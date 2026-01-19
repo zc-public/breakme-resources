@@ -1,0 +1,156 @@
+[=] --- Tag Information --------------------------
+[+]       TYPE: MIFARE Ultralight C (MF0ULC)
+[+]        UID: 04 84 BB 11 01 15 89 
+[+]     UID[0]: 04, NXP Semiconductors Germany
+[+]       BCC0: B3 ( ok )
+[+]       BCC1: 8C ( ok )
+[+]   Internal: 48 ( default )
+[+]       Lock: 00 00  - 0000000000000000
+[+]        OTP: 00 00 00 00  - 00000000000000000000000000000000
+
+[=] --- UL-C Configuration --------------------------
+[=] Total memory....... 188 bytes
+[=] Available memory... 172 bytes
+[=] 40 / 0x28 | 00 00 00 00  - 0000000000000000 Higher lockbits
+[=] 41 / 0x29 | 00 00 00 00  - 0000000000000000 Counter
+[=] 42 / 0x2A | 30 00 00 00  Auth0 unlocked
+[=] 43 / 0x2B | 00 00 00 00  Auth1 R/W access restricted
+[=] 
+[=] --- Fingerprint
+[=] n/a
+
+
+UID:             0484BB11011589
+ATQA anticol:    00 44
+SAK anticol:     00
+Answer to RATS:  None
+FDT to 1A00 (bad key):  11428
+FDT to AF*  (bad key):  1060
+FDT to 1A00 (def key):  11428
+FDT to AF*  (def key):  11492
+Checking ShortFrames...
+ShortFrame 26:   4400 (REQA)
+ShortFrame 52:   4400 (WUPA)
+Checking Shortcut Commands 26;**00+CRC ...
+Cmd 26;3000:             0484BBB3110115898C48000000000000[285C]
+Checking Shortcut Commands 26;**  +CRC ...
+Checking Shortcut Commands 26;**00 ...
+Cmd 26;3000:             0484BBB3110115898C48000000000000[285C]
+Cmd 26;4000:             FDFFFFFF13[0202]
+Checking Shortcut Commands 26;**   ...
+Cmd 26;30  :             0484BBB3110115898C48000000000000[285C]
+Checking Commands **00+CRC ...
+Cmd 1a00:     AF5E172438BF21B1AB[CFEE]
+Cmd 3000:     0484BBB3110115898C48000000000000[285C]
+Cmd **00=00:  a0
+Checking Commands **  +CRC ...
+Checking Commands **00 ...
+Checking Commands **   ...
+
+Checking Commands **08+CRC ...
+Cmd 3008:     00000000000000000000000000000000[3749]
+Cmd a008:     0A
+Cmd **08=00:  1a,50
+Checking Commands **0808+CRC ...
+Checking Commands **080808+CRC ...
+Cmd a2080808:     0A
+Checking Commands **08080808+CRC ...
+Cmd a208080808:     0A
+Checking Commands **0808080808+CRC ...
+Cmd a20808080808:     0A
+Checking Commands **080808080808+CRC ...
+Checking Commands **08080808080808+CRC ...
+Checking Commands **0808080808080808+CRC ...
+Checking Commands **080808080808080808+CRC ...
+Checking Commands **08080808080808080808+CRC ...
+Checking Commands **0808080808080808080808+CRC ...
+Checking Commands **080808080808080808080808+CRC ...
+Checking Commands **08080808080808080808080808+CRC ...
+Checking Commands **0808080808080808080808080808+CRC ...
+Checking Commands **080808080808080808080808080808+CRC ...
+Cmd **080808080808080808080808080808=00:  af
+Checking Commands **08080808080808080808080808080808+CRC ...
+Cmd **08080808080808080808080808080808=00:  af
+Checking Commands **0808080808080808080808080808080808+CRC ...
+Checking Commands **080808080808080808080808080808080808+CRC ...
+Checking Commands **08080808080808080808080808080808080808+CRC ...
+Checking Commands **0808080808080808080808080808080808080808+CRC ...
+Checking Commands Post-Auth **00+CRC ...
+Cmd 3000:     0484BBB3110115898C48000000000000[285C]
+Cmd **00=00:  1a,a0
+
+Checking Commands Post-Auth **  +CRC ...
+Checking Commands Post-Auth **00 ...
+Checking Commands Post-Auth **   ...
+
+Checking Commands Mid-Auth  **00+CRC ...
+Checking Commands Mid-Auth  **  +CRC ...
+Checking Commands Mid-Auth  **00 ...
+Checking Commands Mid-Auth  **   ...
+
+AUTH0=00 Read0     : denied
+AUTH0=00 Fast Read0: allowed
+
+About READY1 + 30 / 3000 without CRC: we cannot chain 2 but we can chain 30(00) and 3000+CRC
+
+          0 |       1056 | Rdr |26(7)                                                                    |     | REQA
+       2116 |       4484 | Tag |44  00                                                                   |     | 
+   61046144 |   61048544 | Rdr |30  00                                                                   |     | READBLOCK(0)
+   61051972 |   61072772 | Tag |04  84  BB  B3  11  01  15  89  8C  48  00  00  00  00  00  00  28  5C   |  ok | 
+   68748160 |   68750560 | Rdr |30  00                                                                   |     | READBLOCK(0)
+
+          0 |       1056 | Rdr |26(7)                                                                    |     | REQA
+       2116 |       4484 | Tag |44  00                                                                   |     | 
+   75574400 |   75575648 | Rdr |30                                                                       |     | READBLOCK(128)
+   75580228 |   75601028 | Tag |04  84  BB  B3  11  01  15  89  8C  48  00  00  00  00  00  00  28  5C   |  ok | 
+  125878912 |  125883680 | Rdr |30  00  02  A8                                                           |  ok | READBLOCK(0)
+  125884740 |  125905540 | Tag |04  84  BB  B3  11  01  15  89  8C  48  00  00  00  00  00  00  28  5C   |  ok | 
+  143362432 |  143367200 | Rdr |30  00  02  A8                                                           |  ok | READBLOCK(0)
+
+About READY1 + 4000 without CRC: we can chain N then 3000+CRC
+
+          0 |       1056 | Rdr |26(7)                                                                    |     | REQA
+       2116 |       4484 | Tag |44  00                                                                   |     | 
+   22758528 |   22760928 | Rdr |40  00                                                                   |     | MAGIC WUPC1
+   22761796 |   22769028 | Tag |FD! FF  FF  FF  13! 02  02                                               |  !! | 
+   51888640 |   51891040 | Rdr |40  00                                                                   |     | MAGIC WUPC1
+   51891908 |   51899140 | Tag |FD! FF  FF  FF  13! 02  02                                               |  !! | 
+   57117056 |   57119456 | Rdr |40  00                                                                   |     | MAGIC WUPC1
+   57120324 |   57127556 | Tag |FD! FF  FF  FF  13! 02  02                                               |  !! | 
+   90252160 |   90256928 | Rdr |30  00  02  A8                                                           |  ok | READBLOCK(0)
+   90257988 |   90278788 | Tag |04  84  BB  B3  11  01  15  89  8C  48  00  00  00  00  00  00  28  5C   |  ok | 
+  116866944 |  116871712 | Rdr |30  00  02  A8                                                           |  ok | READBLOCK(0)
+  116872772 |  116893572 | Tag |04  84  BB  B3  11  01  15  89  8C  48  00  00  00  00  00  00  28  5C   |  ok | 
+
+Or add some N*(40xx without CRC) in full anticol while in READY1
+
+
+
+About Cmd 26;4000:  FDFFFFFF13[0202]
+cf capture ulcg/data/ulcg_4000_zoom.png
+
+HL = 1 = D = start
+LH = 0 = E
+LL     = F = end
+
+HL HL LH HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL HL LH LH HL LH LH LH HL LH HL LH LH LH LH LH LH LH LH HL LL
+ S  1  0  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  0  0  1  0  0  0  1  0  1  0  0  0  0  0  0  0  0  1  E
+pm3 decoding:
+          1101        1111  p        1111        1111  p        1111        1111  p        1111        1111  p        0011        0001  p        0010        0000  p      (00)10       (0000)
+             D           F              F           F              F           F              F           F              3           1              2           0
+                        FD  !                      FF                         FF                         FF                         13  !                      02                        (02)
+=> FD!FF FF FF 13!02 (02)
+
+ S  1  0  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  0  0  1  0  0  0  1  0  1  0  0  0  0  0  0  0  0  1  E
+decoding 56 bits without parity:
+          1101        1111        1111        1111        1111        1111        1111        1111        1111        0011        0001        0101        0000        1000
+             D           F           F           F           F           F           F           F           F           3           1           5           0           8
+                        FD                      FF                      FF                      FF                      3F                      51                      80
+=> FDFFFFFF3F5180
+(if CRCA was present it would be FDFFFFFF3F11D6)
+(if CRCB was present it would be FDFFFFFF3F3019)
+
+About hf 14a raw -sc A2080808
+it writes 08 08 01 49 and 01 49 is CRC_A of the command A2080808
+About hf 14a raw -sc A208080808
+it writes 08 08 08 88 and 88 is first byte of CRC_A of the command A208080808

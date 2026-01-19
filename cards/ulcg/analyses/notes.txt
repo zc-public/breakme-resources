@@ -1,0 +1,38 @@
+./ulc_collect.py -- -c 10000 -j challenges_10000_default_key_stable.json --mode STABLE
+./ulc_collect.py -- -c 10000 -j challenges_10000_default_key_14araw.json --mode RAW
+./analysis_duplicates.py challenges_10000_default_key_stable.json 
+
+Calculating samples needed for 50% probability of at least one duplicate:
+n=100, prob=1.0000, target=0.5, old_min=0, old_max=200
+n=50, prob=1.0000, target=0.5, old_min=0, old_max=100
+n=25, prob=0.9655, target=0.5, old_min=0, old_max=50
+n=12, prob=0.5011, target=0.5, old_min=0, old_max=25
+n=6, prob=0.1486, target=0.5, old_min=0, old_max=12
+n=9, prob=0.3146, target=0.5, old_min=6, old_max=12
+n=10, prob=0.3786, target=0.5, old_min=9, old_max=12
+n=11, prob=0.4429, target=0.5, old_min=10, old_max=12
+Samples needed: 12
+
+Calculating samples needed for 99.99% probability of at least one duplicate:
+n=100, prob=1.0000, target=0.9999, old_min=0, old_max=200
+n=50, prob=1.0000, target=0.9999, old_min=0, old_max=100
+n=25, prob=0.9655, target=0.9999, old_min=0, old_max=50
+n=37, prob=0.9993, target=0.9999, old_min=25, old_max=50
+n=43, prob=1.0000, target=0.9999, old_min=37, old_max=50
+n=40, prob=1.0000, target=0.9999, old_min=37, old_max=43
+n=38, prob=0.9999, target=0.9999, old_min=37, old_max=40
+Samples needed: 38
+
+Calculating samples needed for average max count of duplicates = 3
+n=100, avg_max_count=4.4462, target=3, old_min=0, old_max=200
+n=50, avg_max_count=3.0335, target=3, old_min=0, old_max=100
+n=25, avg_max_count=2.1850, target=3, old_min=0, old_max=50
+n=37, avg_max_count=2.5801, target=3, old_min=25, old_max=50
+n=43, avg_max_count=2.8004, target=3, old_min=37, old_max=50
+n=46, avg_max_count=2.8971, target=3, old_min=43, old_max=50
+n=48, avg_max_count=2.9682, target=3, old_min=46, old_max=50
+n=49, avg_max_count=3.0105, target=3, old_min=48, old_max=50
+Samples needed: 49
+
+./analysis_frequency.py -j challenges_10000_default_key_stable.json --ulcg -s 0x08b5 -m 600
+./analysis_frequency.py -j challenges_10000_default_key_stable.json --ulcg -s 0x08b5 -m 600 --wide

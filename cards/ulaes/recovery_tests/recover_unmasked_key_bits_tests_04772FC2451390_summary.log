@@ -1,0 +1,526 @@
+[+] execute command from commandline: script run recover_unmasked_key_bits.py --block 48 --max_hd_diff 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --masked_key_bits 0xB0000200 --eeprom_init 0x00FF00FF
+EEPROM erasure:
+                                   11111111111111110111111111111111
+                                   11111111111111110111111011111111
+                                   11111101111111110111111011111111
+                                   11111101111111110111111010111111
+                                   11111101111111110111110010111111
+                                   11111101111101110111110010111111
+                                   11111101111101110111110010111101
+                                   11011101111101110111110010111101
+                                   11011101111101110011110010111101
+                                   11011101111101110011100010111101
+                                   11011101110101110011100010111101
+                                   11011101110101110011100010110101
+                                   11011101010101110011100010110101
+                                   11011101010100110011100010110101
+                                   11001101010100110011100010110101
+                                   11000101010100110011100010110101
+                                   11000101000100110011100010110101
+                                   11000101000100100011100010110101
+                                   11000101000100100010100010110101
+                                   11000101000100100010100010110100
+                                   11000101000100.00010100010110100 <= first match with a recovered bit
+                                   11000101000100.00010000010110100 21
+                                   11000101000000.00010000010110100 12 <= error
+                                   10000101000000.00010000010110100  2
+                                   10000101000000.00010000010110000
+                                   10000100000000.00010000010110100  8
+                                   10000100000000.00010000010110000 30 <= error
+                                   10000000000000.00010000010110000  6
+                                   00000000000000.00010000010110000  1
+                                   00000000000000.000100000101.0000
+                                   00000000000000.00010000010..0000
+                                   00000000000000.00000000010..0000 19
+                                   00000000000000.000000000.0..0000  <=== All recovered bits have now flipped
+                                                                     <=== Unflipped in time, assumed to be 0 in the target key in EEPROM => mask in the target key
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   000200B0 (              1         1 11    )
+    EEPROM bits found:   C5102804 (00   0 0   0      0 0        0  )
+            Mask bits:   3F67FEF1 (00111111011001111111111011110001)
+ Recovered block bits:             ..............0.........0.00....
+ Recovered block bits:             00...1.1...0......1.1........0..
+      Block bits init:   3F98FE0E (00111111100110001111111000001110)
+               Errors:                        ^                 ^  
+
+[+] finished recover_unmasked_key_bits.py
+"unflipped in time": bits recovered: 0
+"aggressive guess":  bits recovered: 8 errors: 2
+"skip 2 rows":       bits recovered: 7 errors: 1
+
+[+] execute command from commandline: script run recover_unmasked_key_bits.py --block 48 --max_hd_diff 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --masked_key_bits 0x002800c5 --eeprom_init 0xFF00FF00
+EEPROM erasure:
+                                   11111111111111110111111111111111
+                                   11111101111111110111110111111111
+                                   11111101111111110111110011111111
+                                   11111101111111110111110010111111
+                                   11111101111101110011110010111111
+                                   11111101111101110011110010111101
+                                   11111101110101110011110010111101
+                                   11011101111101110011110010111101
+                                   11011101110101110011110010111101
+                                   11011101010101110011110010111101
+                                   11011101010101110011100010111101
+                                   11011101010101110011100010110101
+                                   11011101010100110011100010110101
+                                   11011101010100110010100010110101
+                                   11001101010100110010100010110101
+                                   11001101010100100010100010110101
+                                   11000101010100100010100010110101
+                                   11000101010100000010100010110101
+                                   11000101010100000010.00010110101 <= first match with a recovered bit
+                                   11000101000100000010.00010110101
+                                   11000101010100000010.00010110100 32
+                                   11000101000100000010.00010110100
+                                   1100010.010100000010.00010110100
+                                   1100010.000100000010.00010110100 10
+                                   1100010.000000000010.00010110100 12
+                                   1100010.000000000010.00010110000 30
+                                   1.00010.000000000010.00010110000
+                                   ..00010.000000000010.00010110000
+                                   ..000.0.000000000010.00010110000
+                                   ..000.0.000000000010.00010100000 28
+                                   ..000.0.000000000010.00010000000 27
+                                   ..000.0.000000000010.00000000000 25
+                                   ..000.0.0000000000.0.00000000000  <=== All recovered bits have now flipped
+                                                                     <=== Unflipped in time, assumed to be 0 in the target key in EEPROM => mask in the target key
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+    EEPROM bits found:   C5002800 (11   1 1          1 1           )
+    EEPROM bits found:   005000B5 (         0 0            0 00 0 0)
+            Mask bits:   3F67FEF1 (00111111011001111111111011110001)
+ Recovered block bits:             11...0.0..........0.0...........
+ Recovered block bits:             .........1.0............1.11.0.1
+      Block bits init:   C06701F1 (11000000011001110000000111110001)
+               Errors:                                             
+
+[+] finished recover_unmasked_key_bits.py
+"unflipped in time": bits recovered: 0
+"aggressive guess":  bits recovered: 7 errors: 0
+"skip 2 rows":       bits recovered: 6 errors: 0
+
+[+] execute command from commandline: script run recover_unmasked_key_bits.py --block 49 --max_hd_diff 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --masked_key_bits 0x00001B00 --eeprom_init 0x00FF00FF
+EEPROM erasure:
+                                   11111011111111111111111111111111
+                                   11111011111111111101111111111111
+                                   11111011111110111101111111111111
+                                   11111011011110111101111111111111
+                                   11111011010110111101111111111111
+                                   11111011010110111101111111110111
+                                   10111011010110111101111111110111
+                                   10111011010110111101111101110111
+                                   10111011010110111101111101100111
+                                   10111001010110111101111101100111
+                                   10101011010110111101111101100111
+                                   10101001010110111101111101100111
+                                   10101001010110111101111101100011
+                                   00101001010110111101111101100011
+                                   00101001010110111001111101100011
+                                   00101001010110110001111101100011
+                                   00101001000110110001111101100011
+                                   00101001000110110001111101100001
+                                   001010010001.0110001111101100001 <= first match with a recovered bit
+                                   001010010001.0110001111101100000 32 <= error
+                                   001010000001.0110001111101100000
+                                   001010000001.0110000111101100000 20
+                                   001010000001.0110000111001100000 24
+                                   001010010001.0110000110001100000
+                                   001010000001.0110000110001100000  8
+                                   001010000001.0.10000111001100000
+                                   001010000001.0.10000110001100000
+                                   000010000001.0.10000111001100000  3
+                                   000010000001.0.10000110001100000
+                                   000010000001.0.10000110000100000
+                                   000000000001.0.10000110001100000  5
+                                   000000000001.0.10000110000100000 26 <= error
+                                   000000000001.0110000110000000000 27 <= error
+                                   000000000001.0.10000111000000000
+                                   000000000001.0.10000110000000000 23
+                                   000000000001.0.10000100000000000 22
+                                   00000000000..0.10000100000000000
+                                   00000000000..0..0000100000000000  <=== All recovered bits have now flipped
+                                   00000000000..0..0000000000000000  <=== All recovered bits have now flipped
+                                                       ^             <=== Unflipped in time, assumed to be 0 in the target key in EEPROM => mask in the target key
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   001B0000 (           11 11                )
+    EEPROM bits found:   29001F61 (  0 0  0           00000 00    0)
+            Mask bits:   2D8496E4 (00101101100001001001011011100100)
+ Recovered block bits:             ...........11.11................
+ Recovered block bits:             ..1.1..1...........10110.11....0
+      Block bits init:   2D7B961B (00101101011110111001011000011011)
+               Errors:                                      ^^    ^
+
+[+] finished recover_unmasked_key_bits.py
+"unflipped in time": bits recovered: 1
+"aggressive guess":  bits recovered: 11 errors: 3
+"skip 2 rows":       bits recovered: 10 errors: 2
+
+[+] execute command from commandline: script run recover_unmasked_key_bits.py --block 49 --max_hd_diff 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --masked_key_bits 0x001C0021 --eeprom_init 0xFF00FF00
+EEPROM erasure:
+                                   11111011111111111111111111111111
+                                   11111011111111111101111111111111
+                                   11111011111110111101111111111111
+                                   11111011011110111101111111110111
+                                   11111011010110111101111111111111
+                                   11111011010110111101111111110111
+                                   11111011010110111101111101110111
+                                   10111011010110111101111101110111
+                                   10111011010110110101111101110111
+                                   10101011010110111101111101110111
+                                   10101011010110110101111101110111
+                                   10101011010110110001111111110111
+                                   10101011010110110001111101110111
+                                   10101001010110110001111101110111
+                                   10111001010110110001111101100111
+                                   10101001011110110001111101100111
+                                   10101001010110110001111101100111
+                                   00101001010110110001111101100111
+                                   00101001000110110001111101100111
+                                   00101001000110110001111101100011
+                                   00101001000110110001111101100001
+                                   00101001000100110001111101100001
+                                   00101001000100110001111001100001
+                                   00101001000100110001111101100000
+                                   00101001000100110001111001100000
+                                   0010100100010011000.111001100000 <= first match with a recovered bit
+                                   0010100.00010011000.111001100000
+                                   0010000.00010011000.111001100000  5 <= error
+                                   0010000.00010001000.111001100000 15
+                                   0010000.00010001000.111001000000 27
+                                   0010000.00010001000.1.1001000000
+                                   0010000.00010001000.111000000000 26
+                                   0010000.00010001000.1.1000000000
+                                   0010000.00010001000.1.0000000000 23 <= error
+                                   00.0000.00010001000.1.0000000000
+                                   00.0000.00000001000.1.1000000000 12
+                                   00.0000.00000001000.1.0000000000
+                                   00.0000.00000001000...0000000000  <=== All recovered bits have now flipped
+                                   00.0000.00000000000...0000000000  <=== All recovered bits have now flipped
+                                                  ^                  <=== Unflipped in time, assumed to be 0 in the target key in EEPROM => mask in the target key
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+    EEPROM bits found:   21001C00 (  1    1           111          )
+    EEPROM bits found:   08130260 (    0      0  00      0  00     )
+            Mask bits:   2D8496E4 (00101101100001001001011011100100)
+ Recovered block bits:             ..0....0...........010..........
+ Recovered block bits:             ....1......0..00......1..11.....
+      Block bits init:   D28469E4 (11010010100001000110100111100100)
+               Errors:                 ^                 ^         
+
+[+] finished recover_unmasked_key_bits.py
+"unflipped in time": bits recovered: 1
+"aggressive guess":  bits recovered: 7 errors: 2
+"skip 2 rows":       bits recovered: 6 errors: 1
+
+[+] execute command from commandline: script run recover_unmasked_key_bits.py --block 50 --max_hd_diff 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --masked_key_bits 0x28006A00 --eeprom_init 0x00FF00FF
+EEPROM erasure:
+                                   11111111111111111111101111111111
+                                   11111111111111111111001111111111
+                                   11111111111111111111000111111111
+                                   11110111111111111111000111111111
+                                   11110111111111111111000111111110
+                                   11110111111111111111000101111110
+                                   11110111111111101111000101111110
+                                   11110111111110101111000101111110
+                                   11110111111110101111000001111110
+                                   11110111011110101111000001111110
+                                   11110111011110101101000001111110
+                                   11110111011110101100000001111110
+                                   11110111011110101000000001111110
+                                   11110111011110101000000000111110
+                                   11110111011010101000000000111110
+                                   11010111011010101000000000111110
+                                   11010111011010101000000000101110
+                                   11010111011010101000000000111010
+                                   11010111011010101000000000101010
+                                   11010111011010101000000000101000
+                                   01010111011010101000000000101000
+                                   01010101011010101000000000101000
+                                   01000101011010101000000000101000
+                                   0100000101101010100000000010.000 <= first match with a recovered bit
+                                   0000000101101010100000000010.000  2
+                                   0000000101101010000000000010.000 17
+                                   0000000101.01010000000000010.000
+                                   0000000101.010.0000000000010.000
+                                   0000000101.010.00000000000.0.000
+                                   0000000101.0.0.00000000000.0.000
+                                   000000010..0.0.00000000000.0.000  <=== All recovered bits have now flipped
+                                   000000000..0.0.00000000000.0.000  <=== All recovered bits have now flipped
+                                          ^                          <=== Unflipped in time, assumed to be 0 in the target key in EEPROM => mask in the target key
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   006A0028 (         11 1 1           1 1   )
+    EEPROM bits found:   41008000 ( 0     0        0               )
+            Mask bits:   52817EDB (01010010100000010111111011011011)
+ Recovered block bits:             .........11.1.1...........1.0...
+ Recovered block bits:             .1.....0........0...............
+      Block bits init:   527E7E24 (01010010011111100111111000100100)
+               Errors:                                             
+
+[+] finished recover_unmasked_key_bits.py
+"unflipped in time": bits recovered: 1
+"aggressive guess":  bits recovered: 3 errors: 0
+"skip 2 rows":       bits recovered: 1 errors: 0
+
+[+] execute command from commandline: script run recover_unmasked_key_bits.py --block 50 --max_hd_diff 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --masked_key_bits 0x008100C7 --eeprom_init 0xFF00FF00
+EEPROM erasure:
+                                   11111111111111111111101111111111
+                                   11111111111111111111001111111111
+                                   11111111111111111111000111111111
+                                   11110111111111111111000111111111
+                                   11110111111110111111000111111111
+                                   11110111111110101111000111111111
+                                   11110111111110101111000111111110
+                                   11110111111110101111000101111110
+                                   11110111011110101111000101111110
+                                   11110111011110101110000101111110
+                                   11110111011110101111000.01111110 <= first match with a recovered bit
+                                   11110111011110101110000.01111110 20 <= error
+                                   11110111011110101100000.01111110 19 <= error
+                                   11110111011110101000000.01111110 18 <= error
+                                   11110111011010101000000.01111110 12
+                                   11110111011010101000000.00111110
+                                   11110111011010101000000.00101110
+                                   11010111011010101000000.00111110  3 <= error
+                                   11010111011010101000000.00101110
+                                   11010111011010101000000.00101010
+                                   .1010111011010101000000.00111010
+                                   .1010111011010101000000.00101010
+                                   .1010111011010101000000.00101000
+                                   .1000111011010101000000.00101000  4 <= error
+                                   1100011101101010.000000.00101000
+                                   .100011101101010.000000.00101000
+                                   .100011101001010.000000.01101000 11
+                                   .100011101001010.000000.00101000
+                                   .10001.101001010.000000.01101000
+                                   .10001.101001010.000000.00111000
+                                   .10001.101001010.000000.00101000
+                                   .10001.101001010.000000.00100000
+                                   .100011101001000.000000.00100000 15
+                                   .10001.101001000.000000.00100000
+                                   .1000..101001000.000000.00100000
+                                   ..000..101001000.000000.00100000
+                                   ..000..101000000.000000.00100000 13
+                                   ..000...01000000.000000.00100000  <=== All recovered bits have now flipped
+                                   ..000...01000000.000000.00000000  <=== All recovered bits have now flipped
+                                   ..000...00000000.000000.00000000  <=== All recovered bits have now flipped
+                                            ^                ^       <=== Unflipped in time, assumed to be 0 in the target key in EEPROM => mask in the target key
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+    EEPROM bits found:   C7008100 (11   111        1      1        )
+    EEPROM bits found:   307A707E (  00     0000 0  000     000000 )
+            Mask bits:   52817EDB (01010010100000010111111011011011)
+ Recovered block bits:             10...101........1......1........
+ Recovered block bits:             ..01.....0000.0..111.....101101.
+      Block bits init:   AD8181DB (10101101100000011000000111011011)
+               Errors:               ^^             ^^^            
+
+[+] finished recover_unmasked_key_bits.py
+"unflipped in time": bits recovered: 2
+"aggressive guess":  bits recovered: 16 errors: 5
+"skip 2 rows":       bits recovered: 14 errors: 3
+
+[+] execute command from commandline: script run recover_unmasked_key_bits.py --block 51 --max_hd_diff 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --masked_key_bits 0x8B008500 --eeprom_init 0x00FF00FF
+EEPROM erasure:
+                                   11111111111011111111111111111111
+                                   11111111111011011111111111111111
+                                   11111101111011011111111111111111
+                                   11111101111011011111111110111111
+                                   11111101111011011101111110111111
+                                   11011101111011011101111110111111
+                                   11011101110011011101111110111111
+                                   11011101110011011101111110101111
+                                   11011100110011011101111110101111
+                                   11011101110011011001111110101111
+                                   11011100110011011001111110101111
+                                   11001101110011011001111110101111
+                                   11001100110011011001111110101111
+                                   11000100110011011001111110101111
+                                   11000100100011011001111110101111
+                                   11000100100001011001111110101111
+                                   11000100100001011000111110101111
+                                   01000100100001011000111110111111
+                                   01000100100001011000111110101111
+                                   01000100100001011000111110001111
+                                   01000100100001011000111010001111
+                                   01000000100001011000111010001111
+                                   00000000100011011000111010001111
+                                   00000100100001011000111010001111
+                                   00000000100001011000111010001111
+                                   00000000100001010000111010001111
+                                   00000000100001010000011010001111
+                                   000000001000010100000110100011.1 <= first match with a recovered bit
+                                   000000001000110100000110100010.1 30 <= error
+                                   000000001000010100000110100010.1
+                                   00000000.000010100000110100010.1
+                                   00000000.000010100000110100010..
+                                   00000000.000010.00000110100010..
+                                   00000000.0000101000001101000.0..
+                                   00000000.000010.000001101000.0..
+                                   00000000.000010.000001001000.0.. 23
+                                   00000000.000010.00000100.000.0..
+                                   00000000.000010.00000000.000.0.. 22
+                                   00000000.0000.0.00000000.000.0..  <=== All recovered bits have now flipped
+                                                                     <=== Unflipped in time, assumed to be 0 in the target key in EEPROM => mask in the target key
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   0085008B (        1    1 1        1   1 11)
+    EEPROM bits found:   00000604 (                     00      0  )
+            Mask bits:   CE7EB1A2 (11001110011111101011000110100010)
+ Recovered block bits:             ........1....0.1........0...1.01
+ Recovered block bits:             .....................00......0..
+      Block bits init:   CE81B15D (11001110100000011011000101011101)
+               Errors:                                          ^  
+
+[+] finished recover_unmasked_key_bits.py
+"unflipped in time": bits recovered: 0
+"aggressive guess":  bits recovered: 3 errors: 1
+"skip 2 rows":       bits recovered: 2 errors: 0
+
+[+] execute command from commandline: script run recover_unmasked_key_bits.py --block 51 --max_hd_diff 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --masked_key_bits 0x008F0045 --eeprom_init 0xFF00FF00
+EEPROM erasure:
+                                   11111111111011111111111111111111
+                                   11111111111011011111111111111111
+                                   11111111111011011111111110111111
+                                   11111101111011011111111110111111
+                                   11011101111011011111111110111111
+                                   11011101111011011101111110111111
+                                   11011101110011011101111110111111
+                                   11001101110011011101111110111111
+                                   11001101110011011101111110101111
+                                   11001101110011011001111110101111
+                                   11000101110011011001111110101111
+                                   11001101100011011001111110101111
+                                   11000101100011011001111110101111
+                                   11000101100011011001111110001111
+                                   11000101100011011000111110001111
+                                   01000101100011011000111110001111
+                                   0100010.100011011000111110001111 <= first match with a recovered bit
+                                   0100010.100001011000111110001111 13
+                                   0100010.10000101.000111110001111
+                                   0100010.10000100.000111110001111
+                                   0101010.10000100.000111110001011 30
+                                   0100010.10000101.000111110001011
+                                   0100010.10000100.000111110001011
+                                   0100010.10000100.000111110001001
+                                   0.00010.10000100.000111110001011
+                                   0.00010.10000100.000111110001001
+                                   0.00010.000001001000111110001001  9
+                                   0.00010.00000101.000111110001001
+                                   0.00010.00000100.000111110001001 16
+                                   0.00010.00000100.000.11110001001
+                                   0.00010.00000100.000.11.10001011
+                                   0.00010.00000100.000.11.10001001 31
+                                   0.00010.00000100.000.11.10001000 32
+                                   0.000.0.00000100.000.11.10001000
+                                   0.00010.00000100.000.11.10000000 29
+                                   0.000.0.00000100.000.11.10000000
+                                   0.000.0.00000100.000.1..10000000
+                                   0.000.0.00000100.000....10000000  <=== All recovered bits have now flipped
+                                   0.000.0.00000100.000....00000000  <=== All recovered bits have now flipped
+                                   0.000.0.00000000.000....00000000  <=== All recovered bits have now flipped
+                                                ^          ^         <=== Unflipped in time, assumed to be 0 in the target key in EEPROM => mask in the target key
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+    EEPROM bits found:   45008F00 ( 1   1 1        1   1111        )
+    EEPROM bits found:   008D008F (        0   00 0        0   0000)
+            Mask bits:   CE7EB1A2 (11001110011111101011000110100010)
+ Recovered block bits:             .0...0.1........0...1110........
+ Recovered block bits:             ........0...11.0........1...0010
+      Block bits init:   317E4EA2 (00110001011111100100111010100010)
+               Errors:                                             
+
+[+] finished recover_unmasked_key_bits.py
+"unflipped in time": bits recovered: 2
+"aggressive guess":  bits recovered: 9 errors: 0
+"skip 2 rows":       bits recovered: 8 errors: 0
+
+
+
+A bit very slow to erase and still seen as a 1 during characterization at a point corresponding to the end of the attack must be considered as a zero, else it would have been part of the attack result.
+we make the assumption that there is an inversely proportional correlation between the speed of erasure of a bit and the ability to revive it.
+A bit quickly erased is erased quite a lot at the end of the attack and has less chance to be revived.
+A bit slower to erase but still seen as erased at the end of the attack is barely erased and can be revived more easily.
+So if during characterization, a bit is seen as erased after a bit we could revive, we assume that if it was a 1, we should have been able to revive it as well.
+So we assume it was a zero.
+
+
+for i in recover_unmasked_key_bits*hd*log; do awk '/execute command/;/EEPROM eras/{b=1}b==1' $i;done > recover_unmasked_key_bits_tests_04772FC2451390_summary.log
+
+"phase 1":           5.875 bits recovered per segment on average, 0     bits wrong
+"unflipped in time": 0.875 bits recovered per segment on average, 0     bits wrong
+"aggressive guess":  8     bits recovered per segment on average, 1.6   bits wrong (aggressive= any bit unflipped after the first flip of a recovered bit)
+"skip 2 rows":       6.75  bits recovered per segment on average, 0.875 bits wrong (same as aggressive but skip 2 rows of events after first flip of recovered bit)
+
+"phase 1"+"skip 2 rows" = 12.625 bits recovered per segment on average, 0.875 bits wrong
+So from a single card, we got for a full key: 50.5 bits recovered on average, comprising 3.5 wrong bits located among 27 bits
+to be compared with the 6 to 10 bits of draft v2 (with HW=1.5 to 2.5)
+
+still to guess: (128-50.5=) 77.5 bits + fixing (0.875*4=) 3.5 bits over (6.75*4=) 27 bits
+estimate(27,3)=2**11.69
+estimate(27,4)=2**14.35
+=> estimate(27,3.5)~2**13
+Total key search space after recovery ~ 2**90
+
+
+if we only consider bits that during characterization didn't flip yet while all recovered bits have already been flipped and say these had to be 0 in EEPROM, we can recover an average of 0.875 bit per segment, without error.
+now, if we make more aggressive guesses and consider all bits that during characterization didn't flip yet while the first of our recovered bits have already flipped and say these had to be 0 in EEPROM, we can recover an average of 8 bits per segment, but 1.6 bits are wrong guesses.
+if we apply a crude filtering = like aggressive but skipping the 2 events just after the first of our recovered bits flipped, we go down to 6.75 bits recovered with 0.875 bits wrong.
+
+the applied technique is not exactly the one you described because I didn't measure the absolute tearing times, I reused the mask recovery script and made a relative comparison between observed bit flips.
+
+it might worth testing with absolute tearing times, maybe still combined with some local relative bitflips to realign timelines, but this requires writing the poc and tracking all tearing times during the first phase of the attack as well.
+35m
+
+hmm absolute tearing times won't help much. It's only valid for the "0.875 unflipped bits", for the other revived by heating there is no tearing time info available
+8m
+
+we could still use them such that instead of saying we filter by skipping 2 events, we say skipping N tears, we filter close events but not events far away even if nothing happened meanwhile
+
+I made an error in the single-card feasibility estimations, I assumed if we recover N bits =1 we've only 64-N to find (on average). But now the recovered bits are both 1 and 0 so we cannot say anymore we've only few 1 to recover...
+
+still not a single-card attack but with 2 cards, assume ((128-50.5)/128)*50.5 = 30.5 new bits recovered from the second card, with 2 wrong bits
+and 20 bits redundant with the first card, that can help detecting 1/6 of errors in the first card recovery
+=> 81 bits recovered with 5 wrong bits over 43 bits
+=> 47 bits to find + 5 wrong bits to fix over 43 bits
+2**47 * estimate(43,5) ~ 2**20 = 2**67 total search space after recovery from 2 cards
+=> within reach with 3 cards.
+((128-(50.5+30.5))/128)*50.5 = 18.5 new bits recovered from the second card, with 1 wrong bit
+=> 99.5 bits recovered with 6 wrong bits over 53 bits
+=> 29.5 bits to find + 6 wrong bits to fix over 53 bits
+2**29.5 * estimate(53,6) ~ 2**24.5 = 2**54 total search space after recovery from 3 cards
+
+not yet a single-card attack but if my napking estimates are correct, with 3 cards, maybe 2 hours tests and $122 + 6h, we can recover a shared key
+
+4 cards:
+((128-(50.5+30.5+18.5))/128)*50.5 = 11 new bits recovered from the second card, with 1 wrong bit
+=> 110.5 bits recovered with 7 wrong bits over 59 bits
+=> 17.5 bits to find + 7 wrong bits to fix over 59 bits
+2**17.5 * estimate(59,7) ~ 2**28.5 = 2**46 total search space after recovery from 4 cards
+=> with 4 cards, 2 hours test + 2 hours BF on 1 GPU
+
+
+rough summary (one segment):
+- tear down up to recovering a HW<=2 segment => 2 bits recovered
+- script keeps running and find weak bits flipping naturally. Move card around... => now like 4 bits recovered per segment
+- heat card => now 6 bits recovered per segment (6 ones in EEPROM)
+- characterize bits decay, starting with eeprom=FFFFFFFF
+- retain unflipped bits that should have flipped now that characterization reached the point where all recovered and revived bits have flipped => 1 zero in EEPROM
+- be aggressive on the guess => 7 zeros in EEPROM of which 1 is wrong guess
+
+
+Howto:
+- get card mask (from sacrificed key)
+  recover_mask_fast_all.sh
+- add uid+mask to recover_mask_fast_all_verify.sh and run it, to make sure there are no forgotten bits
+- add uid+mask to recover_masked_key_bits_heat_tests.sh
+- modify script to e.g. target blocks 48-51 and 2 complementary EEPROM patterns (so we're testing 2 keys of "eeprom" hw=64 using 2 non-overlapping sets of bits)
+- run recover_masked_key_bits_heat_tests.sh and generate 8 log files
+  - the script runs forever, so move the card slowly around for finding bitflips
+  - cycle heat slowly (up to 110C then it becomes unresponsive => let cool until it works again)
+  - ctrl-c when it seems to not find flips anymore
+- add uid+mask to recover_unmasked_key_bits_tests.sh
+- add "masked_key_bits" for each block/pattern to test, to indicate which bits were recovered
+  - use previous logs, grep Masked, then OR all "Masked key bits found" => that's your masked_key_bits
+- run recover_unmasked_key_bits_tests.sh and generate 8 log files
+
+So far the "skip 2" filtering was a manual exercise,
+cf recover_unmasked_key_bits_tests_04772FC2451390_summary.log taking and annotating the waterfalls.
+as the script only points at columns with errors, not rows with errors
+
+
+ULC: same, without mask annoyance, scaled down to its 28 bits per segment

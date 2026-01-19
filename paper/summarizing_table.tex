@@ -1,0 +1,64 @@
+
+{
+\renewcommand{\arraystretch}{1.4}
+\renewcommand\tabularxcolumn[1]{>{\raggedright\arraybackslash}m{#1}}
+\begin{table}[h]
+\caption{Comparison of presented attacks with their requirements and execution times}
+\label{tab:summarized-attacks}
+\centering
+\begin{adjustbox}{center,max width=0.95\textwidth,max totalheight=0.75\textheight}
+\begin{tabularx}{\linewidth}{|l|X|X|X|X|X|X|X|}
+\hline
+  \textbf{\scriptsize Target} &
+  \textbf{\scriptsize Cards} &
+  \textbf{\scriptsize Devices} &
+  \textbf{\scriptsize Reader auth attempts (average)} &
+  \textbf{\scriptsize Card auth attempts (average)} &
+  \textbf{\scriptsize Offline operations (average)} &
+  \textbf{\scriptsize Tearing events (average)} &
+  \textbf{\scriptsize Time (average)} \\ \hline
+\noalign{\hrule height 0.6pt}
+
+  Detect KDF, all & 1 & 2 & 2 & 2 & -- & -- & instant \\ \hline
+\noalign{\hrule height 0.6pt}
+  Ultralight~C & 4 & 1~(2)$^*$ & --~(N)$^*$ & $2^{29.0}$ & -- & -- & 62.1~d \\ \hline
+  Ultralight~C & 4 & 4 & --~(N)$^*$ & $2^{29.0}$ & -- & -- & 24.9~d \\ \hline
+  Ultralight~C & 3 & 3 & 1~(N)$^*$ & $2^{28.6}$ & $2^{27.0}$ & -- & 23.3~d \\ \hline
+  Ultralight~C & 2 & 2 & 1~(N)$^*$ & $2^{28.0}$ & $2^{55.0}$ & -- & 21.0~d + \$122 \\ \hline
+  Ultralight~C & 1 & 2 & $2^{27.0}$ & $2^{27.0}$ & $2^{55.0}$ & -- & 792.5~d + \$122 \\ \hline
+  Ultralight~C & $\mathord{\approx}21$ & 1~(2)$^*$ & 1~(N)$^*$ & $2^{21.2}$ & $2^{27.0}$ & $2^{8.5}$ & 8.1~h \\ \hline
+  Ultralight~C & $\mathord{\approx}28$ & 1~(2)$^*$ & --~(N)$^*$ & $2^{21.7}$ & -- & $2^{8.9}$ & 10.7~h \\ \hline
+  Ultralight~C & $\mathord{\approx}56$ & 1~(2)$^*$ & --~(N)$^*$ & $2^{18.3}$ & -- & $2^{8.5}$ & 1.0~h \\ \hline
+\noalign{\hrule height 0.6pt}
+  \makecell[l]{GT23SC4489\\even if locked} & 1 & 1 & --~(1)$^*$ & 4~($2^{5.6}$) & $2^{29.0}$ & --~(1)$^\dagger$ & 1~(2)$^*$~min \\ \hline
+  FJ8010 & 1 & 1 & --~(1)$^*$ & 4~($2^{5.6}$) & $2^{29.0}$ & -- & 1~(2)$^*$~min \\ \hline
+  USCUID-UL & 1 & 1 & --~(1)$^*$ & 4~($2^{7.3}$) & $2^{29.0}$ & -- & 1~(2)$^*$~min \\ \hline
+\noalign{\hrule height 0.6pt}
+  Ultralight~AES (per key) & 4 & 1~(2)$^*$ & --~(N)$^*$ & $2^{33.0}$ & -- & -- & 1129.8~d \\ \hline
+  Ultralight~AES (per key) & 4 & 4 & --~(N)$^*$ & $2^{33.0}$ & -- & -- & 451.9~d \\ \hline
+  Ultralight~AES (per key) & 3 & 3 & 1~(N)$^*$ & $2^{32.6}$ & $2^{31.0}$ & -- & 423.7~d \\ \hline
+  Ultralight~AES (per key) & $\mathord{\approx}27$ & 1~(2)$^*$ & 1~(N)$^*$ & $2^{22.0}$ & $2^{31.0}$ & $2^{12.5}$ & 13.9~h \\ \hline
+  Ultralight~AES (per key) & $\mathord{\approx}36$ & 1~(2)$^*$ & --~(N)$^*$ & $2^{22.4}$ & -- & $2^{12.9}$ & 18.5~h \\ \hline
+  Ultralight~AES (per key) & $\mathord{\approx}52$ & 1~(2)$^*$ & --~(N)$^*$ & $2^{20.0}$ & -- & $2^{13.5}$ & 3.6~h \\ \hline
+  Ultralight~AES (per key)+heat & $\mathord{\approx}20$ & 1~(2)$^*$ & --~(N)$^*$ & $2^{19.1}$ & -- & $2^{11.9}$ & 2.0~h \\ \hline
+  \makecell[l]{UL~AES reader\\with broken TRNG} & -- & 1 & 1 & -- & -- & -- & instant \\ \hline
+\noalign{\hrule height 0.6pt}
+  NTAG224 AES\_KEY & 4 & 1~(2)$^*$ & --~(N)$^*$ & $2^{33.0}$ & -- & -- & 1197.8~d \\ \hline
+  NTAG224 AES\_KEY & 4 & 4 & --~(N)$^*$ & $2^{33.0}$ & -- & -- & 479.1~d \\ \hline
+  NTAG224 AES\_KEY & 3 & 3 & 1~(N)$^*$ & $2^{32.6}$ & $2^{31.0}$ & -- & 449.2~d \\ \hline
+  NTAG224 AES\_KEY$^\ddagger$ & $\mathord{\approx}52$ & 1~(2)$^*$ & --~(N)$^*$ & $2^{19.7}$ & -- & $2^{10.5}$ & 2.8~h \\ \hline
+  NTAG22x SUNCMAC\_KEY & 1 & 1~(2)$^*$ & --~(1)$^*$ & 4~MAC & $2^{33.0}$ & -- & 2.5~h \\ \hline
+  NTAG22x SUNCMAC\_KEY & 1 & 1~(2)$^*$ & --~(1)$^*$ & $2^{7.5}$~MAC & $2^{20.7}$ & $2^{7.5}$ & 37.7~s \\ \hline
+  \makecell[l]{NTAG224 reader\\with broken TRNG} & -- & 1 & 1 & -- & -- & -- & instant \\ \hline
+
+\end{tabularx}
+\end{adjustbox}
+\end{table}
+}
+* if AUTH0 needs to be changed to a higher value on N of the cards.
+Note that the additional device required for the relay may also be used to accelerate the brute-force phases.
+
+$\dagger$ if pages 44-47 are locked or if AUTH0 is locked.
+
+$\ddagger$ it assumes the mask has already been recovered, which is included in the \emph{SUMCMAC\_KEY with tearing} operations.
+

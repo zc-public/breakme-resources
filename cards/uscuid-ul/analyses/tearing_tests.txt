@@ -1,0 +1,284 @@
+hf mfu otptear -b 10 -i 1 -s 230 -e 280 -m 00000000
+
+
+
+hf mfu wrbl -b 10 -d ffffffff
+hf mfu otptear -b 10 -i 1 -s 100 -e 200 -d FFFFFFFF -m 00000000
+=> 113ms
+hf mfu otptear -b 10 -i 1 -s 100 -e 200 -d FFFFFFFF -t FFFFFFFF -m 00000000
+
+hf mfu otptear -b 10 -i 10 -s 2150 -e 2300 -d FFFFFFFF -t EEEEEEEE -m EEEEEEEE
+hf mfu otptear -b 10 -i 10 -s 2150 -e 2300 -d FFFFFFFF -t FFFFFFFF -m FFFFFFFF
+=> 2180-2260
+
+
+hf mfu wrbl -b 10 -d ffffffff
+hf mfu rdbl -b 10
+hw tearoff --delay 112
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --delay 110
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+hw tearoff --on
+hf 14a raw -sc a20affffffff
+hf mfu rdbl -b 10
+
+
+
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | FF FF FF FF | ....
+[=] 10/0x0A | EF FF FF FF | .... <=
+[=] 10/0x0A | EF FF FF FF | ....
+[=] 10/0x0A | 8F FF FF FF | .... <=
+[=] 10/0x0A | 8E DF FF FF | .... <=
+[=] 10/0x0A | 8E 5F FF FF | ._.. <=
+[=] 10/0x0A | 8E 5F DF E7 | ._.. <=
+[=] 10/0x0A | 8E 5F DF E7 | ._..
+[=] 10/0x0A | 86 5F DF E3 | ._.. <=
+[=] 10/0x0A | 86 5F 9B E3 | ._.. <=
+[=] 10/0x0A | 86 5F 9B E3 | ._..
+[=] 10/0x0A | 86 5F 8B 61 | ._.a <=
+[=] 10/0x0A | 86 5F 8B 61 | ._.a
+[=] 10/0x0A | 82 4F 83 61 | .O.a <=
+[=] 10/0x0A | 02 07 83 21 | ...! <=
+[=] 10/0x0A | 02 07 83 21 | ...!
+[=] 10/0x0A | 00 07 81 21 | ...! <=
+[=] 10/0x0A | 00 03 81 01 | .... <=
+[=] 10/0x0A | 00 03 81 01 | ....
+[=] 10/0x0A | 00 03 81 00 | .... <=
+[=] 10/0x0A | 00 00 80 00 | .... <=
+[=] 10/0x0A | 00 00 80 00 | ....
+[=] 10/0x0A | 00 00 00 00 | .... <=
+[=] 10/0x0A | 00 00 00 00 | ....
+[=] 10/0x0A | 00 00 00 00 | ....
+[=] 10/0x0A | 00 00 00 00 | ....
+[=] 10/0x0A | 00 00 00 00 | ....
+[=] 10/0x0A | 00 00 00 00 | ....
+[=] 10/0x0A | 00 00 00 00 | ....
+[=] 10/0x0A | 00 00 00 00 | ....
+[=] 10/0x0A | 00 00 00 00 | ....
+[=] 10/0x0A | 00 00 00 00 | ....
+[=] 10/0x0A | 00 00 00 00 | ....
+[=] 10/0x0A | 00 00 00 00 | ....
+[=] 10/0x0A | 00 00 00 00 | ....
+
+
+
+
+Another test where we slow down to 109ms as soon as we see the first EFFFFFFF:
+=> 29 values on 32 bits!
+
+[=] 10/0x0A | EF FF FF FF | .... <=
+[=] 10/0x0A | EF FF FF FF | ....
+[=] 10/0x0A | EF FF FF FF | ....
+[=] 10/0x0A | EF FF FF FF | ....
+[=] 10/0x0A | EF FF FF FF | ....
+[=] 10/0x0A | AF FF FF FF | .... <=
+[=] 10/0x0A | AE FF FF FF | .... <=
+[=] 10/0x0A | 8E FF FF FF | .... <=
+[=] 10/0x0A | 8E FF FF FF | ....
+[=] 10/0x0A | 8E FF FF FF | ....
+[=] 10/0x0A | 8E 5F FF FF | ._.. <= 2
+[=] 10/0x0A | 8E 5F FF FF | ._..
+[=] 10/0x0A | 8E 5F FF FF | ._..
+[=] 10/0x0A | 8E 5F FF FF | ._..
+[=] 10/0x0A | 8E 5F FF FF | ._..
+[=] 10/0x0A | 8E 5F FF FF | ._..
+[=] 10/0x0A | 8E 5F FF FF | ._..
+[=] 10/0x0A | 8E 5F FF FF | ._..
+[=] 10/0x0A | 8E 5F FF E7 | ._.. <= 2
+[=] 10/0x0A | 8E 5F FF E7 | ._..
+[=] 10/0x0A | 8E 5F DF E7 | ._.. <=
+[=] 10/0x0A | 8E 5F DF E7 | ._..
+[=] 10/0x0A | 8E 5F DF E7 | ._..
+[=] 10/0x0A | 8E 5F DF E7 | ._..
+[=] 10/0x0A | 8E 5F DF E7 | ._..
+[=] 10/0x0A | 8E 5F DF E3 | ._.. <=
+[=] 10/0x0A | 8E 5F DF E3 | ._..
+[=] 10/0x0A | 86 5F 9B E3 | ._.. !
+[=] 10/0x0A | 8E 5F 9B E3 | ._..
+[=] 10/0x0A | 86 5F 9B E3 | ._.. <= 2
+[=] 10/0x0A | 86 5F 9B E3 | ._..
+[=] 10/0x0A | 86 5F 8B E3 | ._.. <=
+[=] 10/0x0A | 86 5F 8B E3 | ._..
+[=] 10/0x0A | 86 5F 8B 63 | ._.c <=
+[=] 10/0x0A | 86 5F 8B 63 | ._.c
+[=] 10/0x0A | 86 5F 8B 61 | ._.a <=
+[=] 10/0x0A | 86 5F 8B 61 | ._.a
+[=] 10/0x0A | 86 5F 8B 61 | ._.a
+[=] 10/0x0A | 86 5F 8B 61 | ._.a
+[=] 10/0x0A | 86 5F 8B 61 | ._.a
+[=] 10/0x0A | 86 5F 8B 61 | ._.a
+[=] 10/0x0A | 86 5F 8B 61 | ._.a
+[=] 10/0x0A | 86 5F 8B 61 | ._.a
+[=] 10/0x0A | 82 5F 8B 61 | ._.a <=
+[=] 10/0x0A | 82 5F 83 61 | ._.a <=
+[=] 10/0x0A | 82 4F 8B 61 | .O.a <=
+[=] 10/0x0A | 82 4F 83 61 | .O.a <=
+[=] 10/0x0A | 82 4F 83 61 | .O.a
+[=] 10/0x0A | 82 0F 83 61 | ...a !
+[=] 10/0x0A | 02 4F 83 61 | .O.a
+[=] 10/0x0A | 82 0F 83 61 | ...a <=
+[=] 10/0x0A | 82 0F 83 61 | ...a
+[=] 10/0x0A | 82 0F 83 61 | ...a
+[=] 10/0x0A | 82 0F 83 21 | ...! <=
+[=] 10/0x0A | 02 0F 83 21 | ...! <=
+[=] 10/0x0A | 02 0F 81 21 | ...! <=
+[=] 10/0x0A | 02 0F 81 21 | ...!
+[=] 10/0x0A | 00 07 81 21 | ...! !
+[=] 10/0x0A | 00 0F 81 21 | ...! <=
+[=] 10/0x0A | 00 07 81 21 | ...! <=
+[=] 10/0x0A | 00 07 81 21 | ...!
+[=] 10/0x0A | 00 07 81 21 | ...!
+[=] 10/0x0A | 00 07 81 21 | ...!
+[=] 10/0x0A | 00 07 81 21 | ...!
+[=] 10/0x0A | 00 07 81 21 | ...!
+[=] 10/0x0A | 00 07 81 21 | ...!
+[=] 10/0x0A | 00 07 81 21 | ...!
+[=] 10/0x0A | 00 07 81 21 | ...!
+[=] 10/0x0A | 00 03 81 21 | ...! <=
+[=] 10/0x0A | 00 07 81 00 | .... !
+[=] 10/0x0A | 00 03 81 01 | .... <=
+[=] 10/0x0A | 00 03 81 00 | .... <=
+[=] 10/0x0A | 00 03 81 00 | ....
+[=] 10/0x0A | 00 03 81 00 | ....
+[=] 10/0x0A | 00 03 81 00 | ....
+[=] 10/0x0A | 00 03 81 00 | ....
+[=] 10/0x0A | 00 03 81 00 | ....
+[=] 10/0x0A | 00 03 80 00 | .... !
+[=] 10/0x0A | 00 03 81 00 | ....
+[=] 10/0x0A | 00 03 80 00 | .... <=
+[=] 10/0x0A | 00 03 80 00 | ....
+[=] 10/0x0A | 00 03 80 00 | ....
+[=] 10/0x0A | 00 03 80 00 | ....
+[=] 10/0x0A | 00 03 80 00 | ....
+[=] 10/0x0A | 00 02 80 00 | .... <=
+[=] 10/0x0A | 00 02 80 00 | ....
+[=] 10/0x0A | 00 00 80 00 | .... <=
+[=] 10/0x0A | 00 00 80 00 | ....
+[=] 10/0x0A | 00 00 80 00 | ....
+[=] 10/0x0A | 00 00 80 00 | ....
+[=] 10/0x0A | 00 00 80 00 | ....
+[=] 10/0x0A | 00 00 80 00 | ....
+[=] 10/0x0A | 00 00 80 00 | ....
+[=] 10/0x0A | 00 00 80 00 | ....
+[=] 10/0x0A | 00 00 80 00 | ....
+[=] 10/0x0A | 00 00 80 00 | ....
+[=] 10/0x0A | 00 00 80 00 | ....
+[=] 10/0x0A | 00 00 00 00 | .... <=
+

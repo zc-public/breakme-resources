@@ -1,0 +1,116 @@
+Test Sequence:
+6015248150013332727357C4DDED4D7504F0B8386D85966259EAE9E1BCBCFA9CA32A3B4BE05617EF53F20357A2BBFD86B2F3B4F721A732DD313C48680BAAA26FD235A3B2D8646DC28
+
+Bo Zhu's BMA:
+Its characteristic polynomial is (x^16 + x^5 + x^3 + x^2 + 1),and linear span is 16
+clocked as >> 1
+
+UID: maybe 04xxxxxxxA7180
+
+
+Nathan card:
+Fingerprint:
+memory is cyclic, matching all
+always silent except 1a for xx, matching uscuid-ul
+a200 silent, 5000-5f00 silent, 30 read, 1a auth, rest 00 matching uscuid-ul
+can't overwrite the lock bytes, matching all
+can't tear the lock bytes, matching NXP and uscuid-ul
+NAKs reading the key pages
+This is the same card based on everything we know about it
+so if it is the same card, the UID isn't always *A7180
+*180, if any relationship exists in the UID since the NXP we've collected are *80
+
+"Genuine ULC" with wave logo =>
+https://rfidhotel.com/hotel-key-cards/welcome-enjoy-your-stay-blue-key-card/
+same logo
+
+
+# variant 1
+./ulc_collect.py -- -c 10000 -j challenges_10000_default_key_stable_v1.json -m STABLE
+# variant 2
+./ulc_collect.py -- -c 10000 -j challenges_10000_default_key_stable_v2.json -m STABLE --key 627CF2027EA230A050C41602D45AB6DE
+
+
+$ ./analysis_duplicates.py challenges_10000_default_key_stable_v1.json 
+
+Calculating samples needed for 50% probability of at least one duplicate:
+n=100, prob=0.9995, target=0.5, old_min=0, old_max=200
+n=50, prob=0.8426, target=0.5, old_min=0, old_max=100
+n=25, prob=0.3611, target=0.5, old_min=0, old_max=50
+n=37, prob=0.6263, target=0.5, old_min=25, old_max=50
+n=31, prob=0.5002, target=0.5, old_min=25, old_max=37
+n=28, prob=0.4388, target=0.5, old_min=25, old_max=31
+n=29, prob=0.4663, target=0.5, old_min=28, old_max=31
+n=30, prob=0.4804, target=0.5, old_min=29, old_max=31
+Samples needed: 31
+
+Calculating samples needed for 99.99% probability of at least one duplicate:
+n=100, prob=0.9995, target=0.9999, old_min=0, old_max=200
+n=150, prob=1.0000, target=0.9999, old_min=100, old_max=200
+n=125, prob=1.0000, target=0.9999, old_min=100, old_max=150
+n=112, prob=0.9999, target=0.9999, old_min=100, old_max=125
+n=106, prob=0.9999, target=0.9999, old_min=100, old_max=112
+n=103, prob=0.9997, target=0.9999, old_min=100, old_max=106
+n=104, prob=0.9997, target=0.9999, old_min=103, old_max=106
+n=105, prob=1.0000, target=0.9999, old_min=104, old_max=106
+Samples needed: 105
+
+Calculating samples needed for average max count of duplicates = 3
+n=100, avg_max_count=2.3519, target=3, old_min=0, old_max=200
+n=150, avg_max_count=2.8365, target=3, old_min=100, old_max=200
+n=175, avg_max_count=3.0478, target=3, old_min=150, old_max=200
+n=162, avg_max_count=2.9378, target=3, old_min=150, old_max=175
+n=168, avg_max_count=2.9851, target=3, old_min=162, old_max=175
+n=171, avg_max_count=3.0095, target=3, old_min=168, old_max=175
+n=169, avg_max_count=2.9917, target=3, old_min=168, old_max=171
+n=170, avg_max_count=3.0050, target=3, old_min=169, old_max=171
+Samples needed: 170
+
+./analysis_duplicates.py challenges_10000_default_key_stable_v2.json 
+
+Calculating samples needed for 50% probability of at least one duplicate:
+n=100, prob=0.9994, target=0.5, old_min=0, old_max=200
+n=50, prob=0.8705, target=0.5, old_min=0, old_max=100
+n=25, prob=0.3920, target=0.5, old_min=0, old_max=50
+n=37, prob=0.6668, target=0.5, old_min=25, old_max=50
+n=31, prob=0.5334, target=0.5, old_min=25, old_max=37
+n=28, prob=0.4749, target=0.5, old_min=25, old_max=31
+n=29, prob=0.4927, target=0.5, old_min=28, old_max=31
+n=30, prob=0.5136, target=0.5, old_min=29, old_max=31
+Samples needed: 30
+
+Calculating samples needed for 99.99% probability of at least one duplicate:
+n=100, prob=0.9994, target=0.9999, old_min=0, old_max=200
+n=150, prob=1.0000, target=0.9999, old_min=100, old_max=200
+n=125, prob=1.0000, target=0.9999, old_min=100, old_max=150
+n=112, prob=1.0000, target=0.9999, old_min=100, old_max=125
+n=106, prob=0.9999, target=0.9999, old_min=100, old_max=112
+n=103, prob=0.9999, target=0.9999, old_min=100, old_max=106
+n=101, prob=0.9999, target=0.9999, old_min=100, old_max=103
+Samples needed: 101
+
+Calculating samples needed for average max count of duplicates = 3
+n=100, avg_max_count=2.4511, target=3, old_min=0, old_max=200
+n=150, avg_max_count=2.9708, target=3, old_min=100, old_max=200
+n=175, avg_max_count=3.1920, target=3, old_min=150, old_max=200
+n=162, avg_max_count=3.0852, target=3, old_min=150, old_max=175
+n=156, avg_max_count=3.0333, target=3, old_min=150, old_max=162
+n=153, avg_max_count=2.9979, target=3, old_min=150, old_max=156
+n=154, avg_max_count=3.0073, target=3, old_min=153, old_max=156
+Samples needed: 154
+
+./analysis_frequency.py -j challenges_10000_default_key_stable_v1.json --mfc -s 0x0001 -m 65535 --no-gauss --no-title --no-grey
+./analysis_frequency.py -j challenges_10000_default_key_stable_v2.json --mfc -s 0x0001 -m 65535 --no-gauss --no-title --no-grey
+
+
+./analysis_nonces.py -j challenges_10000_default_key_stable_v1.json --mfc --min-dups 10 --bin
+
+Timestamps:
+./ulc_collect.py -- -c 2 -m STABLE -t
+
+
+./ulc_collect.py -- -c 1000 -m RAW_TEST -j challenges_raw.json
+./analysis_frequency.py -j challenges_raw.json --mfc -s 0x0001 -m 65535 --no-gauss --no-title --no-grey
+
+Note:
+only the ULCG resets on WUPA, on ULCUID the LFSR starts when powered

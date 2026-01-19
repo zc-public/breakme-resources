@@ -1,0 +1,51 @@
+\begin{tikzpicture}[
+    node distance=1.5cm,
+    state/.style={ellipse, draw, minimum width=2cm, minimum height=0.8cm},
+    every edge/.style={draw, ->, >=stealth}
+]
+
+% States
+\node[state] (por) at (-3,5.8) {POWER};
+\node[state] (idle) at (-4.9,4.5) {IDLE};
+\node[state] (halt) at (0.9,4.5) {HALT};
+\node[state] (ready1) at (-2,3) {READY 1};
+\node[state] (ready2) at (-2,1.5) {READY 2};
+\node[state] (active) at (-2,0) {ACTIVE};
+\node[state] (authenticated) at (-2,-1.5) {AUTHENTICATED};
+
+% Transitions
+\draw[->] (por) -- (idle);
+\draw[->] (idle) to[out=-10, in=140, looseness=1] node[pos=0.7] {\hspace{-7.8em}REQA/WUPA} (ready1);
+\draw[->] (halt) to[out=190, in=40, looseness=1] node[pos=0.3] {\hspace{-5.2em}WUPA} (ready1);
+
+% SELECT transitions
+\draw[->] (ready1) -- node[right, align=left] {SELECT 1} (ready2);
+\draw[->] (ready2) -- node[right, align=left] {SELECT 2} (active);
+
+% Left curved transitions
+\draw[->] (ready1) to[out=180, in=170, looseness=1.7] node[left, align=right] {READ 0} (active);
+\draw[->] (ready2) to[out=180, in=165, looseness=2] node[right, align=left] {READ 0} (active);
+
+\draw[->] (active) to[out=195, in=175, looseness=8.5] node[left, align=right] {WRITE} (active);
+\draw[<-] (active) to[out=-15, in=5, looseness=8.5] node[right, align=left] {READ} (active);
+
+% AUTHENTICATE transition
+\draw[->] (active) -- node[right, align=left] {\hspace{-9.0em}AUTHENTICATE} (authenticated);
+
+% HALT transitions
+\draw[->] (ready1) to[out=0, in=240, looseness=1] node[right, pos=0.6] {} (halt);
+\draw[->] (ready2) to[out=0, in=260, looseness=1] node[right, pos=0.6] {} (halt);
+\draw[->] (active) to[out=5, in=280, looseness=1] node[above, pos=0.7] {} (halt);
+\draw[->] (authenticated) to[out=3, in=300, looseness=1] node[above, pos=0.55] {\hspace{-3.5em}HALT} (halt);
+
+% Self-loop for AUTHENTICATED
+\draw[<-] (authenticated) to[out=-8, in=3, looseness=6.0] node[right, align=left] {READ} (authenticated);
+\draw[->] (authenticated) to[out=188, in=177, looseness=6.0] node[left, align=right] {WRITE} (authenticated);
+
+% Right side vertical line and labels
+%\draw[->] (3.5,6.5) -- (3.5,0.5);
+%\node[align=left] at (2.5,3.5) {selection\\procedure};
+%\node[align=left] at (2.5,0) {memory\\operations};
+%\draw[->] (3.5,0.4) -- (3.5,-2.0);
+
+\end{tikzpicture}

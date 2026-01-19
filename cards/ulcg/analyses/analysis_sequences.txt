@@ -1,0 +1,1 @@
+./analysis_sequences.py converted_challenges.json |less

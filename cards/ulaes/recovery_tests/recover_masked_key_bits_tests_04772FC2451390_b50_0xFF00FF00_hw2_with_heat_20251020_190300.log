@@ -1,0 +1,300 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 50 --eeprom-init 0xFF00FF00 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --heat-scan
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_masked_key_bits.py --block 50 --eeprom-init 0xFF00FF00 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --heat-scan
+[+] executing python recover_masked_key_bits.py
+[+] args '--block 50 --eeprom-init 0xFF00FF00 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --heat-scan'
+Block      50 (0x32)
+Key index   0 (DataProt)
+Segment     1
+Mask       DB7E8152
+Validating mask for segment with tearoff value: 1000 ms
+Testing with initial tearoff value: 285 ms
+Tears: 1*285ms + 0*235ms
+Bruteforcing, total attempts: 0
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 1*235ms
+Bruteforcing, total attempts: 529
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 2*235ms
+Bruteforcing, total attempts: 1058
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 3*235ms
+Bruteforcing, total attempts: 1587
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 4*235ms
+Bruteforcing, total attempts: 2116
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 5*235ms
+Bruteforcing, total attempts: 2645
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 6*235ms
+Bruteforcing, total attempts: 3174
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 7*235ms
+Bruteforcing, total attempts: 3703
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 8*235ms
+Bruteforcing, total attempts: 4232
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 9*235ms
+Bruteforcing, total attempts: 4761
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 10*235ms
+Bruteforcing, total attempts: 5290
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 11*235ms
+Bruteforcing, total attempts: 5819
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 12*235ms
+Bruteforcing, total attempts: 6348
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 13*235ms
+Bruteforcing, total attempts: 6877
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 14*235ms
+Bruteforcing, total attempts: 7406
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 15*235ms
+Bruteforcing, total attempts: 7935
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 16*235ms
+Bruteforcing, total attempts: 8464
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 17*235ms
+Bruteforcing, total attempts: 8993
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 18*235ms
+Bruteforcing, total attempts: 9522
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 19*235ms
+Bruteforcing, total attempts: 10051
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 20*235ms
+Bruteforcing, total attempts: 10580
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 21*235ms
+Bruteforcing, total attempts: 11109
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 22*235ms
+Bruteforcing, total attempts: 11638
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 23*235ms
+Bruteforcing, total attempts: 12167
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 24*235ms
+Bruteforcing, total attempts: 12696
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 25*235ms
+Bruteforcing, total attempts: 13225
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 26*235ms
+Bruteforcing, total attempts: 13754
+Auth succeeded with key: 00000000DB7E81570000000000000000
+   New key bits found:   DB7E8157 with HD=02
+Masked key bits found:   00000005
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+    EEPROM bits found:   05000000 (00000101000000000000000000000000)
+            Mask bits:   52817EDB (01010010100000010111111011011011)
+ Recovered block bits:             .....1.1........................
+      Block bits init:   AD8181DB (10101101100000011000000111011011)
+Total authentications:   13789
+Time spent since start:  2 minutes 50.10 seconds
+
+New key?
+   New key bits found:   DB7F8157 with HD=03
+Masked key bits found:   00010005
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+    EEPROM bits found:   05000100 (00000101000000000000000100000000)
+            Mask bits:   52817EDB (01010010100000010111111011011011)
+ Recovered block bits:             .....1.1...............1........
+      Block bits init:   AD8181DB (10101101100000011000000111011011)
+
+New key?
+.
+New key?
+   New key bits found:   DBFE8157 with HD=03
+Masked key bits found:   00800005
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+    EEPROM bits found:   05008000 (00000101000000001000000000000000)
+            Mask bits:   52817EDB (01010010100000010111111011011011)
+ Recovered block bits:             .....1.1........1...............
+      Block bits init:   AD8181DB (10101101100000011000000111011011)
+   (also inserted combined key: DBFF8157)
+
+New key?
+   New key bits found:   DB7E8155 with HD=03
+Masked key bits found:   00000007
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+    EEPROM bits found:   07000000 (00000111000000000000000000000000)
+            Mask bits:   52817EDB (01010010100000010111111011011011)
+ Recovered block bits:             .....101........................
+      Block bits init:   AD8181DB (10101101100000011000000111011011)
+   (also inserted combined key: DBFF8155)
+
+New key?
+
+New key?
+..
+New key?
+   New key bits found:   DB7E8115 with HD=04
+Masked key bits found:   00000047
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+    EEPROM bits found:   47000000 (01000111000000000000000000000000)
+            Mask bits:   52817EDB (01010010100000010111111011011011)
+ Recovered block bits:             .0...101........................
+      Block bits init:   AD8181DB (10101101100000011000000111011011)
+   (also inserted combined key: DBFF8115)
+...
+New key?
+....
+New key?
+
+New key?
+
+New key?
+.
+New key?
+   New key bits found:   DBFE8155 with HD=04
+Masked key bits found:   00800007
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+    EEPROM bits found:   07008000 (00000111000000001000000000000000)
+            Mask bits:   52817EDB (01010010100000010111111011011011)
+ Recovered block bits:             .....101........1...............
+      Block bits init:   AD8181DB (10101101100000011000000111011011)
+
+New key?
+
+New key?
+   New key bits found:   DB7E8153 with HD=01
+Masked key bits found:   00000001
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+    EEPROM bits found:   01000000 (00000001000000000000000000000000)
+            Mask bits:   52817EDB (01010010100000010111111011011011)
+ Recovered block bits:             .......1........................
+      Block bits init:   AD8181DB (10101101100000011000000111011011)
+
+New key?
+
+New key?
+   New key bits found:   DBFE8153 with HD=02
+Masked key bits found:   00800001
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+    EEPROM bits found:   01008000 (00000001000000001000000000000000)
+            Mask bits:   52817EDB (01010010100000010111111011011011)
+ Recovered block bits:             .......1........1...............
+      Block bits init:   AD8181DB (10101101100000011000000111011011)
+
+New key?
+.
+New key?
+
+New key?
+.
+New key?
+.
+New key?
+
+New key?
+....
+New key?
+
+New key?
+
+New key?
+.
+New key?
+.
+New key?
+
+New key?
+.
+New key?
+.
+New key?
+..
+New key?
+.......
+New key?
+
+New key?
+.
+New key?
+..
+New key?
+
+New key?
+   New key bits found:   DBFE8195 with HD=06
+Masked key bits found:   008000C7
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+    EEPROM bits found:   C7008000 (11000111000000001000000000000000)
+            Mask bits:   52817EDB (01010010100000010111111011011011)
+ Recovered block bits:             10...101........1...............
+      Block bits init:   AD8181DB (10101101100000011000000111011011)
+   (also inserted combined key: DBFF8195)
+...
+New key?
+..
+New key?
+
+New key?
+
+New key?
+
+New key?
+...
+New key?
+
+New key?
+
+New key?
+..
+New key?
+.
+New key?
+   New key bits found:   DBFE81D5 with HD=05
+Masked key bits found:   00800087
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+    EEPROM bits found:   87008000 (10000111000000001000000000000000)
+            Mask bits:   52817EDB (01010010100000010111111011011011)
+ Recovered block bits:             1....101........1...............
+      Block bits init:   AD8181DB (10101101100000011000000111011011)
+
+New key?
+
+New key?
+......
+New key?
+
+New key?
+.....
+New key?
+..
+New key?
+...
+New key?
+
+New key?
+
+New key?
+
+New key?
+
+New key?
+
+New key?
+..
+New key?
+....
+New key?
+......
+New key?
+..
+New key?
+
+New key?
+
+New key?

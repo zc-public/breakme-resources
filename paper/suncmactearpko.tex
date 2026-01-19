@@ -1,0 +1,263 @@
+\begin{tikzpicture}[
+    box/.style={draw, thick, minimum width=1.2cm, minimum height=0.7cm, anchor=west},
+    reg/.style={minimum height=0.7cm, minimum width=0.7*4cm, anchor=west},
+    arr/.style={thick,->,>=Stealth},
+    lab/.style={anchor=east, font=\bfseries\large},
+    subword/.style={draw, thick, minimum height=0.7cm, minimum width=0.7cm, fill=white},
+    subwordred/.style={draw, thick, minimum height=0.7cm, minimum width=0.7cm, fill=red!50},
+    subwordredhoriz/.style={inner sep=0pt, outer sep=0pt, text height=0.176cm, minimum width=2.8cm, fill=red!50, draw=none},
+    subwordblue/.style={draw, thick, minimum height=0.7cm, minimum width=0.7cm, fill=blue!40},
+    subwordbluehoriz/.style={inner sep=0pt, outer sep=0pt, text height=0.176cm, minimum width=2.8cm, fill=blue!40, draw=none},
+    subwordgreen/.style={draw, thick, minimum height=0.7cm, minimum width=0.7cm, fill=green!50},
+    subwordgreenhoriz/.style={inner sep=0pt, outer sep=0pt, text height=0.176cm, minimum width=2.8cm, fill=green!50, draw=none},
+    subwordyellow/.style={draw, thick, minimum height=0.7cm, minimum width=0.7cm, fill=yellow!50},
+    subwordyellowhoriz/.style={inner sep=0pt, outer sep=0pt, text height=0.176cm, minimum width=2.8cm, fill=yellow!50, draw=none},
+    cyclab/.style={font=\scriptsize, inner sep=1pt}
+]
+
+% Phase 1
+\foreach \i in {0,1,2,3,4} {
+    \node[lab] (K\i) at (0,-\i*1.8) {$K_{\i}$};
+}
+\node at (1.55,0.85) [font=\small] {SUNCMAC\_KEY};
+\node at (1.55,0.55) [font=\small] {register};
+\node at (1.55+1+0.7*4,0.85) [font=\small] {Secure Unique NFC};
+\node at (1.55+1+0.7*4,0.55) [font=\small] {message};
+
+% Key register boxes (phase 1)
+\foreach \i in {0,1,2,3,4} {
+    \node[reg] (KR\i) at (0.14,-\i*1.8) {};
+    \foreach \j in {0,1,2,3} {
+        \ifnum\j<\i
+            \node[subwordblue] at (0.5+0.7*\j,-\i*1.8) {M};
+        \else
+            \node[subword] at (0.5+0.7*\j,-\i*1.8) {};
+        \fi
+    }
+}
+% Tear nodes (invisible)
+\foreach \i in {0,1,2,3,4} {
+    \node[reg] (KRT\i) at (0.14,-\i*1.8-0.9) {};
+}
+
+\foreach \i in {1,2,3,4} {
+            \node[subwordbluehoriz, text height=0.175cm*\i] at (5.38,0.35-\i*1.885) {};
+}
+% Arrow to ciphertext (A)
+\foreach \i in {0,1,2,3,4} {
+    \draw[arr] (KR\i.east) -- ++(1,0) node[midway, above=0pt, cyclab] {(\the\numexpr\i*2+1\relax)} node[reg, draw] (SUN\i) {$SUN_{\i}$};
+}
+% Tear steps
+\foreach \i in {0,1,2,3} {
+    \draw[arr, dotted] (KRT\i.east) -- ++(1,0) node[midway, above=0pt, cyclab] {} node[reg] (SUN\i) {$SUN_{i \in (\the\numexpr\i\relax, \the\numexpr\i+1\relax)}$};
+    \draw[arr, dotted] ($(KRT\i.east) + (0,0.2)$) -- ++(1,0) node[midway, above=0pt, cyclab] {};
+    \draw[arr, dotted] ($(KRT\i.east) + (0,-0.2)$) -- ++(1,0) node[midway, above=0pt, cyclab] {};
+}
+\draw[arr] (KRT4.east) -- ++(1,0) node[midway, above=0pt, cyclab] {} node[reg] (SUN4) {$SUN_{5,6,7}$};
+\draw[arr] ($(KRT4.east) + (0,0.2)$) -- ++(1,0) node[midway, above=0pt, cyclab] {};
+\draw[arr] ($(KRT4.east) + (0,-0.2)$) -- ++(1,0) node[midway, above=0pt, cyclab] {};
+
+% Arrow to next register step (B)
+\foreach \i in {1,2,3,4} {
+    \draw[
+      thick, bend right=45, -{Stealth}] (KR\the\numexpr\i-1\relax.west)
+      to[thick, bend right=45, -{Stealth}] ++(0,-0.6) 
+      to[thick, bend right=45, -{Stealth}] ++(0,-0.3) 
+      to[thick, bend right=45, -{Stealth}] ++(0,-0.3) 
+      to node[cyclab, left=0.07cm] {} (KR\i.west);
+    \node[cyclab] at ($(KR\the\numexpr\i-1\relax.west)!0.5!(KR\i.west) + (-0.4,0)$) {(\the\numexpr\i*2\relax)};
+    \node[] at ($(KR\the\numexpr\i-1\relax)!0.5!(KR\i)$) {$K_{i \in (\the\numexpr\i-1\relax, \the\numexpr\i\relax)}$};
+}
+% Phase 1 bis
+\foreach \i in {5,6,7,8} {
+    \node[lab] (K\i) at (0,-13*1.8+\i*1.8) {$K_{\i}$};
+}
+\foreach \i in {9} {
+    \node[lab] (K\i) at (0,-\i*1.8) {$K_4$};
+}
+
+\node at (1.55,0.85) [font=\small] {SUNCMAC\_KEY};
+\node at (1.55,0.55) [font=\small] {register};
+\node at (1.55+1+0.7*4,0.85) [font=\small] {Secure Unique NFC};
+\node at (1.55+1+0.7*4,0.55) [font=\small] {message};
+
+% Key register boxes (phase 1 bis)
+\foreach \i in {5,6,7,8,9} {
+    \node[reg] (KR\i) at (0.14,-14*1.8+\i*1.8) {};
+    \foreach \j in {0,1,2,3} {
+        \ifnum\j<\the\numexpr\i-5\relax
+            \node[subwordblue] at (0.5+0.7*\j,-\i*1.8) {M};
+        \else
+            \node[subwordred] at (0.5+0.7*\j,-\i*1.8) {0};
+        \fi
+    }
+}
+
+\draw[
+    thick, bend right=45, -{Stealth}] (KR4.west)
+    to[thick, bend right=45, -{Stealth}] ++(0,-0.6) 
+    to[thick, bend right=45, -{Stealth}] ++(0,-0.3) 
+    to[thick, bend right=45, -{Stealth}] ++(0,-0.3) 
+    to node[cyclab, left=0.07cm] {} (KR9.west);
+\node[cyclab] at ($(KR4.west)!0.5!(KR9.west) + (-0.4,0)$) {(10)};
+\node[] at ($(KR4)!0.5!(KR9)$) {$K_{5,6,7}$};
+
+% Tear nodes (invisible)
+\foreach \i in {5,6,7,8} {
+    \node[reg] (KRT\i) at (0.14,-13*1.8+\i*1.8-0.9) {};
+}
+
+\foreach \i in {5,6,7,8} {
+    \node[subwordredhoriz, text height=0.7cm] at (5.38,-\i*1.8) {};
+}
+\foreach \i in {1,2,3,4} {
+    \node[subwordbluehoriz, text height=0.175cm*\i] at (5.38,0.35-\i*1.885-5*1.8) {};
+}
+% Arrow to ciphertext (A)
+\foreach \i in {5,6,7,8,9} {
+    \draw[arr] (KR\i.east) -- ++(1,0) node[midway, above=0pt, cyclab] {(\the\numexpr29-\i*2\relax)} node[reg, draw] (SUN\i) {$SUN_{\the\numexpr\i-1\relax}$};
+}
+
+% Tear steps
+\foreach \i in {5,6,7,8} {
+    \draw[arr, dotted] (KRT\i.east) -- ++(1,0) node[midway, above=0pt, cyclab] {} node[reg] (SUN\i) {$SUN_{i \in (\the\numexpr\i-1\relax, \the\numexpr\i\relax)}$};
+    \draw[arr, dotted] ($(KRT\i.east) + (0,0.2)$) -- ++(1,0) node[midway, above=0pt, cyclab] {};
+    \draw[arr, dotted] ($(KRT\i.east) + (0,-0.2)$) -- ++(1,0) node[midway, above=0pt, cyclab] {};
+}
+
+% Arrow to next register step (B)
+\foreach \i in {6,7,8,9} {
+    \draw[
+      thick, bend right=45, -{Stealth}] (KR\the\numexpr\i\relax.west)
+      to[thick, bend right=45, -{Stealth}] ++(0,-0.6) 
+      to[thick, bend right=45, -{Stealth}] ++(0,-0.3) 
+      to[thick, bend right=45, -{Stealth}] ++(0,-0.3) 
+      to node[cyclab, left=0.07cm] {} (KR\the\numexpr\i-1\relax.west);
+    \node[cyclab] at ($(KR\the\numexpr\i-1\relax.west)!0.5!(KR\i.west) + (-0.4,0)$) {(\the\numexpr30-\i*2\relax)};
+    \node[] at ($(KR\the\numexpr\i-1\relax)!0.5!(KR\i)$) {$K_{i \in (\the\numexpr\i-2\relax, \the\numexpr\i-1\relax)}$};
+}
+
+
+% Phase 2 (to the right)
+\foreach \i in {0,1,2,3,4} {
+    \node[lab] (K2\i) at (9.14,-\i*1.8) {$K_{\i}$};
+}
+\node at (1.55+9.14,0.85) [font=\small] {SUNCMAC\_KEY};
+\node at (1.55+9.14,0.55) [font=\small] {register};
+\node at (1.55+1+0.7*4+9.14,0.85) [font=\small] {Secure Unique NFC};
+\node at (1.55+1+0.7*4+9.14,0.55) [font=\small] {message};
+
+\foreach \i in {0,1,2,3,4} {
+    \node[reg] (K2R\i) at (0.15+9.14,-\i*1.8) {};
+    \foreach \j in {0,1,2,3} {
+        \ifnum\j<\i
+            \node[subwordyellow] at (0.5+0.7*\j+9.14,-\i*1.8) {M};
+        \else
+            \node[subwordgreen] at (0.5+0.7*\j+9.14,-\i*1.8) {};
+        \fi
+    }
+}
+% Tear nodes (invisible)
+\foreach \i in {0,1,2,3,4} {
+    \node[reg] (K2RT\i) at (0.15+9.14,-\i*1.8-0.9) {};
+}
+
+\foreach \i in {0,1,2,3} {
+    \node[subwordgreenhoriz, text height=0.7cm] at (5.38+9.14,-\i*1.8) {};
+}
+\foreach \i in {1,2,3,4} {
+    \node[subwordyellowhoriz, text height=0.175cm*\i] at (5.38+9.14,0.35-\i*1.885) {};
+}
+% Arrow to key register (C)
+\foreach \i in {0,1,2,3} {
+    \draw[arr, <-] (K2R\i.east) -- ++(1,0) node[midway, above=0pt, cyclab] {(\the\numexpr35-\i*2\relax)} node[reg, draw] (SUN\i) {$SUN_{\i}$};
+}
+\foreach \i in {4} {
+    \node[reg, draw] (SUN\i) at ($(K2R\i.east) + (1,0)$) {$SUN_{\i}$};
+}
+% Tear steps
+\foreach \i in {0,1,2,3} {
+    \draw[arr, <-, dotted] (K2RT\i.east) -- ++(1,0) node[midway, above=0pt, cyclab] {} node[reg] (SUN\i) {$SUN_{i \in (\the\numexpr\i\relax, \the\numexpr\i+1\relax)}$};
+    \draw[arr, <-, dotted] ($(K2RT\i.east) + (0,0.2)$) -- ++(1,0) node[midway, above=0pt, cyclab] {};
+    \draw[arr, <-, dotted] ($(K2RT\i.east) + (0,-0.2)$) -- ++(1,0) node[midway, above=0pt, cyclab] {};
+}
+
+% Arrow to prev register step D)
+\foreach \i in {1,2,3,4} {
+    % \draw[
+    %   thick, bend right=45, <-,
+    %   >={Stealth}] (K2R\the\numexpr\i-1\relax.west) to node[cyclab, left=0.07cm] {(\the\numexpr15-\i*2\relax)} (K2R\i.west);
+    \draw[
+      thick, bend right=-45, <-,
+      >={Stealth}] ($(K2R\the\numexpr\i-1\relax.east) + (3.82cm,0)$)
+      to[thick, bend right=-45, >={Stealth}] ++(0,-0.6) 
+      to[thick, bend right=-45, >={Stealth}] ++(0,-0.3) 
+      to[thick, bend right=-45, >={Stealth}] ++(0,-0.3) 
+      to node[cyclab, right=0.07cm] {} ($(K2R\i.east)+ (3.82cm,0)$);
+    \node[cyclab] at ($(K2R\the\numexpr\i-1\relax.east)!0.5!(K2R\i.east) + (4.3,0)$) {(\the\numexpr36-\i*2\relax)};
+    \node[] at ($(K2R\the\numexpr\i-1\relax)!0.5!(K2R\i)$) {$K_{i \in (\the\numexpr\i-1\relax, \the\numexpr\i\relax)}$};
+}
+
+
+% Phase 2 bis
+
+\foreach \i in {5,6,7,8,9} {
+    \node[lab] (K2\i) at (9.14,-\i*1.8) {$K_{\the\numexpr\i-1\relax}$};
+}
+
+% Tear nodes (invisible)
+\foreach \i in {5,6,7,8,9} {
+    \node[reg] (K2RT\i) at (0.15+9.14,-\i*1.8-0.9) {};
+}
+
+\foreach \i in {5,6,7,8,9} {
+    \node[reg] (K2R\i) at (0.15+9.14,-14*1.8+\i*1.8) {};
+    \foreach \j in {0,1,2,3} {
+        \ifnum\j<\the\numexpr\i-5\relax
+            \node[subwordyellow] at (0.5+0.7*\j+9.14,-14*1.8+\i*1.8) {M};
+        \else
+            \node[subwordred] at (0.5+0.7*\j+9.14,-14*1.8+\i*1.8) {0};
+        \fi
+    }
+}
+
+\foreach \i in {5,6,7,8,9} {
+    \node[subwordredhoriz, text height=0.7cm] at (5.38+9.14,-14*1.8+\i*1.8) {};
+}
+\foreach \i in {6,7,8,9} {
+    \node[subwordyellowhoriz, text height=0.175cm*\i-5*0.175cm] at (5.38+9.14,0.35+\i*1.7055-24.7) {};
+}
+% Arrow to key register (C)
+\foreach \i in {5} {
+    \node[reg, draw] (SUN\i) at ($(K2R\i.east) + (1,0)$) {$SUN_{\the\numexpr13-\i\relax}$};
+}
+\foreach \i in {6,7,8,9} {
+    \draw[arr, <-] (K2R\i.east) -- ++(1,0) node[midway, above=0pt, cyclab] {(\the\numexpr9+\i*2\relax)} node[reg, draw] (SUN\i) {$SUN_{\the\numexpr13-\i\relax}$};
+}
+% Tear steps
+\foreach \i in {5,6,7,8} {
+    \draw[arr, <-, dotted] (K2RT\i.east) -- ++(1,0) node[midway, above=0pt, cyclab] {} node[reg] (SUN\i) {$SUN_{i \in (\the\numexpr\i-1\relax, \the\numexpr\i\relax)}$};
+    \draw[arr, <-, dotted] ($(K2RT\i.east) + (0,0.2)$) -- ++(1,0) node[midway, above=0pt, cyclab] {};
+    \draw[arr, <-, dotted] ($(K2RT\i.east) + (0,-0.2)$) -- ++(1,0) node[midway, above=0pt, cyclab] {};
+}
+
+% Arrow to prev register step D)
+\foreach \i in {5,6,7,8} {
+    % \draw[
+    %   thick, bend right=45, <-,
+    %   >={Stealth}] (K2R\the\numexpr\i-1\relax.west) to node[cyclab, left=0.07cm] {(\the\numexpr15-\i*2\relax)} (K2R\i.west);
+    \draw[
+      thick, bend right=-45, <-,
+      >={Stealth}] ($(K2R\the\numexpr14-\i\relax.east) + (3.82cm,0)$)
+      to[thick, bend right=-45, >={Stealth}] ++(0,-0.6) 
+      to[thick, bend right=-45, >={Stealth}] ++(0,-0.3) 
+      to[thick, bend right=-45, >={Stealth}] ++(0,-0.3) 
+      to node[cyclab, right=0.07cm] {} ($(K2R\the\numexpr13-\i\relax.east)+ (3.82cm,0)$);
+    \node[cyclab] at ($(K2R\the\numexpr14-\i\relax.east)!0.5!(K2R\the\numexpr13-\i\relax.east) + (4.3,0)$) {(\the\numexpr36-\i*2\relax)};
+    \node[] at ($(K2R\the\numexpr14-\i\relax)!0.5!(K2R\the\numexpr13-\i\relax)$) {$K_{i \in (\the\numexpr\i-1\relax, \the\numexpr\i\relax)}$};
+}
+
+\node at (3.5,0.6-10*1.8) [font=\small] {Online phase};
+\node at (3.5+9.14,0.6-10*1.8) [font=\small] {Offline phase};
+
+\end{tikzpicture}

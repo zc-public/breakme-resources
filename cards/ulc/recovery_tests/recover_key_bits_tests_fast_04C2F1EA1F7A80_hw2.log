@@ -1,0 +1,362 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 44 --eeprom-init 0x42524541 --bitflips 2 --tear1 380
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 44 --eeprom-init 0x42524541 --bitflips 2 --tear1 380
+[+] executing python recover_key_bits.py
+[+] args '--block 44 --eeprom-init 0x42524541 --bitflips 2 --tear1 380'
+Block      44 (0x2C)
+Segment     3
+Testing with initial tearoff value: 380 ms
+Tears: 1*380ms + 0*240ms
+Bruteforcing, total attempts: 0
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 1*240ms
+Bruteforcing, total attempts: 407
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 2*240ms
+Bruteforcing, total attempts: 814
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 3*240ms
+Bruteforcing, total attempts: 1221
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 4*240ms
+Bruteforcing, total attempts: 1628
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 5*240ms
+Bruteforcing, total attempts: 2035
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 6*240ms
+Bruteforcing, total attempts: 2442
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 7*240ms
+Bruteforcing, total attempts: 2849
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 8*240ms
+Bruteforcing, total attempts: 3256
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 9*240ms
+Bruteforcing, total attempts: 3663
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 10*240ms
+Bruteforcing, total attempts: 4070
+Extending tearoff value: 252 ms
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 11*[240..252]ms
+Bruteforcing, total attempts: 4477
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 12*[240..252]ms
+Bruteforcing, total attempts: 4884
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 13*[240..252]ms
+Bruteforcing, total attempts: 5291
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 14*[240..252]ms
+Bruteforcing, total attempts: 5698
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 15*[240..252]ms
+Bruteforcing, total attempts: 6105
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 16*[240..252]ms
+Bruteforcing, total attempts: 6512
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 17*[240..252]ms
+Bruteforcing, total attempts: 6919
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 18*[240..252]ms
+Bruteforcing, total attempts: 7326
+Auth succeeded with key: 00000000400000000000000000000000
+   New key bits found:   40000000 with HW=01
+     EEPROM bits init:   42524541 (01000010010100100100010101000001)
+ Recovered block bits:             .........................1......
+Total authentications:   7354
+Time spent since start:  1 minutes 25.37 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 45 --eeprom-init 0x4B4D4549 --bitflips 2 --tear1 380
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 45 --eeprom-init 0x4B4D4549 --bitflips 2 --tear1 380
+[+] executing python recover_key_bits.py
+[+] args '--block 45 --eeprom-init 0x4B4D4549 --bitflips 2 --tear1 380'
+Block      45 (0x2D)
+Segment     2
+Testing with initial tearoff value: 380 ms
+Tears: 1*380ms + 0*240ms
+Bruteforcing, total attempts: 0
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 1*240ms
+Bruteforcing, total attempts: 407
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 2*240ms
+Bruteforcing, total attempts: 814
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 3*240ms
+Bruteforcing, total attempts: 1221
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 4*240ms
+Bruteforcing, total attempts: 1628
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 5*240ms
+Bruteforcing, total attempts: 2035
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 6*240ms
+Bruteforcing, total attempts: 2442
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 7*240ms
+Bruteforcing, total attempts: 2849
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 8*240ms
+Bruteforcing, total attempts: 3256
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 9*240ms
+Bruteforcing, total attempts: 3663
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 10*240ms
+Bruteforcing, total attempts: 4070
+Extending tearoff value: 252 ms
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 11*[240..252]ms
+Bruteforcing, total attempts: 4477
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 12*[240..252]ms
+Bruteforcing, total attempts: 4884
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 13*[240..252]ms
+Bruteforcing, total attempts: 5291
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 14*[240..252]ms
+Bruteforcing, total attempts: 5698
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 15*[240..252]ms
+Bruteforcing, total attempts: 6105
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 16*[240..252]ms
+Bruteforcing, total attempts: 6512
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 17*[240..252]ms
+Bruteforcing, total attempts: 6919
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 18*[240..252]ms
+Bruteforcing, total attempts: 7326
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 19*[240..252]ms
+Bruteforcing, total attempts: 7733
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 20*[240..252]ms
+Bruteforcing, total attempts: 8140
+Extending tearoff value: 264 ms
+Testing with extra tearoff value: 264 ms
+Tears: 1*380ms + 21*[240..264]ms
+Bruteforcing, total attempts: 8547
+Testing with extra tearoff value: 264 ms
+Tears: 1*380ms + 22*[240..264]ms
+Bruteforcing, total attempts: 8954
+Testing with extra tearoff value: 264 ms
+Tears: 1*380ms + 23*[240..264]ms
+Bruteforcing, total attempts: 9361
+Auth succeeded with key: 00044000000000000000000000000000
+   New key bits found:   00044000 with HW=02
+     EEPROM bits init:   4B4D4549 (01001011010011010100010101001001)
+ Recovered block bits:             .........1...........1..........
+Total authentications:   9651
+Time spent since start:  1 minutes 51.65 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 46 --eeprom-init 0x46594F55 --bitflips 2 --tear1 380
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 46 --eeprom-init 0x46594F55 --bitflips 2 --tear1 380
+[+] executing python recover_key_bits.py
+[+] args '--block 46 --eeprom-init 0x46594F55 --bitflips 2 --tear1 380'
+Block      46 (0x2E)
+Segment     1
+Testing with initial tearoff value: 380 ms
+Tears: 1*380ms + 0*240ms
+Bruteforcing, total attempts: 0
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 1*240ms
+Bruteforcing, total attempts: 407
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 2*240ms
+Bruteforcing, total attempts: 814
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 3*240ms
+Bruteforcing, total attempts: 1221
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 4*240ms
+Bruteforcing, total attempts: 1628
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 5*240ms
+Bruteforcing, total attempts: 2035
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 6*240ms
+Bruteforcing, total attempts: 2442
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 7*240ms
+Bruteforcing, total attempts: 2849
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 8*240ms
+Bruteforcing, total attempts: 3256
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 9*240ms
+Bruteforcing, total attempts: 3663
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 10*240ms
+Bruteforcing, total attempts: 4070
+Extending tearoff value: 252 ms
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 11*[240..252]ms
+Bruteforcing, total attempts: 4477
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 12*[240..252]ms
+Bruteforcing, total attempts: 4884
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 13*[240..252]ms
+Bruteforcing, total attempts: 5291
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 14*[240..252]ms
+Bruteforcing, total attempts: 5698
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 15*[240..252]ms
+Bruteforcing, total attempts: 6105
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 16*[240..252]ms
+Bruteforcing, total attempts: 6512
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 17*[240..252]ms
+Bruteforcing, total attempts: 6919
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 18*[240..252]ms
+Bruteforcing, total attempts: 7326
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 19*[240..252]ms
+Bruteforcing, total attempts: 7733
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 20*[240..252]ms
+Bruteforcing, total attempts: 8140
+Extending tearoff value: 264 ms
+Testing with extra tearoff value: 264 ms
+Tears: 1*380ms + 21*[240..264]ms
+Bruteforcing, total attempts: 8547
+Testing with extra tearoff value: 264 ms
+Tears: 1*380ms + 22*[240..264]ms
+Bruteforcing, total attempts: 8954
+Testing with extra tearoff value: 264 ms
+Tears: 1*380ms + 23*[240..264]ms
+Bruteforcing, total attempts: 9361
+Testing with extra tearoff value: 264 ms
+Tears: 1*380ms + 24*[240..264]ms
+Bruteforcing, total attempts: 9768
+Testing with extra tearoff value: 264 ms
+Tears: 1*380ms + 25*[240..264]ms
+Bruteforcing, total attempts: 10175
+Testing with extra tearoff value: 264 ms
+Tears: 1*380ms + 26*[240..264]ms
+Bruteforcing, total attempts: 10582
+Auth succeeded with key: 00000000000000000000000000004002
+   New key bits found:   00004002 with HW=02
+     EEPROM bits init:   46594F55 (01000110010110010100111101010101)
+ Recovered block bits:             ......1..1......................
+Total authentications:   10623
+Time spent since start:  2 minutes 3.00 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 47 --eeprom-init 0x43414E21 --bitflips 2 --tear1 380
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 47 --eeprom-init 0x43414E21 --bitflips 2 --tear1 380
+[+] executing python recover_key_bits.py
+[+] args '--block 47 --eeprom-init 0x43414E21 --bitflips 2 --tear1 380'
+Block      47 (0x2F)
+Segment     0
+Testing with initial tearoff value: 380 ms
+Tears: 1*380ms + 0*240ms
+Bruteforcing, total attempts: 0
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 1*240ms
+Bruteforcing, total attempts: 407
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 2*240ms
+Bruteforcing, total attempts: 814
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 3*240ms
+Bruteforcing, total attempts: 1221
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 4*240ms
+Bruteforcing, total attempts: 1628
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 5*240ms
+Bruteforcing, total attempts: 2035
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 6*240ms
+Bruteforcing, total attempts: 2442
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 7*240ms
+Bruteforcing, total attempts: 2849
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 8*240ms
+Bruteforcing, total attempts: 3256
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 9*240ms
+Bruteforcing, total attempts: 3663
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 10*240ms
+Bruteforcing, total attempts: 4070
+Extending tearoff value: 252 ms
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 11*[240..252]ms
+Bruteforcing, total attempts: 4477
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 12*[240..252]ms
+Bruteforcing, total attempts: 4884
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 13*[240..252]ms
+Bruteforcing, total attempts: 5291
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 14*[240..252]ms
+Bruteforcing, total attempts: 5698
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 15*[240..252]ms
+Bruteforcing, total attempts: 6105
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 16*[240..252]ms
+Bruteforcing, total attempts: 6512
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 17*[240..252]ms
+Bruteforcing, total attempts: 6919
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 18*[240..252]ms
+Bruteforcing, total attempts: 7326
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 19*[240..252]ms
+Bruteforcing, total attempts: 7733
+Testing with extra tearoff value: 252 ms
+Tears: 1*380ms + 20*[240..252]ms
+Bruteforcing, total attempts: 8140
+Extending tearoff value: 264 ms
+Testing with extra tearoff value: 264 ms
+Tears: 1*380ms + 21*[240..264]ms
+Bruteforcing, total attempts: 8547
+Testing with extra tearoff value: 264 ms
+Tears: 1*380ms + 22*[240..264]ms
+Bruteforcing, total attempts: 8954
+Testing with extra tearoff value: 264 ms
+Tears: 1*380ms + 23*[240..264]ms
+
+[!] finished recover_key_bits.py with exception
+

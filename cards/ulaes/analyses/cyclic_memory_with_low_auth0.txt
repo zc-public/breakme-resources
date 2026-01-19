@@ -1,0 +1,54 @@
+AUTH0=0x3C
+hf 14a raw -akb7 26
+hf 14a raw -c 3000
+[+] 04 D8 63 37 C2 45 13 90 04 48 00 00 00 00 00 00 [ 4F 0B ]
+    BLOCK0      BLOCK1      BLOCK2      BLOCK3
+
+AUTH0=0x03
+hf mfu wrbl -b 41 -d 00000003 -k 00000000000000000000000000000000
+hf 14a raw -sc 3000
+[+] 04 D8 63 37 C2 45 13 90 04 48 00 00 04 D8 63 37 [ 6F 3A ]
+    BLOCK0      BLOCK1      BLOCK2      BLOCK0                   ok
+hf 14a raw -sc 3001
+[+] C2 45 13 90 04 48 00 00 04 D8 63 37 C2 45 13 90 [ 47 EC ]
+    BLOCK1      BLOCK2      BLOCK0      BLOCK1                   ok
+hf 14a raw -sc 3002
+[+] 04 48 00 00 04 D8 63 37 C2 45 13 90 04 48 00 00 [ A3 04 ]
+    BLOCK2      BLOCK0      BLOCK1      BLOCK2                   ok
+hf 14a raw -akb7 26
+hf 14a raw -c 3000
+[+] 04 D8 63 37 C2 45 13 90 04 48 00 00 04 D8 63 37 [ 6F 3A ]
+    BLOCK0      BLOCK1      BLOCK2      BLOCK0                   ok
+
+AUTH0=0x02
+hf mfu wrbl -b 41 -d 00000002 -k 00000000000000000000000000000000
+hf 14a raw -sc 3000
+[+] 04 D8 63 37 C2 45 13 90 04 D8 63 37 C2 45 13 90 [ 4E 41 ]
+    BLOCK0      BLOCK1      BLOCK0      BLOCK1                   ok
+hf 14a raw -sc 3001
+[+] C2 45 13 90 04 D8 63 37 C2 45 13 90 04 D8 63 37 [ E5 F1 ]
+    BLOCK1      BLOCK0      BLOCK1      BLOCK0                   ok
+hf 14a raw -akb7 26
+hf 14a raw -c 3000
+[+] 04 D8 63 37 C2 45 13 90 04 D8 63 37 C2 45 13 90 [ 4E 41 ]
+    BLOCK0      BLOCK1      BLOCK0      BLOCK1                   ok
+
+AUTH0=0x01
+hf mfu wrbl -b 41 -d 00000001 -k 00000000000000000000000000000000
+hf 14a raw -sc 3000
+[+] 04 D8 63 37 04 D8 63 37 04 D8 63 37 04 D8 63 37 [ B7 39 ]
+    BLOCK0      BLOCK0      BLOCK0      BLOCK0                   ok
+hf 14a raw -akb7 26
+hf 14a raw -c 3000
+[+] 04 D8 63 37 04 D8 63 37 04 D8 63 37 04 D8 63 37 [ B7 39 ]
+    BLOCK0      BLOCK0      BLOCK0      BLOCK0                   ok
+
+AUTH0=0x00
+hf mfu wrbl -b 41 -d 00000000 -k 00000000000000000000000000000000
+hf 14a raw -sc 3000
+[+] 00 
+hf 14a raw -akb7 26
+hf 14a raw -c 3000
+no reply
+
+hf mfu wrbl -b 41 -d 0000003c -k 00000000000000000000000000000000

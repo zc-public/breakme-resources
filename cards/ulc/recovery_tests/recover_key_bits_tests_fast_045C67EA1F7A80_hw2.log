@@ -1,0 +1,100 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 44 --eeprom-init 0x42524541 --bitflips 2 --tear1 380
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 44 --eeprom-init 0x42524541 --bitflips 2 --tear1 380
+[+] executing python recover_key_bits.py
+[+] args '--block 44 --eeprom-init 0x42524541 --bitflips 2 --tear1 380'
+Block      44 (0x2C)
+Segment     3
+Testing with initial tearoff value: 380 ms
+Tears: 1*380ms + 0*240ms
+Bruteforcing, total attempts: 0
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 1*240ms
+Bruteforcing, total attempts: 407
+Auth succeeded with key: 00000000004000400000000000000000
+   New key bits found:   00400040 with HW=02
+     EEPROM bits init:   42524541 (01000010010100100100010101000001)
+ Recovered block bits:             .1...............1..............
+Total authentications:   575
+Time spent since start:  0 minutes 7.24 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 45 --eeprom-init 0x4B4D4549 --bitflips 2 --tear1 380
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 45 --eeprom-init 0x4B4D4549 --bitflips 2 --tear1 380
+[+] executing python recover_key_bits.py
+[+] args '--block 45 --eeprom-init 0x4B4D4549 --bitflips 2 --tear1 380'
+Block      45 (0x2D)
+Segment     2
+Testing with initial tearoff value: 380 ms
+Tears: 1*380ms + 0*240ms
+Bruteforcing, total attempts: 0
+Auth succeeded with key: 00400800000000000000000000000000
+   New key bits found:   00400800 with HW=02
+     EEPROM bits init:   4B4D4549 (01001011010011010100010101001001)
+ Recovered block bits:             ............1....1..............
+Total authentications:   246
+Time spent since start:  0 minutes 3.35 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 46 --eeprom-init 0x46594F55 --bitflips 2 --tear1 380
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 46 --eeprom-init 0x46594F55 --bitflips 2 --tear1 380
+[+] executing python recover_key_bits.py
+[+] args '--block 46 --eeprom-init 0x46594F55 --bitflips 2 --tear1 380'
+Block      46 (0x2E)
+Segment     1
+Testing with initial tearoff value: 380 ms
+Tears: 1*380ms + 0*240ms
+Bruteforcing, total attempts: 0
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 1*240ms
+Bruteforcing, total attempts: 407
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 2*240ms
+Bruteforcing, total attempts: 814
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 3*240ms
+Bruteforcing, total attempts: 1221
+Testing with extra tearoff value: 240 ms
+Tears: 1*380ms + 4*240ms
+
+[!] finished recover_key_bits.py with exception
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 47 --eeprom-init 0x43414E21 --bitflips 2 --tear1 380
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 47 --eeprom-init 0x43414E21 --bitflips 2 --tear1 380
+[+] executing python recover_key_bits.py
+[+] args '--block 47 --eeprom-init 0x43414E21 --bitflips 2 --tear1 380'
+Block      47 (0x2F)
+Segment     0
+Testing with initial tearoff value: 380 ms
+Tears: 1*380ms + 0*240ms
+Bruteforcing, total attempts: 0
+Auth succeeded with key: 00000000000000000040000000000000
+   New key bits found:   00400000 with HW=01
+     EEPROM bits init:   43414E21 (01000011010000010100111000100001)
+ Recovered block bits:             .................1..............
+Total authentications:   21
+Time spent since start:  0 minutes 0.95 seconds
+
+[+] finished recover_key_bits.py
+

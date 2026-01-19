@@ -1,0 +1,4 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 48 --eeprom-init 0xFF00FF00 --bitflips 3 --mask 0x5CC54F0237122097CC168E3C48BB5B13 --tear1 285
+
+[+] Using UART port /dev/ttyACM1

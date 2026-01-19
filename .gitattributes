@@ -1,0 +1,5 @@
+*.[jJ][pP][gG] filter=lfs diff=lfs merge=lfs -text
+*.[pP][dD][fF] filter=lfs diff=lfs merge=lfs -text
+*.[pP][nN][gG] filter=lfs diff=lfs merge=lfs -text
+*.bz2 filter=lfs diff=lfs merge=lfs -text
+*.pgf filter=lfs diff=lfs merge=lfs -text

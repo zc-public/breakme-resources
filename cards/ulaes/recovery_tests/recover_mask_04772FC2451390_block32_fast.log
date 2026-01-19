@@ -1,0 +1,691 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run ./recover_mask_fast.py --block 50
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run ./recover_mask_fast.py --block 50
+[+] executing python ./recover_mask_fast.py
+[+] args '--block 50'
+Testing with initial tearoff value: 280 ms
+Testing with initial tearoff value: 275 ms
+Keys: [0x00000000,]
+Tears: 1*275ms + 0*225ms
+Max HD: 0
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Trying known keys: 00000000
+Trying 1 bitflip from key: 00000000
+Auth succeeded with key: 00000000000400000000000000000000
+New key found: 00040000 with HD=01, max HD in keys: 01
+Keys: [0x00040000, 0x00000000,]
+Tears: 1*275ms + 56*225ms
+Max HD: 1
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Trying known keys: 00040000
+Keys: [0x00040000, 0x00000000,]
+Tears: 1*275ms + 82*225ms
+Max HD: 1
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 00040000
+Keys: [0x00040000, 0x00000000,]
+Tears: 1*275ms + 89*225ms
+Max HD: 1
+Testing with extra tearoff value: 225 ms
+Trying known keys: 00040000
+Trying known keys: 00000000
+Trying 1 bitflip from key: 00040000
+Auth succeeded with key: 00000000000C00000000000000000000
+New key found: 000C0000 with HD=02, max HD in keys: 02
+Keys: [0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 90*225ms
+Max HD: 2
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 000C0000
+Keys: [0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 100*225ms
+Max HD: 2
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 000C0000
+Trying known keys: 00040000
+Keys: [0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 105*225ms
+Max HD: 2
+Trying known keys: 000C0000
+Trying known keys: 00040000
+Trying known keys: 00000000
+Trying 1 bitflip from key: 000C0000
+Auth succeeded with key: 00000000000E00000000000000000000
+New key found: 000E0000 with HD=03, max HD in keys: 03
+Keys: [0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 105*225ms
+Max HD: 3
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 000E0000
+Keys: [0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 107*225ms
+Max HD: 3
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 000E0000
+Keys: [0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 114*225ms
+Max HD: 3
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 000E0000
+Keys: [0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 116*225ms
+Max HD: 3
+Trying known keys: 000E0000
+Trying known keys: 000C0000
+Trying known keys: 00040000
+Trying 1 bitflip from key: 000E0000
+Auth succeeded with key: 00000000010E00000000000000000000
+New key found: 010E0000 with HD=04, max HD in keys: 04
+Keys: [0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 116*225ms
+Max HD: 4
+Testing with extra tearoff value: 225 ms
+Trying known keys: 010E0000
+Trying known keys: 000E0000
+Trying known keys: 000C0000
+Trying 1 bitflip from key: 010E0000
+Auth succeeded with key: 00000000000E00000000000000000000
+Keys: [0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 117*225ms
+Max HD: 4
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 010E0000
+Trying known keys: 000E0000
+Trying known keys: 000C0000
+Trying 1 bitflip from key: 010E0000
+Auth succeeded with key: 00000000010E80000000000000000000
+New key found: 010E8000 with HD=05, max HD in keys: 05
+Keys: [0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 119*225ms
+Max HD: 5
+Testing with extra tearoff value: 225 ms
+Trying known keys: 010E8000
+Keys: [0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 120*225ms
+Max HD: 5
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 010E8000
+Trying known keys: 010E0000
+Trying known keys: 000E0000
+Trying 1 bitflip from key: 010E8000
+Auth succeeded with key: 00000000810E80000000000000000000
+New key found: 810E8000 with HD=06, max HD in keys: 06
+Keys: [0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 122*225ms
+Max HD: 6
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 810E8000
+Keys: [0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 138*225ms
+Max HD: 6
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 810E8000
+Keys: [0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 142*225ms
+Max HD: 6
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 810E8000
+Keys: [0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 144*225ms
+Max HD: 6
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 810E8000
+Trying known keys: 010E8000
+Trying known keys: 010E0000
+Trying 1 bitflip from key: 810E8000
+Auth succeeded with key: 00000000810E80000000000000000000
+Keys: [0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 146*225ms
+Max HD: 6
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 810E8000
+Keys: [0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 149*225ms
+Max HD: 6
+Testing with extra tearoff value: 225 ms
+Trying known keys: 810E8000
+Keys: [0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 150*225ms
+Max HD: 6
+Trying known keys: 810E8000
+Keys: [0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 150*225ms
+Max HD: 6
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 810E8000
+Trying known keys: 010E8000
+Trying known keys: 010E0000
+Trying 1 bitflip from key: 810E8000
+Auth succeeded with key: 00000000810E81000000000000000000
+New key found: 810E8100 with HD=07, max HD in keys: 07
+Keys: [0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 156*225ms
+Max HD: 7
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 810E8100
+Trying known keys: 810E8000
+Trying known keys: 010E8000
+Trying 1 bitflip from key: 810E8100
+Auth succeeded with key: 00000000814E81000000000000000000
+New key found: 814E8100 with HD=08, max HD in keys: 08
+Keys: [0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 160*225ms
+Max HD: 8
+Trying known keys: 814E8100
+Keys: [0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 160*225ms
+Max HD: 8
+Testing with extra tearoff value: 225 ms
+Trying known keys: 814E8100
+Keys: [0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 161*225ms
+Max HD: 8
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 814E8100
+Keys: [0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 163*225ms
+Max HD: 8
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 814E8100
+Keys: [0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 170*225ms
+Max HD: 8
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 814E8100
+Keys: [0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 176*225ms
+Max HD: 8
+Testing with extra tearoff value: 225 ms
+Trying known keys: 814E8100
+Keys: [0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 177*225ms
+Max HD: 8
+Testing with extra tearoff value: 225 ms
+Trying known keys: 814E8100
+Keys: [0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 178*225ms
+Max HD: 8
+Trying known keys: 814E8100
+Trying known keys: 810E8100
+Trying known keys: 810E8000
+Trying 1 bitflip from key: 814E8100
+Auth succeeded with key: 00000000C14E81000000000000000000
+New key found: C14E8100 with HD=09, max HD in keys: 09
+Keys: [0xC14E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 178*225ms
+Max HD: 9
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: C14E8100
+Keys: [0xC14E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 180*225ms
+Max HD: 9
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: C14E8100
+Keys: [0xC14E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 183*225ms
+Max HD: 9
+Trying known keys: C14E8100
+Keys: [0xC14E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 183*225ms
+Max HD: 9
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: C14E8100
+Keys: [0xC14E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 186*225ms
+Max HD: 9
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: C14E8100
+Trying known keys: 814E8100
+Trying known keys: 810E8100
+Trying 1 bitflip from key: C14E8100
+Auth succeeded with key: 00000000C10E81000000000000000000
+New key found: C10E8100 with HD=08, max HD in keys: 09
+Keys: [0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 190*225ms
+Max HD: 9
+Trying known keys: C14E8100
+Trying known keys: C10E8100
+Keys: [0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 190*225ms
+Max HD: 9
+Testing with extra tearoff value: 225 ms
+Trying known keys: C14E8100
+Trying known keys: C10E8100
+Keys: [0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 191*225ms
+Max HD: 9
+Trying known keys: C14E8100
+Trying known keys: C10E8100
+Keys: [0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 191*225ms
+Max HD: 9
+Trying known keys: C14E8100
+Keys: [0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 191*225ms
+Max HD: 9
+Trying known keys: C14E8100
+Trying known keys: C10E8100
+Trying known keys: 814E8100
+Trying known keys: 810E8100
+Trying 1 bitflip from key: C14E8100
+Auth succeeded with key: 00000000C15E81000000000000000000
+New key found: C15E8100 with HD=10, max HD in keys: 10
+Keys: [0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 191*225ms
+Max HD: 10
+Trying known keys: C15E8100
+Keys: [0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 191*225ms
+Max HD: 10
+Testing with extra tearoff value: 225 ms
+Trying known keys: C15E8100
+Trying known keys: C14E8100
+Trying known keys: C10E8100
+Keys: [0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 192*225ms
+Max HD: 10
+Trying known keys: C15E8100
+Trying known keys: C14E8100
+Trying known keys: C10E8100
+Keys: [0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 192*225ms
+Max HD: 10
+Trying known keys: C15E8100
+Trying known keys: C14E8100
+Keys: [0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 192*225ms
+Max HD: 10
+Trying known keys: C15E8100
+Trying known keys: C14E8100
+Trying known keys: C10E8100
+Keys: [0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 192*225ms
+Max HD: 10
+Trying known keys: C15E8100
+Trying known keys: C14E8100
+Trying known keys: C10E8100
+Trying known keys: 814E8100
+Trying 1 bitflip from key: C15E8100
+Auth succeeded with key: 00000000C17E81000000000000000000
+New key found: C17E8100 with HD=11, max HD in keys: 11
+Keys: [0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 192*225ms
+Max HD: 11
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: C17E8100
+Keys: [0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 205*225ms
+Max HD: 11
+Trying known keys: C17E8100
+Trying known keys: C15E8100
+Trying known keys: C14E8100
+Trying 1 bitflip from key: C17E8100
+Auth succeeded with key: 00000000C17E81100000000000000000
+New key found: C17E8110 with HD=12, max HD in keys: 12
+Keys: [0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 205*225ms
+Max HD: 12
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: C17E8110
+Keys: [0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 209*225ms
+Max HD: 12
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: C17E8110
+Keys: [0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 214*225ms
+Max HD: 12
+Trying known keys: C17E8110
+Trying known keys: C17E8100
+Trying known keys: C15E8100
+Trying 1 bitflip from key: C17E8110
+Auth succeeded with key: 00000000C37E81100000000000000000
+New key found: C37E8110 with HD=13, max HD in keys: 13
+Keys: [0xC37E8110, 0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 214*225ms
+Max HD: 13
+Trying known keys: C37E8110
+Trying known keys: C17E8110
+Trying known keys: C17E8100
+Trying 1 bitflip from key: C37E8110
+Auth succeeded with key: 00000000D37E81100000000000000000
+New key found: D37E8110 with HD=14, max HD in keys: 14
+Keys: [0xD37E8110, 0xC37E8110, 0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 214*225ms
+Max HD: 14
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: D37E8110
+Keys: [0xD37E8110, 0xC37E8110, 0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 224*225ms
+Max HD: 14
+Testing with extra tearoff value: 225 ms
+Trying known keys: D37E8110
+Trying known keys: C37E8110
+Trying known keys: C17E8110
+Trying 1 bitflip from key: D37E8110
+Auth succeeded with key: 00000000D37E81120000000000000000
+New key found: D37E8112 with HD=15, max HD in keys: 15
+Keys: [0xD37E8112, 0xD37E8110, 0xC37E8110, 0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 225*225ms
+Max HD: 15
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: D37E8112
+Keys: [0xD37E8112, 0xD37E8110, 0xC37E8110, 0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 229*225ms
+Max HD: 15
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: D37E8112
+Keys: [0xD37E8112, 0xD37E8110, 0xC37E8110, 0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 232*225ms
+Max HD: 15
+Testing with extra tearoff value: 225 ms
+Trying known keys: D37E8112
+Trying known keys: D37E8110
+Keys: [0xD37E8112, 0xD37E8110, 0xC37E8110, 0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 233*225ms
+Max HD: 15
+Testing with extra tearoff value: 225 ms
+Trying known keys: D37E8112
+Keys: [0xD37E8112, 0xD37E8110, 0xC37E8110, 0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 234*225ms
+Max HD: 15
+Testing with extra tearoff value: 225 ms
+Trying known keys: D37E8112
+Keys: [0xD37E8112, 0xD37E8110, 0xC37E8110, 0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 235*225ms
+Max HD: 15
+Testing with extra tearoff value: 225 ms
+Trying known keys: D37E8112
+Trying known keys: D37E8110
+Keys: [0xD37E8112, 0xD37E8110, 0xC37E8110, 0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 236*225ms
+Max HD: 15
+Testing with extra tearoff value: 225 ms
+Trying known keys: D37E8112
+Trying known keys: D37E8110
+Trying known keys: C37E8110
+Trying 1 bitflip from key: D37E8112
+Auth succeeded with key: 00000000D37E81520000000000000000
+New key found: D37E8152 with HD=16, max HD in keys: 16
+Keys: [0xD37E8152, 0xD37E8112, 0xD37E8110, 0xC37E8110, 0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 237*225ms
+Max HD: 16
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: D37E8152
+Keys: [0xD37E8152, 0xD37E8112, 0xD37E8110, 0xC37E8110, 0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 243*225ms
+Max HD: 16
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: D37E8152
+Trying known keys: D37E8112
+Trying known keys: D37E8110
+Trying 1 bitflip from key: D37E8152
+Auth succeeded with key: 00000000D37E81520000000000000000
+Keys: [0xD37E8152, 0xD37E8112, 0xD37E8110, 0xC37E8110, 0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 245*225ms
+Max HD: 16
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: D37E8152
+Trying known keys: D37E8112
+Trying known keys: D37E8110
+Trying 1 bitflip from key: D37E8152
+Auth succeeded with key: 00000000DB7E81520000000000000000
+New key found: DB7E8152 with HD=17, max HD in keys: 17
+Keys: [0xDB7E8152, 0xD37E8152, 0xD37E8112, 0xD37E8110, 0xC37E8110, 0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 247*225ms
+Max HD: 17
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Testing with extra tearoff value: 236 ms
+Stopping after 40 successful authentications with the same key.
+Keys: [0xDB7E8152, 0xD37E8152, 0xD37E8112, 0xD37E8110, 0xC37E8110, 0xC17E8110, 0xC17E8100, 0xC15E8100, 0xC14E8100, 0xC10E8100, 0x814E8100, 0x810E8100, 0x810E8000, 0x010E8000, 0x010E0000, 0x000E0000, 0x000C0000, 0x00040000, 0x00000000,]
+Tears: 1*275ms + 287*225ms (last 40 tears just for confirmation)
+Block 50 (0x32) segment key mask probably found: DB7E8152 (mask block value: 52817EDB) with HD=17
+Total authentications: 3722
+Time spent since start: 1 minutes 49.51 seconds
+
+[!] Script terminated by SystemExit -1
+
+
+[!] finished ./recover_mask_fast.py with exception
+

@@ -1,0 +1,448 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 56 --eeprom-init 0xA5A5A5A5 --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_masked_key_bits.py --block 56 --eeprom-init 0xA5A5A5A5 --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+[+] executing python recover_masked_key_bits.py
+[+] args '--block 56 --eeprom-init 0xA5A5A5A5 --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285'
+Block      56 (0x38)
+Key index   2 (RFU)
+Segment     3
+Mask       00000000
+Testing with initial tearoff value: 285 ms
+Tears: 1*285ms + 0*235ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 2, OK
+   New key bits found:   20000020 with HD=02
+Masked key bits found:   20000020
+     EEPROM bits init:   A5A5A5A5 (10100101101001011010010110100101)
+    EEPROM bits found:   20000020 (00100000000000000000000000100000)
+            Mask bits:   00000000 (00000000000000000000000000000000)
+ Recovered block bits:             ..1.......................1.....
+      Block bits init:   A5A5A5A5 (10100101101001011010010110100101)
+Total authentications:   204
+Time spent since start:  0 minutes 0.73 seconds
+
+[+] finished recover_masked_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 56 --eeprom-init 0x5A5A5A5A --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_masked_key_bits.py --block 56 --eeprom-init 0x5A5A5A5A --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+[+] executing python recover_masked_key_bits.py
+[+] args '--block 56 --eeprom-init 0x5A5A5A5A --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285'
+Block      56 (0x38)
+Key index   2 (RFU)
+Segment     3
+Mask       00000000
+Testing with initial tearoff value: 285 ms
+Tears: 1*285ms + 0*235ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 3, OK
+   New key bits found:   000A4000 with HD=03
+Masked key bits found:   000A4000
+     EEPROM bits init:   5A5A5A5A (01011010010110100101101001011010)
+    EEPROM bits found:   00400A00 (00000000010000000000101000000000)
+            Mask bits:   00000000 (00000000000000000000000000000000)
+ Recovered block bits:             .........1..........1.1.........
+      Block bits init:   5A5A5A5A (01011010010110100101101001011010)
+Total authentications:   3752
+Time spent since start:  0 minutes 0.74 seconds
+
+[+] finished recover_masked_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 57 --eeprom-init 0xA5A5A5A5 --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_masked_key_bits.py --block 57 --eeprom-init 0xA5A5A5A5 --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+[+] executing python recover_masked_key_bits.py
+[+] args '--block 57 --eeprom-init 0xA5A5A5A5 --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285'
+Block      57 (0x39)
+Key index   2 (RFU)
+Segment     2
+Mask       00000000
+Testing with initial tearoff value: 285 ms
+Tears: 1*285ms + 0*235ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 12, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 1*235ms
+Bruteforcing, total attempts: 5492
+RFU Hamming Weight: 12, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 2*235ms
+Bruteforcing, total attempts: 10982
+RFU Hamming Weight: 12, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 3*235ms
+Bruteforcing, total attempts: 16472
+RFU Hamming Weight: 12, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 4*235ms
+Bruteforcing, total attempts: 21962
+RFU Hamming Weight: 12, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 5*235ms
+Bruteforcing, total attempts: 27452
+RFU Hamming Weight: 12, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 6*235ms
+Bruteforcing, total attempts: 32942
+RFU Hamming Weight: 11, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 7*235ms
+Bruteforcing, total attempts: 38432
+RFU Hamming Weight: 10, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 8*235ms
+Bruteforcing, total attempts: 43922
+RFU Hamming Weight: 9, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 9*235ms
+Bruteforcing, total attempts: 49412
+RFU Hamming Weight: 9, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 10*235ms
+Bruteforcing, total attempts: 54902
+RFU Hamming Weight: 9, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 11*235ms
+Bruteforcing, total attempts: 60392
+RFU Hamming Weight: 9, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 12*235ms
+Bruteforcing, total attempts: 65882
+RFU Hamming Weight: 7, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 13*235ms
+Bruteforcing, total attempts: 71372
+RFU Hamming Weight: 8, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 14*235ms
+Bruteforcing, total attempts: 76862
+RFU Hamming Weight: 8, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 15*235ms
+Bruteforcing, total attempts: 82352
+RFU Hamming Weight: 8, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 16*235ms
+Bruteforcing, total attempts: 87842
+RFU Hamming Weight: 7, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 17*235ms
+Bruteforcing, total attempts: 93332
+RFU Hamming Weight: 7, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 18*235ms
+Bruteforcing, total attempts: 98822
+RFU Hamming Weight: 6, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 19*235ms
+Bruteforcing, total attempts: 104312
+RFU Hamming Weight: 6, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 20*235ms
+Bruteforcing, total attempts: 109802
+RFU Hamming Weight: 5, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 21*235ms
+Bruteforcing, total attempts: 115292
+RFU Hamming Weight: 6, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 22*235ms
+Bruteforcing, total attempts: 120782
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 23*235ms
+Bruteforcing, total attempts: 126272
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 24*235ms
+Bruteforcing, total attempts: 131762
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 25*235ms
+Bruteforcing, total attempts: 137252
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 26*235ms
+Bruteforcing, total attempts: 142742
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 27*235ms
+Bruteforcing, total attempts: 148232
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 28*235ms
+Bruteforcing, total attempts: 153722
+RFU Hamming Weight: 3, OK
+   New key bits found:   00A00080 with HD=03
+Masked key bits found:   00A00080
+     EEPROM bits init:   A5A5A5A5 (10100101101001011010010110100101)
+    EEPROM bits found:   8000A000 (10000000000000001010000000000000)
+            Mask bits:   00000000 (00000000000000000000000000000000)
+ Recovered block bits:             1...............1.1.............
+      Block bits init:   A5A5A5A5 (10100101101001011010010110100101)
+Total authentications:   158275
+Time spent since start:  0 minutes 7.93 seconds
+
+[+] finished recover_masked_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 57 --eeprom-init 0x5A5A5A5A --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_masked_key_bits.py --block 57 --eeprom-init 0x5A5A5A5A --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+[+] executing python recover_masked_key_bits.py
+[+] args '--block 57 --eeprom-init 0x5A5A5A5A --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285'
+Block      57 (0x39)
+Key index   2 (RFU)
+Segment     2
+Mask       00000000
+Testing with initial tearoff value: 285 ms
+Tears: 1*285ms + 0*235ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 15, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 1*235ms
+Bruteforcing, total attempts: 5492
+RFU Hamming Weight: 15, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 2*235ms
+Bruteforcing, total attempts: 10982
+RFU Hamming Weight: 15, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 3*235ms
+Bruteforcing, total attempts: 16472
+RFU Hamming Weight: 15, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 4*235ms
+Bruteforcing, total attempts: 21962
+RFU Hamming Weight: 15, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 5*235ms
+Bruteforcing, total attempts: 27452
+RFU Hamming Weight: 15, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 6*235ms
+Bruteforcing, total attempts: 32942
+RFU Hamming Weight: 15, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 7*235ms
+Bruteforcing, total attempts: 38432
+RFU Hamming Weight: 15, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 8*235ms
+Bruteforcing, total attempts: 43922
+RFU Hamming Weight: 14, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 9*235ms
+Bruteforcing, total attempts: 49412
+RFU Hamming Weight: 14, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 10*235ms
+Bruteforcing, total attempts: 54902
+RFU Hamming Weight: 14, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 11*235ms
+Bruteforcing, total attempts: 60392
+RFU Hamming Weight: 14, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 12*235ms
+Bruteforcing, total attempts: 65882
+RFU Hamming Weight: 14, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 13*235ms
+Bruteforcing, total attempts: 71372
+RFU Hamming Weight: 14, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 14*235ms
+Bruteforcing, total attempts: 76862
+RFU Hamming Weight: 13, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 15*235ms
+Bruteforcing, total attempts: 82352
+RFU Hamming Weight: 13, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 16*235ms
+Bruteforcing, total attempts: 87842
+RFU Hamming Weight: 12, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 17*235ms
+Bruteforcing, total attempts: 93332
+RFU Hamming Weight: 12, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 18*235ms
+Bruteforcing, total attempts: 98822
+RFU Hamming Weight: 10, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 19*235ms
+Bruteforcing, total attempts: 104312
+RFU Hamming Weight: 10, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 20*235ms
+Bruteforcing, total attempts: 109802
+RFU Hamming Weight: 9, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 21*235ms
+Bruteforcing, total attempts: 115292
+RFU Hamming Weight: 9, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 22*235ms
+Bruteforcing, total attempts: 120782
+RFU Hamming Weight: 7, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 23*235ms
+Bruteforcing, total attempts: 126272
+RFU Hamming Weight: 7, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 24*235ms
+Bruteforcing, total attempts: 131762
+RFU Hamming Weight: 7, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 25*235ms
+Bruteforcing, total attempts: 137252
+RFU Hamming Weight: 7, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 26*235ms
+Bruteforcing, total attempts: 142742
+RFU Hamming Weight: 7, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 27*235ms
+Bruteforcing, total attempts: 148232
+RFU Hamming Weight: 7, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 28*235ms
+Bruteforcing, total attempts: 153722
+RFU Hamming Weight: 7, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 29*235ms
+Bruteforcing, total attempts: 159212
+RFU Hamming Weight: 7, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 30*235ms
+Bruteforcing, total attempts: 164702
+RFU Hamming Weight: 7, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 31*235ms
+Bruteforcing, total attempts: 170192
+RFU Hamming Weight: 5, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 32*235ms
+Bruteforcing, total attempts: 175682
+RFU Hamming Weight: 5, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 33*235ms
+Bruteforcing, total attempts: 181172
+RFU Hamming Weight: 5, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 34*235ms
+Bruteforcing, total attempts: 186662
+RFU Hamming Weight: 5, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 35*235ms
+Bruteforcing, total attempts: 192152
+RFU Hamming Weight: 5, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 36*235ms
+Bruteforcing, total attempts: 197642
+RFU Hamming Weight: 5, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 37*235ms
+Bruteforcing, total attempts: 203132
+RFU Hamming Weight: 5, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 38*235ms
+Bruteforcing, total attempts: 208622
+RFU Hamming Weight: 3, OK
+   New key bits found:   18000040 with HD=03
+Masked key bits found:   18000040
+     EEPROM bits init:   5A5A5A5A (01011010010110100101101001011010)
+    EEPROM bits found:   40000018 (01000000000000000000000000011000)
+            Mask bits:   00000000 (00000000000000000000000000000000)
+ Recovered block bits:             .1.........................11...
+      Block bits init:   5A5A5A5A (01011010010110100101101001011010)
+Total authentications:   210483
+Time spent since start:  0 minutes 10.51 seconds
+
+[+] finished recover_masked_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 58 --eeprom-init 0xA5A5A5A5 --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_masked_key_bits.py --block 58 --eeprom-init 0xA5A5A5A5 --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+[+] executing python recover_masked_key_bits.py
+[+] args '--block 58 --eeprom-init 0xA5A5A5A5 --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285'
+Block      58 (0x3A)
+Key index   2 (RFU)
+Segment     1
+Mask       00000000
+Testing with initial tearoff value: 285 ms
+
+[!] finished recover_masked_key_bits.py with exception
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 58 --eeprom-init 0x5A5A5A5A --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_masked_key_bits.py --block 58 --eeprom-init 0x5A5A5A5A --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+[+] executing python recover_masked_key_bits.py
+[+] args '--block 58 --eeprom-init 0x5A5A5A5A --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285'
+Block      58 (0x3A)
+Key index   2 (RFU)
+Segment     1
+Mask       00000000
+Testing with initial tearoff value: 285 ms
+
+[!] finished recover_masked_key_bits.py with exception
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 59 --eeprom-init 0xA5A5A5A5 --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_masked_key_bits.py --block 59 --eeprom-init 0xA5A5A5A5 --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+[+] executing python recover_masked_key_bits.py
+[+] args '--block 59 --eeprom-init 0xA5A5A5A5 --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285'
+Block      59 (0x3B)
+Key index   2 (RFU)
+Segment     0
+Mask       00000000
+Testing with initial tearoff value: 285 ms
+
+[!] finished recover_masked_key_bits.py with exception
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 59 --eeprom-init 0x5A5A5A5A --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_masked_key_bits.py --block 59 --eeprom-init 0x5A5A5A5A --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+[+] executing python recover_masked_key_bits.py
+[+] args '--block 59 --eeprom-init 0x5A5A5A5A --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285'
+Block      59 (0x3B)
+Key index   2 (RFU)
+Segment     0
+Mask       00000000
+Testing with initial tearoff value: 285 ms
+
+[!] finished recover_masked_key_bits.py with exception
+

@@ -1,0 +1,398 @@
+Testing cyclic memory when you read pages close to the key
+hf 14a raw -sc 302A
+=> should read 30000000 00000000 04...UID
+NXP ULC:
+ULCG:
+ULC_USCUID-UL:
+yes
+
+
+for i in range(256):
+    print(f"rem {i:02x}\nhf 14a raw -sc {i:02x}")
+
+NXP ULC:
+hf 14a raw -sc xx
+=> 1a                  => 00
+   30, 50, a0, a2      => silent
+   xx                  => 00
+
+ULCG:
+hf 14a raw -sc xx
+=> 1a                  => *silent*
+   30, 50, a0, a2      => silent
+   xx                  => *silent*
+
+ULC_USCUID-UL:
+hf 14a raw -sc xx
+=> 1a                  => 00
+   30, 50, a0, a2      => silent
+   xx                  => *silent*
+
+
+for i in range(256):
+    print(f"rem {i:02x}00\nhf 14a raw -sc {i:02x}00")
+
+NXP ULC:
+hf 14a raw -sc xx00
+=> 1a00 (auth)
+   3000 (read)
+   5000                => silent
+   a000 (compat write) => 00 (ack)
+   a200 (write)        => silent
+   xx00                => 00
+
+ULCG:
+hf 14a raw -sc xx00
+=> 1a00 (auth)
+   3000 (read)
+   5000-*5F00*         => silent
+   a000 (compat write) => 00 (ack)
+   a200 (write)        => silent
+   xx00                => *silent*
+
+ULC_USCUID-UL:
+hf 14a raw -sc xx00
+=> 1a00 (auth)
+   3000 (read)
+   5000-*5F00*         => silent
+   a000 (compat write) => 00 (ack)
+   a200 (write)        => silent
+   xx00                => 00
+
+
+
+ULC_USCUID-UL:
+hf 14a raw -sc 1a0000  => 01
+NXP ULC:               => silent
+ULCG:                  => silent
+
+
+
+
+
+hf mfu wrbl -b 40 -d 00100000
+hf mfu rdbl -b 40
+[=] 40/0x28 | 00 10 00 00 | ....
+hf mfu wrbl -b 40 -d 00000000
+hf mfu rdbl -b 40
+[=] 40/0x28 | 00 10 00 00 | ....
+
+hw tearoff --delay 1200
+hw tearoff --on
+hf 14a raw -sc A22800000000
+hf mfu rdbl -b 40
+
+
+simple tear-off does not work (tested on lock2/lock3)
+
+
+while ULCG:
+hf mfu otptear -b 40 -i 100 -s 200 -e 3000 -t 00000000 -m 00000000
+200us => done
+
+
+hf mfu cauth --key 000102030405060708090a0b0c0d0e0f
+trace list --frame
+=> 1A FDT 11412-11428 then nack 11412-11492 old NXP ULC
+=> 1A FDT 11412-11428 then nack 11476-11492 recent NXP ULC (Mercure Paris), 10000 -> no collision. Saflok Key 1CD0A82018AA640ABA9410EC50B638EC
+=> 1A FDT 11428       then nack  1044- 1124 ULCG
+=> 1A FDT 14868-14884 then nack 49428-49508 USCUID-UL
+
+nxp
+FDT to 1A00           min/max:  11412/11428
+FDT to AF*  (bad key) min/max:  11412/11428
+FDT to AF*  (def key) min/max:  11412/11492
+for i, j in [(11412, 11428), (11412, 11428), (11412, 11492)]:
+    mean = (i + j) / 2
+    delta = (j - i) / 2
+    print( f"{round(mean / 13.56)} +- {round(delta / 13.56)} us")
+842 +- 1 us
+842 +- 1 us
+845 +- 3 us
+
+ULCG
+FDT to 1A00           min/max:  11412/11428
+FDT to AF*  (bad key) min/max:  1044/1060
+FDT to AF*  (def key) min/max:  11412/11492
+for i, j in [(11412, 11428), (1044, 1060), (11412, 11492)]:
+    mean = (i + j) / 2
+    delta = (j - i) / 2
+    print( f"{round(mean / 13.56)} +- {round(delta / 13.56)} us")
+842 +- 1 us
+78 +- 1 us
+845 +- 3 us
+
+USCUID-UL
+FDT to 1A00           min/max:  14868/14884
+FDT to AF*  (bad key) min/max:  49428/49444
+FDT to AF*  (def key) min/max:  49428/49508
+for i,j in [(14868, 14884), (49428, 49444), (49428, 49508)]:
+    mean = (i + j) / 2
+    delta = (j - i) / 2
+    print( f"{round(mean / 13.56)} +- {round(delta / 13.56)} us")
+1097 +- 1 us
+3646 +- 1 us
+3648 +- 3 us
+
+===========================================================================
+
+# Card 1 Chris' "Universal Red Test Card"
+Answer to RATS:  00
+FDT to 1A00          :  14884 = 1097.64 us
+FDT to AF*  (bad key):  49444 = 3646.31 us
+FDT to AF*  (def key):  49444 = 3646.31 us
+1A* Wrong CRC, diff: 6CF3
+
+[usb] pm3 --> hf 14a raw -sc e050
+[+] 00 
+
+# Card 2 USCUID-UL
+https://www.aliexpress.com/item/1005006739532211.html ?
+
+https://github.com/RfidResearchGroup/proxmark3/blob/master/doc/magic_cards_notes.md#ul-2-41-blocks
+https://github.com/RfidResearchGroup/proxmark3/blob/master/doc/magic_cards_notes.md#mifare-ultralight-ev1-directwrite-flavour-3
+
+script run hf_mfu_uscuid.py -r
+[+] 850000A000000A3C0004030101000E03
+[+] ^^^^............................ Magic wakeup disabled
+[+] ....^^.......................... Magic wakeup style Gen1a 40(7)/43
+[+] ......^^........................ Config available in regular mode
+[+] ........^^...................... Auth type 1B - PWD
+[+] ..........^^.................... unknown
+[+] ............^^.................. CUID enabled
+[+] ..............^^................ Maximum memory configuration: UL21
+[+] ................^^^^^^^^^^^^^^^^ version info
+
+[usb] pm3 --> hf 14a raw -sc e050
+[+] 85 00 00 A0 00 00 0A 3C 00 04 03 01 01 00 0E 03 [ C8 1D ]
+
+config: UL-21
+No ULC response
+
+# Card 3 MFUL EV1 DW BCC: warning / Lab401 Ultralight DW
+Lab401 silkscreen, donated in 2019-01 ?
+
+https://github.com/RfidResearchGroup/proxmark3/blob/master/doc/magic_cards_notes.md#mifare-ultralight-ev1-directwrite-flavour-1
+
+[+] 850000A000000AC30004030101000B03
+[+] ^^^^............................ Magic wakeup disabled
+[+] ....^^.......................... Magic wakeup style Gen1a 40(7)/43
+[+] ......^^........................ Config available in regular mode
+[+] ........^^...................... Auth type 1B - PWD
+[+] ..........^^.................... unknown
+[+] ............^^.................. CUID enabled
+[+] ..............^^................ Maximum memory configuration: UL11
+[+] ................^^^^^^^^^^^^^^^^ version info
+
+[usb] pm3 --> hf 14a raw -sc e050
+[+] 85 00 00 A0 00 00 0A C3 00 04 03 01 01 00 0B 03 [ 41 DF ]
+
+config: UL-11
+No ULC response
+
+Activate ULC:
+hf 14a raw -sck E200850000A0; hf 14a raw -ck E2010A000A00; hf 14a raw -ck E20200000000; hf 14a raw -c E20300000000
+=> unknown key
+=> remove ULC and make all pages readable
+hf 14a raw -sck E200850000A0; hf 14a raw -ck E20100000A55; hf 14a raw -ck E20200000000; hf 14a raw -c E20300000000
+hf 14a raw -sc 302C
+[+] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 [ 37 49 ]
+hf 14a raw -sck E200850000A0; hf 14a raw -ck E2010A000A00; hf 14a raw -ck E20200000000; hf 14a raw -c E20300000000
+hf mfu cauth
+[=] 
+[+] --- Known UL-C 3DES keys
+[#] Cmd Error: 00
+[#] Authentication failed
+[+] Authentication 3DES key... 00000000000000000000000000000000 ( ok )
+hf mfu wrbl -b 44 -d 42524541 --force -k 00000000000000000000000000000000
+hf mfu wrbl -b 45 -d 4B4D4549 --force -k 00000000414552420000000000000000
+hf mfu wrbl -b 46 -d 46594F55 --force -k 49454D4B414552420000000000000000
+hf mfu wrbl -b 47 -d 43414E21 --force -k 49454D4B4145524200000000554F5946
+hf mfu cauth
+
+Answer to RATS:  850000A00A000A0000000000000
+hf 14a raw -sck E200850000A0; hf 14a raw -ck E2010A000A00; hf 14a raw -ck E20200000000; hf 14a raw -c E20300000000
+hf mfu cauth
+hf mfu wrbl -b 44 -d 42524541 --force -k 00000000000000000000000000000000
+hf mfu wrbl -b 45 -d 4B4D4549 --force -k 00000000414552420000000000000000
+hf mfu wrbl -b 46 -d 46594F55 --force -k 49454D4B414552420000000000000000
+hf mfu wrbl -b 47 -d 43414E21 --force -k 49454D4B4145524200000000554F5946
+hf mfu cauth
+000006281
+FDT to 1A00          :  14884 = 1097.64 us
+FDT to AF*  (bad key):  49444 = 3646.31 us
+FDT to AF*  (def key):  49508 = 3651.03 us
+1A* Wrong CRC, diff: 6CF3
+
+# Cards 4/5/6 MFUL EV1 DW BCC:warning
+
+maybe "shopping/perso/ali_pdfs/7 Byte Ultralight EV1 UID Changeable Writable 13.56MHz RFID Rewritable Proximity Smart Card Copy Clone.pdf" 2018-09-18
+
+https://github.com/RfidResearchGroup/proxmark3/blob/master/doc/magic_cards_notes.md#mifare-ultralight-ev1-directwrite-flavour-2
+
+[+] 850000A00A000AC30004030101000B03
+[+] ^^^^............................ Magic wakeup disabled
+[+] ....^^.......................... Magic wakeup style Gen1a 40(7)/43
+[+] ......^^........................ Config available in regular mode
+[+] ........^^...................... Auth type 1A - 3DES
+[+] ..........^^.................... unknown
+[+] ............^^.................. CUID enabled
+[+] ..............^^................ Maximum memory configuration: UL11
+[+] ................^^^^^^^^^^^^^^^^ version info
+
+[usb] pm3 --> hf 14a raw -sc e050
+[+] 85 00 00 A0 0A 00 0A C3 00 04 03 01 01 00 0B 03 [ 16 D7 ]
+
+Answer to RATS:  850000A00A000AC30004030101000B0316D7
+FDT to 1A00          :  14868 = 1096.46 us
+FDT to AF*  (bad key):  49444 = 3646.31 us
+FDT to AF*  (def key):  49492 = 3649.85 us
+1A* Wrong CRC, diff: 6CF3
+
+ULC, else same as #3
+
+hf 14a raw -sck E200850000A0; hf 14a raw -ck E2010A000A00; hf 14a raw -ck E20200000000; hf 14a raw -c E20300000000
+hf mfu cauth
+hf mfu wrbl -b 44 -d 42524541 --force -k 00000000000000000000000000000000
+hf mfu wrbl -b 45 -d 4B4D4549 --force -k 00000000414552420000000000000000
+hf mfu wrbl -b 46 -d 46594F55 --force -k 49454D4B414552420000000000000000
+hf mfu wrbl -b 47 -d 43414E21 --force -k 49454D4B4145524200000000554F5946
+hf mfu cauth
+
+# Card 7 MFUL DW BCC:warning / Lab401 Ultralight UID Modifiable
+Lab401 silkscreen, donated in 2019-01 ?
+
+[+] 850000A00A000AB00000000000000000
+[+] ^^^^............................ Magic wakeup disabled
+[+] ....^^.......................... Magic wakeup style Gen1a 40(7)/43
+[+] ......^^........................ Config available in regular mode
+[+] ........^^...................... Auth type 1A - 3DES
+[+] ..........^^.................... unknown
+[+] ............^^.................. CUID enabled
+[+] ..............^^................ Maximum memory configuration: unknown
+[+] ................^^^^^^^^^^^^^^^^ version info
+
+ULC, max mem = ?? 24 pages
+
+hf 14a raw -sc e050
+[+] 85 00 00 A0 0A 00 0A B0 00 00 00 00 00 00 00 00 [ 18 4D ]
+
+Reconfigure and test ULC
+7AFF00A0 0A000AC3 00000000 00000000
+=>
+hf 14a raw -sck E2007AFF00A0; hf 14a raw -ck E2010A000AC3; hf 14a raw -ck E20200000000; hf 14a raw -c E20300000000
+
+script run hf_mfu_uscuid.py -r
+[+] 7AFF00A00A000AC30000000000000000
+[+] ^^^^............................ Magic wakeup enabled with config access
+[+] ....^^.......................... Magic wakeup style Gen1a 40(7)/43
+[+] ......^^........................ Config available in regular mode
+[+] ........^^...................... Auth type 1A - 3DES
+[+] ..........^^.................... unknown
+[+] ............^^.................. CUID enabled
+[+] ..............^^................ Maximum memory configuration: UL11
+[+] ................^^^^^^^^^^^^^^^^ version info
+
+hf 14a raw -sc e050
+ok
+hf 14a raw -akb 7 40; hf 14a raw -k 43;hf 14a raw -c e050
+ok
+hf 14a raw -akb 7 40; hf 14a raw -k 43;hf 14a raw -ck 30F0;hf 14a raw -ck 30F4;hf 14a raw -ck 30F8;hf 14a raw -c 30FC
+[+] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 [ 37 49 ]
+[+] 00 00 00 00 00 00 00 00 44 00 04 00 88 AF 00 00 [ 12 A7 ]
+[+] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 [ 37 49 ]
+[+] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 [ 37 49 ]
+
+reconfigure as ULC:
+850000A00A000AC30004030101000B03
+hf 14a raw -sck E200850000A0; hf 14a raw -ck E2010A000AC3; hf 14a raw -ck E20200040301; hf 14a raw -c E20301000B03
+850000A0 0A000A00 00000000 00000000
+850000A00A000A000000000000000000
+hf 14a raw -sck E200850000A0; hf 14a raw -ck E2010A000A00; hf 14a raw -ck E20200000000; hf 14a raw -c E20300000000
+
+=> unknown ULC key
+=> configure larger memory with 55:
+hf 14a raw -sck E200850000A0; hf 14a raw -ck E2010A000A55; hf 14a raw -ck E20200000000; hf 14a raw -c E20300000000
+
+hf 14a raw -sc e050
+[+] 85 00 00 A0 0A 00 0A 55 00 00 00 00 00 00 00 00 [ 8D EA ]
+
+=> ULC key is interpreted as 00*
+
+hf 14a raw -sc 302C
+[+] D4 F3 EA C9 CE A2 B5 E7 46 59 4F 55 43 41 4E 21 [ C3 E9 ]
+=> key D4F3EAC9 CEA2B5E7 46594F55 43414E21
+
+hf mfu wrbl -b 42 -d 30000000 --force -k 00000000000000000000000000000000
+hf mfu wrbl -b 43 -d 00000000 --force -k 00000000000000000000000000000000
+hf mfu wrbl -b 44 -d 42524541 --force -k 00000000000000000000000000000000
+hf mfu wrbl -b 45 -d 4B4D4549 --force -k 00000000000000000000000000000000
+hf mfu wrbl -b 46 -d 46594F55 --force -k 00000000000000000000000000000000
+hf mfu wrbl -b 47 -d 43414E21 --force -k 00000000000000000000000000000000
+
+=> configure default ULC:
+hf 14a raw -sck E200850000A0; hf 14a raw -ck E2010A000A00; hf 14a raw -ck E20200000000; hf 14a raw -c E20300000000
+
+Answer to RATS:  850000A00A000A0000000000000000006281
+FDT to 1A00          :  14884 = 1097.64 us
+FDT to AF*  (bad key):  49428 = 3645.13 us
+FDT to AF*  (def key):  49428 = 3645.13 us
+1A* Wrong CRC, diff: 6CF3
+
+
+# Cards 8/9 MFULC DW BCC:auto
+
+- 1 with silver sticker "Lab401.com UL-C", donated in 2019-01 ?
+- 1 with Chinese quality check "16/17", maybe "shopping/perso/ali_pdfs/UID changeable Ultralight C Card 0 block writable Chinese Magic Card.pdf" 2018-09-18
+
+Answer to RATS:  0A78008102DBA0C119402AB5
+FDT to 1A00          :  29732 = 2192.63 us
+FDT to AF*  (bad key):  72980 = 5382.01 us
+FDT to AF*  (def key):  72996 = 5383.19 us
+
+Answer to RATS:  0A78008102DBA0C119402AB5
+FDT to 1A00          :  29220 = 2154.87 us
+FDT to AF*  (bad key):  71828 = 5297.05 us
+FDT to AF*  (def key):  71844 = 5298.23 us
+
+=> https://github.com/RfidResearchGroup/proxmark3/blob/master/doc/magic_cards_notes.md#mifare-ultralight-c-directwrite-flavour-1
+
+TODO: fingerprint in the table, investigate PRNG...
+
+
+# Card 10 NTAG213 DW / Lab401 NTAG 213 DW
+Lab401 silkscreen, donated in 2019-01 ?
+
+hf 14a raw -sc e050
+[+] 85 00 00 A0 00 00 0A A5 00 04 04 02 01 00 0F 03 [ 79 0C ]
+
+script run hf_mfu_uscuid.py -r
+[+] 850000A000000AA50004040201000F03
+[+] ^^^^............................ Magic wakeup disabled
+[+] ....^^.......................... Magic wakeup style Gen1a 40(7)/43
+[+] ......^^........................ Config available in regular mode
+[+] ........^^...................... Auth type 1B - PWD
+[+] ..........^^.................... unknown
+[+] ............^^.................. CUID enabled
+[+] ..............^^................ Maximum memory configuration: NTAG 213
+[+] ................^^^^^^^^^^^^^^^^ version info
+
+===========================================================================
+
+
+
+hf 14a raw -akb 7 40; hf 14a raw -k 43;hf 14a raw -c e100
+hf 14a raw -akb 7 20; hf 14a raw -k 23;hf 14a raw -c e100
+
+===========================================================================
+# Card 6 attempt to lock
+
+hf 14a raw -sck E20085000000; hf 14a raw -ck E2010A000000; hf 14a raw -ck E20200000000; hf 14a raw -c E20300000000
+=> now same as Red card
+
+
+
+from 13/09/2020 172f3163e6d238ddd1c11ce36b1dff9ed31552dd
+MIFARE Classic DirectWrite, UFUID version
+to lock classic: 85000000000000000000000000000008
+

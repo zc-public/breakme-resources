@@ -1,0 +1,25 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 48 --eeprom-init 0xFF00FF00 --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_masked_key_bits.py --block 48 --eeprom-init 0xFF00FF00 --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+[+] executing python recover_masked_key_bits.py
+[+] args '--block 48 --eeprom-init 0xFF00FF00 --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285'
+Block      48 (0x30)
+Key index   0 (DataProt)
+Segment     3
+Mask       F1FE673F
+Validating mask for segment with tearoff value: 1000 ms
+Testing with initial tearoff value: 285 ms
+Tears: 1*285ms + 0*235ms
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 48 --eeprom-init 0x00FF00FF --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_masked_key_bits.py --block 48 --eeprom-init 0x00FF00FF --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+[+] executing python recover_masked_key_bits.py
+[+] args '--block 48 --eeprom-init 0x00FF00FF --bitflips 3 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285'

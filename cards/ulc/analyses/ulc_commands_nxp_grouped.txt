@@ -1,0 +1,256 @@
+Analyzing fuzzing results from: ulc_commands_nxp.txt
+Default response determined to be: silent
+
+Command Ranges Summary:
+--------------------------------------------------------------------------------
+
+Command: ACTIVE-1B-CRC
+  Non-default responses:
+    NAK (00): 00-2F, 31-4F, 51-9F, A1, A3-FF
+  DEFAULT (silent): 30, 50, A0, A2
+
+Command: ACTIVE-1B-NOCRC
+  DEFAULT (silent): Full range (00-FF)
+
+Command: ACTIVE-2B-CRC-[00-19]
+  Non-default responses:
+    NAK (00): 00-FF
+  No default (silent) responses found
+
+Command: ACTIVE-2B-CRC-1A
+  Non-default responses:
+    [+] AF 20 A5 0C 89 C5 EB 5F 61 [ 7B 25 ] (WytdIEFGIDIwIEE1IDBDIDg5IEM1IEVCIDVGIDYxIFsgN0IgMjUgXQo=): 00
+    NAK (00): 01-FF
+  No default (silent) responses found
+
+Command: ACTIVE-2B-CRC-[1B-4F]
+  Non-default responses:
+    NAK (00): 00-FF
+  No default (silent) responses found
+
+Command: ACTIVE-2B-CRC-50
+  Non-default responses:
+    NAK (00): 01-FF
+  DEFAULT (silent): 00
+
+Command: ACTIVE-2B-CRC-[51-A1]
+  Non-default responses:
+    NAK (00): 00-FF
+  No default (silent) responses found
+
+Command: ACTIVE-2B-CRC-A2
+  DEFAULT (silent): Full range (00-FF)
+
+Command: ACTIVE-2B-CRC-[A3-FF]
+  Non-default responses:
+    NAK (00): 00-FF
+  No default (silent) responses found
+
+Command: ACTIVE-2B-NOCRC-[00-19]
+  Non-default responses:
+    NAK (01): 00-FF
+  No default (silent) responses found
+
+Command: ACTIVE-2B-NOCRC-1A
+  Non-default responses:
+    NAK (01): 01-FF
+  DEFAULT (silent): 00
+
+Command: ACTIVE-2B-NOCRC-[1B-2F]
+  Non-default responses:
+    NAK (01): 00-FF
+  No default (silent) responses found
+
+Command: ACTIVE-2B-NOCRC-30
+  DEFAULT (silent): Full range (00-FF)
+
+Command: ACTIVE-2B-NOCRC-[31-4F]
+  Non-default responses:
+    NAK (01): 00-FF
+  No default (silent) responses found
+
+Command: ACTIVE-2B-NOCRC-50
+  DEFAULT (silent): Full range (00-FF)
+
+Command: ACTIVE-2B-NOCRC-[51-62]
+  Non-default responses:
+    NAK (01): 00-FF
+  No default (silent) responses found
+
+Command: ACTIVE-2B-NOCRC-63
+  Non-default responses:
+    NAK (01): 00-62, 64-FF
+    NAK (00): 63
+  No default (silent) responses found
+
+Command: ACTIVE-2B-NOCRC-[64-9F]
+  Non-default responses:
+    NAK (01): 00-FF
+  No default (silent) responses found
+
+Command: ACTIVE-2B-NOCRC-A0
+  DEFAULT (silent): Full range (00-FF)
+
+Command: ACTIVE-2B-NOCRC-A1
+  Non-default responses:
+    NAK (01): 00-FF
+  No default (silent) responses found
+
+Command: ACTIVE-2B-NOCRC-A2
+  DEFAULT (silent): Full range (00-FF)
+
+Command: ACTIVE-2B-NOCRC-[A3-FF]
+  Non-default responses:
+    NAK (01): 00-FF
+  No default (silent) responses found
+
+Command: AUTH-1B-CRC
+  Non-default responses:
+    NAK (00): 00-2F, 31-4F, 51-9F, A1, A3-FF
+  DEFAULT (silent): 30, 50, A0, A2
+
+Command: AUTH-1B-NOCRC
+  DEFAULT (silent): Full range (00-FF)
+
+Command: AUTH-2B-CRC-[00-2F]
+  Non-default responses:
+    NAK (00): 00-FF
+  No default (silent) responses found
+
+Command: AUTH-2B-CRC-30
+  Non-default responses:
+    [+] 04 B2 69 57 1A 10 7A 80 F0 48 00 00 00 00 00 00 [ 45 9B ] (WytdIDA0IEIyIDY5IDU3IDFBIDEwIDdBIDgwIEYwIDQ4IDAwIDAwIDAwIDAwIDAwIDAwIFsgNDUgOUIgXQo=): 00
+    [+] 1A 10 7A 80 F0 48 00 00 00 00 00 00 00 00 00 00 [ DB 5C ] (WytdIDFBIDEwIDdBIDgwIEYwIDQ4IDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIFsgREIgNUMgXQo=): 01
+    [+] F0 48 00 00 00 00 00 00 00 00 00 00 00 00 00 00 [ 69 DB ] (WytdIEYwIDQ4IDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIFsgNjkgREIgXQo=): 02
+    [+] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 C1 [ B2 9E ] (WytdIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIEMxIFsgQjIgOUUgXQo=): 03
+    [+] 00 00 00 00 00 00 00 00 00 00 00 C1 00 00 00 00 [ 04 09 ] (WytdIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIEMxIDAwIDAwIDAwIDAwIFsgMDQgMDkgXQo=): 04
+    [+] 00 00 00 00 00 00 00 C1 00 00 00 00 00 00 00 00 [ 7E 26 ] (WytdIDAwIDAwIDAwIDAwIDAwIDAwIDAwIEMxIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIFsgN0UgMjYgXQo=): 05
+    [+] 00 00 00 C1 00 00 00 00 00 00 00 00 00 00 00 00 [ 69 E9 ] (WytdIDAwIDAwIDAwIEMxIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIFsgNjkgRTkgXQo=): 06
+    [+] 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 [ 37 49 ] (WytdIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIFsgMzcgNDkgXQo=): 07-1E, 28
+    [+] 00 00 00 00 00 00 00 00 00 00 00 00 BF C0 63 69 [ 32 21 ] (WytdIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIEJGIEMwIDYzIDY5IFsgMzIgMjEgXQo=): 1F
+    [+] 00 00 00 00 00 00 00 00 BF C0 63 69 3E CA 66 CC [ 5A 42 ] (WytdIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIEJGIEMwIDYzIDY5IDNFIENBIDY2IENDIFsgNUEgNDIgXQo=): 20
+    [+] 00 00 00 00 BF C0 63 69 3E CA 66 CC 91 58 8F 32 [ 3A D8 ] (WytdIDAwIDAwIDAwIDAwIEJGIEMwIDYzIDY5IDNFIENBIDY2IENDIDkxIDU4IDhGIDMyIFsgM0EgRDggXQo=): 21
+    [+] BF C0 63 69 3E CA 66 CC 91 58 8F 32 D5 AD ED 55 [ 53 2B ] (WytdIEJGIEMwIDYzIDY5IDNFIENBIDY2IENDIDkxIDU4IDhGIDMyIEQ1IEFEIEVEIDU1IFsgNTMgMkIgXQo=): 22
+    [+] 3E CA 66 CC 91 58 8F 32 D5 AD ED 55 52 00 00 00 [ C1 DF ] (WytdIDNFIENBIDY2IENDIDkxIDU4IDhGIDMyIEQ1IEFEIEVEIDU1IDUyIDAwIDAwIDAwIFsgQzEgREYgXQo=): 23
+    [+] 91 58 8F 32 D5 AD ED 55 52 00 00 00 01 00 00 00 [ 32 94 ] (WytdIDkxIDU4IDhGIDMyIEQ1IEFEIEVEIDU1IDUyIDAwIDAwIDAwIDAxIDAwIDAwIDAwIFsgMzIgOTQgXQo=): 24
+    [+] D5 AD ED 55 52 00 00 00 01 00 00 00 00 00 00 00 [ 8D 56 ] (WytdIEQ1IEFEIEVEIDU1IDUyIDAwIDAwIDAwIDAxIDAwIDAwIDAwIDAwIDAwIDAwIDAwIFsgOEQgNTYgXQo=): 25
+    [+] 52 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 [ D9 EF ] (WytdIDUyIDAwIDAwIDAwIDAxIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIFsgRDkgRUYgXQo=): 26
+    [+] 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 [ 27 C7 ] (WytdIDAxIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIFsgMjcgQzcgXQo=): 27
+    [+] 00 00 00 00 00 00 00 00 00 00 00 00 04 B2 69 57 [ 56 90 ] (WytdIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDA0IEIyIDY5IDU3IFsgNTYgOTAgXQo=): 29
+    [+] 00 00 00 00 00 00 00 00 04 B2 69 57 1A 10 7A 80 [ 5F CC ] (WytdIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDAwIDA0IEIyIDY5IDU3IDFBIDEwIDdBIDgwIFsgNUYgQ0MgXQo=): 2A
+    [+] 00 00 00 00 04 B2 69 57 1A 10 7A 80 F0 48 00 00 [ C5 B7 ] (WytdIDAwIDAwIDAwIDAwIDA0IEIyIDY5IDU3IDFBIDEwIDdBIDgwIEYwIDQ4IDAwIDAwIFsgQzUgQjcgXQo=): 2B
+    NAK (00): 2C-FF
+  No default (silent) responses found
+
+Command: AUTH-2B-CRC-[31-4F]
+  Non-default responses:
+    NAK (00): 00-FF
+  No default (silent) responses found
+
+Command: AUTH-2B-CRC-50
+  Non-default responses:
+    NAK (00): 01-FF
+  DEFAULT (silent): 00
+
+Command: AUTH-2B-CRC-[51-9F]
+  Non-default responses:
+    NAK (00): 00-FF
+  No default (silent) responses found
+
+Command: AUTH-2B-CRC-A0
+  Non-default responses:
+    NAK (00): 00-01, 30-FF
+    [+] 0A (WytdIDBBIAo=): 02-2F
+  No default (silent) responses found
+
+Command: AUTH-2B-CRC-A1
+  Non-default responses:
+    NAK (00): 00-FF
+  No default (silent) responses found
+
+Command: AUTH-2B-CRC-A2
+  DEFAULT (silent): Full range (00-FF)
+
+Command: AUTH-2B-CRC-[A3-FF]
+  Non-default responses:
+    NAK (00): 00-FF
+  No default (silent) responses found
+
+Command: AUTH-2B-NOCRC-[00-2F]
+  Non-default responses:
+    NAK (01): 00-FF
+  No default (silent) responses found
+
+Command: AUTH-2B-NOCRC-30
+  DEFAULT (silent): Full range (00-FF)
+
+Command: AUTH-2B-NOCRC-[31-4F]
+  Non-default responses:
+    NAK (01): 00-FF
+  No default (silent) responses found
+
+Command: AUTH-2B-NOCRC-50
+  DEFAULT (silent): Full range (00-FF)
+
+Command: AUTH-2B-NOCRC-[51-62]
+  Non-default responses:
+    NAK (01): 00-FF
+  No default (silent) responses found
+
+Command: AUTH-2B-NOCRC-63
+  Non-default responses:
+    NAK (01): 00-62, 64-FF
+    NAK (00): 63
+  No default (silent) responses found
+
+Command: AUTH-2B-NOCRC-[64-9F]
+  Non-default responses:
+    NAK (01): 00-FF
+  No default (silent) responses found
+
+Command: AUTH-2B-NOCRC-A0
+  DEFAULT (silent): Full range (00-FF)
+
+Command: AUTH-2B-NOCRC-A1
+  Non-default responses:
+    NAK (01): 00-FF
+  No default (silent) responses found
+
+Command: AUTH-2B-NOCRC-A2
+  DEFAULT (silent): Full range (00-FF)
+
+Command: AUTH-2B-NOCRC-[A3-FF]
+  Non-default responses:
+    NAK (01): 00-FF
+  No default (silent) responses found
+
+Command: READY1-1B-[CRC, NOCRC]
+  DEFAULT (silent): Full range (00-FF)
+
+Command: READY1-2B-CRC-[00-2F]
+  DEFAULT (silent): Full range (00-FF)
+
+Command: READY1-2B-CRC-30
+  Non-default responses:
+    [+] 04 B2 69 57 1A 10 7A 80 F0 48 00 00 00 00 00 00 [ 45 9B ] (WytdIDA0IEIyIDY5IDU3IDFBIDEwIDdBIDgwIEYwIDQ4IDAwIDAwIDAwIDAwIDAwIDAwIFsgNDUgOUIgXQo=): 00
+  DEFAULT (silent): 01-FF
+
+Command: READY1-2B-CRC-[31-FF]
+  DEFAULT (silent): Full range (00-FF)
+
+Command: READY1-2B-NOCRC-[00-92]
+  DEFAULT (silent): Full range (00-FF)
+
+Command: READY1-2B-NOCRC-93
+  Non-default responses:
+    [+] 88 04 B2 [ 69 57 ] (WytdIDg4IDA0IEIyIFsgNjkgNTcgXQo=): 20
+  DEFAULT (silent): 00-1F, 21-FF
+
+Command: READY1-2B-NOCRC-[94-FF]
+  DEFAULT (silent): Full range (00-FF)
+
+Command: WAKEUP-1B
+  Non-default responses:
+    [+] 44 00 (WytdIDQ0IDAwIAo=): 26, 52
+  DEFAULT (silent): 00-25, 27-51, 53-FF
+--------------------------------------------------------------------------------

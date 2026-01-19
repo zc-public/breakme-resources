@@ -1,0 +1,125 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_suncmac_and_mask.py --format --initkey 0x2b7e151628aed2a6abf7158809cf4f3c
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_suncmac_and_mask.py --format --initkey 0x2b7e151628aed2a6abf7158809cf4f3c
+[+] executing python recover_suncmac_and_mask.py
+[+] args '--format --initkey 0x2b7e151628aed2a6abf7158809cf4f3c'
+http://www.foo.bar?uid=04A40FEA841390x000000x0000000000x55933D67C3780520
+
+Tearing progressively from UUUU to MMMM:
+* UUUU to MUUU: .......
+* MUUU to MMUU: ........
+* MMUU to MMMU: ..................
+* MMMU to MMMM: .......
+Tearing progressively from ZZZZ to MMMM:
+* ZZZZ to MZZZ: ......
+* MZZZ to MMZZ: .......
+* MMZZ to MMMZ: ............
+* MMMZ to MMMM: .......
+
+
+Cracking mask progressively from ZZZZ to MMMM:
+* ZZZZ to MZZZ:
+  * 00000000000000000000000000000000 at HD=0, tried        1 candidates
+  * 000000000000000000000000100A0000 at HD=3, tried     5060 candidates
+  * 00000000000000000000000012020800 at HD=3, tried     4290 candidates
+  * 0000000000000000000000001E0E1A21 at HD=7, tried  1624568 candidates
+  * 0000000000000000000000009E1E1E21 at HD=3, tried     4114 candidates
+  * 0000000000000000000000009E5E1E25 at HD=2, tried      132 candidates
+* MZZZ to MMZZ:
+  * 0000000000000000000000009E5E1E25 at HD=0, tried        1 candidates
+  * 0000000000000000000060089E5E1E25 at HD=3, tried     2046 candidates
+  * 0000000000000000018160E89E5E1E25 at HD=6, tried   854546 candidates
+  * 0000000000000000418160E89E5E1E25 at HD=1, tried       44 candidates
+  * 0000000000000000418360E89E5E1E25 at HD=1, tried       22 candidates
+  * 0000000000000000418360EA9E5E1E25 at HD=1, tried       22 candidates
+  * 0000000000000000499760EA9E5E1E25 at HD=3, tried     5148 candidates
+* MMZZ to MMMZ:
+  * 0000000000000000499760EA9E5E1E25 at HD=0, tried        1 candidates
+  * 0000000000000044499760EA9E5E1E25 at HD=2, tried      110 candidates
+  * 0000000040000040499760EA9E5E1E25 at HD=2, tried      132 candidates
+  * 0000000040000044499760EA9E5E1E25 at HD=0, tried        1 candidates
+  * 00000000C0000044499760EA9E5E1E25 at HD=1, tried       44 candidates
+  * 00000000E0000244499760EA9E5E1E25 at HD=2, tried      308 candidates
+  * 00000000E4000244499760EA9E5E1E25 at HD=1, tried       44 candidates
+  * 00000000F408024E499760EA9E5E1E25 at HD=4, tried    10714 candidates
+  * 00000000F408026E499760EA9E5E1E25 at HD=1, tried       22 candidates
+  * 00000000FC08036E499760EA9E5E1E25 at HD=2, tried      286 candidates
+  * 00000000FC08034E499760EA9E5E1E25 at HD=1, tried       22 candidates
+  * 00000000FC19837E499760EA9E5E1E25 at HD=4, tried    23232 candidates
+* MMMZ to MMMM:
+  * 00000000FC19837E499760EA9E5E1E25 at HD=0, tried        1 candidates
+  * 20C01010FC19837E499760EA9E5E1E25 at HD=5, tried   158114 candidates
+  * 25C01050FC19837E499760EA9E5E1E25 at HD=3, tried     3168 candidates
+  * 35DD1050FC19837E499760EA9E5E1E25 at HD=5, tried   238832 candidates
+  * 3DDD1450FC19837E499760EA9E5E1E25 at HD=2, tried      330 candidates
+  * 3DDF1450FC19837E499760EA9E5E1E25 at HD=1, tried       22 candidates
+  * 7DDF1452FC19837E499760EA9E5E1E25 at HD=2, tried      110 candidates
+
+Cracking SUNCMAC progressively from MMMM to UUUU:
+* MMMM to MMMU:
+  * 7DDF1452FC19837E499760EA9E5E1E25 at HD=0, tried        1 candidates
+  * 3DDF1452FC19837E499760EA9E5E1E25 at HD=1, tried       44 candidates
+  * 3DDF1556FC19837E499760EA9E5E1E25 at HD=2, tried      110 candidates
+  * 3DFF1556FC19837E499760EA9E5E1E25 at HD=1, tried       44 candidates
+  * 3FFF1556FC19837E499760EA9E5E1E25 at HD=1, tried       44 candidates
+  * 2BFE1516FC19837E499760EA9E5E1E25 at HD=4, tried    28336 candidates
+  * 2B7E1516FC19837E499760EA9E5E1E25 at HD=1, tried       44 candidates
+* MMMU to MMUU:
+  * 2B7E1516FC19837E499760EA9E5E1E25 at HD=0, tried        1 candidates
+  * 2B7E1516FC19836E499760EA9E5E1E25 at HD=1, tried       22 candidates
+  * 2B7E1516FC19837E499760EA9E5E1E25 at HD=1, tried       22 candidates
+  * 2B7E1516EC19837E499760EA9E5E1E25 at HD=2, tried      176 candidates
+  * 2B7E1516FC19836E499760EA9E5E1E25 at HD=1, tried       44 candidates
+  * 2B7E1516FC09836E499760EA9E5E1E25 at HD=2, tried      484 candidates
+  * 2B7E1516FC08836E499760EA9E5E1E25 at HD=2, tried      440 candidates
+  * 2B7E1516FC08C36E499760EA9E5E1E25 at HD=2, tried      396 candidates
+  * 2B7E1516FC08D266499760EA9E5E1E25 at HD=4, tried    19030 candidates
+  * 2B7E1516ECA8D266499760EA9E5E1E25 at HD=2, tried      484 candidates
+  * 2B7E1516E828D266499760EA9E5E1E25 at HD=2, tried      506 candidates
+  * 2B7E1516E82AD266499760EA9E5E1E25 at HD=2, tried      440 candidates
+  * 2B7E1516E8AAD266499760EA9E5E1E25 at HD=0, tried        1 candidates
+  * 2B7E151668AED266499760EA9E5E1E25 at HD=2, tried      462 candidates
+  * 2B7E151628AED2E6499760EA9E5E1E25 at HD=2, tried      264 candidates
+  * 2B7E151628AED2A6499760EA9E5E1E25 at HD=1, tried       22 candidates
+  * 2B7E151628AED2E6499760EA9E5E1E25 at HD=1, tried       22 candidates
+  * 2B7E151628AED2A6499760EA9E5E1E25 at HD=0, tried        1 candidates
+* MMUU to MUUU:
+  * 2B7E151628AED2A6499760EA9E5E1E25 at HD=0, tried        1 candidates
+  * 2B7E151628AED2A6499760E89E5E1E25 at HD=1, tried       22 candidates
+  * 2B7E151628AED2A64BB720E89E5E1E25 at HD=3, tried     4774 candidates
+  * 2B7E151628AED2A62BB760C89E5E1E25 at HD=4, tried    25828 candidates
+  * 2B7E151628AED2A6ABB724889E5E1E25 at HD=3, tried     2992 candidates
+  * 2B7E151628AED2A6ABF704889E5E1E25 at HD=2, tried      374 candidates
+  * 2B7E151628AED2A6ABF705889E5E1E25 at HD=1, tried       22 candidates
+  * 2B7E151628AED2A6ABF715889E5E1E25 at HD=1, tried       22 candidates
+* MUUU to UUUU:
+  * 2B7E151628AED2A6ABF715889E5E1E25 at HD=0, tried        1 candidates
+  * 2B7E151628AED2A6ABF715889EDE1E25 at HD=1, tried       44 candidates
+  * 2B7E151628AED2A6ABF715889EDF1F35 at HD=3, tried     2310 candidates
+  * 2B7E151628AED2A6ABF715889FDF5F3D at HD=3, tried     2090 candidates
+  * 2B7E151628AED2A6ABF715881FCF4F3D at HD=3, tried     4466 candidates
+  * 2B7E151628AED2A6ABF7158819CF4F3C at HD=3, tried      990 candidates
+  * 2B7E151628AED2A6ABF7158809CF4F3C at HD=1, tried       44 candidates
+
+Mask key found:
+    7DDF1452FC19837E499760EA9E5E1E25
+
+SUNCMAC key found:
+    2B7E151628AED2A6ABF7158809CF4F3C
+
+Step 1 time: 29.15 seconds
+
+Step 2 time: 3.38 seconds
+
+Total time:  32.53 seconds
+
+Total tears:      153 operations
+
+Total CMAC:   3030908 operations against       72 MACs
+
+[+] finished recover_suncmac_and_mask.py
+

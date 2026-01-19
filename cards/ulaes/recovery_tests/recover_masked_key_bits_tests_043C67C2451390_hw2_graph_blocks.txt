@@ -1,0 +1,2 @@
+if this pattern is confirmed on other cards, we could optimize tearing timings.
+current pattern: fast/slow/slow/fast blocks for both keys

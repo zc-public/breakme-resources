@@ -1,0 +1,204 @@
+\begin{longtable}{l l l l}
+\caption{Fuzzing results by manufacturer, state, and command ranges} \label{tab:fuzz-full} \\
+\multicolumn{4}{c}{\textbf{NXP MF0ICU2}}                                                                                  \\
+\hline
+\textbf{Initial state} & \textbf{Command} & \textbf{Result} & \textbf{Remarks} \\
+\hline
+IDLE                 & \texttt{26}(7)                      & reply           & REQA                                        \\
+IDLE                 & \texttt{52}(7)                      & reply           & WUPA                                        \\
+IDLE                 & \texttt{**}(7)                      & silent          &                                             \\
+READY1               & \texttt{**}                         & silent          &                                             \\
+READY1               & \texttt{**}+CRC                     & silent          &                                             \\
+READY1               & \texttt{9320}                       & reply           & CL1 SEL ALL                                 \\
+READY1               & \texttt{****}                       & silent          &                                             \\
+READY1               & \texttt{3000}+CRC                   & reply           & READ 0 (returns 4 pages even if \texttt{AUTH0} $<$ 4)                        \\
+READY1               & \texttt{****}+CRC                   & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{**}                         & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{30}+CRC                     & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{50}+CRC                     & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{A0}+CRC                     & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{A2}+CRC                     & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{**}+CRC                     & \texttt{0}(4)            & $\rightarrow$ NAK(0)                        \\
+ACTIVE               & \texttt{1A00}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{30**}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{50**}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{6363}                       & \texttt{0}(4)            & $\rightarrow$ NAK(0) (seen as the CRC of an empty command)                       \\
+ACTIVE/AUTHENTICATED & \texttt{A0**}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{A2**}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{****}                       & \texttt{1}(4)            & $\rightarrow$ NAK(1)                        \\
+ACTIVE               & \texttt{1A00}+CRC                   & reply           & AUTHENTICATE                                \\
+ACTIVE               & \texttt{30[00-2B]}+CRC              & reply*          & READ (* if allowed else NAK(0))             \\
+AUTHENTICATED        & \texttt{30[00-2B]}+CRC              & reply           & READ                                        \\
+ACTIVE/AUTHENTICATED & \texttt{5000}+CRC                   & silent          & HALT                                        \\
+ACTIVE               & \texttt{A0[02-2F]}+CRC          & \texttt{A}(4)*           & COMPAT WRITE (*ACK if allowed else NAK(0))  \\
+AUTHENTICATED        & \texttt{A0[02-2F]}+CRC          & \texttt{A}(4)            & COMPAT WRITE $\rightarrow$ ACK              \\
+ACTIVE/AUTHENTICATED & \texttt{A2**}+CRC                   & silent          & truncated WRITE                             \\
+ACTIVE/AUTHENTICATED & \texttt{****}+CRC                   & \texttt{0}(4)            & $\rightarrow$ NAK(0)                        \\
+\hline \\
+\newpage
+\multicolumn{4}{l}{}                                                                                              \\
+\multicolumn{4}{c}{\textbf{Giantec GT23SC4489}}                                                                              \\
+\hline
+\textbf{Initial state} & \textbf{Command} & \textbf{Result} & \textbf{Remarks} \\
+\hline
+IDLE                 & \texttt{26}(7)                      & reply           & REQA                                        \\
+IDLE                 & \texttt{52}(7)                      & reply           & WUPA                                        \\
+IDLE                 & \texttt{**}(7)                      & silent          &                                             \\
+READY1               & \textbf{\texttt{30}}                & \textbf{reply}  & \textbf{seen as READ 0}                     \\
+READY1               & \texttt{**}                         & silent          &                                             \\
+READY1               & \texttt{**}+CRC                     & silent          &                                             \\
+READY1               & \textbf{\texttt{3000}}              & \textbf{reply}  & \textbf{seen as READ 0}                     \\
+READY1               & \textbf{\texttt{40**}}              & \textbf{reply}  & \textbf{\texttt{FDFFFFFF3F5180} without parity}      \\
+READY1               & \texttt{9320}                       & reply           & CL1 SEL ALL                                 \\
+READY1               & \texttt{****}                       & silent          &                                             \\
+READY1               & \texttt{3000}+CRC                   & reply           & READ 0                                      \\
+READY1               & \texttt{****}+CRC                   & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{**}                         & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{30}+CRC                     & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{50}+CRC                     & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{A0}+CRC                     & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{A2}+CRC                     & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{**}+CRC}            & \textbf{silent} &                                             \\
+ACTIVE               & \texttt{1A00}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{30**}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{50**}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{6363}}              & \textbf{silent} &                                             \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{9320}}              & \textbf{\texttt{1}(4)}   & \textbf{$\rightarrow$ NAK(1)}               \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{9370}}              & \textbf{reply}  & \textbf{$\rightarrow$ \texttt{FFFFFFFFFFFFFF 00}(4)} \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{9520}}              & \textbf{\texttt{1}(4)}   & \textbf{$\rightarrow$ NAK(1)}               \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{9570}}              & \textbf{reply}  & \textbf{$\rightarrow$ \texttt{FFFFFFFFFFFFFF 00}(4)} \\
+ACTIVE/AUTHENTICATED & \texttt{A0**}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{A2**}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{****}}              & \textbf{silent} &                                             \\
+ACTIVE               & \texttt{1A00}+CRC                   & reply           & AUTHENTICATE                                \\
+ACTIVE               & \texttt{1A**}+CRC                   & \texttt{0}(4)            & $\rightarrow$ NAK(0)                        \\
+ACTIVE               & \texttt{30[00-2B]}+CRC              & reply*          & READ (* if allowed else NAK(0))             \\
+AUTHENTICATED        & \texttt{30[00-2B]}+CRC              & reply           & READ                                        \\
+ACTIVE/AUTHENTICATED & \texttt{30**}+CRC                   & \texttt{0}(4)            & $\rightarrow$ NAK(0)                        \\
+ACTIVE/AUTHENTICATED & \texttt{5000}+CRC                   & silent          & HALT                                        \\
+ACTIVE/AUTHENTICATED & \texttt{50**}+CRC                   & \texttt{0}(4)            & $\rightarrow$ NAK(0)                        \\
+ACTIVE/AUTHENTICATED          & \textbf{\texttt{9370}+\texttt{****}}          & \textbf{reply} & \textbf{$\rightarrow$ \texttt{FFFFFFFFFF 00}(4)}                \\
+ACTIVE/AUTHENTICATED          & \textbf{\texttt{9570}+\texttt{****}}          & \textbf{reply} & \textbf{$\rightarrow$ \texttt{FFFFFFFFFF 00}(4)}       \\
+ACTIVE               & \texttt{A0[02-2F]}+CRC          & \texttt{A}(4)*           & COMPAT WRITE (*ACK if allowed else NAK(0))  \\
+AUTHENTICATED        & \texttt{A0[02-2F]}+CRC          & \texttt{A}(4)            & COMPAT WRITE $\rightarrow$ ACK              \\
+ACTIVE/AUTHENTICATED & \texttt{A0**}+CRC                   & \texttt{0}(4)            & $\rightarrow$ NAK(0)                        \\
+ACTIVE/AUTHENTICATED & \texttt{A2**}+CRC                   & silent          & truncated WRITE                             \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{****}+CRC}          & \textbf{silent} &                                             \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{A2******}+CRC}      & \textbf{\texttt{A}(4)}  & \textbf{truncated WRITE $\rightarrow$ ACK, completed with CRC}  \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{A2********}+CRC}    & \textbf{\texttt{A}(4)}  & \textbf{truncated WRITE $\rightarrow$ ACK, completed with CRC1} \\
+ACTIVE/AUTHENTICATED & \texttt{AF(**)\{15\}}+CRC           & \texttt{0}(4)           & truncated AUTH Step 2 $\rightarrow$ NAK(0) \\
+ACTIVE/AUTHENTICATED & \texttt{AF(**)\{16\}}+CRC           & \texttt{0}(4)           & AUTH Step 2 $\rightarrow$ NAK(0) \\
+\hline \\
+\newpage
+\multicolumn{4}{l}{}                                                                                     \\
+\multicolumn{4}{c}{\textbf{USCUID-UL}}                                                                        \\
+\hline
+\textbf{Initial state} & \textbf{Command} & \textbf{Result} & \textbf{Remarks} \\
+\hline
+IDLE                 & \texttt{26}(7)                      & reply           & REQA                                        \\
+IDLE                 & \texttt{52}(7)                      & reply           & WUPA                                        \\
+IDLE                 & \texttt{**}(7)                      & silent          &                                             \\
+READY1               & \texttt{**}                         & silent          &                                             \\
+READY1               & \texttt{**}+CRC                     & silent          &                                             \\
+READY1               & \texttt{9320}                       & reply           & CL1 SEL ALL                                 \\
+READY1               & \texttt{****}                       & silent          &                                             \\
+READY1               & \texttt{3000}+CRC                   & reply           & READ 0                                      \\
+READY1               & \texttt{****}+CRC                   & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{1A}}                & \textbf{reply}  & \textbf{variant 1: $\rightarrow$ 
+ \texttt{AF}$\|$E(RndB), wrong CRC, $\Delta:$~\texttt{0x6CF3}}              \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{1A}}                & \textbf{reply}  & \textbf{variant 2: $\rightarrow$ 
+ \texttt{AF}$\|$E(RndB), wrong CRC, $\Delta:$~\texttt{0xB4C5}}              \\
+ACTIVE/AUTHENTICATED & \texttt{**}                         & silent          &                                             \\
+ACTIVE/AUTHENTICATED          & \textbf{\texttt{1A}+CRC}            & \textbf{\texttt{0}(4)}  & \textbf{$\rightarrow$ NAK(0)}                 \\
+ACTIVE/AUTHENTICATED & \texttt{30}+CRC                     & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{50}+CRC                     & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{A0}+CRC                     & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{A2}+CRC                     & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{**}+CRC}            & \textbf{silent} &                                             \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{1A00}}              & \textbf{reply}  & \textbf{variant 1: $\rightarrow$ 
+ \texttt{AF}$\|$E(RndB), wrong CRC, $\Delta:$~\texttt{0x6CF3}}              \\
+ACTIVE               & \textbf{\texttt{1A00}}              & \textbf{reply}  & \textbf{variant 2: $\rightarrow$ 
+ \texttt{AF}$\|$E(RndB), wrong CRC, $\Delta:$~\texttt{0xB4C5}}              \\
+AUTHENTICATED        & \textbf{\texttt{1A00}}              & \textbf{\texttt{0}(4)}  & \textbf{variant 2: $\rightarrow$ 
+ NAK(0)}              \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{1A**}}              & \textbf{\texttt{0}(4)}   & \textbf{$\rightarrow$ NAK(0)}               \\
+ACTIVE/AUTHENTICATED & \texttt{30**}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{50**}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{6363}}              & \textbf{silent} &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{A0**}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{A2**}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{****}}              & \textbf{silent} &                                             \\
+ACTIVE               & \texttt{1A00}+CRC                   & reply           & AUTHENTICATE                                \\
+AUTHENTICATED        & \textbf{\texttt{1A00}+CRC}          & \textbf{reply}  & \textbf{variant 1: $\rightarrow$ 
+ \texttt{AF}$\|$E(RndB)}              \\
+AUTHENTICATED        & \texttt{1A00}+CRC                   & \texttt{0}(4)            & variant 2: $\rightarrow$ 
+ NAK(0)              \\
+ACTIVE/AUTHENTICATED & \texttt{1C**}+CRC                   & \texttt{0}(4) & variant 1: $\rightarrow$ 
+ NAK(0)              \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{1C**}+CRC}          & \textbf{silent} & \textbf{variant 2 $\rightarrow$ 
+ silent}              \\
+ACTIVE               & \texttt{30[00-2B]}+CRC              & reply*          & READ (* if allowed else NAK(0))             \\
+AUTHENTICATED        & \texttt{30[00-2B]}+CRC              & reply           & READ                                        \\
+ACTIVE/AUTHENTICATED & \texttt{5000}+CRC                   & silent          & HALT                                        \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{5*[00-2B]}+CRC}     & \textbf{silent*} & \textbf{seen as HALT} (* if param $<$ \texttt{AUTH0})                                        \\
+ACTIVE               & \texttt{A0[02-2F]}+CRC              & \texttt{A}(4)*           & COMPAT WRITE (*ACK if allowed else NAK(0))  \\
+AUTHENTICATED        & \texttt{A0[02-2F]}+CRC              & \texttt{A}(4)            & COMPAT WRITE $\rightarrow$ ACK              \\
+ACTIVE/AUTHENTICATED & \texttt{A2**}+CRC                   & silent          & truncated WRITE                             \\
+ACTIVE/AUTHENTICATED & \texttt{****}+CRC                   & \texttt{0}(4)            & $\rightarrow$ NAK(0)         \\
+\hline \\
+\multicolumn{4}{l}{}\\
+\multicolumn{4}{p{\textwidth}}{Another non-standard behavior: USCUID-UL permits writes to all four bytes of configuration pages 42~(`AUTH0') and 43~(`AUTH1'), whereas only writing the first byte should be allowed. 
+}                                                                                  \\
+\newpage
+\multicolumn{4}{l}{}                                                                                              \\
+\multicolumn{4}{c}{\textbf{Feiju FJ8010}}                                                                                  \\
+\hline
+\textbf{Initial state} & \textbf{Command} & \textbf{Result} & \textbf{Remarks} \\
+\hline
+IDLE                 & \texttt{26}(7)                      & reply           & REQA                                        \\
+IDLE                 & \texttt{52}(7)                      & reply           & WUPA                                        \\
+IDLE                 & \texttt{**}(7)                      & silent          &                                             \\
+READY1               & \texttt{**}                         & silent          &                                             \\
+READY1               & \texttt{**}+CRC                     & silent          &                                             \\
+READY1               & \texttt{9320}                       & reply           & CL1 SEL ALL                                 \\
+READY1               & \texttt{****}                       & silent          &                                             \\
+READY1               & \texttt{3000}+CRC                   & reply           & READ 0 (returns 4 pages even if \texttt{AUTH0} $<$ 4) \\
+READY1               & \textbf{\texttt{30**}+CRC}          & \textbf{\texttt{0}(4)}   & $\rightarrow$ NAK(0)               \\
+READY1               & \texttt{****}+CRC                   & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{**}                         & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{30}+CRC                     & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{50}+CRC                     & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{A0}+CRC                     & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{A2}+CRC                     & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{**}+CRC}            & \textbf{silent} &                                             \\
+
+ACTIVE               & \texttt{1A00}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{30**}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{50**}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{6363}}              & \textbf{silent} &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{A0**}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \texttt{A2**}                       & silent          &                                             \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{****}}              & \textbf{silent} &                                             \\
+ACTIVE               & \texttt{1A00}+CRC                   & reply           & AUTHENTICATE                                \\
+ACTIVE               & \textbf{\texttt{1A[01-2F]}+CRC}     & \textbf{reply}  & \textbf{seen as AUTHENTICATE}               \\
+AUTHENTICATED        & \textbf{\texttt{1A[00-2F]}+CRC}     & \textbf{reply}  & \textbf{seen as AUTHENTICATE}               \\
+ACTIVE/AUTHENTICATED & \texttt{1A**}+CRC                   & \texttt{0}(4)   & $\rightarrow$ NAK(0)                        \\
+ACTIVE               & \texttt{30[00-2B]}+CRC              & reply*          & READ (* if allowed else NAK(0))             \\
+AUTHENTICATED        & \texttt{30[00-2B]}+CRC              & reply           & READ                                        \\
+ACTIVE/AUTHENTICATED & \texttt{30**}+CRC                   & \texttt{0}(4)   & $\rightarrow$ NAK(0)                        \\
+ACTIVE/AUTHENTICATED & \texttt{5000}+CRC                   & silent          & HALT                                        \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{50[01-2F]}+CRC}     & \textbf{silent} & \textbf{seen as HALT}                       \\
+ACTIVE/AUTHENTICATED & \texttt{50**}+CRC                   & \texttt{0}(4)   & $\rightarrow$ NAK(0)                        \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{70[00-2F]}+CRC}     & \textbf{\texttt{A}(4)}   &  \textbf{$\rightarrow$ ACK (of what ?)} \\
+ACTIVE/AUTHENTICATED & \texttt{70**}+CRC                   & \texttt{0}(4)   & $\rightarrow$ NAK(0)                        \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{71[00-2F]}+CRC}     & \textbf{\texttt{A}(4)}   &  \textbf{$\rightarrow$ ACK (of what ?)} \\
+ACTIVE/AUTHENTICATED & \texttt{71**}+CRC                   & \texttt{0}(4)   & $\rightarrow$ NAK(0)                        \\
+ACTIVE               & \texttt{A0[02-2F]}+CRC              & \texttt{A}(4)*  & COMPAT WRITE (*ACK if allowed else NAK(0))  \\
+AUTHENTICATED        & \texttt{A0[02-2F]}+CRC              & \texttt{A}(4)   & COMPAT WRITE $\rightarrow$ ACK              \\
+ACTIVE               & \texttt{A0**}+CRC                   & \texttt{0}(4)   & $\rightarrow$ NAK(0)                        \\
+ACTIVE/AUTHENTICATED & \texttt{A2**}+CRC                   & silent          & truncated WRITE                             \\
+AUTHENTICATED        & \textbf{\texttt{AF[00-2F]}+CRC}     & \textbf{reply}  & \textbf{seen as AUTHENTICATE}               \\
+AUTHENTICATED        & \texttt{AF**}+CRC                   & \texttt{0}(4)   & $\rightarrow$ NAK(0)                        \\
+ACTIVE/AUTHENTICATED & \textbf{\texttt{****}+CRC}          & \textbf{silent} &                                             \\
+\hline
+\end{longtable}

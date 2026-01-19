@@ -1,0 +1,79 @@
+Honing:
+[=] Erase phase start boundary around   435 us
+[=] Erase phase end boundary around     470 us
+[=] Write phase start boundary around  2805 us
+[=] Write phase end boundary around    2875 us
+
+[=] Erase phase start boundary around   440 us
+[=] Erase phase end boundary around     485 us
+[=] Write phase start boundary around  2800 us
+[=] Write phase end boundary around    2890 us
+
+--
+
+Seems to vary by card:
+
+[=] Erase phase start boundary around   324 us
+[=] Erase phase end boundary around     389 us
+
+--
+
+[=] Erase phase start boundary around   437 us
+[=] Erase phase end boundary around     476 us
+[=] Erase phase start boundary around   433 us
+[=] Erase phase end boundary around     475 us
+[=] Erase phase start boundary around   431 us
+[=] Erase phase end boundary around     479 us
+[=] Erase phase start boundary around   432 us
+[=] Erase phase end boundary around     478 us
+[=] Erase phase start boundary around   427 us
+[=] Erase phase end boundary around     481 us
+[=] Erase phase start boundary around   423 us
+[=] Erase phase end boundary around     480 us
+[=] Erase phase start boundary around   434 us
+[=] Erase phase end boundary around     477 us
+[=] Erase phase start boundary around   426 us
+[=] Erase phase end boundary around     485 us
+[=] Erase phase start boundary around   425 us
+[=] Erase phase end boundary around     478 us
+[=] Erase phase start boundary around   435 us
+[=] Erase phase end boundary around     479 us
+[=] Erase phase start boundary around   433 us
+[=] Erase phase end boundary around     478 us
+[=] Erase phase start boundary around   426 us
+[=] Erase phase end boundary around     477 us
+[=] Erase phase start boundary around   429 us
+[=] Erase phase end boundary around     472 us
+[=] Erase phase start boundary around   430 us
+[=] Erase phase end boundary around     473 us
+
+[=] Write phase start boundary around  2795 us
+[=] Write phase end boundary around    2878 us
+[=] Write phase start boundary around  2796 us
+[=] Write phase end boundary around    2873 us
+[=] Write phase start boundary around  2795 us
+[=] Write phase end boundary around    2883 us
+[=] Write phase start boundary around  2793 us
+[=] Write phase end boundary around    2876 us
+[=] Write phase start boundary around  2796 us
+[=] Write phase end boundary around    2873 us
+[=] Write phase start boundary around  2794 us
+[=] Write phase end boundary around    2873 us
+[=] Write phase start boundary around  2789 us
+[=] Write phase end boundary around    2880 us
+[=] Write phase start boundary around  2791 us
+[=] Write phase end boundary around    2871 us
+[=] Write phase start boundary around  2794 us
+[=] Write phase end boundary around    2873 us
+[=] Write phase start boundary around  2792 us
+[=] Write phase end boundary around    2882 us
+[=] Write phase start boundary around  2798 us
+[=] Write phase end boundary around    2872 us
+[=] Write phase start boundary around  2795 us
+[=] Write phase end boundary around    2879 us
+[=] Write phase start boundary around  2795 us
+[=] Write phase end boundary around    2874 us
+[=] Write phase start boundary around  2794 us
+[=] Write phase end boundary around    2879 us
+[=] Write phase start boundary around  2790 us
+[=] Write phase end boundary around    2877 us

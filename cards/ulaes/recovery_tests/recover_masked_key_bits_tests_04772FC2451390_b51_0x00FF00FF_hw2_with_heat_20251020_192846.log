@@ -1,0 +1,264 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 51 --eeprom-init 0x00FF00FF --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --heat-scan
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_masked_key_bits.py --block 51 --eeprom-init 0x00FF00FF --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --heat-scan
+[+] executing python recover_masked_key_bits.py
+[+] args '--block 51 --eeprom-init 0x00FF00FF --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --heat-scan'
+Block      51 (0x33)
+Key index   0 (DataProt)
+Segment     0
+Mask       A2B17ECE
+Validating mask for segment with tearoff value: 1000 ms
+Testing with initial tearoff value: 285 ms
+Tears: 1*285ms + 0*235ms
+Bruteforcing, total attempts: 0
+Auth succeeded with key: 22B17ACE000000000000000000000000
+   New key bits found:   22B17ACE with HD=02
+Masked key bits found:   80000400
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   00040080 (00000000000001000000000010000000)
+            Mask bits:   CE7EB1A2 (11001110011111101011000110100010)
+ Recovered block bits:             .............0..........0.......
+      Block bits init:   CE81B15D (11001110100000011011000101011101)
+Total authentications:   319
+Time spent since start:  0 minutes 4.67 seconds
+.
+New key?
+
+New key?
+
+New key?
+.......
+New key?
+...................
+New key?
+.
+New key?
+....
+New key?
+   New key bits found:   22B1FACE with HD=03
+Masked key bits found:   80008400
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   00840080 (00000000100001000000000010000000)
+            Mask bits:   CE7EB1A2 (11001110011111101011000110100010)
+ Recovered block bits:             ........1....0..........0.......
+      Block bits init:   CE81B15D (11001110100000011011000101011101)
+...
+New key?
+.
+New key?
+.........................
+New key?
+
+New key?
+
+New key?
+....
+New key?
+...
+New key?
+
+New key?
+...
+New key?
+
+New key?
+...........
+New key?
+.......
+New key?
+....
+New key?
+.......
+New key?
+.........
+New key?
+...............
+New key?
+..
+New key?
+.........
+New key?
+
+New key?
+.
+New key?
+.....
+New key?
+....
+New key?
+.
+New key?
+.
+New key?
+..
+New key?
+.....
+New key?
+....
+New key?
+........
+New key?
+..
+New key?
+...
+New key?
+.
+New key?
+..
+New key?
+.....
+New key?
+
+New key?
+.
+New key?
+   New key bits found:   22B17BCE with HD=03
+Masked key bits found:   80000500
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   00050080 (00000000000001010000000010000000)
+            Mask bits:   CE7EB1A2 (11001110011111101011000110100010)
+ Recovered block bits:             .............0.1........0.......
+      Block bits init:   CE81B15D (11001110100000011011000101011101)
+   (also inserted combined key: 22B1FBCE)
+.........
+New key?
+...........
+New key?
+
+New key?
+.
+New key?
+....
+New key?
+
+New key?
+
+New key?
+
+New key?
+   New key bits found:   23B17ACE with HD=03
+Masked key bits found:   81000400
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   00040081 (00000000000001000000000010000001)
+            Mask bits:   CE7EB1A2 (11001110011111101011000110100010)
+ Recovered block bits:             .............0..........0......1
+      Block bits init:   CE81B15D (11001110100000011011000101011101)
+   (also inserted combined key: 23B1FBCE)
+.
+New key?
+..
+New key?
+...
+New key?
+.
+New key?
+
+New key?
+..
+New key?
+
+New key?
+.
+New key?
+
+New key?
+
+New key?
+..
+New key?
+.
+New key?
+   New key bits found:   2BB17ACE with HD=04
+Masked key bits found:   89000400
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   00040089 (00000000000001000000000010001001)
+            Mask bits:   CE7EB1A2 (11001110011111101011000110100010)
+ Recovered block bits:             .............0..........0...1..1
+      Block bits init:   CE81B15D (11001110100000011011000101011101)
+   (also inserted combined key: 2BB1FBCE)
+
+New key?
+...
+New key?
+.
+New key?
+....
+New key?
+.
+New key?
+.
+New key?
+...
+New key?
+
+New key?
+
+New key?
+.
+New key?
+...
+New key?
+
+New key?
+
+New key?
+.....
+New key?
+....
+New key?
+   New key bits found:   29B17ACE with HD=05
+Masked key bits found:   8B000400
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   0004008B (00000000000001000000000010001011)
+            Mask bits:   CE7EB1A2 (11001110011111101011000110100010)
+ Recovered block bits:             .............0..........0...1.01
+      Block bits init:   CE81B15D (11001110100000011011000101011101)
+   (also inserted combined key: 29B1FBCE)
+....
+New key?
+....
+New key?
+..
+New key?
+....
+New key?
+...
+New key?
+....
+New key?
+.
+New key?
+....
+New key?
+
+New key?
+..
+New key?
+.......
+New key?
+.........
+New key?
+....
+New key?
+.
+New key?
+   New key bits found:   A2B17ACE with HD=01
+Masked key bits found:   00000400
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   00040000 (00000000000001000000000000000000)
+            Mask bits:   CE7EB1A2 (11001110011111101011000110100010)
+ Recovered block bits:             .............0..................
+      Block bits init:   CE81B15D (11001110100000011011000101011101)
+....
+New key?
+......
+New key?
+
+New key?
+....
+New key?
+..

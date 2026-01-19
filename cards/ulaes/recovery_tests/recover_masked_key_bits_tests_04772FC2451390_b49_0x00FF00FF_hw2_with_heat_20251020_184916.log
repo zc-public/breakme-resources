@@ -1,0 +1,404 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 49 --eeprom-init 0x00FF00FF --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --heat-scan
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_masked_key_bits.py --block 49 --eeprom-init 0x00FF00FF --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --heat-scan
+[+] executing python recover_masked_key_bits.py
+[+] args '--block 49 --eeprom-init 0x00FF00FF --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --heat-scan'
+Block      49 (0x31)
+Key index   0 (DataProt)
+Segment     2
+Mask       E496842D
+Validating mask for segment with tearoff value: 1000 ms
+Testing with initial tearoff value: 285 ms
+Tears: 1*285ms + 0*235ms
+Bruteforcing, total attempts: 0
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 1*235ms
+Bruteforcing, total attempts: 529
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 2*235ms
+Bruteforcing, total attempts: 1058
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 3*235ms
+Bruteforcing, total attempts: 1587
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 4*235ms
+Bruteforcing, total attempts: 2116
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 5*235ms
+Bruteforcing, total attempts: 2645
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 6*235ms
+Bruteforcing, total attempts: 3174
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 7*235ms
+Bruteforcing, total attempts: 3703
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 8*235ms
+Bruteforcing, total attempts: 4232
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 9*235ms
+Bruteforcing, total attempts: 4761
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 10*235ms
+Bruteforcing, total attempts: 5290
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 11*235ms
+Bruteforcing, total attempts: 5819
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 12*235ms
+Bruteforcing, total attempts: 6348
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 13*235ms
+Bruteforcing, total attempts: 6877
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 14*235ms
+Bruteforcing, total attempts: 7406
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 15*235ms
+Bruteforcing, total attempts: 7935
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 16*235ms
+Bruteforcing, total attempts: 8464
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 17*235ms
+Bruteforcing, total attempts: 8993
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 18*235ms
+Bruteforcing, total attempts: 9522
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 19*235ms
+Bruteforcing, total attempts: 10051
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 20*235ms
+Bruteforcing, total attempts: 10580
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 21*235ms
+Bruteforcing, total attempts: 11109
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 22*235ms
+Bruteforcing, total attempts: 11638
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 23*235ms
+Bruteforcing, total attempts: 12167
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 24*235ms
+Bruteforcing, total attempts: 12696
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 25*235ms
+Bruteforcing, total attempts: 13225
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 26*235ms
+Bruteforcing, total attempts: 13754
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 27*235ms
+Bruteforcing, total attempts: 14283
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 28*235ms
+Bruteforcing, total attempts: 14812
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 29*235ms
+Bruteforcing, total attempts: 15341
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 30*235ms
+Bruteforcing, total attempts: 15870
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 31*235ms
+Bruteforcing, total attempts: 16399
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 32*235ms
+Bruteforcing, total attempts: 16928
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 33*235ms
+Bruteforcing, total attempts: 17457
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 34*235ms
+Bruteforcing, total attempts: 17986
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 35*235ms
+Bruteforcing, total attempts: 18515
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 36*235ms
+Bruteforcing, total attempts: 19044
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 37*235ms
+Bruteforcing, total attempts: 19573
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 38*235ms
+Bruteforcing, total attempts: 20102
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 39*235ms
+Bruteforcing, total attempts: 20631
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 40*235ms
+Bruteforcing, total attempts: 21160
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 41*235ms
+Bruteforcing, total attempts: 21689
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 42*235ms
+Bruteforcing, total attempts: 22218
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 43*235ms
+Bruteforcing, total attempts: 22747
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 44*235ms
+Bruteforcing, total attempts: 23276
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 45*235ms
+Bruteforcing, total attempts: 23805
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 46*235ms
+Bruteforcing, total attempts: 24334
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 47*235ms
+Bruteforcing, total attempts: 24863
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 48*235ms
+Bruteforcing, total attempts: 25392
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 49*235ms
+Bruteforcing, total attempts: 25921
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 50*235ms
+Bruteforcing, total attempts: 26450
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 51*235ms
+Bruteforcing, total attempts: 26979
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 52*235ms
+Bruteforcing, total attempts: 27508
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 53*235ms
+Bruteforcing, total attempts: 28037
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 54*235ms
+Bruteforcing, total attempts: 28566
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 55*235ms
+Bruteforcing, total attempts: 29095
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 56*235ms
+Bruteforcing, total attempts: 29624
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 57*235ms
+Bruteforcing, total attempts: 30153
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 58*235ms
+Bruteforcing, total attempts: 30682
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 59*235ms
+Bruteforcing, total attempts: 31211
+Auth succeeded with key: 0000000000000000E496952D00000000
+   New key bits found:   E496952D with HD=02
+Masked key bits found:   00001100
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   00110000 (00000000000100010000000000000000)
+            Mask bits:   2D8496E4 (00101101100001001001011011100100)
+ Recovered block bits:             ...........1...1................
+      Block bits init:   2D7B961B (00101101011110111001011000011011)
+Total authentications:   31468
+Time spent since start:  6 minutes 27.10 seconds
+
+New key?
+
+New key?
+
+New key?
+
+New key?
+
+New key?
+   New key bits found:   E4969F2D with HD=04
+Masked key bits found:   00001B00
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   001B0000 (00000000000110110000000000000000)
+            Mask bits:   2D8496E4 (00101101100001001001011011100100)
+ Recovered block bits:             ...........11.11................
+      Block bits init:   2D7B961B (00101101011110111001011000011011)
+..
+New key?
+   New key bits found:   E496972D with HD=03
+Masked key bits found:   00001300
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   00130000 (00000000000100110000000000000000)
+            Mask bits:   2D8496E4 (00101101100001001001011011100100)
+ Recovered block bits:             ...........1..11................
+      Block bits init:   2D7B961B (00101101011110111001011000011011)
+..
+New key?
+.
+New key?
+.
+New key?
+....
+New key?
+.
+New key?
+
+New key?
+.
+New key?
+.....
+New key?
+...
+New key?
+
+New key?
+....
+New key?
+
+New key?
+
+New key?
+.........
+New key?
+.........
+New key?
+
+New key?
+   New key bits found:   8496952D with HD=04
+Masked key bits found:   60001100
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   00110060 (00000000000100010000000001100000)
+            Mask bits:   2D8496E4 (00101101100001001001011011100100)
+ Recovered block bits:             ...........1...1.........00.....
+      Block bits init:   2D7B961B (00101101011110111001011000011011)
+   (also inserted combined key: 84969F2D)
+...
+New key?
+.....
+New key?
+.
+New key?
+.
+New key?
+.
+New key?
+...
+New key?
+..
+New key?
+
+New key?
+
+New key?
+   New key bits found:   8496972D with HD=05
+Masked key bits found:   60001300
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   00130060 (00000000000100110000000001100000)
+            Mask bits:   2D8496E4 (00101101100001001001011011100100)
+ Recovered block bits:             ...........1..11.........00.....
+      Block bits init:   2D7B961B (00101101011110111001011000011011)
+
+New key?
+
+New key?
+.
+New key?
+
+New key?
+.
+New key?
+
+New key?
+.
+New key?
+.....................
+New key?
+.
+New key?
+
+New key?
+...
+New key?
+.......
+New key?
+....
+New key?
+.....
+New key?
+....
+New key?
+...
+New key?
+......
+New key?
+......
+New key?
+..
+New key?
+
+New key?
+
+New key?
+............
+New key?
+..............
+New key?
+......
+New key?
+...
+New key?
+...
+New key?
+.
+New key?
+.
+New key?
+.
+New key?
+
+New key?
+.........
+New key?
+
+New key?
+......
+New key?
+.............
+New key?
+.
+New key?
+
+New key?
+......
+New key?
+
+New key?
+..
+New key?
+...
+New key?
+
+New key?
+.
+New key?
+......
+New key?
+
+New key?
+..............
+New key?
+.
+New key?
+..
+New key?
+
+New key?
+....
+New key?
+.
+New key?
+........
+New key?
+.......
+New key?
+..
+New key?
+..
+New key?
+.....

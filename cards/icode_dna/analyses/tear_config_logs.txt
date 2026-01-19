@@ -1,0 +1,439 @@
+Summary of data:
+- Config pages can be torn, if they can accept multiple writes it can lead to practical results.
+- NFC_KH is locked and immutable after initial write.
+- Tear-off phase begins at 602 us
+- Tear-off phase ends 1430us-1450us
+- Tear off appears to reset to 1's or mask
+
+# CARD A: Demonstrating that NFC_KH3 is immutable
+
+$ ./read_config_tear.sh 16 00000000
+--- Tearing off write of 00000000 to config block 16 at 600us --
+Memory contents of block 16:
+3D E7 00 00
+--- Tearing off write of 00000000 to config block 16 at 601us --
+Memory contents of block 16:
+3D E7 00 00
+--- Tearing off write of 00000000 to config block 16 at 602us --
+Memory contents of block 16:
+3D E7 00 00
+--- Tearing off write of 00000000 to config block 16 at 603us --
+Memory contents of block 16:
+3D E7 00 00
+--- Tearing off write of 00000000 to config block 16 at 604us --
+Memory contents of block 16:
+3D E7 00 00
+--- Tearing off write of 00000000 to config block 16 at 605us --
+Memory contents of block 16:
+3D E7 00 00
+--- Tearing off write of 00000000 to config block 16 at 606us --
+Memory contents of block 16:
+3D E7 00 00
+--- Tearing off write of 00000000 to config block 16 at 607us --
+Memory contents of block 16:
+3D E7 00 00
+--- Tearing off write of 00000000 to config block 16 at 608us --
+Memory contents of block 16:
+3D E7 00 00
+--- Tearing off write of 00000000 to config block 16 at 609us --
+Memory contents of block 16:
+3D E7 00 00
+--- Tearing off write of 00000000 to config block 16 at 610us --
+Memory contents of block 16:
+3D E7 00 00
+--- Tearing off write of 00000000 to config block 16 at 611us --
+Memory contents of block 16:
+3D E7 00 00
+--- Tearing off write of 00000000 to config block 16 at 612us --
+Memory contents of block 16:
+3D E7 00 00
+
+# CARD A: Demonstrating regular tearing and subsequent locked state after first write, NFC_KH2:
+
+$ ./read_config_tear.sh 14 00000000
+--- Tearing off write of 00000000 to config block 14 at 600us --
+Memory contents of block 14:
+07 81 00 00
+--- Tearing off write of 00000000 to config block 14 at 601us --
+Memory contents of block 14:
+07 81 00 00
+--- Tearing off write of 00000000 to config block 14 at 602us --
+Memory contents of block 14:
+1D 6D 00 00
+--- Tearing off write of 00000000 to config block 14 at 603us --
+Memory contents of block 14:
+1D 6D 00 00
+--- Tearing off write of 00000000 to config block 14 at 604us --
+Memory contents of block 14:
+1D 6D 00 00
+--- Tearing off write of 00000000 to config block 14 at 605us --
+Memory contents of block 14:
+1D 6D 00 00
+--- Tearing off write of 00000000 to config block 14 at 606us --
+Memory contents of block 14:
+1D 6D 00 00
+--- Tearing off write of 00000000 to config block 14 at 607us --
+Memory contents of block 14:
+1D 6D 00 00
+--- Tearing off write of 00000000 to config block 14 at 608us --
+Memory contents of block 14:
+1D 6D 00 00
+--- Tearing off write of 00000000 to config block 14 at 609us --
+Memory contents of block 14:
+1D 6D 00 00
+
+# CARD B: Demonstrating regular tearing and subsequent locked state after first write, NFC_KH0
+
+$ ./read_config_tear.sh 10 00000000
+--- Tearing off write of 00000000 to config block 10 at 600us --
+Memory contents of block 10:
+07 81 00 00
+--- Tearing off write of 00000000 to config block 10 at 601us --
+Memory contents of block 10:
+07 81 00 00
+--- Tearing off write of 00000000 to config block 10 at 602us --
+Memory contents of block 10:
+84 A4 00 00
+--- Tearing off write of 00000000 to config block 10 at 603us --
+Memory contents of block 10:
+84 A4 00 00
+--- Tearing off write of 00000000 to config block 10 at 604us --
+Memory contents of block 10:
+84 A4 00 00
+--- Tearing off write of 00000000 to config block 10 at 605us --
+Memory contents of block 10:
+04 A4 00 00
+--- Tearing off write of 00000000 to config block 10 at 606us --
+Memory contents of block 10:
+84 A4 00 00
+--- Tearing off write of 00000000 to config block 10 at 607us --
+Memory contents of block 10:
+04 A4 00 00
+--- Tearing off write of 00000000 to config block 10 at 608us --
+Memory contents of block 10:
+84 A4 00 00
+--- Tearing off write of 00000000 to config block 10 at 609us --
+Memory contents of block 10:
+04 A4 00 00
+--- Tearing off write of 00000000 to config block 10 at 610us --
+Memory contents of block 10:
+84 A4 00 00
+--- Tearing off write of 00000000 to config block 10 at 611us --
+Memory contents of block 10:
+84 A4 00 00
+--- Tearing off write of 00000000 to config block 10 at 612us --
+Memory contents of block 10:
+84 A4 00 00
+--- Tearing off write of 00000000 to config block 10 at 613us --
+Memory contents of block 10:
+84 A4 00 00
+--- Tearing off write of 00000000 to config block 10 at 614us --
+Memory contents of block 10:
+84 A4 00 00
+--- Tearing off write of 00000000 to config block 10 at 615us --
+Memory contents of block 10:
+84 A4 00 00
+
+# CARD B: Demonstrating regular tearing and subsequent locked state after first write, NFC_KH1. Note this test got "lucky" and locked in a weak bit, it is not writing multiple times.
+
+$ ./read_config_tear.sh 12 00000000
+--- Tearing off write of 00000000 to config block 12 at 600us --
+Memory contents of block 12:
+07 81 00 00
+--- Tearing off write of 00000000 to config block 12 at 601us --
+Memory contents of block 12:
+D7 A1 00 00
+--- Tearing off write of 00000000 to config block 12 at 602us --
+Memory contents of block 12:
+D7 A1 00 00
+--- Tearing off write of 00000000 to config block 12 at 603us --
+Memory contents of block 12:
+57 A1 00 00
+--- Tearing off write of 00000000 to config block 12 at 604us --
+Memory contents of block 12:
+57 A1 00 00
+--- Tearing off write of 00000000 to config block 12 at 605us --
+Memory contents of block 12:
+57 A1 00 00
+--- Tearing off write of 00000000 to config block 12 at 606us --
+Memory contents of block 12:
+D7 A1 00 00
+--- Tearing off write of 00000000 to config block 12 at 607us --
+Memory contents of block 12:
+57 A1 00 00
+--- Tearing off write of 00000000 to config block 12 at 608us --
+Memory contents of block 12:
+57 A1 00 00
+--- Tearing off write of 00000000 to config block 12 at 609us --
+Memory contents of block 12:
+D7 A1 00 00
+--- Tearing off write of 00000000 to config block 12 at 610us --
+Memory contents of block 12:
+57 A1 00 00
+--- Tearing off write of 00000000 to config block 12 at 611us --
+Memory contents of block 12:
+57 A1 00 00
+--- Tearing off write of 00000000 to config block 12 at 612us --
+Memory contents of block 12:
+57 A1 00 00
+--- Tearing off write of 00000000 to config block 12 at 613us --
+Memory contents of block 12:
+D7 A1 00 00
+
+# CARD B: Demonstrating regular tearing and subsequent locked state after first write, NFC_KH2, with data ffffffff
+
+$ ./read_config_tear.sh 14 ffffffff
+--- Tearing off write of ffffffff to config block 14 at 600us --
+Memory contents of block 14:
+07 81 00 00
+--- Tearing off write of ffffffff to config block 14 at 601us --
+Memory contents of block 14:
+07 81 00 00
+--- Tearing off write of ffffffff to config block 14 at 602us --
+Memory contents of block 14:
+8F EF 00 00
+--- Tearing off write of ffffffff to config block 14 at 603us --
+Memory contents of block 14:
+8F EF 00 00
+--- Tearing off write of ffffffff to config block 14 at 604us --
+Memory contents of block 14:
+8F EF 00 00
+--- Tearing off write of ffffffff to config block 14 at 605us --
+Memory contents of block 14:
+8F EF 00 00
+--- Tearing off write of ffffffff to config block 14 at 606us --
+Memory contents of block 14:
+8F EF 00 00
+--- Tearing off write of ffffffff to config block 14 at 607us --
+Memory contents of block 14:
+8F EF 00 00
+--- Tearing off write of ffffffff to config block 14 at 608us --
+Memory contents of block 14:
+8F EF 00 00
+--- Tearing off write of ffffffff to config block 14 at 609us --
+Memory contents of block 14:
+8F EF 00 00
+--- Tearing off write of ffffffff to config block 14 at 610us --
+Memory contents of block 14:
+8F EF 00 00
+
+# CARD C: Demonstrating tearing and subsequent locked state after (650us) first write, NFC_KH0, with data 00000000
+
+$ ./read_config_tear.sh 10 00000000
+--- Tearing off write of 00000000 to config block 10 at 650us --
+Memory contents of block 10:
+21 B1 00 00
+--- Tearing off write of 00000000 to config block 10 at 651us --
+Memory contents of block 10:
+21 B1 00 00
+--- Tearing off write of 00000000 to config block 10 at 652us --
+Memory contents of block 10:
+21 B1 00 00
+
+
+# CARD C: Demonstrating tearing and subsequent locked state after (700us) first write, NFC_KH1 and NFC_KH2, with data 00000000
+
+$ ./read_config_tear.sh 12 00000000
+--- Tearing off write of 00000000 to config block 12 at 700us --
+Memory contents of block 12:
+13 63 00 00
+--- Tearing off write of 00000000 to config block 12 at 701us --
+Memory contents of block 12:
+13 63 00 00
+--- Tearing off write of 00000000 to config block 12 at 702us --
+Memory contents of block 12:
+13 63 00 00
+--- Tearing off write of 00000000 to config block 12 at 703us --
+Memory contents of block 12:
+13 63 00 00
+
+$ ./read_config_tear.sh 14 00000000
+--- Tearing off write of 00000000 to config block 14 at 700us --
+Memory contents of block 14:
+21 B1 00 00
+--- Tearing off write of 00000000 to config block 14 at 701us --
+Memory contents of block 14:
+21 B1 00 00
+--- Tearing off write of 00000000 to config block 14 at 702us --
+Memory contents of block 14:
+21 B1 00 00
+--- Tearing off write of 00000000 to config block 14 at 703us --
+Memory contents of block 14:
+21 B1 00 00
+
+# CARD D: Demonstrating tearing and subsequent locked state after (750us) first write, NFC_KH2, with data 00000000
+
+$ ./read_config_tear.sh 14 00000000
+--- Tearing off write of 00000000 to config block 14 at 750us --
+Memory contents of block 14:
+A4 C4 00 00
+--- Tearing off write of 00000000 to config block 14 at 751us --
+Memory contents of block 14:
+A4 C4 00 00
+--- Tearing off write of 00000000 to config block 14 at 752us --
+Memory contents of block 14:
+A4 C4 00 00
+--- Tearing off write of 00000000 to config block 14 at 753us --
+Memory contents of block 14:
+A4 C4 00 00
+--- Tearing off write of 00000000 to config block 14 at 754us --
+Memory contents of block 14:
+A4 C4 00 00
+--- Tearing off write of 00000000 to config block 14 at 755us --
+Memory contents of block 14:
+A4 C4 00 00
+
+# CARD D: Demonstrating tearing and subsequent locked state after (850us) first write, NFC_KH0, with data 00000000
+
+$ ./read_config_tear.sh 10 00000000
+--- Tearing off write of 00000000 to config block 10 at 850us --
+Memory contents of block 10:
+DF 5F 00 00
+--- Tearing off write of 00000000 to config block 10 at 851us --
+Memory contents of block 10:
+DF 5F 00 00
+--- Tearing off write of 00000000 to config block 10 at 852us --
+Memory contents of block 10:
+DF 5F 00 00
+--- Tearing off write of 00000000 to config block 10 at 853us --
+Memory contents of block 10:
+DF 5F 00 00
+
+# CARD D: Demonstrating tearing and subsequent locked state after (1000us) first write, NFC_KH1, with data 00000000
+
+$ ./read_config_tear.sh 12 00000000
+--- Tearing off write of 00000000 to config block 12 at 1000us --
+Memory contents of block 12:
+A1 C1 00 00
+--- Tearing off write of 00000000 to config block 12 at 1001us --
+Memory contents of block 12:
+A1 C1 00 00
+--- Tearing off write of 00000000 to config block 12 at 1002us --
+Memory contents of block 12:
+A1 C1 00 00
+
+# CARD E: Demonstrating tearing and subsequent locked state after (1400us) first write, NFC_KH0, with data 00000000
+
+$ ./read_config_tear.sh 10 00000000 1400
+--- Tearing off write of 00000000 to config block 10 at 1400us --
+Memory contents of block 10:
+2D BD 00 00
+--- Tearing off write of 00000000 to config block 10 at 1401us --
+Memory contents of block 10:
+2D BD 00 00
+--- Tearing off write of 00000000 to config block 10 at 1402us --
+Memory contents of block 10:
+2D BD 00 00
+
+# CARD E: Demonstrating tearing and subsequent locked state after (2400us) first write, NFC_KH1, with data 00000000
+
+$ ./read_config_tear.sh 12 00000000 2400
+--- Tearing off write of 00000000 to config block 12 at 2400us --
+Memory contents of block 12:
+00 00 00 00
+--- Tearing off write of 00000000 to config block 12 at 2401us --
+Memory contents of block 12:
+00 00 00 00
+--- Tearing off write of 00000000 to config block 12 at 2402us --
+Memory contents of block 12:
+00 00 00 00
+
+# CARD E: Demonstrating tearing and subsequent locked state after (2000us) first write, NFC_KH2, with data 00000000
+
+$ ./read_config_tear.sh 14 00000000 2000
+--- Tearing off write of 00000000 to config block 14 at 2000us --
+Memory contents of block 14:
+00 00 00 00
+--- Tearing off write of 00000000 to config block 14 at 2001us --
+Memory contents of block 14:
+00 00 00 00
+--- Tearing off write of 00000000 to config block 14 at 2002us --
+Memory contents of block 14:
+00 00 00 00
+
+# CARD F: Demonstrating tearing and subsequent locked state after (1700us) first write, NFC_KH0, with data 00000000
+
+$ ./read_config_tear.sh 10 00000000 1700
+--- Tearing off write of 00000000 to config block 10 at 1700us --
+Memory contents of block 10:
+00 00 00 00
+--- Tearing off write of 00000000 to config block 10 at 1701us --
+Memory contents of block 10:
+00 00 00 00
+--- Tearing off write of 00000000 to config block 10 at 1702us --
+Memory contents of block 10:
+00 00 00 00
+
+# CARD F: Demonstrating tearing and subsequent locked state after (1500us) first write, NFC_KH1, with data 00000000
+
+$ ./read_config_tear.sh 12 00000000 1500
+--- Tearing off write of 00000000 to config block 12 at 1500us --
+Memory contents of block 12:
+00 00 00 00
+--- Tearing off write of 00000000 to config block 12 at 1501us --
+Memory contents of block 12:
+00 00 00 00
+--- Tearing off write of 00000000 to config block 12 at 1502us --
+Memory contents of block 12:
+00 00 00 00
+
+# CARD F: Demonstrating tearing and subsequent locked state after (1410us) first write, NFC_KH2, with data 00000000
+
+$ ./read_config_tear.sh 14 00000000 1410
+--- Tearing off write of 00000000 to config block 14 at 1410us --
+Memory contents of block 14:
+20 B0 00 00
+--- Tearing off write of 00000000 to config block 14 at 1411us --
+Memory contents of block 14:
+20 B0 00 00
+--- Tearing off write of 00000000 to config block 14 at 1412us --
+Memory contents of block 14:
+20 B0 00 00
+
+# CARD G: Demonstrating tearing and subsequent locked state after (1450us) first write, NFC_KH0, with data 00000000
+
+$ ./read_config_tear.sh 10 00000000 1450
+--- Tearing off write of 00000000 to config block 10 at 1450us --
+Memory contents of block 10:
+00 00 00 00
+--- Tearing off write of 00000000 to config block 10 at 1451us --
+Memory contents of block 10:
+00 00 00 00
+--- Tearing off write of 00000000 to config block 10 at 1452us --
+Memory contents of block 10:
+00 00 00 00
+
+# CARD G: Demonstrating tearing and subsequent locked state after (1430us) first write, NFC_KH1, with data 00000000
+
+$ ./read_config_tear.sh 12 00000000 1430
+--- Tearing off write of 00000000 to config block 12 at 1430us --
+Memory contents of block 12:
+71 51 00 00
+--- Tearing off write of 00000000 to config block 12 at 1431us --
+Memory contents of block 12:
+71 51 00 00
+--- Tearing off write of 00000000 to config block 12 at 1432us --
+Memory contents of block 12:
+71 51 00 00
+
+# CARD G: Demonstrating zero can be written directly to NFC_KH2, locking it in place, as it is still technically the same state as 0x81
+
+[usb] pm3 --> hf 15 raw -a -k -c -d 00c0041401
+[+] (11) 00 07 81 00 00 00 00 00 00 21 34 
+[usb] pm3 --> hf 15 raw -a -k -c -d 00c1041407000000
+[!] ⚠  command failed
+[usb] pm3 --> hf 15 raw -a -k -c -d 00c0041401
+[+] (11) 00 07 00 00 00 00 00 00 00 E9 2D
+
+# CARD G: Demonstrating zero and even FF cannot be written to NFC_KH3, it is already locked in a higher state (E7)
+
+[usb] pm3 --> hf 15 raw -a -k -c -d 00c0041601
+[+] (11) 00 25 E7 00 00 00 00 00 00 F6 75 
+[usb] pm3 --> hf 15 raw -a -k -c -d 00c1041625000000
+[!] ⚠  command failed
+[usb] pm3 --> hf 15 raw -a -k -c -d 00c0041601
+[+] (11) 00 25 E7 00 00 00 00 00 00 F6 75
+[usb] pm3 --> hf 15 raw -a -k -c -d 00c1041625FF0000
+[!] ⚠  command failed
+[usb] pm3 --> hf 15 raw -a -k -c -d 00c0041601
+[+] (11) 00 25 E7 00 00 00 00 00 00 F6 75

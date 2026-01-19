@@ -1,0 +1,70 @@
+$ OFFSET=1190; ./pm3 --incognito -c "hw tearoff --delay $OFFSET; hf mfu wrbl -b 41 -d 0000003C -k 00000000000000000000000000000000; hw tearoff --on --skip 3;hf mfu wrbl -b 41 -d 0200003C; hf mfu rdbl -b 41; hf mfu rdbl -b 41; hf mfu rdbl -b 41; hf mfu rdbl -b 41; hf mfu rdbl -b 41"
+[=] No preferences file will be loaded
+[+] execute command from commandline: hw tearoff --delay 1190; hf mfu wrbl -b 41 -d 0000003C -k 00000000000000000000000000000000; hw tearoff --on --skip 3;hf mfu wrbl -b 41 -d 0200003C; hf mfu rdbl -b 41; hf mfu rdbl -b 41; hf mfu rdbl -b 41; hf mfu rdbl -b 41; hf mfu rdbl -b 41
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> hw tearoff --delay 1190
+[=] Tear-off hook configured with delay of 1190 us
+[usb|script] pm3 --> hf mfu wrbl -b 41 -d 0000003C -k 00000000000000000000000000000000
+[=] Block: 41 (0x29) [ 00 00 00 3C ]
+[=] Using aes... 00000000000000000000000000000000
+[+] Write ( ok )
+[?] Hint: Try `hf mfu rdbl -b 41` to verify 
+[usb|script] pm3 --> hw tearoff --on --skip 3
+[=] Tear-off hook will be skipped 3 times before being activated
+[=] Tear-off hook enabled
+[usb|script] pm3 --> hf mfu wrbl -b 41 -d 0200003C
+[#] Tear-off skipped!
+[#] Tear-off skipped!
+[#] Tear-off skipped!
+[=] Block: 41 (0x29) [ 02 00 00 3C ]
+[#] Tear-off triggered!
+[-] ⛔ Write ( fail )
+[?] Hint: Check password / key!
+[usb|script] pm3 --> hf mfu rdbl -b 41
+[#] Cmd Error: card timeout. len: 0
+[#] Cmd Error: card timeout. len: 0
+[#] Cmd Error: card timeout. len: 0
+[#] Cmd Error: card timeout. len: 0
+[#] Cmd Error: card timeout. len: 0
+[#] Read block error
+[!] ⚠  Failed reading block 41 ( 00 )
+[usb|script] pm3 --> hf mfu rdbl -b 41
+
+[=] Block#  | Data        | Ascii
+[=] -----------------------------
+[=] 41/0x29 | 00 00 00 30 | ...0
+
+[usb|script] pm3 --> hf mfu rdbl -b 41
+
+[=] Block#  | Data        | Ascii
+[=] -----------------------------
+[=] 41/0x29 | 00 00 00 30 | ...0
+
+[usb|script] pm3 --> hf mfu rdbl -b 41
+
+[=] Block#  | Data        | Ascii
+[=] -----------------------------
+[=] 41/0x29 | 02 00 00 30 | ...0
+
+[usb|script] pm3 --> hf mfu rdbl -b 41
+
+[=] Block#  | Data        | Ascii
+[=] -----------------------------
+[=] 41/0x29 | 00 00 00 30 | ...0
+
+----
+
+[usb] pm3 --> hf mfu rdbl -b 41
+
+[=] Block#  | Data        | Ascii
+[=] -----------------------------
+[=] 41/0x29 | 00 00 00 30 | ...0
+
+[usb] pm3 --> hf mfu rdbl -b 41
+
+[=] Block#  | Data        | Ascii
+[=] -----------------------------
+[=] 41/0x29 | 02 00 00 30 | ...0

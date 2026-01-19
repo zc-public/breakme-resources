@@ -1,0 +1,56 @@
+[usb|script] pm3 --> script run ./fingerprint_ulc.py
+[+] executing python ./fingerprint_ulc.py
+[+] args ''
+
+[=] --- Tag Information --------------------------
+[+]       TYPE: MIFARE Ultralight C (MF0ULC) ( NTAG21x )
+[+]        UID: EF 82 17 33 44 55 66 
+[+]     UID[0]: EF, no tag-info available
+      BCC0: 45, crc should be F2
+[+]       BCC1: 44 ( ok )
+[+]   Internal: 48
+[+]       Lock: 00 00  - 0000000000000000
+[+]        OTP: 00 00 00 00  - 00000000000000000000000000000000
+
+[=] --- UL-C Configuration --------------------------
+[=] Total memory....... 188 bytes
+[=] Available memory... 172 bytes
+[=] 40 / 0x28 | 00 00 00 00  - 0000000000000000 Higher lockbits
+[=] 41 / 0x29 | 00 00 00 00  - 0000000000000000 Counter
+[=] 42 / 0x2A | 30 00 00 00  Auth0 unlocked
+[=] 43 / 0x2B | 00 00 00 00  Auth1 R/W access restricted
+[=] 
+[=] --- Fingerprint
+[=] n/a
+[#] Warning: HF field is off
+[#] Warning: HF field is off
+[!!]  Error: tag didn't answer to READ magic
+
+UID:             EF821733445566
+ATQA anticol:    00 44
+SAK anticol:     00
+Answer to RATS:  0A78008102DBA0C119402AB5
+FDT to 1A00          :  29732 = 2192.63 us
+FDT to AF*  (bad key):  72996 = 5383.19 us
+FDT to AF*  (def key):  72996 = 5383.19 us
+Checking ShortFrames...
+ShortFrame 26:   4400 (REQA)
+ShortFrame 52:   4400 (WUPA)
+Checking Shortcut Commands 26;**00+CRC ...
+Checking Shortcut Commands 26;**  +CRC ...
+Checking Shortcut Commands 26;**00 ...
+Checking Shortcut Commands 26;**   ...
+Checking Commands **00+CRC ...
+Cmd 1a00:     AF89B07B35A1B3F47E[6C4C]
+Cmd 3000:     EF821745334455664448000000000000[5BC1]
+Cmd a000:     0A
+Cmd a200:     0A
+Cmd af00:     00D8E861F7A0222F2D[6DD8]
+Checking Commands **  +CRC ...
+Cmd 1a  :     AF89B07B35A1B3F47E[6C4C]
+Cmd 30  :     00000000000000000000000000000000[3749]
+Cmd a0  :     0A
+Cmd a2  :     0A
+Cmd af  :     00DA3A7CE7DD65CE66[6B84]
+Checking Commands **00 ...
+Checking Commands **   ...

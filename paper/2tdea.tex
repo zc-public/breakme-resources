@@ -1,0 +1,55 @@
+\begin{tikzpicture}[
+    box/.style={draw, rectangle, minimum width=1cm, minimum height=1cm, thick},
+    arrow/.style={->, >=Stealth, thick},
+    label/.style={font=\normalsize}
+]
+
+% Encryption section
+\node[label] at (-0.8, 1.8) {P};
+\node[box] (E1) at (0.8, 1.8) {E};
+\node[box] (D) at (2.6, 1.8) {D};
+\node[box] (E2) at (4.4, 1.8) {E};
+\node[label] at (6, 1.8) {C};
+
+% Keys for encryption
+\node[label] (K1a) at (0.8, 3) {$\mathrm{Key1}$};
+\node[label] (K2a) at (2.6, 3) {$\mathrm{Key2}$};
+\node[label] (K1b) at (4.4, 3) {$\mathrm{Key1}$};
+
+% Arrows for encryption
+\draw[arrow] (-0.5, 1.8) -- (E1);
+\draw[arrow] (E1) -- (D);
+\draw[arrow] (D) -- (E2);
+\draw[arrow] (E2) -- (5.7, 1.8);
+\draw[arrow] (K1a) -- (E1);
+\draw[arrow] (K2a) -- (D);
+\draw[arrow] (K1b) -- (E2);
+
+% Encryption label
+\node[label] at (2.6, 0.6) {Encryption};
+
+% Decryption section
+\node[label] at (-0.8, -1.8) {C};
+\node[box] (D1) at (0.8, -1.8) {D};
+\node[box] (E3) at (2.6, -1.8) {E};
+\node[box] (D2) at (4.4, -1.8) {D};
+\node[label] at (6, -1.8) {P};
+
+% Keys for decryption
+\node[label] (K1c) at (0.8, -0.6) {$\mathrm{Key1}$};
+\node[label] (K2b) at (2.6, -0.6) {$\mathrm{Key2}$};
+\node[label] (K1d) at (4.4, -0.6) {$\mathrm{Key1}$};
+
+% Arrows for decryption
+\draw[arrow] (-0.5, -1.8) -- (D1);
+\draw[arrow] (D1) -- (E3);
+\draw[arrow] (E3) -- (D2);
+\draw[arrow] (D2) -- (5.7, -1.8);
+\draw[arrow] (K1c) -- (D1);
+\draw[arrow] (K2b) -- (E3);
+\draw[arrow] (K1d) -- (D2);
+
+% Decryption label
+\node[label] at (2.6, -3) {Decryption};
+
+\end{tikzpicture}

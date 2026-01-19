@@ -1,0 +1,254 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 57 --eeprom-init 0x00FF00FF --bitflips 6 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 280 --heat-scan
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_masked_key_bits.py --block 57 --eeprom-init 0x00FF00FF --bitflips 6 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 280 --heat-scan
+[+] executing python recover_masked_key_bits.py
+[+] args '--block 57 --eeprom-init 0x00FF00FF --bitflips 6 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 280 --heat-scan'
+Block      57 (0x39)
+Key index   2 (RFU)
+Segment     2
+Mask       00000000
+Testing with initial tearoff value: 280 ms
+Tears: 1*280ms + 0*235ms
+Bruteforcing, total attempts: 2
+RFU Hamming Distance: 16, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 1*235ms
+Bruteforcing, total attempts: 1149020
+RFU Hamming Distance: 16, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 2*235ms
+Bruteforcing, total attempts: 2298038
+RFU Hamming Distance: 16, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 3*235ms
+Bruteforcing, total attempts: 3447056
+RFU Hamming Distance: 16, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 4*235ms
+Bruteforcing, total attempts: 4596074
+RFU Hamming Distance: 16, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 5*235ms
+Bruteforcing, total attempts: 5745092
+RFU Hamming Distance: 16, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 6*235ms
+Bruteforcing, total attempts: 6894110
+RFU Hamming Distance: 16, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 7*235ms
+Bruteforcing, total attempts: 8043128
+RFU Hamming Distance: 16, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 8*235ms
+Bruteforcing, total attempts: 9192146
+RFU Hamming Distance: 16, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 9*235ms
+Bruteforcing, total attempts: 10341164
+RFU Hamming Distance: 16, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 10*235ms
+Bruteforcing, total attempts: 11490182
+RFU Hamming Distance: 16, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 11*235ms
+Bruteforcing, total attempts: 12639200
+RFU Hamming Distance: 16, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 12*235ms
+Bruteforcing, total attempts: 13788218
+RFU Hamming Distance: 16, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 13*235ms
+Bruteforcing, total attempts: 14937236
+RFU Hamming Distance: 16, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 14*235ms
+Bruteforcing, total attempts: 16086254
+RFU Hamming Distance: 16, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 15*235ms
+Bruteforcing, total attempts: 17235272
+RFU Hamming Distance: 15, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 16*235ms
+Bruteforcing, total attempts: 18384290
+RFU Hamming Distance: 15, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 17*235ms
+Bruteforcing, total attempts: 19533308
+RFU Hamming Distance: 15, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 18*235ms
+Bruteforcing, total attempts: 20682326
+RFU Hamming Distance: 15, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 19*235ms
+Bruteforcing, total attempts: 21831344
+RFU Hamming Distance: 15, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 20*235ms
+Bruteforcing, total attempts: 22980362
+RFU Hamming Distance: 15, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 21*235ms
+Bruteforcing, total attempts: 24129380
+RFU Hamming Distance: 15, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 22*235ms
+Bruteforcing, total attempts: 25278398
+RFU Hamming Distance: 14, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 23*235ms
+Bruteforcing, total attempts: 26427416
+RFU Hamming Distance: 14, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 24*235ms
+Bruteforcing, total attempts: 27576434
+RFU Hamming Distance: 14, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 25*235ms
+Bruteforcing, total attempts: 28725452
+RFU Hamming Distance: 14, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 26*235ms
+Bruteforcing, total attempts: 29874470
+RFU Hamming Distance: 14, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 27*235ms
+Bruteforcing, total attempts: 31023488
+RFU Hamming Distance: 13, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 28*235ms
+Bruteforcing, total attempts: 32172506
+RFU Hamming Distance: 13, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 29*235ms
+Bruteforcing, total attempts: 33321524
+RFU Hamming Distance: 13, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 30*235ms
+Bruteforcing, total attempts: 34470542
+RFU Hamming Distance: 13, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 31*235ms
+Bruteforcing, total attempts: 35619560
+RFU Hamming Distance: 13, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 32*235ms
+Bruteforcing, total attempts: 36768578
+RFU Hamming Distance: 13, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 33*235ms
+Bruteforcing, total attempts: 37917596
+RFU Hamming Distance: 13, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 34*235ms
+Bruteforcing, total attempts: 39066614
+RFU Hamming Distance: 13, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 35*235ms
+Bruteforcing, total attempts: 40215632
+RFU Hamming Distance: 13, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 36*235ms
+Bruteforcing, total attempts: 41364650
+RFU Hamming Distance: 11, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 37*235ms
+Bruteforcing, total attempts: 42513668
+RFU Hamming Distance: 10, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 38*235ms
+Bruteforcing, total attempts: 43662686
+RFU Hamming Distance: 10, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 39*235ms
+Bruteforcing, total attempts: 44811704
+RFU Hamming Distance: 9, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 40*235ms
+Bruteforcing, total attempts: 45960722
+RFU Hamming Distance: 8, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 41*235ms
+Bruteforcing, total attempts: 47109740
+RFU Hamming Distance: 7, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 42*235ms
+Bruteforcing, total attempts: 48258758
+RFU Hamming Distance: 7, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 43*235ms
+Bruteforcing, total attempts: 49407776
+RFU Hamming Distance: 7, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 44*235ms
+Bruteforcing, total attempts: 50556794
+RFU Hamming Distance: 7, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 45*235ms
+Bruteforcing, total attempts: 51705812
+RFU Hamming Distance: 6, OK
+   New key bits found:   5A005000 with HD=06
+Masked key bits found:   5A005000
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   0050005A (00000000010100000000000001011010)
+            Mask bits:   00000000 (00000000000000000000000000000000)
+ Recovered block bits:             .........1.1.............1.11.1.
+      Block bits init:   00FF00FF (00000000111111110000000011111111)
+Total authentications:   52142860
+Time spent since start:  0 minutes 12.30 seconds
+...?.???..?.?
+
+   New key bits found:   5A004000 with HD=05
+Masked key bits found:   5A004000
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   0040005A (00000000010000000000000001011010)
+            Mask bits:   00000000 (00000000000000000000000000000000)
+ Recovered block bits:             .........1...............1.11.1.
+      Block bits init:   00FF00FF (00000000111111110000000011111111)
+...?.???.?..??..?..???.....??.....??....?..?..?.?.....?....?.?..???.?...??
+
+   New key bits found:   7A001000 with HD=06
+Masked key bits found:   7A001000
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   0010007A (00000000000100000000000001111010)
+            Mask bits:   00000000 (00000000000000000000000000000000)
+ Recovered block bits:             ...........1.............1111.1.
+      Block bits init:   00FF00FF (00000000111111110000000011111111)
+   (also inserted combined key: 7A005000 with HD=07)
+..?..?
+
+   New key bits found:   5A005200 with HD=07
+Masked key bits found:   5A005200
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   0052005A (00000000010100100000000001011010)
+            Mask bits:   00000000 (00000000000000000000000000000000)
+ Recovered block bits:             .........1.1..1..........1.11.1.
+      Block bits init:   00FF00FF (00000000111111110000000011111111)
+   (also inserted combined key: 7A005200 with HD=08)
+..................?..........?....?............??
+
+   New key bits found:   5A001000 with HD=05
+Masked key bits found:   5A001000
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   0010005A (00000000000100000000000001011010)
+            Mask bits:   00000000 (00000000000000000000000000000000)
+ Recovered block bits:             ...........1.............1.11.1.
+      Block bits init:   00FF00FF (00000000111111110000000011111111)
+...........?
+
+   New key bits found:   5A000000 with HD=04
+Masked key bits found:   5A000000
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   0000005A (00000000000000000000000001011010)
+            Mask bits:   00000000 (00000000000000000000000000000000)
+ Recovered block bits:             .........................1.11.1.
+      Block bits init:   00FF00FF (00000000111111110000000011111111)
+.???..?..?...?..?...........?....??......?..?.....?......??.?.?......???.?.?........??.?..??....?..?

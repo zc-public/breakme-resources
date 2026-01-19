@@ -1,0 +1,62 @@
+
+AUTH0=0x30
+hf 14a raw -akb7 26
+hf 14a raw -c 3000
+[+] 04 84 BB B3 11 01 15 89 8C 48 00 00 00 00 00 00 [ 28 5C ]
+    BLOCK0      BLOCK1      BLOCK2      BLOCK3
+
+AUTH0=0x03
+hf mfu wrbl -b 42 -d 03000000 -k 49454D4B41455242214E4143554F5946
+hf 14a raw -sc 3000
+[+] 04 84 BB B3 11 01 15 89 8C 48 00 00 04 84 BB B3 [ 9F 18 ]
+    BLOCK0      BLOCK1      BLOCK2      BLOCK0                   ok
+hf 14a raw -sc 3001
+[+] 11 01 15 89 8C 48 00 00 04 84 BB B3 11 01 15 89 [ 1F 6F ]
+    BLOCK1      BLOCK2      BLOCK0      BLOCK1                   ok
+hf 14a raw -sc 3002
+[+] 8C 48 00 00 04 84 BB B3 11 01 15 89 8C 48 00 00 [ AA 7F ]
+    BLOCK2      BLOCK0      BLOCK1      BLOCK2                   ok
+hf 14a raw -akb7 26
+hf 14a raw -c 3000
+[+] 04 84 BB B3 11 01 15 89 8C 48 00 00 04 84 BB B3 [ 9F 18 ]
+    BLOCK0      BLOCK1      BLOCK2      BLOCK0                   ok
+
+
+AUTH0<3 undefined in the datasheet...
+
+AUTH0=0x02
+hf mfu wrbl -b 42 -d 02000000 -k 49454D4B41455242214E4143554F5946
+hf 14a raw -sc 3000
+[+] 04 84 BB B3 11 01 15 89 04 84 BB B3 11 01 15 89 [ CE 91 ]
+    BLOCK0      BLOCK1      BLOCK0      BLOCK1                   ok
+hf 14a raw -sc 3001
+[+] 11 01 15 89 04 84 BB B3 11 01 15 89 8C 48 00 00 [ 88 3B ]
+    BLOCK1      BLOCK0      BLOCK1      BLOCK0                   ok (different than NXP ULC...)
+hf 14a raw -akb7 26
+hf 14a raw -c 3000
+[+] 04 84 BB B3 11 01 15 89 04 84 BB B3 11 01 15 89 [ CE 91 ]
+    BLOCK0      BLOCK1      BLOCK0      BLOCK1                   ok
+
+AUTH0=0x01
+hf mfu wrbl -b 42 -d 01000000 -k 49454D4B41455242214E4143554F5946
+hf 14a raw -sc 3000
+[+] 04 84 BB B3 04 84 BB B3 11 01 15 89 8C 48 00 00 [ B9 68 ]
+    BLOCK0      BLOCK0      BLOCK1!!    BLOCK2!!                 fail, leak 2 blocks (same as NXP)
+hf 14a raw -akb7 26
+hf 14a raw -c 3000
+[+] 04 84 BB B3 04 84 BB B3 11 01 15 89 8C 48 00 00 [ B9 68 ]
+    BLOCK0      BLOCK0      BLOCK1!!    BLOCK2!!                 fail, leak 2 blocks (same as NXP)
+
+AUTH0=0x00
+hf mfu wrbl -b 42 -d 00000000 -k 49454D4B41455242214E4143554F5946
+hf 14a raw -sc 3000
+[+] 00 
+hf 14a raw -akb7 26
+hf 14a raw -c 3000
+[+] 04 84 BB B3 11 01 15 89 8C 48 00 00 00 00 00 00 [ 28 5C ]
+    BLOCK0!!    BLOCK1!!    BLOCK2!!    BLOCK3!!                 fail, leak all blocks (same as NXP)
+
+hf mfu wrbl -b 42 -d 30000000 -k 49454D4B41455242214E4143554F5946
+
+
+

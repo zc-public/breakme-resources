@@ -1,0 +1,83 @@
+GET    s1  s2  s3  s4  = suncmac key
+
+TEAR   xx
+GET   ts1  s2  s3  s4  = start tearing segment 1. Can be done a few times until it stabilizes
+REPEAT
+
+TEAR0  xx
+GET    m1  s2  s3  s4  = s1 fully teared = mask
+
+TEAR       xx
+GET    m1 ts2  s3  s4
+REPEAT
+
+TEAR0      xx
+GET    m1  m2  s3  s4
+
+TEAR           xx
+GET    m1  m2 ts3  s4
+REPEAT
+
+TEAR0          xx
+GET    m1  m2  m3  s4
+
+TEAR               xx
+GET    m1  m2  m3 ts4
+REPEAT
+
+TEAR0              xx
+GET    m1  m2  m3  m4  = suncmac key=mask
+
+WRITE      z2  z3  z4
+GET    m1  z2  z3  z4  = m1
+WRITE  z1
+TEAR0      xx
+GET    z1  m2  z3  z4  = m2
+WRITE      z2
+TEAR0          xx
+GET    z1  z2  m3  z4  = m3
+WRITE          z3
+TEAR0              xx
+GET    z1  z2  z3  m4  = m4
+WRITE              z4
+GET    z1  z2  z3  z4  = suncmac key=0
+CHECK  z1  z2  z3  z4  = suncmac key=0
+
+TEAR   xx
+GET   tz1  z2  z3  z4  = tear segment 1 from zero to mask
+BREAK tz1  z2  z3  z4  = BREAK tz1 (test if !=z1)
+REPEAT
+BREAK  m1  z2  z3  z4  = m1
+
+WRITE  z1
+TEAR       xx
+GET    z1 tz2  z3  z4
+BREAK  z1 tz2  z3  z4
+REPEAT
+BREAK  z1  m2  z3  z4
+
+WRITE      z2
+TEAR           xx
+GET    z1  z2 tz3  z4
+BREAK  z1  z2 tz3  z4
+REPEAT
+BREAK  z1  z2  m3  z4
+
+WRITE          z3
+TEAR               xx
+GET    z1  z2  z3 tz4
+BREAK  z1  z2  z3 tz4
+REPEAT
+BREAK  z1  z2  z3  m4
+WRITE              z4
+
+CHECK  m1  m2  m3  m4 = mask key
+BREAK  m1  m2  m3 ts4
+BREAK  m1  m2  m3  s4
+BREAK  m1  m2 ts3  s4
+BREAK  m1  m2  s3  s4
+BREAK  m1 ts2  s3  s4
+BREAK  m1  s2  s3  s4
+BREAK ts1  s2  s3  s4
+BREAK  s1  s2  s3  s4 = SUNCMAC key
+

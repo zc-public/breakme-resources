@@ -1,0 +1,1196 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 8 --eeprom-init 0xFF00FF00 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 8 --eeprom-init 0xFF00FF00 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 8 --eeprom-init 0xFF00FF00 --bitflips 3 --tear1 400'
+Block       8 (0x08)
+Segment     3
+Testing with initial tearoff value: 400 ms
+
+[!] finished recover_key_bits.py with exception
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 8 --eeprom-init 0x00FF00FF --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 8 --eeprom-init 0x00FF00FF --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 8 --eeprom-init 0x00FF00FF --bitflips 3 --tear1 400'
+Block       8 (0x08)
+Segment     3
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 3*240ms
+Bruteforcing, total attempts: 11054
+RFU Hamming Weight: 3, OK
+   New key bits found:   40000C00 with HW=03
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+ Recovered block bits:             ............11...........1......
+Total authentications:   13120
+Time spent since start:  0 minutes 1.51 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 8 --eeprom-init 0xF0F0F0F0 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 8 --eeprom-init 0xF0F0F0F0 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 8 --eeprom-init 0xF0F0F0F0 --bitflips 3 --tear1 400'
+Block       8 (0x08)
+Segment     3
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 3, OK
+   New key bits found:   40A00000 with HW=03
+     EEPROM bits init:   F0F0F0F0 (11110000111100001111000011110000)
+ Recovered block bits:             ................1.1......1......
+Total authentications:   2011
+Time spent since start:  0 minutes 0.73 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 8 --eeprom-init 0x0F0F0F0F --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 8 --eeprom-init 0x0F0F0F0F --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 8 --eeprom-init 0x0F0F0F0F --bitflips 3 --tear1 400'
+Block       8 (0x08)
+Segment     3
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 3, OK
+   New key bits found:   08000C00 with HW=03
+     EEPROM bits init:   0F0F0F0F (00001111000011110000111100001111)
+ Recovered block bits:             ............11..............1...
+Total authentications:   4992
+Time spent since start:  0 minutes 1.00 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 8 --eeprom-init 0xAAAAAAAA --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 8 --eeprom-init 0xAAAAAAAA --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 8 --eeprom-init 0xAAAAAAAA --bitflips 3 --tear1 400'
+Block       8 (0x08)
+Segment     3
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 3, OK
+   New key bits found:   08200800 with HW=03
+     EEPROM bits init:   AAAAAAAA (10101010101010101010101010101010)
+ Recovered block bits:             ............1.....1.........1...
+Total authentications:   1254
+Time spent since start:  0 minutes 0.74 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 8 --eeprom-init 0x55555555 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 8 --eeprom-init 0x55555555 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 8 --eeprom-init 0x55555555 --bitflips 3 --tear1 400'
+Block       8 (0x08)
+Segment     3
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 2, OK
+   New key bits found:   40000400 with HW=02
+     EEPROM bits init:   55555555 (01010101010101010101010101010101)
+ Recovered block bits:             .............1...........1......
+Total authentications:   166
+Time spent since start:  0 minutes 0.74 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 8 --eeprom-init 0xA5A5A5A5 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 8 --eeprom-init 0xA5A5A5A5 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 8 --eeprom-init 0xA5A5A5A5 --bitflips 3 --tear1 400'
+Block       8 (0x08)
+Segment     3
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 3, OK
+   New key bits found:   00A00400 with HW=03
+     EEPROM bits init:   A5A5A5A5 (10100101101001011010010110100101)
+ Recovered block bits:             .............1..1.1.............
+Total authentications:   3022
+Time spent since start:  0 minutes 0.74 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 8 --eeprom-init 0x5A5A5A5A --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 8 --eeprom-init 0x5A5A5A5A --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 8 --eeprom-init 0x5A5A5A5A --bitflips 3 --tear1 400'
+Block       8 (0x08)
+Segment     3
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 3, OK
+   New key bits found:   48000800 with HW=03
+     EEPROM bits init:   5A5A5A5A (01011010010110100101101001011010)
+ Recovered block bits:             ............1............1..1...
+Total authentications:   8511
+Time spent since start:  0 minutes 1.26 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 8 --eeprom-init 0xC3C3C3C3 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 8 --eeprom-init 0xC3C3C3C3 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 8 --eeprom-init 0xC3C3C3C3 --bitflips 3 --tear1 400'
+Block       8 (0x08)
+Segment     3
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 1, OK
+   New key bits found:   40000000 with HW=01
+     EEPROM bits init:   C3C3C3C3 (11000011110000111100001111000011)
+ Recovered block bits:             .........................1......
+Total authentications:   9
+Time spent since start:  0 minutes 0.73 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 8 --eeprom-init 0x3C3C3C3C --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 8 --eeprom-init 0x3C3C3C3C --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 8 --eeprom-init 0x3C3C3C3C --bitflips 3 --tear1 400'
+Block       8 (0x08)
+Segment     3
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 3, OK
+   New key bits found:   08000C00 with HW=03
+     EEPROM bits init:   3C3C3C3C (00111100001111000011110000111100)
+ Recovered block bits:             ............11..............1...
+Total authentications:   4992
+Time spent since start:  0 minutes 1.00 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 9 --eeprom-init 0xFF00FF00 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 9 --eeprom-init 0xFF00FF00 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 9 --eeprom-init 0xFF00FF00 --bitflips 3 --tear1 400'
+Block       9 (0x09)
+Segment     2
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 6, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 3, OK
+   New key bits found:   00420010 with HW=03
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+ Recovered block bits:             ...1.............1....1.........
+Total authentications:   9805
+Time spent since start:  0 minutes 1.26 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 9 --eeprom-init 0x00FF00FF --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 9 --eeprom-init 0x00FF00FF --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 9 --eeprom-init 0x00FF00FF --bitflips 3 --tear1 400'
+Block       9 (0x09)
+Segment     2
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 2, OK
+   New key bits found:   20008000 with HW=02
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+ Recovered block bits:             ........1.................1.....
+Total authentications:   3833
+Time spent since start:  0 minutes 0.99 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 9 --eeprom-init 0xF0F0F0F0 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 9 --eeprom-init 0xF0F0F0F0 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 9 --eeprom-init 0xF0F0F0F0 --bitflips 3 --tear1 400'
+Block       9 (0x09)
+Segment     2
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 5, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 3*240ms
+Bruteforcing, total attempts: 11054
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 4*240ms
+Bruteforcing, total attempts: 14738
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 5*240ms
+Bruteforcing, total attempts: 18422
+RFU Hamming Weight: 3, OK
+   New key bits found:   20408000 with HW=03
+     EEPROM bits init:   F0F0F0F0 (11110000111100001111000011110000)
+ Recovered block bits:             ........1........1........1.....
+Total authentications:   20222
+Time spent since start:  0 minutes 2.02 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 9 --eeprom-init 0x0F0F0F0F --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 9 --eeprom-init 0x0F0F0F0F --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 9 --eeprom-init 0x0F0F0F0F --bitflips 3 --tear1 400'
+Block       9 (0x09)
+Segment     2
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 6, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 6, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 3*240ms
+Bruteforcing, total attempts: 11054
+RFU Hamming Weight: 2, OK
+   New key bits found:   00060000 with HW=02
+     EEPROM bits init:   0F0F0F0F (00001111000011110000111100001111)
+ Recovered block bits:             .....................11.........
+Total authentications:   11252
+Time spent since start:  0 minutes 1.51 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 9 --eeprom-init 0xAAAAAAAA --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 9 --eeprom-init 0xAAAAAAAA --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 9 --eeprom-init 0xAAAAAAAA --bitflips 3 --tear1 400'
+Block       9 (0x09)
+Segment     2
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 3, OK
+   New key bits found:   20028000 with HW=03
+     EEPROM bits init:   AAAAAAAA (10101010101010101010101010101010)
+ Recovered block bits:             ........1.............1...1.....
+Total authentications:   5401
+Time spent since start:  0 minutes 1.00 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 9 --eeprom-init 0x55555555 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 9 --eeprom-init 0x55555555 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 9 --eeprom-init 0x55555555 --bitflips 3 --tear1 400'
+Block       9 (0x09)
+Segment     2
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 7, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 7, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 3*240ms
+Bruteforcing, total attempts: 11054
+RFU Hamming Weight: 3, OK
+   New key bits found:   00440010 with HW=03
+     EEPROM bits init:   55555555 (01010101010101010101010101010101)
+ Recovered block bits:             ...1.............1...1..........
+Total authentications:   13660
+Time spent since start:  0 minutes 1.52 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 9 --eeprom-init 0xA5A5A5A5 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 9 --eeprom-init 0xA5A5A5A5 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 9 --eeprom-init 0xA5A5A5A5 --bitflips 3 --tear1 400'
+Block       9 (0x09)
+Segment     2
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 8, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 6, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 3*240ms
+Bruteforcing, total attempts: 11054
+RFU Hamming Weight: 2, OK
+   New key bits found:   20008000 with HW=02
+     EEPROM bits init:   A5A5A5A5 (10100101101001011010010110100101)
+ Recovered block bits:             ........1.................1.....
+Total authentications:   11201
+Time spent since start:  0 minutes 1.50 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 9 --eeprom-init 0x5A5A5A5A --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 9 --eeprom-init 0x5A5A5A5A --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 9 --eeprom-init 0x5A5A5A5A --bitflips 3 --tear1 400'
+Block       9 (0x09)
+Segment     2
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 3*240ms
+Bruteforcing, total attempts: 11054
+RFU Hamming Weight: 3, OK
+   New key bits found:   00420010 with HW=03
+     EEPROM bits init:   5A5A5A5A (01011010010110100101101001011010)
+ Recovered block bits:             ...1.............1....1.........
+Total authentications:   13489
+Time spent since start:  0 minutes 1.51 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 9 --eeprom-init 0xC3C3C3C3 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 9 --eeprom-init 0xC3C3C3C3 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 9 --eeprom-init 0xC3C3C3C3 --bitflips 3 --tear1 400'
+Block       9 (0x09)
+Segment     2
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 5, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 3, OK
+   New key bits found:   00428000 with HW=03
+     EEPROM bits init:   C3C3C3C3 (11000011110000111100001111000011)
+ Recovered block bits:             ........1........1....1.........
+Total authentications:   6117
+Time spent since start:  0 minutes 1.00 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 9 --eeprom-init 0x3C3C3C3C --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 9 --eeprom-init 0x3C3C3C3C --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 9 --eeprom-init 0x3C3C3C3C --bitflips 3 --tear1 400'
+Block       9 (0x09)
+Segment     2
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 5, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 3, OK
+   New key bits found:   20040010 with HW=03
+     EEPROM bits init:   3C3C3C3C (00111100001111000011110000111100)
+ Recovered block bits:             ...1.................1....1.....
+Total authentications:   5424
+Time spent since start:  0 minutes 0.99 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 10 --eeprom-init 0xFF00FF00 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 10 --eeprom-init 0xFF00FF00 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 10 --eeprom-init 0xFF00FF00 --bitflips 3 --tear1 400'
+Block      10 (0x0A)
+Segment     1
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 7, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 6, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 6, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 3*240ms
+Bruteforcing, total attempts: 11054
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 4*240ms
+Bruteforcing, total attempts: 14738
+RFU Hamming Weight: 3, OK
+   New key bits found:   00480002 with HW=03
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+ Recovered block bits:             ......1..........1..1...........
+Total authentications:   17494
+Time spent since start:  0 minutes 1.77 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 10 --eeprom-init 0x00FF00FF --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 10 --eeprom-init 0x00FF00FF --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 10 --eeprom-init 0x00FF00FF --bitflips 3 --tear1 400'
+Block      10 (0x0A)
+Segment     1
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 3, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 2, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 2, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 3*240ms
+Bruteforcing, total attempts: 11054
+RFU Hamming Weight: 1, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 4*240ms
+Bruteforcing, total attempts: 14738
+RFU Hamming Weight: 1, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 5*240ms
+Bruteforcing, total attempts: 18422
+RFU Hamming Weight: 1, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 6*240ms
+
+[!] finished recover_key_bits.py with exception
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 10 --eeprom-init 0xF0F0F0F0 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 10 --eeprom-init 0xF0F0F0F0 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 10 --eeprom-init 0xF0F0F0F0 --bitflips 3 --tear1 400'
+Block      10 (0x0A)
+Segment     1
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 2, OK
+   New key bits found:   20400000 with HW=02
+     EEPROM bits init:   F0F0F0F0 (11110000111100001111000011110000)
+ Recovered block bits:             .................1........1.....
+Total authentications:   7509
+Time spent since start:  0 minutes 1.25 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 10 --eeprom-init 0x0F0F0F0F --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 10 --eeprom-init 0x0F0F0F0F --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 10 --eeprom-init 0x0F0F0F0F --bitflips 3 --tear1 400'
+Block      10 (0x0A)
+Segment     1
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 6, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 6, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 5, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 3*240ms
+Bruteforcing, total attempts: 11054
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 4*240ms
+Bruteforcing, total attempts: 14738
+RFU Hamming Weight: 3, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 5*240ms
+Bruteforcing, total attempts: 18422
+RFU Hamming Weight: 3, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 6*240ms
+Bruteforcing, total attempts: 22106
+RFU Hamming Weight: 2, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 7*240ms
+Bruteforcing, total attempts: 25790
+RFU Hamming Weight: 2, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 8*240ms
+Bruteforcing, total attempts: 29474
+RFU Hamming Weight: 2, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 9*240ms
+
+[!] finished recover_key_bits.py with exception
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 10 --eeprom-init 0xAAAAAAAA --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 10 --eeprom-init 0xAAAAAAAA --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 10 --eeprom-init 0xAAAAAAAA --bitflips 3 --tear1 400'
+Block      10 (0x0A)
+Segment     1
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 3, OK
+   New key bits found:   20080002 with HW=03
+     EEPROM bits init:   AAAAAAAA (10101010101010101010101010101010)
+ Recovered block bits:             ......1.............1.....1.....
+Total authentications:   1755
+Time spent since start:  0 minutes 0.74 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 10 --eeprom-init 0x55555555 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 10 --eeprom-init 0x55555555 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 10 --eeprom-init 0x55555555 --bitflips 3 --tear1 400'
+Block      10 (0x0A)
+Segment     1
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 3, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 3, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 3*240ms
+Bruteforcing, total attempts: 11054
+RFU Hamming Weight: 1, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 4*240ms
+Bruteforcing, total attempts: 14738
+RFU Hamming Weight: 2, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 5*240ms
+
+[!] finished recover_key_bits.py with exception
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 10 --eeprom-init 0xA5A5A5A5 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 10 --eeprom-init 0xA5A5A5A5 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 10 --eeprom-init 0xA5A5A5A5 --bitflips 3 --tear1 400'
+Block      10 (0x0A)
+Segment     1
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 5, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 3*240ms
+Bruteforcing, total attempts: 11054
+RFU Hamming Weight: 3, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 4*240ms
+Bruteforcing, total attempts: 14738
+RFU Hamming Weight: 3, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 5*240ms
+Bruteforcing, total attempts: 18422
+RFU Hamming Weight: 2, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 6*240ms
+Bruteforcing, total attempts: 22106
+RFU Hamming Weight: 2, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 7*240ms
+Bruteforcing, total attempts: 25790
+RFU Hamming Weight: 1, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 8*240ms
+Bruteforcing, total attempts: 29474
+RFU Hamming Weight: 1, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 9*240ms
+
+[!] finished recover_key_bits.py with exception
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 10 --eeprom-init 0x5A5A5A5A --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 10 --eeprom-init 0x5A5A5A5A --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 10 --eeprom-init 0x5A5A5A5A --bitflips 3 --tear1 400'
+Block      10 (0x0A)
+Segment     1
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 5, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 3, OK
+   New key bits found:   00480002 with HW=03
+     EEPROM bits init:   5A5A5A5A (01011010010110100101101001011010)
+ Recovered block bits:             ......1..........1..1...........
+Total authentications:   10126
+Time spent since start:  0 minutes 1.26 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 10 --eeprom-init 0xC3C3C3C3 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 10 --eeprom-init 0xC3C3C3C3 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 10 --eeprom-init 0xC3C3C3C3 --bitflips 3 --tear1 400'
+Block      10 (0x0A)
+Segment     1
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 5, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 3*240ms
+Bruteforcing, total attempts: 11054
+RFU Hamming Weight: 3, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 4*240ms
+Bruteforcing, total attempts: 14738
+RFU Hamming Weight: 2, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 5*240ms
+Bruteforcing, total attempts: 18422
+RFU Hamming Weight: 2, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 6*240ms
+Bruteforcing, total attempts: 22106
+RFU Hamming Weight: 2, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 7*240ms
+Bruteforcing, total attempts: 25790
+RFU Hamming Weight: 2, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 8*240ms
+Bruteforcing, total attempts: 29474
+RFU Hamming Weight: 1, OK
+   New key bits found:   00000002 with HW=01
+     EEPROM bits init:   C3C3C3C3 (11000011110000111100001111000011)
+ Recovered block bits:             ......1.........................
+Total authentications:   29497
+Time spent since start:  0 minutes 2.80 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 10 --eeprom-init 0x3C3C3C3C --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 10 --eeprom-init 0x3C3C3C3C --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 10 --eeprom-init 0x3C3C3C3C --bitflips 3 --tear1 400'
+Block      10 (0x0A)
+Segment     1
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 3, OK
+   New key bits found:   200C0000 with HW=03
+     EEPROM bits init:   3C3C3C3C (00111100001111000011110000111100)
+ Recovered block bits:             ....................11....1.....
+Total authentications:   5409
+Time spent since start:  0 minutes 1.00 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 11 --eeprom-init 0xFF00FF00 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 11 --eeprom-init 0xFF00FF00 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 11 --eeprom-init 0xFF00FF00 --bitflips 3 --tear1 400'
+Block      11 (0x0B)
+Segment     0
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 1, OK
+   New key bits found:   00000004 with HW=01
+     EEPROM bits init:   FF00FF00 (11111111000000001111111100000000)
+ Recovered block bits:             .....1..........................
+Total authentications:   26
+Time spent since start:  0 minutes 0.73 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 11 --eeprom-init 0x00FF00FF --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 11 --eeprom-init 0x00FF00FF --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 11 --eeprom-init 0x00FF00FF --bitflips 3 --tear1 400'
+Block      11 (0x0B)
+Segment     0
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 2, OK
+   New key bits found:   20001000 with HW=02
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+ Recovered block bits:             ...........1..............1.....
+Total authentications:   146
+Time spent since start:  0 minutes 0.73 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 11 --eeprom-init 0xF0F0F0F0 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 11 --eeprom-init 0xF0F0F0F0 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 11 --eeprom-init 0xF0F0F0F0 --bitflips 3 --tear1 400'
+Block      11 (0x0B)
+Segment     0
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 2, OK
+   New key bits found:   20001000 with HW=02
+     EEPROM bits init:   F0F0F0F0 (11110000111100001111000011110000)
+ Recovered block bits:             ...........1..............1.....
+Total authentications:   146
+Time spent since start:  0 minutes 0.75 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 11 --eeprom-init 0x0F0F0F0F --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 11 --eeprom-init 0x0F0F0F0F --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 11 --eeprom-init 0x0F0F0F0F --bitflips 3 --tear1 400'
+Block      11 (0x0B)
+Segment     0
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 2, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 1, OK
+   New key bits found:   00000004 with HW=01
+     EEPROM bits init:   0F0F0F0F (00001111000011110000111100001111)
+ Recovered block bits:             .....1..........................
+Total authentications:   3710
+Time spent since start:  0 minutes 1.00 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 11 --eeprom-init 0xAAAAAAAA --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 11 --eeprom-init 0xAAAAAAAA --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 11 --eeprom-init 0xAAAAAAAA --bitflips 3 --tear1 400'
+Block      11 (0x0B)
+Segment     0
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 1, OK
+   New key bits found:   20000000 with HW=01
+     EEPROM bits init:   AAAAAAAA (10101010101010101010101010101010)
+ Recovered block bits:             ..........................1.....
+Total authentications:   8
+Time spent since start:  0 minutes 0.73 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 11 --eeprom-init 0x55555555 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 11 --eeprom-init 0x55555555 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 11 --eeprom-init 0x55555555 --bitflips 3 --tear1 400'
+Block      11 (0x0B)
+Segment     0
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 4, too large
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 3, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 2*240ms
+Bruteforcing, total attempts: 7370
+RFU Hamming Weight: 2, OK
+   New key bits found:   00001004 with HW=02
+     EEPROM bits init:   55555555 (01010101010101010101010101010101)
+ Recovered block bits:             .....1.....1....................
+Total authentications:   7727
+Time spent since start:  0 minutes 1.26 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 11 --eeprom-init 0xA5A5A5A5 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 11 --eeprom-init 0xA5A5A5A5 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 11 --eeprom-init 0xA5A5A5A5 --bitflips 3 --tear1 400'
+Block      11 (0x0B)
+Segment     0
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 3, OK
+Testing with extra tearoff value: 240 ms
+Tears: 1*400ms + 1*240ms
+Bruteforcing, total attempts: 3686
+RFU Hamming Weight: 2, OK
+   New key bits found:   20000004 with HW=02
+     EEPROM bits init:   A5A5A5A5 (10100101101001011010010110100101)
+ Recovered block bits:             .....1....................1.....
+Total authentications:   3835
+Time spent since start:  0 minutes 1.00 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 11 --eeprom-init 0x5A5A5A5A --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 11 --eeprom-init 0x5A5A5A5A --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 11 --eeprom-init 0x5A5A5A5A --bitflips 3 --tear1 400'
+Block      11 (0x0B)
+Segment     0
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 1, OK
+   New key bits found:   00001000 with HW=01
+     EEPROM bits init:   5A5A5A5A (01011010010110100101101001011010)
+ Recovered block bits:             ...........1....................
+Total authentications:   21
+Time spent since start:  0 minutes 0.73 seconds
+
+[+] finished recover_key_bits.py
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 11 --eeprom-init 0xC3C3C3C3 --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 11 --eeprom-init 0xC3C3C3C3 --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 11 --eeprom-init 0xC3C3C3C3 --bitflips 3 --tear1 400'
+Block      11 (0x0B)
+Segment     0
+Testing with initial tearoff value: 400 ms
+
+[!] finished recover_key_bits.py with exception
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_key_bits.py --block 11 --eeprom-init 0x3C3C3C3C --bitflips 3 --tear1 400
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_key_bits.py --block 11 --eeprom-init 0x3C3C3C3C --bitflips 3 --tear1 400
+[+] executing python recover_key_bits.py
+[+] args '--block 11 --eeprom-init 0x3C3C3C3C --bitflips 3 --tear1 400'
+Block      11 (0x0B)
+Segment     0
+Testing with initial tearoff value: 400 ms
+Tears: 1*400ms + 0*240ms
+Bruteforcing, total attempts: 2
+RFU Hamming Weight: 3, OK
+   New key bits found:   20001004 with HW=03
+     EEPROM bits init:   3C3C3C3C (00111100001111000011110000111100)
+ Recovered block bits:             .....1.....1..............1.....
+Total authentications:   1864
+Time spent since start:  0 minutes 0.74 seconds
+
+[+] finished recover_key_bits.py
+

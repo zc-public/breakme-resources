@@ -1,0 +1,202 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 48 --eeprom-init 0x00FF00FF --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --heat-scan
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_masked_key_bits.py --block 48 --eeprom-init 0x00FF00FF --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --heat-scan
+[+] executing python recover_masked_key_bits.py
+[+] args '--block 48 --eeprom-init 0x00FF00FF --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --heat-scan'
+Block      48 (0x30)
+Key index   0 (DataProt)
+Segment     3
+Mask       F1FE673F
+Validating mask for segment with tearoff value: 1000 ms
+Testing with initial tearoff value: 285 ms
+Tears: 1*285ms + 0*235ms
+Bruteforcing, total attempts: 0
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 1*235ms
+Bruteforcing, total attempts: 529
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 2*235ms
+Bruteforcing, total attempts: 1058
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 3*235ms
+Bruteforcing, total attempts: 1587
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 4*235ms
+Bruteforcing, total attempts: 2116
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 5*235ms
+Bruteforcing, total attempts: 2645
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 6*235ms
+Bruteforcing, total attempts: 3174
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 7*235ms
+Bruteforcing, total attempts: 3703
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 8*235ms
+Bruteforcing, total attempts: 4232
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 9*235ms
+Bruteforcing, total attempts: 4761
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 10*235ms
+Bruteforcing, total attempts: 5290
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 11*235ms
+Bruteforcing, total attempts: 5819
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 12*235ms
+Bruteforcing, total attempts: 6348
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 13*235ms
+Bruteforcing, total attempts: 6877
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 14*235ms
+Bruteforcing, total attempts: 7406
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 15*235ms
+Bruteforcing, total attempts: 7935
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 16*235ms
+Bruteforcing, total attempts: 8464
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 17*235ms
+Bruteforcing, total attempts: 8993
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 18*235ms
+Bruteforcing, total attempts: 9522
+Testing with extra tearoff value: 235 ms
+Tears: 1*285ms + 19*235ms
+Bruteforcing, total attempts: 10051
+Auth succeeded with key: 00000000000000000000000051FE673F
+   New key bits found:   51FE673F with HD=02
+Masked key bits found:   A0000000
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   000000A0 (00000000000000000000000010100000)
+            Mask bits:   3F67FEF1 (00111111011001111111111011110001)
+ Recovered block bits:             ........................0.0.....
+      Block bits init:   3F98FE0E (00111111100110001111111000001110)
+Total authentications:   10579
+Time spent since start:  2 minutes 10.53 seconds
+..
+   New key bits found:   41FE673F with HD=03
+Masked key bits found:   B0000000
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   000000B0 (00000000000000000000000010110000)
+            Mask bits:   3F67FEF1 (00111111011001111111111011110001)
+ Recovered block bits:             ........................0.00....
+      Block bits init:   3F98FE0E (00111111100110001111111000001110)
+......
+..
+...
+..
+....
+...
+...
+.
+....
+.......
+   New key bits found:   51FE653F with HD=03
+Masked key bits found:   A0000200
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   000200A0 (00000000000000100000000010100000)
+            Mask bits:   3F67FEF1 (00111111011001111111111011110001)
+ Recovered block bits:             ..............0.........0.0.....
+      Block bits init:   3F98FE0E (00111111100110001111111000001110)
+   (also inserted combined key: 41FE653F)
+.......
+
+
+
+......
+
+.
+..
+......
+..
+...
+.........
+......
+...
+........
+.
+..
+............
+
+
+..
+
+.
+.
+.
+.
+............
+........
+
+............
+..
+.
+...
+........
+..
+.......
+.
+
+.....
+...
+
+..
+
+
+.....
+....
+
+.
+
+...
+.....
+...
+....
+....
+...
+......................
+..
+..
+.
+
+.....
+
+......
+....
+....
+..
+..
+...
+......
+
+
+
+..
+.
+.
+..
+...
+..........
+.....
+.
+.......
+.
+.
+
+
+
+
+..
+.......
+...
+.
+.............

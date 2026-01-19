@@ -1,0 +1,16 @@
+AUTH failed quite often
+samples:
+
+      71808 |      76576 | Rdr |1A  00  41  76                                                           |  ok | AUTH-1 
+      95940 |     117892 | Tag |AF  A2  54  98  C0  C6  61  E6  B2  8E  B0  E4  EA  9C  63  B9  BF  31   |     | 
+            |            |     |9A!                                                                      |  ok | 
+     129664 |     170080 | Rdr |AF  E1  4D  5D  0E  E2  77  15  DF  08  B4  15  2B  A2  3D  A8  E0  A9   |     | 
+            |            |     |7F  B7  E1  8C  38  4C  E4  AC  2A  8D  F1  3D  3B  BC  35  43  2E       |  ok | 
+
+      71936 |      76704 | Rdr |1A  00  41  76                                                           |  ok | AUTH-1 
+
+      71936 |      76704 | Rdr |1A  00  41  76                                                           |  ok | AUTH-1 
+      96052 |     118068 | Tag |AF  5C  A8  1F  CA  A9  E8  21  15  F6  D7  EC  50  40  28  39  51  9E   |     | 
+            |            |     |19                                                                       |  ok | 
+     129792 |     170208 | Rdr |AF  E1  4D  5D  0E  E2  77  15  DF  08  B4  15  2B  A2  3D  A8  E0  5D   |     | 
+            |            |     |09  D1  C6  5C  7C  53  5A  62  8E  BE  8B  1A  E3  2B  BD  20  8B       |  ok | 

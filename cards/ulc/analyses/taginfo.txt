@@ -1,0 +1,33 @@
+NXP TagInfo detection based solely on UID (test site)
+
+# old NXP
+Non-genuine, most probably counterfeit product
+--- Tag Silicon Information
+       Wafer Counter: 17087932 ( 0x104BDBC )
+   Wafer Coordinates: x 44, y 124 (0x2C, 0x7C)
+           Test Site: 1
+
+# new NXP
+Most probably NXP Semiconductors
+--- Tag Silicon Information
+       Wafer Counter: 17777661 ( 0x10F43FD )
+   Wafer Coordinates: x 238, y 171 (0xEE, 0xAB)
+           Test Site: 2
+
+# ULCG
+Non-genuine, most probably counterfeit product
+--- Tag Silicon Information
+       Wafer Counter: 16949282 ( 0x102A022 )
+   Wafer Coordinates: x 445, y 704 (0x1BD, 0x2C0)
+           Test Site: 1
+
+# USCUID-UL
+Non-genuine, most probably counterfeit product
+./uid2wafer.py 0426D6F52A7180
+--- Tag Silicon Information
+       Wafer Counter: 17704286 ( 0x10E255E )
+   Wafer Coordinates: x 38, y 214 (0x26, 0xD6)
+           Test Site: 5
+
+
+E.g. 042C83E1ED2580 (ts=1) is seen as non-genuine while non-existing 042C83E2ED2580 (ts=2) is seen as genuine.

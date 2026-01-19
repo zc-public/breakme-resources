@@ -1,0 +1,12 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run ntag22x_suncmac_recovery --format --initkey 0x2b7e151628aed2a6abf7158809cf4f3c --json recover_suncmac_and_mask_04699CC2451390_mac_data.json
+
+[+] Using UART port /dev/ttyACM1
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run ntag22x_suncmac_recovery --format --initkey 0x2b7e151628aed2a6abf7158809cf4f3c --json recover_suncmac_and_mask_04699CC2451390_mac_data.json
+[+] executing python /home/debian/RFID/paper/benchmarks/proxmark_ulcg/client/pyscripts/ntag22x_suncmac_recovery.py
+[+] args '--format --initkey 0x2b7e151628aed2a6abf7158809cf4f3c --json recover_suncmac_and_mask_04699CC2451390_mac_data.json'
+
+[!] finished ntag22x_suncmac_recovery with exception
+

@@ -1,0 +1,58 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_masked_key_bits.py --block 56 --eeprom-init 0x00FF00FF --bitflips 6 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 280 --heat-scan
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_masked_key_bits.py --block 56 --eeprom-init 0x00FF00FF --bitflips 6 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 280 --heat-scan
+[+] executing python recover_masked_key_bits.py
+[+] args '--block 56 --eeprom-init 0x00FF00FF --bitflips 6 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 280 --heat-scan'
+Block      56 (0x38)
+Key index   2 (RFU)
+Segment     3
+Mask       00000000
+Testing with initial tearoff value: 280 ms
+Tears: 1*280ms + 0*235ms
+Bruteforcing, total attempts: 2
+RFU Hamming Distance: 11, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 1*235ms
+Bruteforcing, total attempts: 1149020
+RFU Hamming Distance: 10, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 2*235ms
+Bruteforcing, total attempts: 2298038
+RFU Hamming Distance: 8, too large
+Testing with extra tearoff value: 235 ms
+Tears: 1*280ms + 3*235ms
+Bruteforcing, total attempts: 3447056
+RFU Hamming Distance: 6, OK
+   New key bits found:   38004600 with HD=06
+Masked key bits found:   38004600
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   00460038 (00000000010001100000000000111000)
+            Mask bits:   00000000 (00000000000000000000000000000000)
+ Recovered block bits:             .........1...11...........111...
+      Block bits init:   00FF00FF (00000000111111110000000011111111)
+Total authentications:   4123202
+Time spent since start:  0 minutes 1.52 seconds
+?
+
+   New key bits found:   30004600 with HD=05
+Masked key bits found:   30004600
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   00460030 (00000000010001100000000000110000)
+            Mask bits:   00000000 (00000000000000000000000000000000)
+ Recovered block bits:             .........1...11...........11....
+      Block bits init:   00FF00FF (00000000111111110000000011111111)
+.?.?
+
+   New key bits found:   30006600 with HD=06
+Masked key bits found:   30006600
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   00660030 (00000000011001100000000000110000)
+            Mask bits:   00000000 (00000000000000000000000000000000)
+ Recovered block bits:             .........11..11...........11....
+      Block bits init:   00FF00FF (00000000111111110000000011111111)
+   (also inserted combined key: 38006600)
+.?..?.........??...?........??...??..?.?..?..?....?...???....??

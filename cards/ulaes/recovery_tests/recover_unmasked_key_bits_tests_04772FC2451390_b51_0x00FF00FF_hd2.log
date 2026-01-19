@@ -1,0 +1,1713 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_unmasked_key_bits.py --block 51 --max_hd_diff 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --masked_key_bits 0x8B008500 --eeprom_init 0x00FF00FF
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_unmasked_key_bits.py --block 51 --max_hd_diff 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --masked_key_bits 0x8B008500 --eeprom_init 0x00FF00FF
+[+] executing python recover_unmasked_key_bits.py
+[+] args '--block 51 --max_hd_diff 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285 --masked_key_bits 0x8B008500 --eeprom_init 0x00FF00FF'
+Initkey: 0000000000000000000000005D4E8131
+Testing with initial tearoff value: 285 ms
+Testing with initial tearoff value: 280 ms
+Testing with initial tearoff value: 275 ms
+Testing with initial tearoff value: 270 ms
+Keys: [0x5D4E8131,]
+Tears: 1*270ms + 0*215ms
+Max HD: 0
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 5D4E8131
+Testing with extra tearoff value: 225 ms
+Keys: [0x5D4E8131,]
+Tears: 1*270ms + 77*215ms
+Max HD: 0
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 5D4E8131
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E8131,]
+Tears: 1*270ms + 101*215ms
+Max HD: 0
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 5D4E8131
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E8131,]
+Tears: 1*270ms + 105*215ms
+Max HD: 0
+Trying known keys: 5D4E8131
+Trying 1 bitflip from key: 5D4E8131
+Auth succeeded with key: 5D4E9131000000000000000000000000
+New key found: 5D4E9131 with HD=01, max HD in keys: 01
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 106*215ms
+Max HD: 1
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 5D4E9131
+Testing with extra tearoff value: 225 ms
+Keys: [0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 140*215ms
+Max HD: 1
+Trying known keys: 5D4E9131
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 141*215ms
+Max HD: 1
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 5D4E9131
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 147*215ms
+Max HD: 1
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 5D4E9131
+Trying known keys: 5D4E8131
+Trying 1 bitflip from key: 5D4E9131
+Auth succeeded with key: 5D4E9131000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 153*215ms
+Max HD: 1
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 5D4E9131
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 157*215ms
+Max HD: 1
+Testing with extra tearoff value: 215 ms
+Trying known keys: 5D4E9131
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 159*215ms
+Max HD: 1
+Trying known keys: 5D4E9131
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 160*215ms
+Max HD: 1
+Trying known keys: 5D4E9131
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 161*215ms
+Max HD: 1
+Testing with extra tearoff value: 215 ms
+Trying known keys: 5D4E9131
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 163*215ms
+Max HD: 1
+Trying known keys: 5D4E9131
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 164*215ms
+Max HD: 1
+Testing with extra tearoff value: 215 ms
+Trying known keys: 5D4E9131
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 166*215ms
+Max HD: 1
+Trying known keys: 5D4E9131
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 167*215ms
+Max HD: 1
+Trying known keys: 5D4E9131
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 168*215ms
+Max HD: 1
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 5D4E9131
+Trying known keys: 5D4E8131
+Trying 1 bitflip from key: 5D4E9131
+Auth succeeded with key: 5D4E9331000000000000000000000000
+New key found: 5D4E9331 with HD=02, max HD in keys: 02
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 171*215ms
+Max HD: 2
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 5D4E9331
+Testing with extra tearoff value: 225 ms
+Keys: [0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 195*215ms
+Max HD: 2
+Trying known keys: 5D4E9331
+Trying known keys: 5D4E9131
+Trying known keys: 5D4E8131
+Trying 1 bitflip from key: 5D4E9331
+Auth succeeded with key: 5D4E9333000000000000000000000000
+New key found: 5D4E9333 with HD=03, max HD in keys: 03
+Testing with extra tearoff value: 215 ms
+Keys: [0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 196*215ms
+Max HD: 3
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 5D4E9333
+Trying known keys: 5D4E9331
+Trying known keys: 5D4E9131
+Trying 1 bitflip from key: 5D4E9333
+Auth succeeded with key: 1D4E9333000000000000000000000000
+New key found: 1D4E9333 with HD=04, max HD in keys: 04
+Testing with extra tearoff value: 225 ms
+Keys: [0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 221*215ms
+Max HD: 4
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 1D4E9333
+Testing with extra tearoff value: 225 ms
+Keys: [0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 246*215ms
+Max HD: 4
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 1D4E9333
+Testing with extra tearoff value: 215 ms
+Keys: [0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 250*215ms
+Max HD: 4
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 1D4E9333
+Testing with extra tearoff value: 215 ms
+Keys: [0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 254*215ms
+Max HD: 4
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 1D4E9333
+Trying known keys: 5D4E9333
+Trying known keys: 5D4E9331
+Trying 1 bitflip from key: 1D4E9333
+Auth succeeded with key: 1D6E9333000000000000000000000000
+New key found: 1D6E9333 with HD=05, max HD in keys: 05
+Testing with extra tearoff value: 215 ms
+Keys: [0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 257*215ms
+Max HD: 5
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 1D6E9333
+Trying known keys: 1D4E9333
+Trying known keys: 5D4E9333
+Trying 1 bitflip from key: 1D6E9333
+Auth succeeded with key: 1D6E9313000000000000000000000000
+New key found: 1D6E9313 with HD=06, max HD in keys: 06
+Testing with extra tearoff value: 225 ms
+Keys: [0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 280*215ms
+Max HD: 6
+Testing with extra tearoff value: 215 ms
+Trying known keys: 1D6E9313
+Testing with extra tearoff value: 215 ms
+Keys: [0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 282*215ms
+Max HD: 6
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 1D6E9313
+Testing with extra tearoff value: 215 ms
+Keys: [0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 285*215ms
+Max HD: 6
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 1D6E9313
+Testing with extra tearoff value: 215 ms
+Keys: [0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 288*215ms
+Max HD: 6
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 1D6E9313
+Testing with extra tearoff value: 215 ms
+Keys: [0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 291*215ms
+Max HD: 6
+Testing with extra tearoff value: 215 ms
+Trying known keys: 1D6E9313
+Trying known keys: 1D6E9333
+Trying known keys: 1D4E9333
+Trying 1 bitflip from key: 1D6E9313
+Auth succeeded with key: 1D6EB313000000000000000000000000
+New key found: 1D6EB313 with HD=07, max HD in keys: 07
+Testing with extra tearoff value: 215 ms
+Keys: [0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 293*215ms
+Max HD: 7
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 1D6EB313
+Trying known keys: 1D6E9313
+Trying known keys: 1D6E9333
+Trying 1 bitflip from key: 1D6EB313
+Auth succeeded with key: 0D6EB313000000000000000000000000
+New key found: 0D6EB313 with HD=08, max HD in keys: 08
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 299*215ms
+Max HD: 8
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 0D6EB313
+Trying known keys: 1D6EB313
+Trying known keys: 1D6E9313
+Trying 1 bitflip from key: 0D6EB313
+Auth succeeded with key: 0D6EB313000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 313*215ms
+Max HD: 8
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 0D6EB313
+Trying known keys: 1D6EB313
+Trying known keys: 1D6E9313
+Trying 1 bitflip from key: 0D6EB313
+Auth succeeded with key: 0D6EB312000000000000000000000000
+New key found: 0D6EB312 with HD=09, max HD in keys: 09
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 323*215ms
+Max HD: 9
+Trying known keys: 0D6EB312
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 324*215ms
+Max HD: 9
+Testing with extra tearoff value: 215 ms
+Trying known keys: 0D6EB312
+Trying known keys: 0D6EB313
+Trying known keys: 1D6EB313
+Trying 1 bitflip from key: 0D6EB312
+Auth succeeded with key: 0D6EB312000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 326*215ms
+Max HD: 9
+Trying known keys: 0D6EB312
+Trying known keys: 0D6EB313
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 327*215ms
+Max HD: 9
+Trying known keys: 0D6EB312
+Trying known keys: 0D6EB313
+Trying known keys: 1D6EB313
+Trying 1 bitflip from key: 0D6EB312
+Auth succeeded with key: 0D6EB312000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 328*215ms
+Max HD: 9
+Testing with extra tearoff value: 215 ms
+Trying known keys: 0D6EB312
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 330*215ms
+Max HD: 9
+Trying known keys: 0D6EB312
+Trying known keys: 0D6EB313
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 331*215ms
+Max HD: 9
+Trying known keys: 0D6EB312
+Trying known keys: 0D6EB313
+Trying known keys: 1D6EB313
+Trying 1 bitflip from key: 0D6EB312
+Trying 1 bitflip from key: 0D6EB313
+Auth succeeded with key: 0D2EB313000000000000000000000000
+New key found: 0D2EB313 with HD=09, max HD in keys: 10
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 332*215ms
+Max HD: 10
+Trying known keys: 0D2EB312
+Trying known keys: 0D2EB313
+Trying known keys: 0D6EB312
+Trying known keys: 0D6EB313
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 333*215ms
+Max HD: 10
+Trying known keys: 0D2EB312
+Trying known keys: 0D2EB313
+Trying known keys: 0D6EB312
+Trying known keys: 0D6EB313
+Trying 1 bitflip from key: 0D2EB312
+Auth succeeded with key: 0D2EB313000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 334*215ms
+Max HD: 10
+Trying known keys: 0D2EB312
+Trying known keys: 0D2EB313
+Trying known keys: 0D6EB312
+Trying known keys: 0D6EB313
+Trying 1 bitflip from key: 0D2EB312
+Trying 1 bitflip from key: 0D2EB313
+Auth succeeded with key: 0D2EB303000000000000000000000000
+New key found: 0D2EB303 with HD=10, max HD in keys: 11
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 335*215ms
+Max HD: 11
+Trying known keys: 0D2EB302
+Trying known keys: 0D2EB303
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 336*215ms
+Max HD: 11
+Trying known keys: 0D2EB302
+Trying known keys: 0D2EB303
+Trying known keys: 0D2EB312
+Trying known keys: 0D2EB313
+Trying known keys: 0D6EB312
+Trying 1 bitflip from key: 0D2EB302
+Auth succeeded with key: 0D2EB303000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 337*215ms
+Max HD: 11
+Trying known keys: 0D2EB302
+Trying known keys: 0D2EB303
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 338*215ms
+Max HD: 11
+Trying known keys: 0D2EB302
+Trying known keys: 0D2EB303
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 339*215ms
+Max HD: 11
+Trying known keys: 0D2EB302
+Trying known keys: 0D2EB303
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 340*215ms
+Max HD: 11
+Trying known keys: 0D2EB302
+Trying known keys: 0D2EB303
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 341*215ms
+Max HD: 11
+Trying known keys: 0D2EB302
+Trying known keys: 0D2EB303
+Trying known keys: 0D2EB312
+Trying known keys: 0D2EB313
+Trying known keys: 0D6EB312
+Trying 1 bitflip from key: 0D2EB302
+Auth succeeded with key: 0D2EB30A000000000000000000000000
+New key found: 0D2EB30A with HD=12, max HD in keys: 12
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 342*215ms
+Max HD: 12
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 0D2EB30A
+Trying known keys: 0D2EB302
+Trying known keys: 0D2EB303
+Trying known keys: 0D2EB312
+Trying 1 bitflip from key: 0D2EB30A
+Auth succeeded with key: 0D2EF30A000000000000000000000000
+New key found: 0D2EF30A with HD=13, max HD in keys: 13
+Testing with extra tearoff value: 225 ms
+Keys: [0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 367*215ms
+Max HD: 13
+Testing with extra tearoff value: 215 ms
+Trying known keys: 0D2EF30A
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 369*215ms
+Max HD: 13
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 0D2EF30A
+Trying known keys: 0D2EB30A
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 373*215ms
+Max HD: 13
+Trying known keys: 0D2EF30A
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 374*215ms
+Max HD: 13
+Trying known keys: 0D2EF30A
+Trying known keys: 0D2EB30A
+Trying known keys: 0D2EB302
+Trying 1 bitflip from key: 0D2EF30A
+Auth succeeded with key: 0D2EF30A000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 375*215ms
+Max HD: 13
+Testing with extra tearoff value: 215 ms
+Trying known keys: 0D2EF30A
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 377*215ms
+Max HD: 13
+Trying known keys: 0D2EF30A
+Trying known keys: 0D2EB30A
+Trying known keys: 0D2EB302
+Trying 1 bitflip from key: 0D2EF30A
+Auth succeeded with key: 0D2EFB0A000000000000000000000000
+New key found: 0D2EFB0A with HD=14, max HD in keys: 14
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 378*215ms
+Max HD: 14
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 0D2EFB0A
+Trying known keys: 0D2EF30A
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 384*215ms
+Max HD: 14
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 0D2EFB0A
+Trying known keys: 0D2EF30A
+Trying known keys: 0D2EB30A
+Trying 1 bitflip from key: 0D2EFB0A
+Auth succeeded with key: 0D3EFB0A000000000000000000000000
+New key found: 0D3EFB0A with HD=15, max HD in keys: 15
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 393*215ms
+Max HD: 15
+Trying known keys: 0D3EFB0A
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 394*215ms
+Max HD: 15
+Trying known keys: 0D3EFB0A
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 395*215ms
+Max HD: 15
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 0D3EFB0A
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 399*215ms
+Max HD: 15
+Trying known keys: 0D3EFB0A
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 400*215ms
+Max HD: 15
+Trying known keys: 0D3EFB0A
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 401*215ms
+Max HD: 15
+Trying known keys: 0D3EFB0A
+Trying known keys: 0D2EFB0A
+Trying known keys: 0D2EF30A
+Trying 1 bitflip from key: 0D3EFB0A
+Auth succeeded with key: 0D3EFB8A000000000000000000000000
+New key found: 0D3EFB8A with HD=16, max HD in keys: 16
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 402*215ms
+Max HD: 16
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 0D3EFB8A
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 413*215ms
+Max HD: 16
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 0D3EFB8A
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 418*215ms
+Max HD: 16
+Trying known keys: 0D3EFB8A
+Trying known keys: 0D3EFB0A
+Trying known keys: 0D2EFB0A
+Trying 1 bitflip from key: 0D3EFB8A
+Auth succeeded with key: 0D3EFB8A000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 419*215ms
+Max HD: 16
+Trying known keys: 0D3EFB8A
+Trying known keys: 0D3EFB0A
+Trying known keys: 0D2EFB0A
+Trying 1 bitflip from key: 0D3EFB8A
+Auth succeeded with key: 0D3EFB8A000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 420*215ms
+Max HD: 16
+Trying known keys: 0D3EFB8A
+Trying known keys: 0D3EFB0A
+Trying known keys: 0D2EFB0A
+Trying 1 bitflip from key: 0D3EFB8A
+Auth succeeded with key: 0D3EFB8A000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 421*215ms
+Max HD: 16
+Trying known keys: 0D3EFB8A
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 422*215ms
+Max HD: 16
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 0D3EFB8A
+Trying known keys: 0D3EFB0A
+Trying known keys: 0D2EFB0A
+Trying 1 bitflip from key: 0D3EFB8A
+Auth succeeded with key: 1D3EFB8A000000000000000000000000
+New key found: 1D3EFB8A with HD=15, max HD in keys: 16
+Testing with extra tearoff value: 215 ms
+Keys: [0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 425*215ms
+Max HD: 16
+Trying known keys: 0D3EFB8A
+Trying known keys: 1D3EFB8A
+Trying known keys: 0D3EFB0A
+Trying known keys: 0D2EFB0A
+Trying 1 bitflip from key: 0D3EFB8A
+Auth succeeded with key: 2D3EFB8A000000000000000000000000
+New key found: 2D3EFB8A with HD=17, max HD in keys: 17
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 426*215ms
+Max HD: 17
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2D3EFB8A
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 431*215ms
+Max HD: 17
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2D3EFB8A
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 439*215ms
+Max HD: 17
+Trying known keys: 2D3EFB8A
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 440*215ms
+Max HD: 17
+Trying known keys: 2D3EFB8A
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 441*215ms
+Max HD: 17
+Trying known keys: 2D3EFB8A
+Trying known keys: 0D3EFB8A
+Trying known keys: 1D3EFB8A
+Trying known keys: 0D3EFB0A
+Trying 1 bitflip from key: 2D3EFB8A
+Auth succeeded with key: 2D3FFB8A000000000000000000000000
+New key found: 2D3FFB8A with HD=18, max HD in keys: 18
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 442*215ms
+Max HD: 18
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2D3FFB8A
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 449*215ms
+Max HD: 18
+Trying known keys: 2D3FFB8A
+Trying known keys: 2D3EFB8A
+Trying known keys: 0D3EFB8A
+Trying 1 bitflip from key: 2D3FFB8A
+Auth succeeded with key: 2D3FFB8E000000000000000000000000
+New key found: 2D3FFB8E with HD=19, max HD in keys: 19
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 450*215ms
+Max HD: 19
+Trying known keys: 2D3FFB8E
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 451*215ms
+Max HD: 19
+Trying known keys: 2D3FFB8E
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 452*215ms
+Max HD: 19
+Trying known keys: 2D3FFB8E
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 453*215ms
+Max HD: 19
+Trying known keys: 2D3FFB8E
+Trying known keys: 2D3FFB8A
+Trying known keys: 2D3EFB8A
+Trying 1 bitflip from key: 2D3FFB8E
+Auth succeeded with key: 2D3FFBCE000000000000000000000000
+New key found: 2D3FFBCE with HD=20, max HD in keys: 20
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3FFBCE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 454*215ms
+Max HD: 20
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2D3FFBCE
+Trying known keys: 2D3FFB8E
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3FFBCE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 458*215ms
+Max HD: 20
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2D3FFBCE
+Trying known keys: 2D3FFB8E
+Trying known keys: 2D3FFB8A
+Trying 1 bitflip from key: 2D3FFBCE
+Auth succeeded with key: 2D3FF3CE000000000000000000000000
+New key found: 2D3FF3CE with HD=19, max HD in keys: 20
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3FFBCE, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 462*215ms
+Max HD: 20
+Trying known keys: 2D3FFBCE
+Trying known keys: 2D3FF3CE
+Trying known keys: 2D3FFB8E
+Trying known keys: 2D3FFB8A
+Trying 1 bitflip from key: 2D3FFBCE
+Auth succeeded with key: 2D3FFBCA000000000000000000000000
+New key found: 2D3FFBCA with HD=19, max HD in keys: 20
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 463*215ms
+Max HD: 20
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2D3FFBCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 470*215ms
+Max HD: 20
+Trying known keys: 2D3FFBCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 471*215ms
+Max HD: 20
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2D3FFBCE
+Trying known keys: 2D3FFBCA
+Trying known keys: 2D3FF3CE
+Trying known keys: 2D3FFB8E
+Trying known keys: 2D3FFB8A
+Trying 1 bitflip from key: 2D3FFBCE
+Trying 1 bitflip from key: 2D3FFBCA
+Auth succeeded with key: 2D3FFBCE000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 474*215ms
+Max HD: 20
+Trying known keys: 2D3FFBCE
+Trying known keys: 2D3FFBCA
+Trying known keys: 2D3FF3CE
+Trying known keys: 2D3FFB8E
+Trying known keys: 2D3FFB8A
+Trying 1 bitflip from key: 2D3FFBCE
+Auth succeeded with key: 2D3FFBCE000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 475*215ms
+Max HD: 20
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2D3FFBCE
+Trying known keys: 2D3FFBCA
+Trying known keys: 2D3FF3CE
+Trying known keys: 2D3FFB8E
+Trying known keys: 2D3FFB8A
+Trying 1 bitflip from key: 2D3FFBCE
+Auth succeeded with key: 2DBFFBCE000000000000000000000000
+New key found: 2DBFFBCE with HD=21, max HD in keys: 21
+Testing with extra tearoff value: 215 ms
+Keys: [0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 477*215ms
+Max HD: 21
+Trying known keys: 2DBFFBCE
+Trying known keys: 2D3FFBCE
+Trying known keys: 2D3FFBCA
+Trying known keys: 2D3FF3CE
+Trying known keys: 2D3FFB8E
+Trying 1 bitflip from key: 2DBFFBCE
+Auth succeeded with key: 2DB7FBCE000000000000000000000000
+New key found: 2DB7FBCE with HD=22, max HD in keys: 22
+Testing with extra tearoff value: 215 ms
+Keys: [0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 478*215ms
+Max HD: 22
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2DB7FBCE
+Trying known keys: 2DBFFBCE
+Trying known keys: 2D3FFBCE
+Trying 1 bitflip from key: 2DB7FBCE
+Auth succeeded with key: 2DBFFBCE000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 480*215ms
+Max HD: 22
+Trying known keys: 2DB7FBCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 481*215ms
+Max HD: 22
+Trying known keys: 2DB7FBCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 482*215ms
+Max HD: 22
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2DB7FBCE
+Trying known keys: 2DBFFBCE
+Trying known keys: 2D3FFBCE
+Trying 1 bitflip from key: 2DB7FBCE
+Auth succeeded with key: 2FB7FBCE000000000000000000000000
+New key found: 2FB7FBCE with HD=23, max HD in keys: 23
+Testing with extra tearoff value: 215 ms
+Keys: [0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 484*215ms
+Max HD: 23
+Trying known keys: 2FB7FBCE
+Trying known keys: 2DB7FBCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 485*215ms
+Max HD: 23
+Trying known keys: 2FB7FBCE
+Trying known keys: 2DB7FBCE
+Trying known keys: 2DBFFBCE
+Trying 1 bitflip from key: 2FB7FBCE
+Auth succeeded with key: 2DB7FBCE000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 486*215ms
+Max HD: 23
+Trying known keys: 2FB7FBCE
+Trying known keys: 2DB7FBCE
+Trying known keys: 2DBFFBCE
+Trying 1 bitflip from key: 2FB7FBCE
+Auth succeeded with key: 2DB7FBCE000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 487*215ms
+Max HD: 23
+Trying known keys: 2FB7FBCE
+Trying known keys: 2DB7FBCE
+Trying known keys: 2DBFFBCE
+Trying 1 bitflip from key: 2FB7FBCE
+Auth succeeded with key: 2BB7FBCE000000000000000000000000
+New key found: 2BB7FBCE with HD=24, max HD in keys: 24
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB7FBCE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 488*215ms
+Max HD: 24
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2BB7FBCE
+Trying known keys: 2FB7FBCE
+Trying known keys: 2DB7FBCE
+Trying 1 bitflip from key: 2BB7FBCE
+Auth succeeded with key: 2BB7FBCE000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB7FBCE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 493*215ms
+Max HD: 24
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2BB7FBCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB7FBCE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 496*215ms
+Max HD: 24
+Trying known keys: 2BB7FBCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB7FBCE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 497*215ms
+Max HD: 24
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2BB7FBCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB7FBCE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 499*215ms
+Max HD: 24
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2BB7FBCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB7FBCE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 502*215ms
+Max HD: 24
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2BB7FBCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB7FBCE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 504*215ms
+Max HD: 24
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2BB7FBCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB7FBCE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 506*215ms
+Max HD: 24
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2BB7FBCE
+Trying known keys: 2FB7FBCE
+Trying known keys: 2DB7FBCE
+Trying 1 bitflip from key: 2BB7FBCE
+Auth succeeded with key: 2BB7F3CE000000000000000000000000
+New key found: 2BB7F3CE with HD=23, max HD in keys: 24
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 510*215ms
+Max HD: 24
+Trying known keys: 2BB7FBCE
+Trying known keys: 2BB7F3CE
+Trying known keys: 2FB7FBCE
+Trying known keys: 2DB7FBCE
+Trying 1 bitflip from key: 2BB7FBCE
+Auth succeeded with key: 2BB77BCE000000000000000000000000
+New key found: 2BB77BCE with HD=25, max HD in keys: 25
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 511*215ms
+Max HD: 25
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2BB77BCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 513*215ms
+Max HD: 25
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2BB77BCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 515*215ms
+Max HD: 25
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2BB77BCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 519*215ms
+Max HD: 25
+Trying known keys: 2BB77BCE
+Trying known keys: 2BB7FBCE
+Trying known keys: 2BB7F3CE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 520*215ms
+Max HD: 25
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2BB77BCE
+Trying known keys: 2BB7FBCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 523*215ms
+Max HD: 25
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2BB77BCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 525*215ms
+Max HD: 25
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2BB77BCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 528*215ms
+Max HD: 25
+Trying known keys: 2BB77BCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 529*215ms
+Max HD: 25
+Trying known keys: 2BB77BCE
+Trying known keys: 2BB7FBCE
+Trying known keys: 2BB7F3CE
+Trying known keys: 2FB7FBCE
+Trying 1 bitflip from key: 2BB77BCE
+Auth succeeded with key: 2BB7FBCE000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 530*215ms
+Max HD: 25
+Trying known keys: 2BB77BCE
+Trying known keys: 2BB7FBCE
+Trying known keys: 2BB7F3CE
+Trying known keys: 2FB7FBCE
+Trying 1 bitflip from key: 2BB77BCE
+Auth succeeded with key: 2AB77BCE000000000000000000000000
+New key found: 2AB77BCE with HD=26, max HD in keys: 26
+Testing with extra tearoff value: 215 ms
+Keys: [0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 531*215ms
+Max HD: 26
+Trying known keys: 2AB77BCE
+Trying known keys: 2BB77BCE
+Trying known keys: 2BB7FBCE
+Trying 1 bitflip from key: 2AB77BCE
+Auth succeeded with key: 2BB77BCE000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 532*215ms
+Max HD: 26
+Trying known keys: 2AB77BCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 533*215ms
+Max HD: 26
+Trying known keys: 2AB77BCE
+Trying known keys: 2BB77BCE
+Trying known keys: 2BB7FBCE
+Trying 1 bitflip from key: 2AB77BCE
+Auth succeeded with key: 2AB77BCE000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 534*215ms
+Max HD: 26
+Trying known keys: 2AB77BCE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 535*215ms
+Max HD: 26
+Trying known keys: 2AB77BCE
+Trying known keys: 2BB77BCE
+Trying known keys: 2BB7FBCE
+Trying 1 bitflip from key: 2AB77BCE
+Auth succeeded with key: 2AB77BCE000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 536*215ms
+Max HD: 26
+Trying known keys: 2AB77BCE
+Trying known keys: 2BB77BCE
+Trying known keys: 2BB7FBCE
+Trying 1 bitflip from key: 2AB77BCE
+Auth succeeded with key: 2AB77ACE000000000000000000000000
+New key found: 2AB77ACE with HD=27, max HD in keys: 27
+Testing with extra tearoff value: 215 ms
+Keys: [0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 537*215ms
+Max HD: 27
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2AB77ACE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 540*215ms
+Max HD: 27
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2AB77ACE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 542*215ms
+Max HD: 27
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2AB77ACE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 558*215ms
+Max HD: 27
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2AB77ACE
+Testing with extra tearoff value: 215 ms
+Keys: [0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 565*215ms
+Max HD: 27
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 2AB77ACE
+Trying known keys: 2AB77BCE
+Trying known keys: 2BB77BCE
+Trying 1 bitflip from key: 2AB77ACE
+Trying 1 bitflip from key: 2AB77BCE
+Auth succeeded with key: 22B77BCE000000000000000000000000
+New key found: 22B77BCE with HD=27, max HD in keys: 28
+Testing with extra tearoff value: 215 ms
+Keys: [0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 568*215ms
+Max HD: 28
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 22B77ACE
+Testing with extra tearoff value: 225 ms
+Keys: [0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 604*215ms
+Max HD: 28
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 22B77ACE
+Testing with extra tearoff value: 215 ms
+Keys: [0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 607*215ms
+Max HD: 28
+Testing with extra tearoff value: 215 ms
+Trying known keys: 22B77ACE
+Testing with extra tearoff value: 215 ms
+Keys: [0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 609*215ms
+Max HD: 28
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: 22B77ACE
+Testing with extra tearoff value: 215 ms
+Keys: [0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 614*215ms
+Max HD: 28
+Trying known keys: 22B77ACE
+Testing with extra tearoff value: 215 ms
+Keys: [0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 615*215ms
+Max HD: 28
+Trying known keys: 22B77ACE
+Testing with extra tearoff value: 215 ms
+Keys: [0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 616*215ms
+Max HD: 28
+Trying known keys: 22B77ACE
+Trying known keys: 22B77BCE
+Trying known keys: 2AB77ACE
+Trying known keys: 2AB77BCE
+Trying 1 bitflip from key: 22B77ACE
+Auth succeeded with key: 22B57ACE000000000000000000000000
+New key found: 22B57ACE with HD=29, max HD in keys: 29
+Testing with extra tearoff value: 215 ms
+Keys: [0x22B57ACE, 0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 617*215ms
+Max HD: 29
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: 22B57ACE
+Testing with extra tearoff value: 225 ms
+Keys: [0x22B57ACE, 0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 646*215ms
+Max HD: 29
+Trying known keys: 22B57ACE
+Trying known keys: 22B77ACE
+Trying known keys: 22B77BCE
+Trying known keys: 2AB77ACE
+Trying 1 bitflip from key: 22B57ACE
+Auth succeeded with key: A2B57ACE000000000000000000000000
+New key found: A2B57ACE with HD=30, max HD in keys: 30
+Testing with extra tearoff value: 215 ms
+Keys: [0xA2B57ACE, 0x22B57ACE, 0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 647*215ms
+Max HD: 30
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: A2B57ACE
+Testing with extra tearoff value: 225 ms
+Keys: [0xA2B57ACE, 0x22B57ACE, 0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 689*215ms
+Max HD: 30
+Testing with extra tearoff value: 215 ms
+Trying known keys: A2B57ACE
+Testing with extra tearoff value: 215 ms
+Keys: [0xA2B57ACE, 0x22B57ACE, 0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 691*215ms
+Max HD: 30
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: A2B57ACE
+Testing with extra tearoff value: 215 ms
+Keys: [0xA2B57ACE, 0x22B57ACE, 0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 695*215ms
+Max HD: 30
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: A2B57ACE
+Trying known keys: 22B57ACE
+Trying known keys: 22B77ACE
+Trying 1 bitflip from key: A2B57ACE
+Auth succeeded with key: A2B57ACE000000000000000000000000
+Testing with extra tearoff value: 215 ms
+Keys: [0xA2B57ACE, 0x22B57ACE, 0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 699*215ms
+Max HD: 30
+Testing with extra tearoff value: 215 ms
+Trying known keys: A2B57ACE
+Testing with extra tearoff value: 215 ms
+Keys: [0xA2B57ACE, 0x22B57ACE, 0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 701*215ms
+Max HD: 30
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Trying known keys: A2B57ACE
+Trying known keys: 22B57ACE
+Trying known keys: 22B77ACE
+Trying 1 bitflip from key: A2B57ACE
+Auth succeeded with key: A2B17ACE000000000000000000000000
+New key found: A2B17ACE with HD=31, max HD in keys: 31
+Testing with extra tearoff value: 215 ms
+Keys: [0xA2B17ACE, 0xA2B57ACE, 0x22B57ACE, 0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 704*215ms
+Max HD: 31
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 215 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Testing with extra tearoff value: 225 ms
+Trying known keys: A2B17ACE
+Trying known keys: A2B57ACE
+Trying known keys: 22B57ACE
+Trying 1 bitflip from key: A2B17ACE
+Auth succeeded with key: A2B17ECE000000000000000000000000
+New key found: A2B17ECE with HD=32, max HD in keys: 32
+Testing with extra tearoff value: 225 ms
+Keys: [0xA2B17ECE, 0xA2B17ACE, 0xA2B57ACE, 0x22B57ACE, 0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 740*215ms
+Max HD: 32
+Testing with extra tearoff value: 215 ms
+Stopping after having reached mask value.
+Keys: [0xA2B17ECE, 0xA2B17ACE, 0xA2B57ACE, 0x22B57ACE, 0x22B77ACE, 0x22B77BCE, 0x2AB77ACE, 0x2AB77BCE, 0x2BB77BCE, 0x2BB7FBCE, 0x2BB7F3CE, 0x2FB7FBCE, 0x2DB7FBCE, 0x2DBFFBCE, 0x2D3FFBCE, 0x2D3FFBCA, 0x2D3FF3CE, 0x2D3FFB8E, 0x2D3FFB8A, 0x2D3EFB8A, 0x0D3EFB8A, 0x1D3EFB8A, 0x0D3EFB0A, 0x0D2EFB0A, 0x0D2EF30A, 0x0D2EB30A, 0x0D2EB302, 0x0D2EB303, 0x0D2EB312, 0x0D2EB313, 0x0D6EB312, 0x0D6EB313, 0x1D6EB313, 0x1D6E9313, 0x1D6E9333, 0x1D4E9333, 0x5D4E9333, 0x5D4E9331, 0x5D4E9131, 0x5D4E8131,]
+Tears: 1*270ms + 741*215ms (last 1 tears just for confirmation)
+Total authentications: 12089
+Time spent since start: 5 minutes 3.19 seconds
+Mask key:     A2B17ECE
+Antimask key: 5D4E8131
+EEPROM erasure:
+                                   11111111111011111111111111111111
+                                   11111111111011011111111111111111
+                                   11111101111011011111111111111111
+                                   11111101111011011111111110111111
+                                   11111101111011011101111110111111
+                                   11011101111011011101111110111111
+                                   11011101110011011101111110111111
+                                   11011101110011011101111110101111
+                                   11011100110011011101111110101111
+                                   11011101110011011001111110101111
+                                   11011100110011011001111110101111
+                                   11001101110011011001111110101111
+                                   11001100110011011001111110101111
+                                   11000100110011011001111110101111
+                                   11000100100011011001111110101111
+                                   11000100100001011001111110101111
+                                   11000100100001011000111110101111
+                                   01000100100001011000111110111111
+                                   01000100100001011000111110101111
+                                   01000100100001011000111110001111
+                                   01000100100001011000111010001111
+                                   01000000100001011000111010001111
+                                   00000000100011011000111010001111
+                                   00000100100001011000111010001111
+                                   00000000100001011000111010001111
+                                   00000000100001010000111010001111
+                                   00000000100001010000011010001111
+                                   000000001000010100000110100011.1
+                                   000000001000110100000110100010.1
+                                   000000001000010100000110100010.1
+                                   00000000.000010100000110100010.1
+                                   00000000.000010100000110100010..
+                                   00000000.000010.00000110100010..
+                                   00000000.0000101000001101000.0..
+                                   00000000.000010.000001101000.0..
+                                   00000000.000010.000001001000.0..
+                                   00000000.000010.00000100.000.0..
+                                   00000000.000010.00000000.000.0..
+                                   00000000.0000.0.00000000.000.0..  <=== All recovered bits have now flipped
+                                                                     <=== Unflipped in time, assumed to be 0 in the target key in EEPROM => mask in the target key
+     EEPROM bits init:   00FF00FF (00000000111111110000000011111111)
+    EEPROM bits found:   0085008B (        1    1 1        1   1 11)
+    EEPROM bits found:   00000604 (                     00      0  )
+            Mask bits:   CE7EB1A2 (11001110011111101011000110100010)
+ Recovered block bits:             ........1....0.1........0...1.01
+ Recovered block bits:             .....................00......0..
+      Block bits init:   CE81B15D (11001110100000011011000101011101)
+               Errors:                                          ^  
+
+[+] finished recover_unmasked_key_bits.py
+

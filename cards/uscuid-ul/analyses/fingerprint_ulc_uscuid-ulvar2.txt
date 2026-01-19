@@ -1,0 +1,101 @@
+[=] --- Tag Information --------------------------
+[+]       TYPE: MIFARE Ultralight C (MF0ULC)
+[+]        UID: 04 0C 38 85 3F 61 80 
+[+]     UID[0]: 04, NXP Semiconductors Germany
+[+]       BCC0: B8 ( ok )
+[+]       BCC1: 5B ( ok )
+[+]   Internal: 48 ( default )
+[+]       Lock: 00 00  - 0000000000000000
+[+]        OTP: 00 00 00 00  - 00000000000000000000000000000000
+
+[=] --- UL-C Configuration --------------------------
+[=] Total memory....... 188 bytes
+[=] Available memory... 172 bytes
+[=] 40 / 0x28 | 00 10 00 00  - 0000000000010000 Higher lockbits
+[=] 41 / 0x29 | 00 00 00 00  - 0000000000000000 Counter
+[=] 42 / 0x2A | 30 00 00 00  Auth0 unlocked
+[=] 43 / 0x2B | 00 00 00 00  Auth1 R/W access restricted
+[=] 
+[=] --- Fingerprint
+[=] n/a
+[=] 
+[+] --- Known UL-C 3DES keys
+[+] Found default 3des key: 
+[=]     deskey1 [44/0x2C]: 42 52 45 41  [BREA]
+[=]     deskey1 [45/0x2D]: 4B 4D 45 49  [KMEI]
+[=]     deskey2 [46/0x2E]: 46 59 4F 55  [FYOU]
+[=]     deskey2 [47/0x2F]: 43 41 4E 21  [CAN!]
+[=] 3des key: 49454D4B41455242214E4143554F5946
+
+
+UID:             040C38853F6180
+ATQA anticol:    00 44
+SAK anticol:     00
+Answer to RATS:  00
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11412 = 841.59 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11476 = 846.31 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11412 = 841.59 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11476 = 846.31 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11412 = 841.59 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11476 = 846.31 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11476 = 846.31 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11476 = 846.31 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11476 = 846.31 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11412 = 841.59 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11476 = 846.31 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11412 = 841.59 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11476 = 846.31 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11476 = 846.31 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11476 = 846.31 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11412 = 841.59 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11412 = 841.59 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11476 = 846.31 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11412 = 841.59 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11412 = 841.59 us
+FDT to 1A00          :  11412 = 841.59 us
+FDT to AF*  (bad key):  11412 = 841.59 us
+FDT to AF*  (def key):  11476 = 846.31 us
+FDT to 1A00           min/max:  11412/11412 = 841.59/841.59 us = 842 +- 0 us
+FDT to AF*  (bad key) min/max:  11412/11412 = 841.59/841.59 us = 842 +- 0 us
+FDT to AF*  (def key) min/max:  11412/11476 = 841.59/846.31 us = 844 +- 2 us
+--- 0 minutes 7 seconds ---

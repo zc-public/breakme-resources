@@ -1,0 +1,49 @@
+Theoretical cracking speed for ULC and ULAES based only on the required time to send commands and receive responses, based on real measurements but cutting the PICC-PCD FDT to the minimum allowed (so as if the reader was super fast).
+Both with the read0 shortcut and the fast anticol directly with wupa+9370+9570
+
+Ultralight C:
+With read0:    33448+65360 /fc = 137 keys/s
+With fast sel: 38232+65360 /fc = 130 keys/s
+
+WUPA+READ0:
+WUPA             992
+FDT             1108
+ATQA            2368
+FDT PICC-PCD    1172  5640
+3000            4728
+FDT             1044
+block0         20864
+FDT PICC-PCD    1172 27808
+--------------------
+               33448
+
+WUPA+9370+9570:
+WUPA             992
+FDT             1108
+ATQA            2368
+FDT PICC-PCD    1172  5640
+9370           10528
+FDT             1044
+SAK             3520
+FDT PICC-PCD    1172 16264
+9570           10528
+FDT             1044
+SAK             3584
+FDT PICC-PCD    1172 16328
+--------------------
+               38232
+
+1A+AF:
+1A00            4768
+FDT            11412
+RndB           12736
+FDT PICC-PCD    1172 30088
+AF             22048
+FDT            11412
+NAK              640
+FDT PICC-PCD    1172 35272
+--------------------
+               65360
+
+Theoretical cracking speed with read0:    33448+65360 /fc = 137 keys/s
+Theoretical cracking speed with fast sel: 38232+65360 /fc = 130 keys/s

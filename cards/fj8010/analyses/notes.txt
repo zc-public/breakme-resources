@@ -1,0 +1,67 @@
+./ulc_collect.py -- -c 10000 -j challenges_10000_default_key_stable.json --mode STABLE
+./ulc_collect.py -- -c 10000 -j challenges_10000_default_key_14araw.json --mode RAW
+
+./analysis_duplicates.py challenges_10000_default_key_stable.json
+
+Calculating samples needed for 50% probability of at least one duplicate:
+n=100, prob=1.0000, target=0.5, old_min=0, old_max=200
+n=50, prob=1.0000, target=0.5, old_min=0, old_max=100
+n=25, prob=0.9670, target=0.5, old_min=0, old_max=50
+n=12, prob=0.5208, target=0.5, old_min=0, old_max=25
+n=6, prob=0.1585, target=0.5, old_min=0, old_max=12
+n=9, prob=0.3247, target=0.5, old_min=6, old_max=12
+n=10, prob=0.3827, target=0.5, old_min=9, old_max=12
+n=11, prob=0.4487, target=0.5, old_min=10, old_max=12
+Samples needed: 12
+
+Calculating samples needed for 99.99% probability of at least one duplicate:
+n=100, prob=1.0000, target=0.9999, old_min=0, old_max=200
+n=50, prob=1.0000, target=0.9999, old_min=0, old_max=100
+n=25, prob=0.9670, target=0.9999, old_min=0, old_max=50
+n=37, prob=0.9998, target=0.9999, old_min=25, old_max=50
+n=43, prob=1.0000, target=0.9999, old_min=37, old_max=50
+n=40, prob=0.9999, target=0.9999, old_min=37, old_max=43
+n=38, prob=0.9998, target=0.9999, old_min=37, old_max=40
+n=39, prob=0.9999, target=0.9999, old_min=38, old_max=40
+Samples needed: 39
+
+Calculating samples needed for average max count of duplicates = 3
+n=100, avg_max_count=4.4931, target=3, old_min=0, old_max=200
+n=50, avg_max_count=3.0828, target=3, old_min=0, old_max=100
+n=25, avg_max_count=2.2038, target=3, old_min=0, old_max=50
+n=37, avg_max_count=2.6105, target=3, old_min=25, old_max=50
+n=43, avg_max_count=2.8220, target=3, old_min=37, old_max=50
+n=46, avg_max_count=2.9411, target=3, old_min=43, old_max=50
+n=48, avg_max_count=3.0037, target=3, old_min=46, old_max=50
+n=47, avg_max_count=2.9685, target=3, old_min=46, old_max=48
+Samples needed: 48
+
+
+./analysis_frequency.py -j challenges_10000_default_key_14araw.json --mfc -s 0x2adb
+./analysis_frequency.py -j challenges_10000_default_key_stable.json --mfc -s 0xe7bc -m 600
+./analysis_frequency.py -j challenges_10000_default_key_stable.json --mfc -s 0xe7bc -m 600 --wide
+
+
+DELAY_REQA = 0
+REDO_REQA = 0
+DELAY_FASTSELECT = 0
+ADD_INSTRUCTION = 0
+DELAY_AUTH = 0
+
+./ulc_collect.py -- -c 30 -j challenges.json --mode RAW_TEST
+./analysis_frequency.py -j challenges.json --mfc -s 0x0001 -m 65535 --no-graph
+challenges.json                                    Mean: 32442.13, Std Dev: 724.59, Peak Index: 32442
+
+DELAY_REQA = 0.02 .. 0.2
+=> no effect, LFSR didn't start moving yet before first REQA
+
+REDO_REQA = 1 .. 2
+=> no effect, LFSR reset at each REQA
+
+DELAY_FASTSELECT = 0.02
+DELAY_FASTSELECT = 0.04
+=> LFSR mean index increases
+ADD_INSTRUCTION = 1
+=> LFSR mean index increases
+DELAY_AUTH = 0.02
+=> LFSR mean index increases

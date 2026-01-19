@@ -1,0 +1,75 @@
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_unmasked_key_bits.py --block 48 --eeprom-init 00000000000000001B697BD20E0198C0 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_unmasked_key_bits.py --block 48 --eeprom-init 00000000000000001B697BD20E0198C0 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+[+] executing python recover_unmasked_key_bits.py
+[+] args '--block 48 --eeprom-init 00000000000000001B697BD20E0198C0 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285'
+
+[!] Script terminated by SystemExit -1
+
+
+[!] finished recover_unmasked_key_bits.py with exception
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_unmasked_key_bits.py --block 49 --eeprom-init 00000000000000001B697BD20E0198C0 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_unmasked_key_bits.py --block 49 --eeprom-init 00000000000000001B697BD20E0198C0 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+[+] executing python recover_unmasked_key_bits.py
+[+] args '--block 49 --eeprom-init 00000000000000001B697BD20E0198C0 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285'
+
+[!] Script terminated by SystemExit -1
+
+
+[!] finished recover_unmasked_key_bits.py with exception
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_unmasked_key_bits.py --block 50 --eeprom-init 00000000000000001B697BD20E0198C0 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_unmasked_key_bits.py --block 50 --eeprom-init 00000000000000001B697BD20E0198C0 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+[+] executing python recover_unmasked_key_bits.py
+[+] args '--block 50 --eeprom-init 00000000000000001B697BD20E0198C0 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285'
+
+[!] Script terminated by SystemExit -1
+
+
+[!] finished recover_unmasked_key_bits.py with exception
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_unmasked_key_bits.py --block 51 --eeprom-init 00000000000000001B697BD20E0198C0 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_unmasked_key_bits.py --block 51 --eeprom-init 00000000000000001B697BD20E0198C0 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+[+] executing python recover_unmasked_key_bits.py
+[+] args '--block 51 --eeprom-init 00000000000000001B697BD20E0198C0 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285'
+
+[!] Script terminated by SystemExit -1
+
+
+[!] finished recover_unmasked_key_bits.py with exception
+
+[=] No preferences file will be loaded
+[+] execute command from commandline: script run recover_unmasked_key_bits.py --block 52 --eeprom-init 00000000000000001B697BD20E0198C0 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+
+[+] Using UART port /dev/ttyACM0
+[+] Communicating with PM3 over USB-CDC
+[=] No history will be recorded
+[usb|script] pm3 --> script run recover_unmasked_key_bits.py --block 52 --eeprom-init 00000000000000001B697BD20E0198C0 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285
+[+] executing python recover_unmasked_key_bits.py
+[+] args '--block 52 --eeprom-init 00000000000000001B697BD20E0198C0 --bitflips 2 --mask 0xA2B17ECEDB7E8152E496842DF1FE673F --tear1 285'
+
+[!] Script terminated by SystemExit -1
+
+
+[!] finished recover_unmasked_key_bits.py with exception
+
