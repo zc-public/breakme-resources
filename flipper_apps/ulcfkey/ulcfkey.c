@@ -1,5 +1,9 @@
 #pragma GCC optimize("O3")
 #pragma GCC optimize("-funroll-all-loops")
+
+#pragma GCC diagnostic push
+// Suppress specific warnings
+#pragma GCC diagnostic ignored "-Wdiscarded-qualifiers"
 #pragma GCC diagnostic ignored "-Wunused-function"
 
 #include <furi.h>
@@ -1254,3 +1258,5 @@ int32_t ulcfkey_app(void* p) {
     free(app);
     return 0;
 }
+
+#pragma GCC diagnostic pop
