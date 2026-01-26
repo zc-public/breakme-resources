@@ -2,10 +2,13 @@
 //#pragma GCC optimize("tree-vectorize")
 //#pragma GCC optimize("unroll-loops")
 //#pragma GCC optimize("unroll-all-loops")
+#pragma GCC diagnostic push
 
 // Development warnings to catch potential issues
 #pragma GCC diagnostic warning "-Wunused-variable"
 #pragma GCC diagnostic warning "-Wunused-function"
+// Suppress specific warnings
+#pragma GCC diagnostic ignored "-Wdiscarded-qualifiers"
 
 #include "ulc_brute.h"
 #include "ulc_attack.h"
@@ -294,3 +297,5 @@ int32_t ulc_brute_app(void* p) {
 
     return 0;
 }
+
+#pragma GCC diagnostic pop

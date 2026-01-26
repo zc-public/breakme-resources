@@ -1,6 +1,10 @@
 #pragma GCC optimize("O3")
 #pragma GCC optimize("-funroll-all-loops")
 
+#pragma GCC diagnostic push
+// Suppress specific warnings
+#pragma GCC diagnostic ignored "-Wdiscarded-qualifiers"
+
 #include <furi.h>
 #include <furi_hal.h>
 #include <furi_hal_cortex.h>
@@ -594,3 +598,5 @@ int32_t ulc_brute_app(void* p) {
 
     return 0;
 }
+
+#pragma GCC diagnostic pop
