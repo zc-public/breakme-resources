@@ -1,5 +1,5 @@
 App(
-    appid="ulcfkey",
+    appid="ulcfkey_next",
     name="ULCFKey",
     apptype=FlipperAppType.EXTERNAL,
     entry_point="ulcfkey_app",
