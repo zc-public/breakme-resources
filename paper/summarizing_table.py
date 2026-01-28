@@ -189,7 +189,7 @@ Note that the additional device required for the relay may also be used to accel
 
 $\dagger$ if pages 44-47 are locked or if AUTH0 is locked.
 
-$\ddagger$ it assumes the mask has already been recovered, which is included in the \emph{SUMCMAC\_KEY with tearing} operations.
+$\ddagger$ it assumes the mask has already been recovered, which is included in the \emph{SUNCMAC\_KEY with tearing} operations.
 """)
 
 
