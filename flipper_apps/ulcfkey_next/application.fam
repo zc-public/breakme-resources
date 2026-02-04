@@ -1,6 +1,6 @@
 App(
     appid="ulcfkey_next",
-    name="ULCFKey",
+    name="ULCFKey (Next)",
     apptype=FlipperAppType.EXTERNAL,
     entry_point="ulcfkey_app",
     requires=["gui", "subghz"],
