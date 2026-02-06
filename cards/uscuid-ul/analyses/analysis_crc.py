@@ -82,6 +82,14 @@ c7 = "AFE0FB3B14D4B0B023926B"
 # hf 14a raw -skc 3000;hf 14a raw 1a
 c8 = "AF803BCE02080A19445E5B"
 
+# hf 14a raw -s 1a00
+c9 = "AF27859164B8EB3C8B66DA"
+
+# hf 14a raw -s 1a0000
+c10 = "AF66BADEF558DC7E122039"
+
+# hf 14a raw -s 1a00ff
+c11 = "AF2711A6C74FA43BCF5E8F"
 
 # [=]   0/0x00 | 04 26 D6 7C |   | .&.|
 # [=]   1/0x01 | F5 2A 71 80 |   | .*q.
@@ -90,7 +98,7 @@ c8 = "AF803BCE02080A19445E5B"
 # [=]   4/0x04 | 02 00 00 10 | 0 | ....
 # [=]   5/0x05 | 00 06 01 10 | 0 | ....
 # [=]   6/0x06 | 11 FF 00 00 | 0 | ....
-for c in [c1, c2, c3, c4, c5, c6, c7, c8]:
+for c in [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11]:
     calculated_crc = append_crc16_a(c[:-4])
     diff = f"{int(calculated_crc[-4:], 16) ^ int(c[-4:], 16):04X}"
     print(f"Reply: {c}, CRC Match: {calculated_crc == c}, Calculated CRC: {calculated_crc}, Diff: {diff}")
@@ -155,8 +163,14 @@ cn1 = "AFBCFD2520CC9E7525C266"
 cn2 = "AF4870A8A6CC7B186366D8"
 # Cmd 1a00?+CRC: AFA1311399C2F427A5[161B] clear: 59CAE9CEFE6A7D73
 cn3 = "AFA1311399C2F427A5161B"
+# hf 14a raw -s 1a00
+cn4 = "AFD85174406E8C52B30226"
+# hf 14a raw -s 1a0000
+cn5 = "AF19401A39823441837238"
+# hf 14a raw -s 1a00ff
+cn6 = "AF1EC9827FE6630FD8662B"
 
-for c in [cn1, cn2, cn3]:
+for c in [cn1, cn2, cn3, cn4, cn5, cn6]:
     calculated_crc = append_crc16_a(c[:-4])
     diff = f"{int(calculated_crc[-4:], 16) ^ int(c[-4:], 16):04X}"
     print(f"Reply: {c}, CRC Match: {calculated_crc == c}, Calculated CRC: {calculated_crc}, Diff: {diff}")
