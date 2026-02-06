@@ -115,9 +115,9 @@ ACTIVE/AUTHENTICATED & \texttt{50}+CRC                     & silent          &  
 ACTIVE/AUTHENTICATED & \texttt{A0}+CRC                     & silent          &                                             \\
 ACTIVE/AUTHENTICATED & \texttt{A2}+CRC                     & silent          &                                             \\
 ACTIVE/AUTHENTICATED & \textbf{\texttt{**}+CRC}            & \textbf{silent} &                                             \\
-ACTIVE/AUTHENTICATED & \textbf{\texttt{1A00}}              & \textbf{reply}  & \textbf{variant 1: $\rightarrow$ 
+ACTIVE/AUTHENTICATED & \textbf{\texttt{1A00}} / \textbf{\texttt{1A00**}} & \textbf{reply}  & \textbf{variant 1: $\rightarrow$ 
  \texttt{AF}$\|$E(RndB), wrong CRC, $\Delta:$~\texttt{0x6CF3}}              \\
-ACTIVE               & \textbf{\texttt{1A00}}              & \textbf{reply}  & \textbf{variant 2: $\rightarrow$ 
+ACTIVE               & \textbf{\texttt{1A00}} / \textbf{\texttt{1A00**}} & \textbf{reply}  & \textbf{variant 2: $\rightarrow$ 
  \texttt{AF}$\|$E(RndB), wrong CRC, $\Delta:$~\texttt{0xB4C5}}              \\
 AUTHENTICATED        & \textbf{\texttt{1A00}}              & \textbf{\texttt{0}(4)}  & \textbf{variant 2: $\rightarrow$ 
  NAK(0)}              \\
@@ -128,8 +128,8 @@ ACTIVE/AUTHENTICATED & \textbf{\texttt{6363}}              & \textbf{silent} &  
 ACTIVE/AUTHENTICATED & \texttt{A0**}                       & silent          &                                             \\
 ACTIVE/AUTHENTICATED & \texttt{A2**}                       & silent          &                                             \\
 ACTIVE/AUTHENTICATED & \textbf{\texttt{****}}              & \textbf{silent} &                                             \\
-ACTIVE               & \texttt{1A00}+CRC                   & reply           & AUTHENTICATE                                \\
-AUTHENTICATED        & \textbf{\texttt{1A00}+CRC}          & \textbf{reply}  & \textbf{variant 1: $\rightarrow$ 
+ACTIVE               & \texttt{1A00}+CRC\textbf{(+**\dots)}                   & reply           & AUTHENTICATE \textbf{(optionally with spurious bytes)}                               \\
+AUTHENTICATED        & \textbf{\texttt{1A00}+CRC(+**\dots)}          & \textbf{reply}  & \textbf{variant 1: $\rightarrow$ 
  \texttt{AF}$\|$E(RndB)}              \\
 AUTHENTICATED        & \texttt{1A00}+CRC                   & \texttt{0}(4)            & variant 2: $\rightarrow$ 
  NAK(0)              \\
