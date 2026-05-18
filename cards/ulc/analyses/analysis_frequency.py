@@ -6,6 +6,7 @@ import os
 import numpy as np
 from scipy.stats import skewnorm
 import argparse
+from matplotlib.ticker import MultipleLocator
 import matplotlib.pyplot as plt
 
 f = 10
@@ -123,7 +124,7 @@ def stats(jsonfile, max_index=1000, with_skew=False):
 
 
 def generate_wide_graph(jsonfile, stats_results, start_x, max_index=1000,
-                        with_skew=False, gauss=True, really_max_index=65535):
+                        with_skew=False, gauss=True, dark=False, really_max_index=65535):
     freqs, x, p, smallest_index, largest_index, mean, std_dev, skew, max_index_skewed = stats_results
     indices = list(range(max_index))
     # Set the regions to show
@@ -134,11 +135,25 @@ def generate_wide_graph(jsonfile, stats_results, start_x, max_index=1000,
     region2 = (really_max_index - region2_left_margin, really_max_index)
     region2_size = region2[1] - region2[0]
     dpi = 150  # Dots per inch
+
+    if dark:
+        plt.style.use('dark_background')
+        fg_color = 'white'
+        diag_color = 'white'
+        bar_color = '#ef5902'
+        bar_alpha = 0.9
+    else:
+        plt.style.use('default')
+        fg_color = 'black'
+        diag_color = 'k'
+        bar_color = 'blue'
+        bar_alpha = 0.6
+
     fig, (ax1, ax2) = plt.subplots(1, 2, sharey=True, figsize=(1350 / dpi, 900 / dpi), dpi=dpi,
                                    gridspec_kw={'width_ratios': [region1_size, region2_size]})
-    ax1.bar(indices[region1[0]:region1[1]], freqs[region1[0]:region1[1]], width=1, color='blue', alpha=0.6,
+    ax1.bar(indices[region1[0]:region1[1]], freqs[region1[0]:region1[1]], width=1, color=bar_color, alpha=bar_alpha,
             label='Nonces count')
-    ax2.bar(indices[region2[0]:region2[1]], freqs[region2[0]:region2[1]], width=1, color='blue', alpha=0.6)
+    ax2.bar(indices[region2[0]:region2[1]], freqs[region2[0]:region2[1]], width=1, color=bar_color, alpha=bar_alpha)
     # Set limits
     ax1.set_xlim(region1)
     ax2.set_xlim(region2)
@@ -148,9 +163,18 @@ def generate_wide_graph(jsonfile, stats_results, start_x, max_index=1000,
     ax1.yaxis.tick_left()
     ax2.yaxis.tick_right()
 
+    for spine in ax1.spines.values():
+        spine.set_edgecolor(fg_color)
+    for spine in ax2.spines.values():
+        spine.set_edgecolor(fg_color)
+    ax1.tick_params(colors=fg_color)
+    ax2.tick_params(colors=fg_color)
+    ax1.xaxis.label.set_color(fg_color)
+    ax1.yaxis.label.set_color(fg_color)
+
     # Add diagonal lines to show the break
     d = .015  # size of diagonal lines
-    kwargs = dict(transform=ax1.transAxes, color='k', clip_on=False)
+    kwargs = dict(transform=ax1.transAxes, color=diag_color, clip_on=False)
     f = region2_size / region1_size
     ax1.plot([1-d*f, 1+d*f], [-d, +d], **kwargs)
     ax1.plot([1-d*f, 1+d*f], [1-d, 1+d], **kwargs)
@@ -164,11 +188,9 @@ def generate_wide_graph(jsonfile, stats_results, start_x, max_index=1000,
     ax1.set_xlabel(' '*45 + f'LFSR16 Index (with LFSR16[1] = 0x{start_x:04X})')
     ax1.set_ylabel('Nonces at given index')
 
-    # fig.suptitle(f'File: {os.path.basename(jsonfile)}', fontsize=10)
-
-    ax1.xaxis.set_major_locator(plt.MultipleLocator(100))
+    ax1.xaxis.set_major_locator(MultipleLocator(100))
     ax1.grid(which='major', axis='x', linestyle='-')
-    ax2.xaxis.set_major_locator(plt.MultipleLocator(100))
+    ax2.xaxis.set_major_locator(MultipleLocator(100))
     ax2.grid(which='major', axis='x', linestyle='-')
     ax1.axvspan(smallest_index, largest_index, color='lightgrey', alpha=0.3)
     handles, labels = ax1.get_legend_handles_labels()
@@ -186,14 +208,20 @@ def generate_wide_graph(jsonfile, stats_results, start_x, max_index=1000,
                 f'Mean at:{max_index_skewed:6.0f}\n'
                 f'Std Dev:{std_dev:6.0f}'
             )
-    fig.legend(handles, labels,
-               title=legend_title,
-               loc='upper right', bbox_to_anchor=(0.88, 0.85))
+    legend = fig.legend(handles, labels,
+                        title=legend_title,
+                        loc='upper right', bbox_to_anchor=(0.88, 0.85))
+    if dark:
+        legend.get_frame().set_facecolor('#1a1a1a')
+        legend.get_frame().set_edgecolor('white')
+        for text in legend.get_texts():
+            text.set_color('white')
+        legend.get_title().set_color('white')
 
-    plt.savefig(f'frequency_distribution_{os.path.basename(jsonfile)}{"_skew" if with_skew else ""}_wide.png',
-                bbox_inches='tight')
-    plt.savefig(f'frequency_distribution_{os.path.basename(jsonfile)}{"_skew" if with_skew else ""}_wide.pgf',
-                bbox_inches='tight')
+    suffix = f'{"_skew" if with_skew else ""}_wide{"_dark" if dark else ""}'
+    base = os.path.basename(jsonfile)
+    plt.savefig(f'frequency_distribution_{base}{suffix}.png', bbox_inches='tight')
+    plt.savefig(f'frequency_distribution_{base}{suffix}.pgf', bbox_inches='tight')
 
 
 def generate_graphs(jsonfiles, stats_results, start_x, max_index=1000,
@@ -267,6 +295,8 @@ if __name__ == "__main__":
                         help="Disable grey highlighting of the smallest and largest indices.")
     parser.add_argument("--no-graph", action="store_true",
                         help="Disable graph generation.")
+    parser.add_argument("--dark", action="store_true",
+                        help="Enable dark mode for graph. Implies --wide")
     args = parser.parse_args()
 
     if args.ulcg == args.mfc:
@@ -297,8 +327,11 @@ if __name__ == "__main__":
     if args.no_graph:
         sys.exit(0)
 
+    if args.dark:
+        args.wide = True
+
     if args.wide:
-        generate_wide_graph(args.json[0], stats_results[0], args.startx, args.max, args.skew, not args.no_gauss)
+        generate_wide_graph(args.json[0], stats_results[0], args.startx, args.max, args.skew, not args.no_gauss, args.dark)
     else:
         generate_graphs(args.json, stats_results, args.startx, args.max,
                         args.skew, not args.no_gauss, not args.no_title, not args.no_grey)

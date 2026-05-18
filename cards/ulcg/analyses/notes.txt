@@ -36,3 +36,4 @@ Samples needed: 49
 
 ./analysis_frequency.py -j challenges_10000_default_key_stable.json --ulcg -s 0x08b5 -m 600
 ./analysis_frequency.py -j challenges_10000_default_key_stable.json --ulcg -s 0x08b5 -m 600 --wide
+./analysis_frequency.py -j challenges_10000_default_key_stable.json --ulcg -s 0x08b5 -m 600 --wide --no-gauss --dark
