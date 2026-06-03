@@ -720,7 +720,6 @@ To evaluate the effectiveness of this technique, we tested three distinct recove
     \item \textbf{Filtered Strategy:} By applying a crude filter --- specifically skipping the first two flip events following the initial recovered bit transition --- the average recovery rate adjusted to 6.75 bits per segment with a reduced error rate of 0.875 bits.
 \end{itemize}
 Integrating the filtered strategy allows for the recovery of 12.625 bits per segment on average, including 0.875 erroneous bits within a subset of 6.75 bits.
-This means that on average, from a single card, we can extract 50.5 bits of the AES key, comprising 3.5 erroneous bits located among 27 bits.
 Further refinements may be possible by iterating the characterization phase, and measuring the precise number of tearing events between bitflips to weight the probability of bit correctness. We can also challenge the assumption that the slowest bits to be erased are the first ones to be revived by heating, by conducting a heat-recovery characterization of the suspected $0$ bits, along with the already recovered ones, to verify if they reappear.
 
 \subsection{Ultralight~AES: Reader Nonces, Online Attack Enhancements}
@@ -1247,7 +1246,7 @@ All resources accompanying this paper are available in a dedicated GitHub reposi
     {\small \texttt{ntag22x\_suncmac\_recovery.py}} & NTAG~22x~DNA \texttt{SUNCMAC\_KEY} recovery script that implements the attack described in Section~\ref{sec:ntag22x_tear} \\ \hline
     {\small \texttt{hf mfu cchk/aeschk}} & New commands that check MIFARE Ultralight~C/AES tags against dictionary files, enabling brute-force with tearing described in Sections~\ref{sec:estimate_ulc} and~\ref{sec:estimate_ulaes} \\ \hline
     {\small \texttt{hf mfu cauth/aesauth}} & New options to support optimizations described in Sections~\ref{sec:tearing_calibration} and~\ref{sec:aes_tearing} \\ \hline
-    {\small \texttt{hf mfu sim --1a1/--1a2}} & Add support to inject C/AES authentication card reply, supporting relay attacks as described in Sections~\ref{sec:relay} and \ref{sec:aesrelay}\\ \hline
+    {\small \texttt{hf mfu sim --1a1/--1a2}} & Add support to inject C/AES authentication card reply, supporting relay attacks as described in Sections~\ref{sec:relay} and \ref{sec:aesrelay} and authentication bypass of Section~\ref{sec:aes_oddity} \\ \hline
     {\small \texttt{hf mfu info}} & Add fingerprinting of NXP Ultralight~C, ULCG, FJ8010 and variants of USCUID-UL as described in Section~\ref{sec:fingerprint_ulc}\\ \hline
     {\small \texttt{hf mfu *}} & Ultralight~AES support added to \texttt{info}, \texttt{rdbl}, \texttt{wrbl}, \texttt{dump}, \texttt{ndefread}, \texttt{wipe}, \texttt{setkey}\\ \hline
     {\small \texttt{hf 14a raw -w <us>}} & New option helpful to control LFSR position of ULCG cards, supporting Section~\ref{sec:giantec} \\ \hline

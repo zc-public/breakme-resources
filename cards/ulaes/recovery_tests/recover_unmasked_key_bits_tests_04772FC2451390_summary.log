@@ -449,6 +449,7 @@ for i in recover_unmasked_key_bits*hd*log; do awk '/execute command/;/EEPROM era
 "phase 1"+"skip 2 rows" = 12.625 bits recovered per segment on average, 0.875 bits wrong
 So from a single card, we got for a full key: 50.5 bits recovered on average, comprising 3.5 wrong bits located among 27 bits
 to be compared with the 6 to 10 bits of draft v2 (with HW=1.5 to 2.5)
+EDIT: wrong, we can't recover from 4 segments on a single card, only one segment.
 
 still to guess: (128-50.5=) 77.5 bits + fixing (0.875*4=) 3.5 bits over (6.75*4=) 27 bits
 estimate(27,3)=2**11.69

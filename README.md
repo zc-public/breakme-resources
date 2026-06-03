@@ -28,3 +28,4 @@ A local copy of the paper is available [here](paper/deliverables/20260120_eprint
 | 2025-12-01 | NXP requested disclosure is delayed to Q2 2026 for product recertification                                                  |
 | 2025-12-08 | Anticipated publication date communicated to NXP (January 20, 2026), disclosure timeline scoped to customer risk mitigation |
 | 2026-01-25 | Paper and Proof-of-Concept exploits published                                                                               |
+| 2026-05-30 | Talk given at Hardwear.io USA 2026                                                                                          |
