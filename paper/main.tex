@@ -1237,7 +1237,7 @@ All resources accompanying this paper are available in a dedicated GitHub reposi
   \centering
   \caption{Features integrated in the Proxmark3 repository}
   \label{tab:pm3repo-contents}
-  \begin{tabular}{|l|p{0.72\textwidth}|}
+  \begin{tabularx}{\textwidth}{|l|X|}
     \hline
     \textbf{Feature} & \textbf{Description} \\ \hline
     {\small \texttt{mfulc\_des\_brute}} & Tool that implements the offline brute-force attack described in Section~\ref{sec:readernonces} and \ref{sec:counterfeit_recovery} \\ \hline
@@ -1246,12 +1246,12 @@ All resources accompanying this paper are available in a dedicated GitHub reposi
     {\small \texttt{ntag22x\_suncmac\_recovery.py}} & NTAG~22x~DNA \texttt{SUNCMAC\_KEY} recovery script that implements the attack described in Section~\ref{sec:ntag22x_tear} \\ \hline
     {\small \texttt{hf mfu cchk/aeschk}} & New commands that check MIFARE Ultralight~C/AES tags against dictionary files, enabling brute-force with tearing described in Sections~\ref{sec:estimate_ulc} and~\ref{sec:estimate_ulaes} \\ \hline
     {\small \texttt{hf mfu cauth/aesauth}} & New options to support optimizations described in Sections~\ref{sec:tearing_calibration} and~\ref{sec:aes_tearing} \\ \hline
-    {\small \texttt{hf mfu sim --1a1/--1a2}} & Add support to inject C/AES authentication card reply, supporting relay attacks as described in Sections~\ref{sec:relay} and \ref{sec:aesrelay} and authentication bypass of Section~\ref{sec:aes_oddity} \\ \hline
+    \makecell[l]{\small \texttt{hf mfu sim}\\\small \texttt{--1a1/--1a2/--1a2-mirror}} & Add support to inject C/AES authentication card reply, supporting relay attacks as described in Sections~\ref{sec:relay} and \ref{sec:aesrelay} and authentication bypass of Section~\ref{sec:aes_oddity} \\ \hline
     {\small \texttt{hf mfu info}} & Add fingerprinting of NXP Ultralight~C, ULCG, FJ8010 and variants of USCUID-UL as described in Section~\ref{sec:fingerprint_ulc}\\ \hline
     {\small \texttt{hf mfu *}} & Ultralight~AES support added to \texttt{info}, \texttt{rdbl}, \texttt{wrbl}, \texttt{dump}, \texttt{ndefread}, \texttt{wipe}, \texttt{setkey}\\ \hline
     {\small \texttt{hf 14a raw -w <us>}} & New option helpful to control LFSR position of ULCG cards, supporting Section~\ref{sec:giantec} \\ \hline
     {\small \texttt{hw tearoff --skip <n>}} & New option to enable tearing of complex commands \\ \hline
-  \end{tabular}
+  \end{tabularx}
 \end{table}
 \pagebreak
 \begin{table}[ht]
