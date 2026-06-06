@@ -229,6 +229,8 @@ First, the original credential is presented directly to the reader to verify tha
 
 This approach avoids the need to retrieve the actual key or compromise the tag itself; it simply checks if the system's authentication outcome changes when the UID is altered. It is important to note that performing such tests against live systems carries risks, as some readers may log or alarm on unexpected UIDs. However, if the attacker possesses multiple valid tag UIDs --- such as a second captured UID or is in possession of a second legitimate tag --- they can be used to bypass alarms or logging mechanisms that trigger on unknown UIDs while performing this technique.
 
+It is worth noting that nothing in this approach is specific to MIFARE Ultralight~C; the same technique applies equally to other contactless technologies, such as MIFARE DESFire.
+
 \section{Identifying Site Key Diversification}
 \label{sec:site_kdf}
 
