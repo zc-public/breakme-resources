@@ -750,6 +750,29 @@ With an Ultralight~C, if the reader random \textit{RndA} can be zeroed (or made 
 But with an Ultralight~AES, if the reader random can be zeroed (or made as a stream of constant bytes), one can immediately pretend to have a valid tag, simply by replaying the first half of the reader's message, as \textit{ek(RndA)==ek(RndA')}.
 This issue could only affect readers based on low-cost microcontrollers with a poor source of entropy. For instance, a reader relying on a floating ADC input that could be grounded, saturated, or --- if sampled byte per byte --- rendered constant.
 
+\section{Look Ma, no relay!}
+\label{sec:norelay}
+
+To take over an authenticated session with a tag, the relay attacks described in Sections~\ref{sec:relay} and~\ref{sec:aesrelay} are straightforward in principle but require two communicating devices. This section presents a proof-of-concept single-device variant, implemented as a Proxmark3 RDV4 standalone mode, that eliminates the need for a second relay device entirely by exploiting the physics of near-field coupling.
+
+The idea is to let the tag be authenticated by a legitimate reader, and then take control of the tag with our own reader, without ever interrupting the tag's power supply, leaving it in a continuous authenticated state.
+
+To the best of our knowledge, previous attempts to maintain a tag in an active state while transferring control from one reader to another have always failed: when two readers operate simultaneously at nearly the same carrier frequency, their fields interfere to produce a low-frequency beat of constructive and destructive interference that momentarily deprives the tag of power.
+
+In contrast, our approach leverages a careful positioning and the Proxmark3 RDV4's powerful 9~V antenna driver to create a dominant RF field that can effectively overcome the legitimate reader's field once the tag is authenticated. This allows the Proxmark3 to maintain continuous power to the tag and preserve its authenticated state without needing to switch modes or rely on precise timing.
+
+The technique proceeds as follows.
+
+\begin{itemize}
+    \item The Proxmark3 is placed in close contact with a MIFARE Ultralight~C or Ultralight~AES tag and operates as a passive sniffer.
+    \item The tag and Proxmark3 are slowly brought together toward the legitimate reader, with the Proxmark3 held directly behind the tag, monitoring the RF field and waiting for a complete authentication exchange between the reader and the tag.
+    \item Once the Proxmark3 detects the tag's final authentication response (\textit{ek(RndA')}), confirming that the tag has successfully transitioned to the \texttt{AUTHENTICATED} state, it immediately activates its own reader field. At this point, the Proxmark3's field dominates and effectively suppresses the reader's field, preventing the reader from issuing further commands to the tag while keeping the tag continuously powered and preserving its state. Field beating still occurs, but the Proxmark3's stronger field ensures that even during destructive interference, the tag remains powered. However, the legitimate reader's residual interference also prevents the Proxmark3 from reliably communicating with the tag at this stage.
+    \item We then walk away from the legitimate reader, and the Proxmark3 is now in exclusive control of the tag.
+\end{itemize}
+
+These operations have been successfully tested with a Proxmark3 RDV4 against both Ultralight~C and Ultralight~AES tags, using Android phones and hospitality readers as the authenticating reader.
+However, other Proxmark3 variants with weaker antenna drivers, such as the Proxmark3 Easy, have not been able to reliably overpower the reader's field, and therefore could not maintain the tag in an authenticated state.
+
 \section{Impact on NTAG~223~DNA and NTAG~224~DNA}
 \label{sec:ntag22x}
 
@@ -1253,6 +1276,7 @@ All resources accompanying this paper are available in a dedicated GitHub reposi
     {\small \texttt{hf mfu *}} & Ultralight~AES support added to \texttt{info}, \texttt{rdbl}, \texttt{wrbl}, \texttt{dump}, \texttt{ndefread}, \texttt{wipe}, \texttt{setkey}\\ \hline
     {\small \texttt{hf 14a raw -w <us>}} & New option helpful to control LFSR position of ULCG cards, supporting Section~\ref{sec:giantec} \\ \hline
     {\small \texttt{hw tearoff --skip <n>}} & New option to enable tearing of complex commands \\ \hline
+    {\small \texttt{hf\_doegox\_auth0}} & Standalone mode to take over a session and unlock an Ultralight C/AES tag, as presented in Section~\ref{sec:norelay} \\ \hline
   \end{tabularx}
 \end{table}
 \pagebreak
