@@ -405,7 +405,7 @@ The widespread adoption of the MIFARE portfolio has led to the emergence of a ma
 
 \subsection{Giantec GT23SC4489 aka ULCG}
 \label{sec:giantec}
-The Giantec GT23SC4489 is a product that is particularly noteworthy due to its frequent occurrence in real-world deployments, especially within the hospitality industry ($\approx$ 29\% of observed cards, $n=73$). In circulation as early as 2014~\cite{ulcg_datasheet}, and discovered in 2018~\cite{ulcg_gh_issue}, it is easily identifiable by its UID suffix (ending in \texttt{1589}). Some major hotel chains explicitly label these cards as ``ULCG'' cards. We will use the terms GT23SC4489 and ULCG interchangeably from now on.
+The Giantec GT23SC4489 is a product that is particularly noteworthy due to its frequent occurrence in real-world deployments, especially within the hospitality industry ($\approx$ 29\% of observed cards, $n=74$). In circulation as early as 2014~\cite{ulcg_datasheet}, and discovered in 2018~\cite{ulcg_gh_issue}, it is easily identifiable by its UID suffix (ending in \texttt{1589}). Some major hotel chains explicitly label these cards as ``ULCG'' cards. We will use the terms GT23SC4489 and ULCG interchangeably from now on.
 
 Our analysis identified its hardware origins through decapping and analysis of the IC markings.
 
@@ -467,7 +467,7 @@ The combination of a predictable PRNG and insecure memory protection enables a c
 
 \subsection{USCUID-UL}
 \label{sec:uscuidul}
-Another counterfeit product identified during our investigation is based on an unknown IC and found in hospitality deployments ($\approx$ 5\% of observed cards, $n=73$). Our analysis began with two unmarked ICs (cf Figures~\ref{fig:uscuidulv1ic} and~\ref{fig:uscuidulv2ic}) that functioned similarly to a standard MIFARE Ultralight~C but exhibited unique command responses and processing times that distinguish them from genuine NXP ICs. These specific anomalies precisely matched the behavior of a known USCUID-UL card when configured to emulate a standard Ultralight~C.
+Another counterfeit product identified during our investigation is based on an unknown IC and found in hospitality deployments ($\approx$ 5\% of observed cards, $n=74$). Our analysis began with two unmarked ICs (cf Figures~\ref{fig:uscuidulv1ic} and~\ref{fig:uscuidulv2ic}) that functioned similarly to a standard MIFARE Ultralight~C but exhibited unique command responses and processing times that distinguish them from genuine NXP ICs. These specific anomalies precisely matched the behavior of a known USCUID-UL card when configured to emulate a standard Ultralight~C.
 
 USCUID-UL cards are configurable `magic' cards, which allows their UID and other parameters to be altered. This led to our hypothesis that the initial unmarked ICs are USCUID-UL cards that have been 'locked down' into a non-configurable state. Subsequent decappings of known USCUID-UL cards acquired from various sources revealed three IC layouts: two corresponding to Figures~\ref{fig:uscuidulv1ic} and~\ref{fig:uscuidulv2ic}, and a third one (cf Figure~\ref{fig:unlockedic}) featuring a few die markings. Although the specific manufacturer remains unidentified, the profound architectural similarities at the silicon level between the marked and unmarked ICs --- as well as an intersecting fingerprint --- allow us to establish a definitive link.
 
@@ -570,6 +570,7 @@ Our analysis identified at least two variants of this card, distinguishable thro
 \label{sec:fj8010}
 
 When searching for manufacturers proposing ICs with features compatible with Ultralight~C, we identified the Feiju FJ8010, featuring a \emph{3DES Authentication Function}.
+Later, we found a single instance of its deployment in hospitality.
 As for the previously studied ICs, the FJ8010 samples implement the standard MIFARE Ultralight~C command set, but with unique command responses that distinguish it from genuine NXP ICs.
 
 \vspace{0.5em}
@@ -1099,7 +1100,7 @@ To assess the real-world impact of the identified vulnerabilities, a survey of d
 
 A majority of the widely deployed MIFARE Ultralight~C systems examined failed to implement basic security configurations. Out of eight common systems analyzed, spanning sectors such as hospitality, ticketing, and vehicle monitoring, six were found with their lock bytes left unconfigured (75\%). This observation may be partly attributable to the omission of public guidance on the necessity of locking the key pages, leaving the final implementation choices to system integrators who may not recognize the risk. This oversight permits the partial key overwrite attacks described. The only systems observed to have correctly configured the lock bytes on their credentials were SALTO and Hop Fastpass. However, multiple SALTO deployments were observed to use ULCG cards, which are vulnerable to lock byte tearing attacks that circumvent this security measure. Furthermore, every Ultralight~C system sampled (100\%) was affected by one or more of the issues detailed in this work, ranging from weaknesses that increase the attack surface to exploitable flaws that allow for full key recovery. One system using MIFARE Ultralight~AES was identified, believed to be a VingCard credential, which properly enabled \texttt{SEC\_MSG\_ACT}.
 
-The incidence of compatible integrated circuits was also found to be a significant issue. A sampling of 73 cards, primarily sourced from hospitality deployments within the United States, revealed that 25 cards ($\approx$ 34\%) were not genuine NXP products. The presence of these cards, which contain more severe vulnerabilities such as predictable random number generators, introduces a latent risk into these environments.
+The incidence of compatible integrated circuits was also found to be a significant issue. A sampling of 74 cards, primarily sourced from hospitality deployments within the United States, revealed that 26 cards ($\approx$ 35\%) were not genuine NXP products. The presence of these cards, which contain more severe vulnerabilities such as predictable random number generators, introduces a latent risk into these environments.
 
 By applying our attack methodology to a USCUID-UL credential from a deployed system, we recovered the static 3DES authentication key used for authenticity in minutes (as mentioned in Section~\ref{sec:estimate}). This result confirms that the vulnerabilities are readily exploitable and carry immediate consequences for the security of deployed systems.
 
