@@ -270,6 +270,8 @@ MIFARE Ultralight~C tags implement anti-tearing mechanisms to protect memory are
 
 Prior reduction of the keyspace to $2^{28}$ bits -- achieved through the 75\% key overwrite technique -- can be further reduced by leveraging EEPROM tearing attacks~\cite{teuwen2021eeprom}. These methods exploit the physical characteristics of EEPROM write operations, specifically targeting the initial erase phase inherent in MIFARE Ultralight~C's write process, where a page is first zeroed before new data is written.
 
+Quite interestingly, the earliest account of an asymmetric faulting of a key stored in EEPROM appears in Section 3 of the seminal paper introducing Differential Fault Analysis~\cite{biham_dfa_1997}.
+
 \subsection{Tearing Attack Principles}
 
 EEPROM tearing attacks exploit the non-atomic nature of memory write operations. When an EEPROM write or erase operation is interrupted, it affects the number of trapped electrons in the floating gates of transistors, which in turn affects the logical value when read back. 
