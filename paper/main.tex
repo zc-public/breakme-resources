@@ -973,6 +973,7 @@ These estimates suggest that recovering a static Ultralight~C key is achievable 
 The combination of a predictable PRNG, potential lock byte tearing, and an optimized implementation of the \texttt{mfulc\_des\_brute} tool (introduced in Section~\ref{sec:readernonces}) for the ULCG/FJ8010/USCUID-UL LFSRs allows for rapid recovery. We used the default Ultralight~C static key \texttt{BREAKMEIFYOUCAN!} for verification. In addition, we validated the practicality of our methods by recovering a real-world USCUID-UL static key used for authenticity, underscoring the security implications of our findings.
 
 Demonstrated recovery times are under 1 minute using standard laptop hardware, approximately 48 seconds on a 2021 flagship mobile phone (Pixel 6 Pro), and around 15 seconds on a modern desktop (i9-13900K). This leverages offline computation heavily after obtaining necessary nonces via brief interaction with the card --- exploiting the predictable PRNG when paired with the relay attack described in Section~\ref{sec:relay}.
+After the initial release of this paper, Connor Milligan and Sam Croley independently ported the key recovery to GPU (CUDA~\cite{cuda_des_brute} and Hashcat~\cite{hashcat_des_brute}), bringing it down to insane speeds.
 
 To demonstrate the practicality of the relay component, we implemented a proof-of-concept using two Flipper Zero devices communicating over a 433~MHz Sub-GHz link. One device interacted with the card, the other with the reader, successfully relaying the necessary authentication messages to bring the card into an authenticated state relative to the attacker's device. Once the card enters the \texttt{AUTHENTICATED} state, the attacker can execute partial overwrites. This confirms that physical proximity between the target card and a legitimate reader is not required, and that the attack can be performed with relatively inexpensive, readily available hardware.
 
@@ -1324,6 +1325,7 @@ Additions:
     \item More USCUID-UL fingerprinting data (\texttt{1A00} with spurious data)
     \item Discovery of a FJ8010 case in hospitality
     \item Reference to Biham and Shamir CRYPTO '97 paper
+    \item References to GPU port of counterfeit key recovery by Connor and Sam
     \item Mention that KDF check technique also applies to other technologies such as DESFire
 \end{itemize}
 Errata:
