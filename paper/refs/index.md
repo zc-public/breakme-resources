@@ -37,6 +37,9 @@ DEF CON 21 Presentation, August 2013. [Online](https://infocon.org/cons/DEF%20CO
 
 1. NXP Semiconductors, [“Symmetric key diversifications,”](AN10922.pdf) Application Note Rev. 2.2, July 2019, document number: AN10922. [Online](https://www.nxp.com/docs/en/application-note/AN10922.pdf)
 
+1. E. Biham and A. Shamir, [“Differential fault analysis of secret key cryptosystems,”](BFb0052259.pdf) in Advances in Cryptology —
+CRYPTO ’97, B. S. Kaliski, Ed. Berlin, Heidelberg: Springer Berlin Heidelberg, 1997, pp. 513–525. [Online](https://link.springer.com/content/pdf/10.1007/BFb0052259.pdf)
+
 1. NXP Semiconductors, [“Anti-counterfeit news,”](MIFARE-Anti-counterfeit-news.pdf) 2024 [Online](https://www.nxp.com/docs/en/supporting-information/MIFARE-Anti-counterfeit-news.pdf)
 
 1. Giantec Semiconductor, [“Gt23sc4489 - 192 bytes eeprom memory contactless smart card - conform to iso/iec 14443a standard,”](GT23SC4489_GTAG_192b_ULCG.pdf) Giantec Semiconductor, Product Data Sheet Rev. 1.0, April 2014. [Online](http://static6.arrow.com/aropdfconversion/bb8cf59726d830d31aa015410871ab5857a21657/gt23sc4439_ds_adv.pdf)
@@ -61,6 +64,12 @@ DEF CON 21 Presentation, August 2013. [Online](https://infocon.org/cons/DEF%20CO
 
 1. NXP Semiconductors, [“NT2H2421S0: NTAG 224 DNA StatusDetect - NFC T2T compliant IC with StatusDetect feature,”](NT2H2421S0_rev3.2.pdf) product data sheet rev. 3.2, October 2023 [Online](https://www.nxp.com/docs/en/data-sheet/NT2H2421S0.pdf)
 
+1. C. Milligan, “Proxmark3:
+Cuda implementation of mfulc des brute,”
+GitHub commit 46398d8, May 2026. [Online](https://github.com/RfidResearchGroup/proxmark3/commit/46398d855b14fcb6ec764e2cf2afd240b0cffc6b)
+
+1. S. Croley, “Hashcat: Implement mifare ultralight c counterfeit and reader mode,” GitHub PR #4679, May 2026. [Online](https://github.com/hashcat/hashcat/pull/4679)
+
 1. [ISO/IEC 15693-3:2019 Cards and security devices for personal identification — Contactless vicinity objects — Part 3: Anticollision and transmission protocol](BS_ISO-IEC_15693-3-2019.pdf), International Organization for Standardization Std., 2019. [Online (paywall)](https://www.iso.org/standard/90286.html)
 
 1. [ISO/IEC 18000-63:2021 Information technology — Radio frequency identification for item management — Part 63: Parameters for air interface communications at 860 MHz to 960 MHz Type C](BS_ISO-IEC_18000-63-2015.pdf), International Organization for Standardization Std., 2021. [Online (paywall)](https://www.iso.org/standard/78309.html)
@@ -80,8 +89,7 @@ Organization for Standardization Std., 2018.](ISO-IEC-14443-4-2018.pdf) [Online 
 
 1. NXP Semiconductors, [“MIFARE SAM AV3 for NTAG 5, ICODE DNA and UCODE DNA,”](AN12698.pdf) Application Note Rev. 1.2, February 2020, document number: AN12698. [Online](https://www.nxp.com/docs/en/application-note/AN12698.pdf)
 
-1. NXP Semiconductors, [“NT4H2421Gx: NTAG 424 DNA – Secure NFC T4T compliant IC,”](NT4H2421Gx.pdf) product data sheet rev. 3.0, January
-2019.
+1. NXP Semiconductors, [“NT4H2421Gx: NTAG 424 DNA – Secure NFC T4T compliant IC,”](NT4H2421Gx.pdf) product data sheet rev. 3.0, January 2019.
 
 1. NXP Semiconductors, [“NTAG X DNA: Secure NFC T4T compliant IC for PKI,”](NTAGXDNADS.pdf) product data sheet rev. 3.0, May 2025.
 
@@ -95,3 +103,5 @@ rev. 1.1, May 2025
 1. C. Herrmann, P. Teuwen, O. Moiseenko, M. Walker et al., “Proxmark3 – Iceman repo.” [Online](https://github.com/RfidResearchGroup/proxmark3)
 
 1. “Flipper Zero firmware,” [Online](https://github.com/flipperdevices/flipperzero-firmware)
+
+1. “ChameleonUltra code repository.” [Online](https://github.com/RfidResearchGroup/ChameleonUltra)
