@@ -458,7 +458,7 @@ Not only does the number of possible nonce values drop from $2^{64}$ to $2^{16}-
     \label{fig:freq_distrib_ulcg}
 \end{center}
 
-Figure~\ref{fig:freq_distrib_ulcg} illustrates this issue: in 10\,000 requests, all LFSR indexes of the observed nonce values fell in the gray zone of the graph and most of them highly concentrated in an even smaller portion of about $2^{7}$ values.
+Figure~\ref{fig:freq_distrib_ulcg} illustrates this issue: in 10\,000 requests, all LFSR indexes of the observed nonce values fell in the gray zone of the graph and most of them highly concentrated in an even smaller portion of about $2^{7}$ values\footnote{Under ideal conditions --- running the loop in the reader itself, keeping some distance to the reader and not resetting the card between attempts --- we could obtain the exact same nonce more than 98~\% of the time.}.
 In practice, many \texttt{RndB} values will recur within a small number of transactions. Given the observed bias, there is a greater than 50\% chance of finding a duplicate among 12 nonces, and the probability reaches 99.99\%  with only 39 nonces. This repetition drastically eases offline analysis, since an attacker can gather multiple repeated \texttt{RndB} values and match them with partial key guesses offline. While the official NXP TagInfo application warns users about some of the non-genuine cards\footnote{Note that the TagInfo detection is quite unreliable on Ultralight~C cards and will, for example, detect old genuine NXP cards as \emph{``Non-genuine, most probably counterfeit product''}, solely based on their old ``site'' reference in the UID (tested on NXP TagInfo v6.1.0).}
 , many systems neither check nor block usage of non-genuine cards.
 
@@ -1291,7 +1291,8 @@ All resources accompanying this paper are available in a dedicated GitHub reposi
     {\small \texttt{mfulaes\_mask\_recovery.py}} & Ultralight~AES key mask recovery script that implements the attack described in Section~\ref{sec:aes_tearing} \\ \hline
     {\small \texttt{ntag22x\_suncmac\_recovery.py}} & NTAG~22x~DNA \texttt{SUNCMAC\_KEY} recovery script that implements the attack described in Section~\ref{sec:ntag22x_tear} \\ \hline
     {\small \texttt{hf mfu cchk/aeschk}} & New commands that check MIFARE Ultralight~C/AES tags against dictionary files, enabling brute-force with tearing described in Sections~\ref{sec:estimate_ulc} and~\ref{sec:estimate_ulaes} \\ \hline
-    \makecell[tl]{{\small \texttt{hf mfu cauth/aesauth}}\\{\small \texttt{--retries/--nocheck/--read0}}\\{\small \texttt{--collect/--pair}}} & New options to support optimizations described in Sections~\ref{sec:tearing_calibration} and~\ref{sec:aes_tearing} and authentication with colliding nonces as described in Section~\ref{sec:counterfeit_recovery}\\ \hline
+    \makecell[tl]{{\small \texttt{hf mfu cauth/aesauth}}\\{\small \texttt{--retries/--nocheck/--read0}}} & New options to support optimizations described in Sections~\ref{sec:tearing_calibration} and~\ref{sec:aes_tearing}\\ \hline
+    \makecell[tl]{{\small \texttt{hf mfu cauth}}\\{\small \texttt{--noauth/--collect/--pair}}} & New options to perform authentication with colliding nonces as described in Section~\ref{sec:counterfeit_recovery}\\ \hline
     \makecell[tl]{{\small \texttt{hf mfu sim}}\\{\small \texttt{--1a1/--1a2}}\\{\small \texttt{--1a2-mirror}}} & Add support to inject C/AES authentication card reply, supporting relay attacks as described in Sections~\ref{sec:relay} and \ref{sec:aesrelay} and authentication bypass of Section~\ref{sec:aes_oddity} \\ \hline
     {\small \texttt{hf mfu info}} & Add fingerprinting of NXP Ultralight~C, ULCG, FJ8010 and variants of USCUID-UL as described in Section~\ref{sec:fingerprint_ulc}\\ \hline
     {\small \texttt{hf mfu *}} & Ultralight~AES support added to \texttt{info}, \texttt{rdbl}, \texttt{wrbl}, \texttt{dump}, \texttt{ndefread}, \texttt{wipe}, \texttt{setkey}\\ \hline
@@ -1344,6 +1345,7 @@ Additions:
     \item Reference to Biham and Shamir CRYPTO '97 paper
     \item References to GPU port of counterfeit key recovery by Connor and Sam
     \item Mention that KDF check technique also applies to other technologies such as DESFire
+    \item Counterfeit authentication based on collisions: add footnote and Proxmark3 options
 \end{itemize}
 Errata:
 \begin{itemize}
