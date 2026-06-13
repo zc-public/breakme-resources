@@ -54,6 +54,10 @@ CRYPTO ’97, B. S. Kaliski, Ed. Berlin, Heidelberg: Springer Berlin Heidelberg,
 
 1. M. Merhi, J. C. Hernandez-Castro, and P. Peris-Lopez, [“Studying the pseudo random number generator of a low-cost rfid tag,”](2011rfidta.pdf) in 2011 IEEE International Conference on RFID-Technologies and Applications, 2011, pp. 381–385. [Online](https://www.researchgate.net/publication/220866383_Studying_the_pseudo_random_number_generator_of_a_low-cost_RFID_tag)
 
+1. Jose Vincente Campos, “SDR nfc-laboratory v2.0.” [Online](https://github.com/josevcm/)
+
+1. R. Flynn, [“An investigation of possible attacks on the MIFARE DESFire EV1 smartcard used in public transportation,”](FYP_Report_DESFireEV1.pdf) 2019. [Online](https://www.researchgate.net/publication/344479867_An_investigation_of_possible_attacks_on_the_MIFARE_DESFire_EV1_smartcard_used_in_public_transportation)
+
 1. NXP Semiconductors, [“MF0AES(H)x0, NT2H2xy1G and NT2H2xy1S security target lite,”](nscib-cc-0138361-stlite.pdf) evaluation document rev. 1.1, January 2022. [Online](https://www.tuv-nederland.nl/assets/files/cerfiticaten/2022/02/nscib-cc-0138361-stlite.pdf)
 
 1. NXP Semiconductors, [“NT2H2331G0: NTAG 223 DNA - NFC T2T compliant IC,”](NT2H2331G0_rev3.1.pdf) product data sheet rev. 3.1, April 2023. [Online](https://www.nxp.com/docs/en/data-sheet/NT2H2331G0.pdf)
