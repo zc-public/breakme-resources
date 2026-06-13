@@ -1,0 +1,11 @@
+Only on ULCG
+Card positioned aside the Pm3 RDV4 (=keep some distance)
+No RF field reset between auths
+
+[usb] pm3 --> hf mfu cauth -0 --collect -r 999 --noauth
+[=] Top 2 most common nonces:
+[=]   6ae7a28b8e280110 (count: 984)
+[=]   aaeb914cc07e65df (count: 2)
+[=] Time spent 5,6s
+[=] Authentication attempts: 1000
+[=] Speed: 179,4 auths/s

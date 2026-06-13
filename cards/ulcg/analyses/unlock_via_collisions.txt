@@ -1,0 +1,35 @@
+
+For ULCG / Feiju / USCUID-UL:
+
+hf mfu cauth --collect --read0 --retries 99 --reset --noauth
+[=] Top 10 most common nonces:
+[=]   a2e50d41550746b6 (count: 15)
+[=]   d83ef7928d02f974 (count: 12)
+[=]   0acbfaebfdb11639 (count: 11)
+[=]   e9085bd27ee3fd93 (count: 10)
+[=]   250fa56064565b21 (count: 9)
+[=]   fee81d3c2eac3394 (count: 7)
+[=]   03b1a6f2e44c77b4 (count: 6)
+[=]   e7ac2837c7ac8d26 (count: 5)
+[=]   10dd3562167be6b2 (count: 4)
+[=]   6f159ca7a8f759bc (count: 3)
+[=] Time spent 0,6s
+[=] Authentication attempts: 100
+[=] Speed: 177,9 auths/s
+
+
+hf mfu sim -t 13 -u 04F4B114C72A81 --1a1 D83EF7928D02F974
+-> get reader nonce
+hf mfu sim -t 13 -u 04F4B114C72A81 --1a1 A2E50D41550746B6
+-> get reader nonce
+hf mfu sim -t 13 -u 04F4B114C72A81 --1a1 0ACBFAEBFDB11639
+-> get reader nonce
+
+hf mfu cauth --read0 --retries 99 --reset  --pair A2E50D41550746B6E8029D3EB5C8F986B3AC53AD93283E81 --pair D83EF7928D02F974764208C0DD051D679CB09CDFFD676FB9 --pair 0ACBFAEBFDB11639B101F7F2ED5D3935BBA9E48B318D47F5 -k
+[+] Authentication 3DES with nonce pair... ok
+[=] Time spent 0,0s
+[=] Authentication attempts: 6
+[=] Speed: 157,9 auths/s
+
+hf 14a raw -c a22a30000000
+
