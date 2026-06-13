@@ -793,6 +793,8 @@ The observed beating has a frequency of approximately 180 Hz, indicating both 13
 This technique has been successfully tested with a Proxmark3 RDV4 against both Ultralight~C and Ultralight~AES tags, using Android phones and hospitality readers as the authenticating reader.
 However, other Proxmark3 variants with weaker antenna drivers, such as the Proxmark3 Easy, have not been able to reliably overpower the reader's field, and therefore could not maintain the tag in an authenticated state.
 
+The technique could very probably be applied to other types of relay attacks such as the \emph{suspended commit}~\cite{flynn_2919} against MIFARE DESFire~EV1 and EV2 by switching from sniffer mode to reader mode during the commit command CRC, although we have not tested it yet.
+
 \section{Impact on NTAG~223~DNA and NTAG~224~DNA}
 \label{sec:ntag22x}
 
