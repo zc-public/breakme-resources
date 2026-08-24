@@ -126,7 +126,7 @@ Section~\ref{sec:readernonces} presents improved attacks using reader nonces;
 Section~\ref{sec:optimize} discusses brute-force optimizations;
 Section~\ref{sec:counterfeit} examines counterfeit cards;
 Section~\ref{sec:ulaes} analyzes the impact on Ultralight~AES;
-Section~\ref{sec:norelay} presents a session takeover without relay;
+Section~\ref{sec:norelay} presents a session takeover requiring no relay;
 Section~\ref{sec:ntag22x} analyzes the impact on NTAG~223~DNA and NTAG~224~DNA;
 Section~\ref{sec:estimate} estimates practical attack times;
 Section~\ref{sec:attempt1card} explores single-tag attacks;
@@ -230,7 +230,7 @@ First, the original credential is presented directly to the reader to verify tha
 
 This approach avoids the need to retrieve the actual key or compromise the tag itself; it simply checks if the system's authentication outcome changes when the UID is altered. It is important to note that performing such tests against live systems carries risks, as some readers may log or alarm on unexpected UIDs. However, if the attacker possesses multiple valid tag UIDs --- such as a second captured UID or is in possession of a second legitimate tag --- they can be used to bypass alarms or logging mechanisms that trigger on unknown UIDs while performing this technique.
 
-It is worth noting that nothing in this approach is specific to MIFARE Ultralight~C; the same technique applies equally to other contactless technologies, such as MIFARE DESFire.
+This method is applicable to many other contactless technologies, including MIFARE Plus and DESFire.
 
 \section{Identifying Site Key Diversification}
 \label{sec:site_kdf}
@@ -754,7 +754,7 @@ With an Ultralight~C, if the reader random \textit{RndA} can be zeroed (or made 
 But with an Ultralight~AES, if the reader random can be zeroed (or made as a stream of constant bytes), one can immediately pretend to have a valid tag, simply by replaying the first half of the reader's message, as \textit{ek(RndA)==ek(RndA')}.
 This issue could only affect readers based on low-cost microcontrollers with a poor source of entropy. For instance, a reader relying on a floating ADC input that could be grounded, saturated, or --- if sampled byte per byte --- rendered constant.
 
-\section{Look Ma, no relay!}
+\section{Session Takeover Without a Relay}
 \label{sec:norelay}
 
 To take over an authenticated session with a tag, the relay attacks described in Sections~\ref{sec:relay} and~\ref{sec:aesrelay} are straightforward in principle but require two communicating devices. This section presents a proof-of-concept single-device variant, implemented as a Proxmark3 RDV4 standalone mode, that eliminates the need for a second relay device entirely by exploiting the physics of near-field coupling.
@@ -793,7 +793,7 @@ The observed beating has a frequency of approximately 180 Hz, indicating both 13
 This technique has been successfully tested with a Proxmark3 RDV4 against both Ultralight~C and Ultralight~AES tags, using Android phones and hospitality readers as the authenticating reader.
 However, other Proxmark3 variants with weaker antenna drivers, such as the Proxmark3 Easy, have not been able to reliably overpower the reader's field, and therefore could not maintain the tag in an authenticated state.
 
-The technique could very probably be applied to other types of relay attacks such as the \emph{suspended commit}~\cite{flynn_2919} against MIFARE DESFire~EV1 and EV2 by switching from sniffer mode to reader mode during the commit command CRC, although we have not tested it yet.
+The technique can be applied to other types of relay attacks such as the \emph{suspended commit}~\cite{flynn_2919} against MIFARE DESFire~EV1 and EV2. We demonstrated it in a second Proxmark3 RDV4 standalone mode, by switching from sniffer mode to reader mode right before the commit command CRC.
 
 \section{Impact on NTAG~223~DNA and NTAG~224~DNA}
 \label{sec:ntag22x}
@@ -989,14 +989,14 @@ These estimates suggest that recovering a static Ultralight~C key is achievable 
 \subsection{For ULCG, FJ8010, and USCUID-UL}
 \label{sec_estimate_counterfeit}
 \subsubsection*{Full Key Recovery (Single Card)} 
-The combination of a predictable PRNG, potential lock byte tearing, and an optimized implementation of the \texttt{mfulc\_des\_brute} tool (introduced in Section~\ref{sec:readernonces}) for the ULCG/FJ8010/USCUID-UL LFSRs allows for rapid recovery. We used the default Ultralight~C static key \texttt{BREAKMEIFYOUCAN!} for verification. In addition, we validated the practicality of our methods by recovering a real-world USCUID-UL static key used for authenticity, underscoring the security implications of our findings.
+The combination of a predictable PRNG, potential lock byte tearing, and an optimized implementation of the \texttt{mfulc\_des\_brute} tool (introduced in Section~\ref{sec:readernonces}) for the ULCG/FJ8010/USCUID-UL LFSRs allows for rapid recovery. We used the default Ultralight~C key \texttt{BREAKMEIFYOUCAN!} for verification. In addition, we validated the practicality of our methods by recovering a real-world USCUID-UL card key used for authenticity, underscoring the security implications of our findings.
 
 Demonstrated recovery times are under 1 minute using standard laptop hardware, approximately 48 seconds on a 2021 flagship mobile phone (Pixel 6 Pro), and around 15 seconds on a modern desktop (i9-13900K). This leverages offline computation heavily after obtaining necessary nonces via brief interaction with the card --- exploiting the predictable PRNG when paired with the relay attack described in Section~\ref{sec:relay}.
-After the initial release of this paper, Connor Milligan and Sam Croley independently ported the key recovery to GPU (CUDA~\cite{cuda_des_brute} and Hashcat~\cite{hashcat_des_brute}), bringing it down to insane speeds.
+After the initial release of this paper, Connor Milligan and Sam Croley independently implemented GPU support (for the Proxmark3~\cite{cuda_des_brute} and \texttt{hashcat}~\cite{hashcat_des_brute}). This enables near-instantaneous recovery, requiring approximately 2 seconds on a modern consumer laptop.
 
 To demonstrate the practicality of the relay component, we implemented a proof-of-concept using two Flipper Zero devices communicating over a 433~MHz Sub-GHz link. One device interacted with the card, the other with the reader, successfully relaying the necessary authentication messages to bring the card into an authenticated state relative to the attacker's device. Once the card enters the \texttt{AUTHENTICATED} state, the attacker can execute partial overwrites. This confirms that physical proximity between the target card and a legitimate reader is not required, and that the attack can be performed with relatively inexpensive, readily available hardware.
 
-In typical deployments using Ultralight~C with default (unlocked) configurations, recovering a static key is within the capabilities of a determined attacker. Further, these findings highlight both the critical security regression presented by prevalent compatible ICs (key recovery in less than a minute, lock byte tearing) and the need for industry-wide awareness and replacement of compatible ICs with genuine NXP chips.
+In typical deployments using Ultralight~C with default (unlocked) configurations, recovering a static key is within the capabilities of a determined attacker. Further, these findings highlight both the critical security regression presented by prevalent compatible ICs (single-card key recovery in less than a minute, lock byte tearing) and the need for industry-wide awareness and replacement of compatible ICs with genuine NXP chips.
 
 \subsection{For MIFARE Ultralight~AES}
 \label{sec:estimate_ulaes}
@@ -1293,7 +1293,7 @@ All resources accompanying this paper are available in a dedicated GitHub reposi
     {\small \texttt{mfulaes\_mask\_recovery.py}} & Ultralight~AES key mask recovery script that implements the attack described in Section~\ref{sec:aes_tearing} \\ \hline
     {\small \texttt{ntag22x\_suncmac\_recovery.py}} & NTAG~22x~DNA \texttt{SUNCMAC\_KEY} recovery script that implements the attack described in Section~\ref{sec:ntag22x_tear} \\ \hline
     {\small \texttt{hf mfu cchk/aeschk}} & New commands that check MIFARE Ultralight~C/AES tags against dictionary files, enabling brute-force with tearing described in Sections~\ref{sec:estimate_ulc} and~\ref{sec:estimate_ulaes} \\ \hline
-    \makecell[tl]{{\small \texttt{hf mfu cauth/aesauth}}\\{\small \texttt{--retries/--nocheck/--read0}}} & New options to support optimizations described in Sections~\ref{sec:tearing_calibration} and~\ref{sec:aes_tearing}\\ \hline
+    \makecell[tl]{{\small \texttt{hf mfu cauth/aesauth}}\\{\small \texttt{--retries/--nocheck/--read0}}} & New options to support optimizations described in Sections~\ref{sec:tearing_calibration}, \ref{sec:onlineoptimize} and~\ref{sec:aes_tearing}\\ \hline
     \makecell[tl]{{\small \texttt{hf mfu cauth}}\\{\small \texttt{--noauth/--collect/--pair}}} & New options to perform authentication with colliding nonces as described in Section~\ref{sec:counterfeit_recovery}\\ \hline
     \makecell[tl]{{\small \texttt{hf mfu sim}}\\{\small \texttt{--1a1/--1a2}}\\{\small \texttt{--1a2-mirror}}} & Add support to inject C/AES authentication card reply, supporting relay attacks as described in Sections~\ref{sec:relay} and \ref{sec:aesrelay} and authentication bypass of Section~\ref{sec:aes_oddity} \\ \hline
     {\small \texttt{hf mfu info}} & Add fingerprinting of NXP Ultralight~C, ULCG, FJ8010 and variants of USCUID-UL as described in Section~\ref{sec:fingerprint_ulc}\\ \hline
@@ -1301,6 +1301,7 @@ All resources accompanying this paper are available in a dedicated GitHub reposi
     {\small \texttt{hf 14a raw -w <us>}} & New option helpful to control LFSR position of ULCG cards, supporting Section~\ref{sec:giantec} \\ \hline
     {\small \texttt{hw tearoff --skip <n>}} & New option to enable tearing of complex commands \\ \hline
     {\small \texttt{hf\_doegox\_auth0}} & Standalone mode to take over a session and unlock an Ultralight C/AES tag, as presented in Section~\ref{sec:norelay} \\ \hline
+    {\small \texttt{hf\_doegox\_commit}} & Standalone mode to take over a session and suspend the commit of a DESFire EV1/EV2, as mentioned in Section~\ref{sec:norelay} \\ \hline
   \end{tabularx}
 \end{table}
 \pagebreak
