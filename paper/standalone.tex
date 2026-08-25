@@ -1,0 +1,43 @@
+\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (fig) at (0,0)
+        {\includegraphics[width=16cm]{ulc-standalone-mode}};
+    \begin{scope}[x={(fig.south east)},y={(fig.north west)}]
+        % --- READER field-active span ---
+        \begin{scope}[shift={(0,0.938)}]
+            \draw[green!60!black,thick,|-|] (0.029,0) -- (0.997,0);
+            \node[green!60!black,font=\bfseries\large,anchor=south] at (0.30,0) {reader's field active};
+        \end{scope}
+
+        % --- Proxmark3 field-active span ---
+        \begin{scope}[shift={(0.53,0.96)}]
+            \draw[blue!70!black,thick,|-|] (0,0) -- (0.467,0);
+            \node[blue!70!black,font=\bfseries\large,anchor=south] at (0.23,0) {Proxmark3's field active};
+        \end{scope}
+        \begin{scope}[shift={(0,0.43)}]
+            \draw[blue!70!black,thick,|-|] (0.029,0) -- (0.681,0);
+            \node[blue!70!black,font=\bfseries\large,anchor=south] at (0.30,0) {Proxmark3's field active};
+        \end{scope}
+
+        % --- AUTHENTICATE ---
+        \begin{scope}[shift={(0.20,0.57)}]
+            \node[green!60!black,font=\bfseries,anchor=south] at (0.075,0.14) {AUTHENTICATE};
+            \node[green!60!black,font=\bfseries,anchor=south] at (0.075,0.10) {handshake};
+        \end{scope}
+
+        % --- plain text labels ---
+        \node[red!60!black,font=\bfseries,anchor=south] at (0.79,0.71) {READ};
+        \node[blue!60!black, font=\bfseries] at (0.40,0.235) {UNLOCK};
+        \node[blue!60!black, font=\bfseries] at (0.62,0.235) {ACK};
+
+        % --- legend ---
+        \begin{scope}[shift={(0.73,0.15)}]
+            \fill[white,draw=black,thin] (-0.02,-0.09) rectangle (0.25,0.07);
+            \fill[green!60!black] (0,0.03) rectangle (0.02,0.05);
+            \node[font=\small,anchor=west] at (0.03,0.04) {reader exchange};
+            \fill[red!60!black] (0,-0.02) rectangle (0.02,0);
+            \node[font=\small,anchor=west] at (0.03,-0.01) {lost reader exchange};
+            \fill[blue!60!black] (0,-0.07) rectangle (0.02,-0.05);
+            \node[font=\small,anchor=west] at (0.03,-0.06) {Proxmark3 exchange};
+        \end{scope}
+    \end{scope}
+\end{tikzpicture}
