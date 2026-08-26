@@ -68,7 +68,7 @@
 \title{``BREAKMEIFYOUCAN!'': Exploiting Keyspace Reduction and Relay Attacks in 3DES and AES-protected NFC Technologies}
 \author{Nathan Nye, Philippe Teuwen, Tiernan Messmer,\\
         Steven Mauch, Struan Clark, Zinong Li, Zachary Weiss, Lucifer Voeltner}
-\date{August XX, 2026~--- Rev. 1.1}
+\date{August 28, 2026~--- Rev. 1.1}
 
 \hypersetup{
   pdftitle={BREAKMEIFYOUCAN!: Exploiting Keyspace Reduction and Relay Attacks in 3DES and AES-protected NFC Technologies},
@@ -474,19 +474,6 @@ USCUID-UL cards are configurable `magic' cards, which allows their UID and other
 
 Public shipping records of hospitality deployments suggest that their supply chain may involve manufacturers such as Chengdu Mind or Global Card Systems. Microscopic analysis of the third USCUID-UL IC reveals various markings, including ``HNU,'' ``X\&H,'' and ``ZSMicro,'' as shown in Figures \ref{fig:unlockedic}, \ref{fig:unlockedicmarkings}, and \ref{fig:unlockediczsmicro}.
 
-Similar to the Giantec GT23SC4489, it employs a predictable 16-bit linear-feedback shift register instead of a secure TRNG.
-
-\pagebreak
-
-We reverse-engineered this LFSR using the Berlekamp–Massey algorithm and found it to be identical to the one used in the MIFARE Classic. Its operation is defined by the following equation:
-
-\begin{equation}
-\begin{array}{l}
-x = \bigl(x \gg 1\bigr) \;\big\vert\; \\ 
-\Bigl(\bigl(x \oplus (x \gg 2) \oplus (x \gg 3) \oplus (x \gg 5)\bigr) \;\&\; 1\Bigr) \ll 15
-\end{array}
-\end{equation}
-
 \vspace{0.5em}
 \noindent
 \begin{minipage}{\linewidth}
@@ -540,6 +527,16 @@ x = \bigl(x \gg 1\bigr) \;\big\vert\; \\
 
 \pagebreak
 
+Similar to the Giantec GT23SC4489, it employs a predictable 16-bit linear-feedback shift register instead of a secure TRNG.
+
+We reverse-engineered this LFSR using the Berlekamp–Massey algorithm and found it to be identical to the one used in the MIFARE Classic. Its operation is defined by the following equation:
+
+\begin{equation}
+\begin{array}{l}
+x = \bigl(x \gg 1\bigr) \;\big\vert\; \\ 
+\Bigl(\bigl(x \oplus (x \gg 2) \oplus (x \gg 3) \oplus (x \gg 5)\bigr) \;\&\; 1\Bigr) \ll 15
+\end{array}
+\end{equation}
 
 Figure~\ref{fig:freq_distrib_uscuidv1} shows that the initial nonce values are concentrated around a few indexes. A possible explanation is that very few bits of the initial state are truly random. Although not as deterministic as for the ULCG, these values collide quite rapidly within a small number of transactions: there is a greater than 50\% chance of finding a duplicate among 31 nonces, and the probability reaches 99.99\%  with only 105 nonces.
 
@@ -597,6 +594,8 @@ Similar to USCUID-UL, this IC is using the MIFARE Classic LFSR to generate its n
 
 Moreover, the nonce values relate to the time spent between sending the wake-up command (\texttt{REQA} or \texttt{WUPA}) and querying it for its nonce.
 
+Figure~\ref{fig:freq_distrib_fj8010} is very similar to ULCG's Figure~\ref{fig:freq_distrib_ulcg}. There is a greater than 50\% chance of finding a duplicate among 12 nonces, and the probability reaches 99.99\%  with only 39 nonces.
+
 \vspace{0.5em}
 \noindent
 \begin{minipage}{\linewidth}
@@ -607,8 +606,6 @@ Moreover, the nonce values relate to the time spent between sending the wake-up 
     \label{fig:freq_distrib_fj8010}
 \end{minipage}
 \vspace{0.5em}
-
-Figure~\ref{fig:freq_distrib_fj8010} is very similar to ULCG's Figure~\ref{fig:freq_distrib_ulcg}. There is a greater than 50\% chance of finding a duplicate among 12 nonces, and the probability reaches 99.99\%  with only 39 nonces.
 
 \subsection{Assessing Static Key Usage via Encrypted Nonce Collisions}
 \label{sec:counterfeit_static_check}
@@ -649,6 +646,7 @@ bool valid_lfsr_ulcg(uint64_t x64) {
     return true;
 }
 \end{lstlisting}
+\columnbreak
 \begin{lstlisting}[style=customc]
 bool valid_lfsr_mfc(uint64_t x64) {
     x64 = __builtin_bswap64(x64);
@@ -890,6 +888,7 @@ Using the optimized online attack (WUPA + READ 0), in practice over 100 keys can
 \]
 per segment, or about 15 days on average. As mentioned in Section~\ref{sec:onlineoptimize}, an unoptimized baseline implementation tested on the Flipper Zero achieves only 8 keys/s, requiring approximately 190 days per segment.
 
+\columnbreak
 \subsubsection*{Online Brute-Force (per 28-bit segment) with Tearing}
 \setlength{\parindent}{15pt}
 If enough tags sharing the same key are available, tearing techniques can significantly reduce the online brute-force.
@@ -1180,6 +1179,8 @@ For applications requiring a higher level of security, migration to more advance
 
 Finally, addressing the risk of counterfeit cards requires diligence in the supply chain. System owners and integrators must verify the authenticity of the ICs they deploy (see Section~\ref{sec:fingerprint_ulc} for fingerprinting techniques comparing genuine and counterfeit Ultralight~C cards). Replacing known counterfeit cards with genuine NXP products is a necessary step to ensure a baseline level of security.
 
+Since the initial release of this paper, NXP has updated the datasheets of MIFARE Ultralight~C, MIFARE Ultralight~AES, and NTAG~22x~DNA to mandate or strongly recommend, where available, countermeasures such as locking the user configuration and the key(s), and enabling \texttt{AUTH\_LIM} and \texttt{SEC\_MSG\_ACT}.
+
 \section{Future Work}
 \label{sec:future}
 While this study focused primarily on logical vulnerabilities and low-cost physical attacks, the exploration of more sophisticated physical attack vectors remains a fertile ground for future research. Investigating the applicability of Electromagnetic Fault Injection (EMFI) to disrupt control logic may prove valuable, potentially bypassing authentication states, \texttt{READ} ranges, or locking mechanisms. Additionally, although timing analysis of the challenge comparison has yielded no exploitable results, high-resolution electromagnetic (EM) side-channel analysis using near-field probes could reveal data-dependent leakage during the cryptographic comparison of the nonce, potentially enabling non-invasive key recovery.
@@ -1338,7 +1339,7 @@ All resources accompanying this paper are available in a dedicated GitHub reposi
     \item Initial release
 \end{itemize}
 
-\noindent\textbf{2026-08-xx Revision 1.1}\\
+\noindent\textbf{2026-08-28 Revision 1.1}\\
 Additions:
 \begin{itemize}
     \item Support of the Ultralight~AES authentication bypass in the Proxmark3
